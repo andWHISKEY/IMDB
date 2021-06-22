@@ -1,0 +1,481 @@
+Movie_id	Reviewer_id	Reviewer_rating	Review_date	Review_text
+0059742	71629917	10	20180428	Rent it or buy it, a true classic that is perfect from start to finish...
+0120338	2263198	10	20180703	the film was thrilling, exciting and fascinating in every sense of the word!
+0125439	0024634	10	20000209	For me, it's still delightful after nine months and nine viewings.
+0209144	20682472	9	20000404	A trip in to the mind
+0314331	2926093	8	20031219	A fabric woven of happy and sad threads
+0332136	3079414	10	20040206	A moving, well crafted romance with standout performances
+0471041	4310775	7	20121218	Highly recommended for action-fans!
+0482571	69508929	10	20180530	The way obsession play out to be the main theme, the way broken timelines are used for storytelling and the way the final twist is revealed - simply excellent. It gets a special 10/10 and an A+.
+2209418	1393451	10	20130121	BEFORE MIDNIGHT is what indie film making (and the Sundance Film Festival) is all about--truly original, creative, unique, interesting characters and their stories, told outside the Hollywood system, by people passionate about their craft (and in this case at the top of their craft).
+8623904	62228332	7	20191108	Surprisingly good was expecting a cheesy rom/com holiday film. But instead the Movie make you look up and appreciate what you have in life ??
+0080761	15140057	10	20170924	Welcome to Camp Blood the classic original slasher that started it all my personal favorite
+0082418	65737204	7	20160504	It's Friday 13th again, why are you all going there!!!
+0083972	13977076	7	20181219	Jason gets his hockey mask
+0087298	15140057	10	20180924	The best of the series excellent slasher film the best Friday the 13th movie ever
+0089173	20781972	6	20090626	Ugh
+0091080	0355122	6	19990826	The last of the passable Friday the 13th's
+0095179	15140057	10	20170924	Carrie VS Jason, my favorite underrated flick Lar Park-Lincoln is the best of this film
+0097388	15140057	6	20170924	Guilty pleasure of mine is not that bad of a slasher film that everyone says
+0112384	3174947	9	20050115	A Great Movie
+0496806	4249554	9	20070527	Really good
+1396218	49684669	10	20141024	Good and funny movie
+1620981	5180963	8	20191012	Never Judge People By the Outside... Stays True to TV show and Movies!
+2245084	3179696	9	20150208	Disney old magic
+4123430	4458224	6	20181114	Stunning movie, but where is the plot..?
+5028340	4596901	7	20190121	A good film but cannot compare to the 1964 film
+1911658	3282150	10	20150722	It's amazing
+0315327	0867801	8	20031219	What if God was one of us? It would be pretty funny.
+0413099	2036506	8	20090312	Don't expect Bruce Almighty all over again.
+0381707	1759327	10	20071106	A definition of funny.
+1355644	3604559	9	20161223	I cannot understand all those bad reviews of Passengers
+4126476	biancabbswart	5	20190412	I wasn't disappointed but I wasn't satisfied either
+0033467	elleglw	10	20060831	why did Citizen Kane create such an impact upon its first release?
+0034583	Jaymay	10	20030823	HOW TO WATCH THIS MOVIE
+0045152	Sober-Friend	9	20180122	A Classic
+0052357	james.king@optusnet.com.au	10	20020710	A Standard Rave
+0032138	robb_772	10	20060507	A true cinematic milestone
+0081398	MovieAddict2016	10	20040405	Essential masterpiece; powerful De Niro; simply one of the best films of all time.
+0054215	mark-lovellsamuels	10	20090727	The Perkins Factor
+0061722	mjs3p	10	20000525	great but often misunderstood film
+7880466	xchintu	10	20180418	One of the best conan movie
+0112471	lady_writer	0	20000308	The beauty is the simplicity of magnificent human emotion.
+0113670	pilby	0	20000709	Wonderful material for the heart ...
+373889	juliebug04	8	20070711	Separate the film from the book, and you will be impressed
+0383574	skyblueangel-1	8	20060710	Viva Pirates!
+0458352	blackbird2379	7	20060615	Better than Expected
+0795421	rayclister	7	20080710	James Bond needs singing lessons!
+1591095	MovieProductions	7	20110401	Better than Paranormal Activity and Saw combined
+1707386	Danusha_Goska	8	20121225	Why We Pay to Watch Others Suffer
+2294629	CarrieJa	10	20131125	For the first time in forever a true Disney classic is realized
+4846340	steven-leibson	9	20170107	Punches all my buttons: segregation, space, engineering, computers
+0147800	Darth_Stat 	8.5	20010304	You can't fault this one, it just aint typical.
+4633694	mattheewssilverhammer	9	20181221	How on God's green Earth did this work so well???
+5013056	timhigham	0	20170723	Instantly forgettable, yet of such a sad historical event.
+6146586	ahmetkozan	9	20190517	It's got its own action style!
+0241527	ktulu34	0	20011119	Magically Delicious
+0295297	MaxBofg89	8	20051120	Back to school, Mr. Potter: a superior second installment
+0304141	callanvass	9	20100917	Azkaban is an enthralling, often spellbinding adventure. Worth revisiting, again and again.
+0330373	tjcclarke	7	20051107	Rowling's Roller-coaster Gathers Pace
+0926084	sofie-17 	9	20101112	Wickedly awesome - One of the best
+1201607	vila-ddt	10	20110715	End of an era... End of our childhoods... End of Harry Potter
+0417741	ZeroCorpse-1	6	20090715	All the least important parts of the book in movie form.
+0449088	tough_guy007	7	20070528	Good conclusion to the series, same problems as the 2nd
+2278388	rubenm	8	20140315	Absurd, funny, exciting, violent and colourful 
+1464540	Superunknovvn	6	20110321	Twilight with balls
+1790809	hilaryswank2011	10	20170922	The Future of Theatre Structure is going to be More Like Amusement Park! 
+1790864	billygoata1071	7	20140918	Compromises 
+2692250	view_and_review	6	20150820	Expect No Surprises
+2948356	amr_hamada	8	20190908	Didn't expect the story to be that great !
+4046784	maddisonfield	3	20150911	How to make an entire book fandom hate you
+0083658	ccthemovieman-1	9	20081207	New Blu-Ray Disc Made Me A Blade Runner Fan 
+0120363	mattyman100	10	20181026	Toy Story 2 was an amazing sequel to Toy Story 1 which was also amazing! It was simply fantastic and had such great storytelling and everything! This movie was amazing!
+0114709	The_Light_Triton	8	20090122	Popular movies are coming out every month and some of them have such hype that games are made for them. Toy story had this kind of hype, because it was the first full-length computer animated feature to ever be seen in theatres.
+0198781	ziodalcio	10	20190207	I don't know how many times I have watched this movie, but it always makes me laugh like it's the first time I see it. Overall I think it's one of the most original and entertaining movies Disney has ever produced.
+0435761	Chrisonnet	10	20100805	Toy Story 3 is magical movie masterpiece, that has the ability to capture any audience of an age.
+1449283	Animany94	5	20190303	That's a legit question from me, because I found it disappointing in several ways. To make I'm not mistaken, I do not think this movie is awful, I just found lacking in the sense of flow and on some characters.
+1453405	damh_frikinlater	10	20130620	Monsters University is the best Pixar film since Toy Story 3 in 2010, and as good as Monsters Inc.
+4500922	andreibelcu	1	20180227	There is nothing surprising in this movie, except the 0 % accuracy of the enemy troops. You can anticipate what is going to happen, and even what they are going to say.
+5848272	Jo_Blo_Movie_Critic	7	20190305	very original and creative, but not quite as good as its predecessor
+6083230	EggOrChicken	10	20190310	It took a little time to get wrapped up in the plot, but after that it was a pleasure to watch on many levels. Ultimately, I feel it's about the question of living a simple life or not, but it also touches on other important issues.
+8119680	altairlegend	10	20190106	Without camshaken fighting and fast chasing scene, Dark Figure of Crime did more than enough to keep me on the edge.
+0245429	klydearce	10	20180306	The art of Spirited Away, and other Miyazaki films are masterpieces.A visual masterpiece, and a spectacularly beautiful animated film.
+0347149	sherryrozz	7	20181122	This is my first Studio Ghibli film and then I realised why people revere the studio. The animation is quite beautiful.
+0876563	wissemlaib-02910	10	20190917	So i just finished watching this amazing work by Mayazaki and i am so happy. I dunno why but i kept smiling all the time. The drawings are so beautiful and the story is so original. Another great work that i am blessed that my eyes saw. If you can't handle tooooo much cuteness i don't recommand this film for you because it is full of it. I am sure i will rewatch this film again!
+0983213	nojunk-46182	3	20180731	Boy meets girl, fall in love, go their separate ways, boy pines for girl, the end. Beautiful art but not much of a story here.
+2140203	acmccullum	10	20190222	I've seen this movie 4 times now and every time, I've sympathized with the characters. When I watched Wolf Children for the first time, I wasn't expecting the amount of feelings that happened, even in the beginning. A story of a single mother raising two children that also happen to be part wolf is shown super well in this film! I would recommend this to anyone that likes animated movies with a solid story line.
+2323836	hayashimegumi	8	20140928	The characters' memories and struggles are heartbreaking but they are also essential as it reminds us the value of love, life and friendship.
+5311514	dradenperegrine	9	20190416	Film is pretty. Girl is pretty. Her village is pretty, the co-worker waitress' legs are pretty. Disney sucks in comparison.
+5323662	minhazhimu	10	20180408	This is one of the best animated movies I ever watched.
+6317962	jmjjmj3	8	20181208	Two boys like one girl. Girl likes one boy. Girl plans to run away with boy. Runaway plan goes awry until supernatural events intervene to allow boy to replay day's events. From that point, viewers will have radically different satisfaction levels with plot development. This anime is a blend of sci-fi, alternate realities and romance. Great soundtracks make up for plot not being fully realized.
+9426210	MrDHWong	8	20190825	I watched was in Japanese with English subtitles, but I am interested in seeing a dubbed version when it is readily available.
+2380307	 archiewheeler	9	20180503	Pixar has created a masterpiece of cinema
+0457430	allan-117	10	20060912	The best fantasy of the past decade
+3544112	billntoumos	9	20160726	Surprisingly delightful
+0462538	SamuelChase	6	20070728	I don't know....I just don't know.
+1825683	collen-xathi	7	20180218	Sadly Over-hyped
+0988045	C-Younkin	8	20091222	Downey and Law are on the case
+3262342	samkoseoglu	8	20180125	Visualized Sentiment
+3846674	siderite	9	20180819	For a romantic movie it is really great!
+2582846	 naxt1114	7	20140605	The Fault Is Not in Our Stars, But in Ourselves??
+5726616	 DavidO-Scotland	10	20171106	Stunning
+0364569	Desertman84	10	20101126	A Korean Masterpiece Oldboy is one hell of a movie. It is a film that is characterized by surrealism, gritty violence and raw emotion. The theme is about revenge and how it destroys one person. After viewing it, it left me silent for more than five minutes to contemplate on what I have seen. It was simply a masterpiece. It has proved that Koreans are one of the most creative when it comes to cinema. But mind you, this film is not for everyone. Especially for the weak at heart. Aside from revenge, it touches subject on incest as well. Nevertheless, it is a MASTERPIECE. The acting is world-class in this film. Choi Min-sik and Yu Ji-tae were simply amazing as Oh Daesu and Lee Woo-jin respectively. Credit should also be given to Gang Hye-jung as Mido. The characters are given emotional depth that one could sympathize for. They were not simply categorized as either good or evil but they were allowed to feel raw emotion. The direction was also spectacular from Park Chan-wook. And the soundtrack was mesmerizing. This is definitely a must-see especially for people who love another kind of entertainment. I could have given this a 11 out of 10 rating if only I am allowed to. 
+0087843	philip_vanderveken	10	20040919	Many people compare Once Upon a Time in America with The Godfather. In my opinion these two movies can't be compared. Both are masterpieces in their own way, but each of them has a different style. You don't compare a Picasso to Michelangelo's Sixteen Chapel either, do you? What is it that makes this movie a masterpiece? Well, first of all there is the director. Sergio Leone is a real master when it comes to creating a special atmosphere, full of mystery, surprises and drama... He's one of the few directors who understands the art of cutting a movie in such a way that you stay focused until the end. The way the movie was cut is also the reason why a lot of Americans don't think this movie is very special. There are three versions, but only the European version is how the director imagined it to be. He didn't want his movie to be shown in chronological order (1910's - 1930's - 1960's), but wanted to mix these three periods of time. The studio cut the movie in chronological order, loosing a lot of its originality and therefor getting a lot of bad critics. If you want to see this film the way Sergio Leone saw it, you have to make sure you get the director's cut. The second reason why this movie is so great is the music. Ennio Morricone, who is seen as the greatest writer of film music ever, did an excellent job. Together with the images, the music speaks for itself in this movie. From time to time there isn't said a word, but the music and the images on their own tell the story. He understood perfectly what Sergio Leone wanted and composed most of the music even before the movie was shot. Last but not least there is also the acting and the script. The actors all did an excellent job. But what else can you expect from actors like Robert De Niro, Joe Pesci... They helped making this movie as great as it is by putting there best effort in it. The script helped them with it. It took twelve years to complete, but it hasn't left any detail untouched. The writers really thought of everything when creating it. I can really recommend this movie to everyone, but especially to people who like the gangster genre. When you want to see the movie, you better be sure that you will have the time for it. This isn't a movie that is finished after 90 minutes. You'll have to be able to stay focused during 3 hours and 47 minutes, which will certainly not be easy during the first 20 to 30 minutes. Some scenes at the beginning only make sense when you have seen the end of the movie. But when you are able to stay focused, you'll find this one of the best movies you've ever seen. I certainly did and I rewarded it with a well deserved 10/10.
+0051201	littlemartinarocena	10	20071230	At the end of the day the films you give top marks are those films that become constant companions. You can see them again at the drop of a hat, you show them to people who have never see them and it's always a triumph. Witness For The Prosecution is one of those wonders. Suspend your disbelief for a couple of hours and enjoy this banquet of a romp. Charles Laughton showed here what he was made of better, more clearly and more loudly than in any other film and all of his films, at least the moments with him in it, are unforgettable - Captain Blight or Henry VIII, Quasimodo or that malefic Senator from South Carolina. Here the severity of his lawyer by vocation takes your senses away with his masterful judicial way to see logic and it's such an incredible fun to watch him do it. Tyrone Power is a toy in his hands but not Marlene Dietrich who stands her ground, not merely as a character but as a presence on the screen. Billy Wilder visits early Hitchcock territory with wit and fun. Elsa Lanchester's nurse is the cherry on top of this delightful film.
+3778644	poopville	7	20180806	So I am of the generation who got to experience Star Wars feom the beginning. Standing in a crazy ling line, literally wrapped around the local theater back in 1977 as a kid. Totally unaware I was about to see a movie that would become my central interest for all my childhood, early teens and once again as an adult. And all these years later, able to share this fandom with my own son. I liked Solo. I wouldn't say it's my favorite but it was a fun ride and it evoked the feelings that I associate with Stat Wars. The world and characters felt right. It showed us some cool new things about life in that world, living under the Empire. The amazing cityscapes of Corellia... It felt similar to me to Rogue One. Modern filmmaking techniques yet convincingly evoking the vibes of the classic Star Wars world. Anyway, I just wanted to put in some positive review for this movie to contrast this strange wave of hate feom fans on here. I don't really understand it. I have liked something about every Star Wars movie there has been. Some are better than others. There are weaker moments in every one to be sure. But none are worth the irrational seeming hate some people are putting out there. Solo is good and worth your time if you like Star Wars. Just one fan's opinion.
+1345836	Geeky Randy	10	20130101	After eight years in seclusion, Batman resurfaces to face Bane, a mastermind bent on destroying Gotham and has ties to Bruce Wayne's past. Christopher Nolan's conclusion to his Dark Knight trilogy should be treated as a wrap up rather than a third installment. Despite many new characters being introduced, even their conflicts and motives are derived from events that occurred in the previous two films. Such an approach could be seen as a weakness, since the conflict could just end up being sort of a rematch rather than moving the story forward; however, Nolan's approach works terrificly. Over an hour is shot in stunning IMAX, but the film is more touching than it is intense? and that's its best quality. Hardy steps in as the genius mercenary Bane, who is slightly bigger, slightly stronger and slightly smarter than Batman, thus making him a challenge best suited for the grand finale. The Joker works best as Batman's arch-nemesis since they are polar opposites, with The Joker standing for everything Batman stands against. Two-Face works best as Batman's most tragic enemy because Harvey Dent is very much like Bruce Wayne? the only difference is: Dent copes with his tragedy through revenge rather than seeking justice as Wayne did. Bane works best as Batman's most challenging villain because of his physical and mental superiority?forget the Bane you saw in BATMAN & ROBIN. Nolan carefully chose all his villains in the series wisely and executed them perfectly. Hardy had big shoes to fill following Ledger's posthumous Oscar winning performance; while Bane is no Joker, Hardy does a satisfying job and should not be compared to Ledger's performance as they are completely different roles. It is Michael Caine, however, that delivers the most memorable and touching performance of the entire film. A wonderful conclusion to a wonderful trilogy.
+2488496	zde-03245	1	20161211	I do not have a hard time placing this film. On one side it's so typically hollywoodish - it's a super-production with Star Wars-related content that would make it probably to many Fan film festivals. It's very conventional in its Sunday morning TV message and the morality tale that it tells is quite conventional, and of course, we know the end of the story, either because we have watched Star Wars or because we have seen enough films from Hollywood or for both reasons. On the other side it's a film by JJ Abrams, so there is a dose of mainstream story-telling and inexplicable plot developments in its characters. The special effects are 100% created for the movie and uninspired. So it's the story of Episode IV without any twists. What makes it worse are elements of fan fiction in the story telling, distracted (but not awful) acting from Leia, Rey and others and the computer-generated special effects which succeed to create a level of thrill to a story. Did we need this story and episode? At this level of amateurishness the answer is no.
+1185834	BiiivAL	8	20180705	What can I say about the new chapters of the great saga of the Far-distant Galaxy? To say that it is amazing, that it is exciting and that it is fascinating - means to say nothing. The series seemed to have poured new blood into the Star Wars. And now the fact that I was impressed with him: 1. Clones ... for the first time in the history of the series (including numerous comic books, books, games and individual stories) the clones showed LIVE! From now on, these are not soulless faceless machines for murders. These are ordinary people, just like you or me. They also think, they experience, they feel and feel fear. For the first time in the history of the series, my heart bleeds when another soldier settles on the ground with a black hole in white mandororian armor. Each clone is like a brother and at the same time is incredibly unique. This is shown especially well in the series (it seems first, but perhaps the memory changes me), where Master Yoda with a bunch of clones had to make his way to the ruler of no-remember-what-planet to conclude a contract before Darth Tiranus (Count Dooku in the common people). It is there that the great Yoda reveals to each of his brothers his uniqueness. 2. Music. Well ... what can I say. The music of John Williams is, of course, good. But ... it is a little outdated (in my case - fed up). In addition, it absolutely does not approach the action, which unfolds in the series. Kevin Kainer was able not only to create an atmosphere of what is happening. His compositions literally tell us what's happening on the screen, perfectly fitting into the picture (although it would have been perfectly listened to without it). 3. Graphics. Many scold this series and full-length for the graphic component. I do not know about you, but I liked it. And George Lucas, too. In one of his interviews, he said that he specifically decided to use just such a graphic style. 4. Humor. A good deal of sound humor is also there. If someone says that the droids joke flatly and in a way that is not funny, then do not believe this person, because most likely he does not have a sense of humor, or he did not hear, but learned about it from the stories of one deaf-mute (yes forgive me these people, for I did not mean anything insulting). If many of the droid's phrases are simply ridiculous, then some make you literally cry with laughter. 5. The plot. I'm delighted that I can finally see what happened during the clone war, so I'll add it to this list. 6. Action. Neither in a fairy tale, nor describe with a pen. Such brutal battle scenes you have never seen, and camera work just blows the roof) Music adds effect. Bottom line: what do we get as a result? A grinding blend that is svezhakom in the saga. But the most important thing here is the mapping of clones. The number of Jedi here is quite understandable, since this is the series of fighters in white armor. Honestly, I would gladly have looked at all six episodes again if they were re-released in the same style.
+0120915	BiiivAL	8	20180704	Episode I: The Hidden Menace is perhaps the most ambiguous film in George W. Lucas's Star Wars series. Met by the rather coldly stern gaze of critics, the first film of the new trilogy can cause some confusion in the viewer. There are not many action scenes in it, there are many dialogues and just a leisurely development of actions, which sometimes may seem like a forced filler with a connecting function between fights and races. But this is only at first glance, because if you look closely ... Young Obi-Wan Kenobi (Ewan McGregor) and his teacher, Qui-Gon Jin (Liam Neeson), go to negotiations with the Trade Federation, which threatens to blockade the peaceful little planet of Naboo. In Obi-Wan's eyes, his mind and vision are already visible, his movements are already full of courage and confidence. Confidence and powerful, unquestioning dedication are seen in the young queen Amidala (Natalie Portman) that she is ready to do anything to help her people, the inhabitants of the occupied world federation. It is in The Phantom Menace most accurately and correctly disclose the nature and fragile at the same time in BOGATYRSKY solid Padme: it is able to stand alone against the decision of the Senate, venturing recklessly brave adventures and combine intuitive dictates of the heart with equanimity of mind. Qui-Gon Jin is unshakable and calm, in whatever situation he was. His eyes radiate wisdom and strength, a smile condescendingly reasonable, and the movements are smooth and weighed. But the main feature of Obi-Wan's teacher is not in these, of course, the most important qualities. Qui-Gon, first of all, is a man of exceptional faith. Some of his actions seem too risky and thoughtless, but somewhere in general they can be mistaken for a desperate bluff. But for him, extremely sensitive to everything around him, holding in an unsurpassed harmony the awareness of his own forces and the sense of difficulty of the tasks set, for him, who knows how to feel the situation on many, many forward steps, faith is the main tool. With her help, he stands unshakably on his feet, seeking his own, by all means. Once having set a goal - to certainly train quite a young Anakin Skywalker - Qui-Gon will go to her persistently and steadily. He alone believes in the Prophecy of the great destiny of the boy, as if he did not hear the fears of the Jedi Council that Anakin's uncertain future could pose great troubles to the Galaxy. But the foresight and the unique sense of Qui-Gon's world allow him to see far further than to his eminent like-minded people and mentors, like Master Yoda and Master Windu. In addition, an extraordinary faith allows Qui-Gon to destroy any of his fears and doubts that can obscure his clear eyes. The moment of the film is very important, in which the wise Jedi tells Anakin about the medichlorians, micro-organisms existing in symbiosis with the cells of any living organism. Perhaps, in these mysterious media chlorians lies the human soul, elusive to the eye and non-existent for touch. Then the wise counsel of Qui-Gon Jinn and unselfish greed deprived the boy Anakin Skywalker, wanted to visit every planet in the universe, it seems quite clear and sharp, Go up to the call of the heart, and you go on the right path. And even though this road is lost in the darkness of the gathering clouds, there will always be someone who sees a little farther than everyone else, and builds on this sagacity its most powerful faith. Qui-Gon believed in Anakin from the first second and believed in him to the end; most likely he understood the suffering and upheavals that promised further training of the boy for the Galaxy and for himself, but in one thing he was certain that in the final analysis Skywalker would return the Force to equilibrium ... Finishing on the major note of universal jubilation and festivities, Episode I: The Hidden Menace at first glance does not justify its mysterious and menacing title. But, having looked a little closer, we see that the holiday is just a calm before the storm, and a sweet truce is a tricky tactical ploy. It also becomes clear with horror that all the actions of all the heroes are quite comparable with the freedom to choose the actions of puppets tied to strong threads, for which someone is confidently pulling, able to control the movements of dolls by the easy fingering. And the violent protest of Padme Amidaly at the Senate meeting, and the murder of the mighty Darth Moule, and the fiasco of the Trade Federation, and the heroic death of Qui-Gon Gin, are all foggings in the plan of the mysterious strategist who is still hiding far from the battlefields, its galactic war. And Anakin Skywalker's aching lead heart, which is filled with a burning, drying fear after the death of a Jedi so much loved by him, also lies in a small coin, albeit of a larger value than the rest, on a comprehensive battle map of the devilish clever and cunning puppeteer. The beginning of the saga is laid, the heroes are represented, the plot knots are tied. Star Wars Beginning
+0121765	BiiivAL	8	20180704	The second episode of the new trilogy of Star Wars was much better than the first. He is much more gloomy, eventful and full of the sense that soon the customary world will collapse ... Moreover, it can be considered the most romantic film of the saga - speech, of course, about the love line of Anakin Skywalker and Padme Amidala performed by Natalie Portman. It is not only very well developed, but it also takes place mainly in very beautiful, blooming locations, which is generally uncommon for Star Wars. Even sad to realize that it is waiting for a tragic ending ... In all other respects, the Clone Attack can be considered a good film. Excellent battles on light swords, skirmishes, long conversations and flights on space ships - all this is done very qualitatively and interestingly. There are a lot of really unexpected plot twists, which will be appreciated not only by the fans of the universe, but by all the rest. For example, when a small dwarf Yoda takes a lightsaber in his hands and almost starts on an equal footing with the formidable Count Dooku, perhaps everyone was surprised ... However, in spite of this, the second episode can not be put on the same level as the classical trilogy. And it's not even the quality of performance, but the fact that those films evoked much more emotional response, they had the notorious Star Wars magic, which is practically absent in the first two prequels. However, watching the Attack of the Clones is worth all fans of fiction - these films are shot too rarely.
+0121766	BiiivAL	9	20180705	May 19, 2005 was not a simple day for fans and fans of the Star Wars. It was a day when all pieces of history fell into place, finally opening a riddle that lasted more than 28 years. People imagined and thought out, wrote books and stories, collected facts and made legends, and everything for the sake of one saga, which will forever remain in the hearts of its admirers. Probably, almost every person, leaving the hall, could not convey or describe in words, what happened during these several hours in the cinema. Joyful, sad, tearful, shocked faces, slowly headed for the exit, promising to come back and see this episode again. This is the chapter of history, truly the most intense and the most powerful. It penetrates into the lungs, not allowing to breathe, touching hearts and souls. We are just spectators. But we can experience. And at some point, there is only a doomed sigh, realizing that there is no way out. Indeed, the third episode is the most cruel and tragic. There is much more pain and despair in it than in any other part. Here the republic collapses like a house of cards, turning into an empire, the Jedi perish at the hands of their single minded, and the face of Anakin Skywalker forever hides the black helmet of Darth Vader. And all this inspires horror, the horror of hopelessness, when you slowly begin to understand that all this is only part of the plan, the way of a petty senator to a ruthless emperor, where everyone is just a pawn, in a huge game of the big world. And every word said accidentally becomes the key to this great puzzle, which accompanies the imperial march. But when you realize it, it's too late. I swear the faithfulness of your teachings, whispers the future dark lord to his master with despair and devotion, asking only one thing - to save her beloved. At this moment Anakin Skywalker perishes, dies together with the republic, along with the Jedi, together with her beloved, giving birth to Darth Vader - the future tyrant, which inspires terror and fear, driven by hatred and despair, in the eyes of which something like love is reflected ... And the most terrible thing was that it was inevitable. The Jedi themselves dug themselves a pit, while the enemy stood behind them, alternately, pushing them down. This is war. Order 66. The army of clones. Padme Anakin. Alone, these errors are not so significant, but together they form a whole madness and panic, in one hour destroying everything that the galaxy has been working on for many millennia. Therefore here the absolute evil and absolute good unite in the struggle, this cinema and consists of some contrasts. Good and bad, the Jedi and the Sith, Obi-Wan and Anakin, the emperor and Yoda, Anakin and Padme. Such a controversial character went to Hayden Cristian. In essence, he plays two opposites in one body. Nobility and sincerity at the beginning and anger and hatred in the end. And all fear began, which slowly grew into panic, then into despair, anger, getting to hatred. It was thanks to fear that the emperor firmly grabbed Anakin's soul, not wanting to let go of his new servant. The glitter of embittered eyes, in which hatred for everything and the thirst for power breathe. It is difficult to imagine someone who could better cope with this task. Therefore, there are no more words left than one: I believe. It's all over, Anakin. I'm above you! The battle of Obi-Wan and Skywalker is what remains in memory forever. This is not just a battle between two people who have spent together their whole lives, this is a battle between two brothers who sacrificed their lives for each other's sake. Here, the side and skills of each are determined. Obi-Wan (in the brilliant, by the way, performance of Evan McGregor) does not try to follow the easy ways to achieve his goals. He goes to Mustafar, he understands with bitterness what is going on. Therefore, this battle is not only with the darkness, it is a battle with yourself, with your feelings and attachments. Unlike Anakin, Obi-Wan is firmly committed to duty, goals, order. For some reason, he is sorry for the most in the end. A person who, in any situation, acted as correctly, and not as easily. At the same time, we see the battle of two other opposites. Yoda and the emperor. Here, the battle goes for other concepts, for democracy, peace and freedom. The fate of the entire galaxy is being decided. And as the swords are crossed, good and evil are constantly side by side, weaving and maintaining the balance of power, crossing swords, but achieving different goals. But where did it start? Padme Amidala, without knowing it herself, is the center of the whole string and culmination that unfolds during these few hours. A tragic figure that unwittingly became the key to the empire, from which they simply got rid of unnecessarily. Natalie Portman, like no other, fits into a gloomy sweep and the helpless panic that reigns around. Her heroine is touching and ardent, but unable to change anything, she is only an outside observer of the war and the collapse of the republic. Painful and sad ... Most of the attention of the film is given to Anakin, whose fear and sweeping increasingly turns him into the ruler of the Sith. However, about the persecution of General Grievous, powerful battles and amazing planets, also did not forget. This is a movie that will not leave anyone indifferent. Yes, and whether to restrain feelings? After all, this legend, which will be remembered. Bravo George Lucas. The highest ball.
+0099785	tfrizzell	9	20001104	Home Alone is a hilarious film about a young boy (Macaulay Culkin) who is accidently left home during the Christmas holidays after the rest of his family goes to Europe. At first Culkin loves the situation, but soon he is scared to death when he learns that burglars Joe Pesci and Daniel Stern are targeting his house. However, Culkin is pretty smart for an eight-year-old and he has plans for them when they attack. Chris Columbus' direction is smart and so is the over-achieving screenplay. This film has a little bit of something for everyone and the fact that the backdrop is the Christmas holidays, only makes it that much more special. All the performers do well and in the end the film also does. 4 stars out of 5.
+0104431	Op_Prime	8	20051207	Home Alone 2 has pretty much the same plot as the first movie, but Home Alone 2 is a very good sequel. The new traps for the Wet, er... Sticky Bandits are great. Once again Joe Pesci and Daniel Stern give wonderful performances. Having Tim Curry in this was also a treat. There is a lot of enjoyment in this movie.
+0119303	usedforpayments	9	20181109	Home Alone 3 would be a really great film if they ( the writer/director/producer) didn't name it Home Alone 3. I saw the 4.4 rating and immediately understood why. Home 1 & 2 were classic Christmas films. Why wait 5 years to complete the potential trilogy? I understand that this film is nothing like the original and that's what people are expecting. If this was a stand alone film, it probably would've been better received. Either way, I think its a great film. The plot, the actors, the acting, the comedy, the scenes, all were good
+0332379	Wizard-8	10	20031010	Glancing at what other people have written about this movie, it seems that these individuals are taking this film a bit too seriously. Worrying about the messages this movie is delivering? Come on, there is no way that the con that Jack Black's character pulls off could ever get far in the real world! I don't think any sane person watching this movie would take this seriously. This is a comedy, for crying out loud, made to make us laugh!  I thought Black was fine in this movie. Sure, maybe his character is a little one-note with his proclamations of rock on and stick it to the man, but Black somehow manages to do it over and over without being boring. He's unbelievably energetic AND versatile, delivering these same things in different ways each time that prevent the movie from getting into a rut. I think it's safe to say that only Black himself could have made this role work so well.
+0418279	brando647	8	20090817	I was not a Transformers kid when I grew up in the 80's and I think that's why I wasn't so hard on Michael Bay's film when I caught it in the summer of 2007. Going into the film for the first time, the only characters I knew by name were Optimus Prime, Megatron, and Bumblebee (and I only knew of him through the mention of friends). So, without having the fanboy mentality, I was able to enjoy the movie as it was...and I did. I thought it was a fun action flick and one of the best popcorn movies from the year. Based on the Hasbro toyline and it's resulting animated series/comics, the film follows high-schooler Sam Witwicky who discovers his Camaro is a shape-shifting alien robot; he is soon brought into the middle of a war between the Autobots and the Decepticons, warring factions of a race of sentient robots.
+1055369	lukalele	7	20090929	I'm amazed at some of the reviews on here. Seriously, what did people expect outta this film? Shakespeare? The English Patient? You go to see this for the ridiculous action, awesome special effects and just to have a good time, which is what I had. Yeah, it did seem to overindulge slightly and was slow in parts. Yeah, the humour's cheesy, sometimes painfully so. No surprise there though, let's remember we're watching a film based on kids' toys, not a Bronte novel. It ain't perfect, but if you expected it to be, I'm glad you're feeling let down. For me, it didn't try to be anything it shouldn't have and what it needed to do right, it did.
+1399103	thegoods7	8	20120117	Transformers Dark of the Moon being the third movie of the Transformers series you wouldn't think it would be as good as the first two, well it is. In this movie Megan Fox is no longer to be seen but we are gifted with a beautiful Rosie Huntington-Whiteley playing along side Shia LaBeouf. This movie added some serious effects to it with the robots. just like the first two it combines an action/love/comedy attribute. The action scenes in this movie are without a doubt awesome. The effects they used are amazing and to sort of let you catch up with whats happening they use slow motion to let you see things that are going on. I like how they've taken something that has actually happened like the moon landing and have put there own twist on what actually was happening. this was a very good movie and would recommend it to anyone interested in seeing robots you played with as kid come to life.
+2109248	elendil-32558	7	20180301	Admittably, the Transformers Franchise got worse with every movie since its really interesting first one. But Age of Extinction has to be seen as a reset of the universe. It got rid of most of the really cringy and annoying assets like Sam and some of the annoying perverted Transformers. It doesn't try to be very deep and interesting, the plot is simple and easy, a bit too long, yes, but at no point I got annoyed by the story. Most of the characters, especially the autobots have destinct roles, they don't have to be introduced, they're part of the team and do their job. Gelvatron has a really nice plottwist and some scenes are decently funny. The whole movie has some Logan vibes to it, of course without very deep conflict and not near as much emotion.
+0477347	keithclock	7	20061219	I think it's really annoying when I read reviews on here of a kids movie and someone tears it apart. Do these people expect to see Oscar award winning performances and production? As for this film, I thought it was really cute. It's perfect for a kid's imagination. I saw the movie at a pre-screening and every kid afterwards was smiling and excitedly talking about the movie. Sure there are some dumb jokes, etc., but overall the movie was great. It was especially cool to see Dick Van Dyke and Mickey Rooney working together.
+1078912	fanofbatman-1	6	20090526	Night at the Museum: Battle of the Smithsonian is the second film in the Night at the Museum series. While it isn't much different than the first film I have to say it isn't quite as good. Ben Stiller was pretty good but I don't think anybody else really stuck out. One thing I that disappointed by was the lack of screen time for Steve Coogan and Owen Wilson, or Octavius and Jedediah. In the first movie, they stole the show. But in this movie, they are underused like most of the others in the cast. Night at the Museum 2 has its funny parts, but seems to lack the charm and fun of the first movie. It's a worthy sequel that meets the standards of the first movie, but doesn't exceed them. You might want to wait for it's DVD/Blu-Ray release, but seeing in theaters is good too. Thanks for reading this review.
+0111257	snickerssjo	10	20000829	Keanu Reeves forever changed the movie hero
+0120768	Shaf-2	9	19980808	Strong, Intelligent movie-making
+0258463	Sleel	8	20030317	Hooray for decent, more realistic spy films!
+0360486	kevinspaceysgrl	9	20050220	See it! You won't be sorry!
+0387564	lizabeth666	9	20041210	Well made horror/thriller, two thumbs up
+1254468	vikascoder	7	20131004	Great Visuals, Weak Script overall
+1457767	thejoshl	9	20130717	With virtually no sex, no gore and no cursing The Conjuring earns its R-rating on scares alone.
+1959563	allstarrunner	9	20170809	Reynolds and Jackson were born for this moment
+2290840	moviexclusive	9	20130407	Buoyed by Lee Byung Hun's finest performance to date, this period drama with humour, poignancy and heart is one of the finest Korean movies in a long while
+2911666	trublu215	9	20141020	The coolest action film you'll see all year
+0096283	jmjolnir	9	20031125	A kids movie?
+0097165	jchckid	10	20010319	this movie is the greatest movie, with excellent cinematic techniques.
+0120461	SwingBatta	6	20020206	The script is the real natural disaster in Volcano
+0309698	ma-cortes	7	20040921	It's a good film full of suspense , thrills , intrigue and lots of killings
+0454876	damh_frikinlater	10	20121121	Probably the Most Complete Film of the Year
+1014759	visforhendrix23	4	20100302	Alice in Blunderland
+1440129	Pozzible_Movie_Critic	8	20120321	Definition of a guilty pleasure
+1706620	katycrit	8	20150804	It's commentary, not plot holes.
+5034276	mcdaid	8	20160402	Decent thriller covering similar territory to Frequency
+2084970	fruitbat00	10	20141016	Compelling and Enthralling from start to finish.
+1242460	stamper	9	20111027	A fantastic film by a great director
+2674426	DarkVulcan29	10	20160610	Claflin and Clarke where to perfect
+1148204	yfguitarist	9	20090722	Remarkably well-acted, darkly humorous, and effectively disturbing
+7668870	ymyuseda	8	20180926	Excellent Actor And Actrees In This Film
+6472976	emilymarshmallows	8	20190319	I have CF - here's my opinion
+1179904	IAN-Cinemaniac	8	20091026	A Reminder Why We Love Horror
+0167404	kylopod	10	20051231	An appropriate spoiler-free review
+6788942	yoggwork	8	20190218	what a teenagers movie should be
+0396171	Naurya	8	20060913	The critics are wrong - Brilliant!
+1588170	kluseba	9	20110613	A perfect tale of revenge
+0338013	samuellewis48	10	20040506	A warm hearted original love story
+0398286	dylanhook	10	20120821	Definitely one of the best animated films I've seen...a guy's review
+1022603	slowcloud	9	20090623	A love story deftly built on unrequited love.
+1605783	klassepige	8	20110520	You can do some thinking while laughing!
+1670345	pinkled5	6	20130607	Watchable but lacks depth & substance
+1980929	phd_travel	8	20140703	Keira can sing! Nice feel good movie about music making today
+2096673	Aang1	10	20150710	Amazing movie- Those who bash it because it is not a kid's movie, please stop
+2194499	roger-pettit1	10	20130823	One of the very best films I have ever seen
+2980516	PatientWolf	9	20140908	The Theory of Everything - While there is life, there is hope.
+3079380	vsd324	8	20170807	A comedic American version of a James Bond movie.
+0077936	mikebull	10	20050908	My favorite movie
+0116477	tbone_4ever	10	20050205	Brilliant version
+0317705	Quinoa1984	10	20041105	My favorite film from Pixar in over five years- Bird and company produce a triumph of a family film
+0892769	axel_foley	9	20100315	this is why you go to the movies
+1485796	excalibur107	7	20180910	A Birthday Surprise
+1646971	luke-salewski	9	20140611	Worthy of the Hopes and Expectations You Are Afraid to Carry into the Theater
+2015381	BrentHankins	9	20140730	A sprawling space opera full of humor and action.
+2386490	patrickk_lunt	9	20190212	The perfect ending to a solid series
+3606756	trw_98462	8	20180622	A Simply Super Movie
+3896198	BiiivAL	8	20180605	Family cosmagogue
+1099212	carbonfiller	2	20090528	not for my age group
+1392170	aryassen	3	20120323	How can this be a cult movie?
+1638002	YJLcool	7	20141111	A heartfelt, sincere romantic drama comedy film
+2935510	costin2004	6	20190919	How the screenplay can ruin a movie
+4477536	kofila	1	20180218	Fifty Shades Bored to Death
+0075148	TheSixthChild	10	20031228	His whole life was a million-to-one shot
+0032976	Infofreak	10	20050305	What Atmospheric Gothic-horror Should Be.
+0052618	CubsandCulture	10	20181104	Human Drama, Grand Spectacle, Moving Divinity
+0091763	Vogue189	10	20010721	One of Oliver Stone's best films
+0385752	JerusalemFace	6	20071206	Entertaining, but missed opportunity
+1375666	clipturnity	9	20100822	Matrix but in dreamworld? Nah. 
+1409024	billygoat1071	7	20120526	Bigger Imaginations 
+1588398	skydancers	8	20111106	Better than I'd been led to believe. 
+1661199	happipuppi13	10	20170422	Cinderella 2015/2016 : Another Wonderful World from Disney 
+3521164	snperera	9	20170208	what a delight! 
+4777008	ymyuseda	7	20191017	Good But Not Amazing
+1477834	shopping-277-112148	6	20181217	Is it just me? 
+4972582	arniecage	8	20180702	James McAvoy Carries This Film 
+6450804	ericck90	3	20191103	We did this 
+7286456	JF500	10	20190910	As a viewer that actually went to TIFF and witnessed this film and didn't want to believe the hype, it is an absolute MASTERPIECE and Phoenix is a certified legend. 
+816692	pipoulefr	10	20141105	Nolan's masterpiece, one of the best sci-fi movie
+0332452	ja0576	9	20121118	It's just a movie
+0371746	sacflyzone	10	20080423	Delivers Intelligence & Great Acting with its Fun
+0416449	gus495	8	20070331	A two-sided piece of art
+0468571	manuel_de_dios	10	20080707	Best movie of 2008 hands down!
+0480251	Electrified_Voltage	8	20081107	Has its share of thrills and poignancy
+0489101	 k-dhesi	9	20090509	Jumper not the one to Amaze..........But the one to Entertain!
+0780523	newkidontheblock	9	20100103	By Jove...it's actually GOOD!
+10349550	?vjenee	1	20190821	Worst acting ever
+1187043	?lanacastillo49	8	20110301	more than just a laugh...taught me great life lessons as well
+0029583	travisimo	10	20040114	A Movie Milestone
+0034492	Smells_Like_Cheese	8	20040921	A Disney film with a lot of heart
+0048280	moonspinner55	7	20020602	Simple and often lovely
+0088247	baumer	10	19990715	Nice night for a walk.
+5606664	johnnyutah31	9	20190831	Perfect Balance
+0097757	BigAir	10	19981217	This is my favourite movie of all time...
+0119654	Chromium_5	8	20041211	Smart, funny spoof that is impossible not to like!
+0120762	chrisbrown6453	8	20020617	Disney comes through with yet another animated masterpiece, and this one goes by the name Mulan.
+0120912	Fletch06	6	20060427	Not As bad as I was told
+0123755	mjw2305	8	20050119	Low Budget, Does not have to equal Low Quality 
+0099674	tazamaster	10	20041211	It really isn't that bad..
+0102926	Sargebri	10	20030712	A Grand Thriller
+0105236	ElMaruecan82	10	20110509	These 'Dogs' bark a lot, but they bite, too 
+0105323	billion_mucks	10	20071126	Old Men Won't Cry- Scent of A Woman
+0118971	v_haritha_in	7	20140911	I saw the Devil!
+0120689	KathyT	10	19991215	As wonderful as the book!
+0169547	Antithesys	10	20000909	Beautiful...so beautiful
+0361748	sssalem	1	20091023	Very disappointing
+0362227	triple8	10	20040705	Hanks and Spielberg do it again-another winner!
+0372183	gravfire	7	20050213	Excellent movie with a disappointing touch
+0378194	abacus24	10	20060705	A Tarantino Masterpiece
+0385887	kjproulx	8	20190911	A Calm, Engaging Mystery
+0993846	BrentHankins	9	20131224	DiCaprio gives the best performance of his career.
+1010048	sambitprem	4	20090127	unrealistic & over-rated
+1504320	Samiam3	8	20101210	The King says a mouthful
+1663202	yongfilmcritic	10	20190117	A milestone in cinematography.
+1853728	hugo_gamboa	10	20121225	Holy Sh*t!
+3460252	realtab	7	20151231	Don't believe the 1's and 2's or the 9's and 10's
+4425200	akramabuzait	10	20170209	It's a blood oath and bloodbath,oh it's bloody alright
+7131622	carlvan1977	10	20190727	Not for everyone
+0021749	Quinoa1984	10	20040912	Lady and the Tramp, before animation and at the start of talkies- one of the most wonderful films ever conceived and executed
+0117060	benturkalj	8	20060518	Very clever thriller
+0120755	Rockford_6	6	20080904	Good action, but bad plot
+0317919	jb_campo	7	20140728	Fast-paced action thriller
+0332280	filmnoir500	10	20050210	Beautiful
+1074638	ChiSox3514	8	201201223	Back on the Bond Bandwagon
+1229238	ccthemovieman-1	10	20120615	Excellent: The MI Series Still Going Strong
+2381249	Prashast_Singh	10	20181027	A solid entry in the MI series; a stunning action movie.
+3183660	hcarljohan	7	20161116	I liked it
+4912910	cufiviy	10	20180716	A terrific movie from the great and handsome Tom Cruise.
+0441773	the-movie-guy	8	20080606	Cute animated comedy that inspires lessons in life
+1302011	neji107	9	20110522	Packs twice the punch, in every way!
+2267968	coreyjdenford	8	20160311	Dragon Warrior Rising
+0875025	poikkeus	8	20070228	Thrilling entertainment risk
+1343092	copyright908	9	20130514	Nothing exceeds like excess
+1156398	jaypugh	9	20090921	Brilliantly crafted with laughs from beginning to end
+1560220	masonsaul	8	20191019	Great sequel
+2250912	acekaiba	10	20170707	Spider-Man's Legacy
+2527336	alibazargan 	2	20180404	Garbage
+0083866	Catherine_Grace_Zeh	10	20051221	Very touching movie about a special friendship for all ages that will warm your heart and make you cry
+0458339	AI_The Strange	8	20110808	A weak man knows the value of strength.
+0848228	ivo-cobra8	10	20170702	Bad-ass descent-amazing superhero MCU action flick defenders of the earth my favorite
+2395427	ivo-cobra8	10	20160508	Avengers: Age of Ultron is a damn good Superhero flick, excellent sequel!
+4154756	shawneofthedead	10	20180425	This movie will blow your mind and break your heart - and make you desperate to go back for more. Brave, brilliant and better than it has any right to be.
+4154796	ahmetkozan	10	20190425	The End of an Era!
+1228705	BwSwim	8	20100510	Iron Man 2 is Totally Worth it.
+1300854	ivo-cobra8	9	20151022	A Big improvement over Iron Man 2 : Defending an Underrated Marvel third entry!
+1431045	moviewizguy	8	20160215	This is what it looks like when filmmakers take risks
+5463162	DeadMansTrousers	7	20190123	Honest review of all 3 versions
+2361509	grantss	7	20160819	Sweet, sensitive, thoughtful movie - so much better than I expected
+0031381	bkoganbing	10	20061021	Scarlett's So High Spirited And Vivacious
+0117509	Acetylcholine	10	19990517	Shakespeare Worthy
+0120855	The_Light_Triton	9	20150624	The final movie in the Disney renaissance
+0382932	stalcup	10	20070617	Incredible
+0910970	DrWetter	10	20080608	Pixar does it again!
+1772341	FairlyAnonymous	9	20121103	A lot better than expected, and made for gamers
+1979388	MrGenre	7	20160618	A Fun Movie, Even If It's Not Pixar's Best
+4429160	molinagrn	8	20191027	A pretty good parody fairy tale twist movie.
+6105098	menzoderks	1	20190721	No soul.
+6751668	mysticfall	10	20191018	For those who didn't like the movie because of its second half
+0073486	Quinoa1984	10	20000415	Best film of its era
+0076759	davidsarah	10	20041212	The film that changed the world
+0080684	Spleen	10	19991026	It's NOT the darkest of the trilogy - it's the most mature
+0099685	gogoschka-1	10	20131217	In one word: perfection
+0109830	thomas-hardcastle-2	10	20070514	In my opinion, no film has touched me more than this one
+0114369	winner55	9	20071014	one of the best-made films of its era and genre
+0120737	NRGWasp	10	20020502	An absolutely incredible film!
+0120815	ToldYaSo	9	19990816	War is hell, and Saving Private Ryan peeks into the gates of Hades
+0133093	mambubkid	10	20000919	The benchmark for all sci-fi films to come
+0167261	calcat91355	9	20060305	Magnificent epic
+0167260	eviltimmy	10	20031220	Five out of five decapitated orcs
+0137523	buk-3	10	19991015	A unique film
+0111161	carflo	10	20031126	Tied for the best movie I have ever seen
+0110912	kylopod	10	20051117	The masterpiece without a message
+0108052	ving13	9	19980805	Excellent - Spielberg's Best
+0078748	BroadswordCallinDannyBoy	10	20040415	Classic tale of terror
+0071562	OriginalMovieBuff21	10	20040912	One of the greatest sequels ever made
+0068646	mattrochman	10	20061014	Initially, I wasn't a fan... but then I realised
+0060196	steven-f-freeman	10	20071226	Primal honesty and morality
+0050083	Smells_Like_Cheese	10	20061229	Terrific drama with some of the greatest actors in cinematic history
+1798709	enginozdil	10	20180417	Another movie that i say i should've watched before. Intense romantic drama.
+0803096	randywwe412	10	20160519	A great Fantasy flick
+2094766	JanskiT	5	20170114	It isn't so bad as it could be.
+5884052	beyondj	8	20190507	Critics p*** off!!
+1677720	ArchStanton1862	9	20180320	An Instant Classic
+2369135	BrentHankins?	7	20140312	silly and predictable, but plenty of fun.
+1727824	chas_newport?	9	20181025	You go to be entertained, but find yourself moved.
+9764654	Jiseong Kim	4	20190306	Run the Whole Course with Big hole.
+0406661	antal-wahlers	3	20050114	Waste of my time
+3306854	Timotei?	3.5	20160416	It's a bit too long, the pacing is awkward, some of the scene transitions are jarring, most of the new characters are irrelevant, the final performance had a lot of noticeable drops in animation quality, and it felt like it failed in its attempt to properly balance fan service and character drama. This movie has a lot of problems.
+0071853	Manthorpe 	10	20040216	They could grab it by the husk..... 
+0071853	james_gb	1	20030106	Doesn't Stand the Test of Time 
+0071853	lambiepie-2	10	20030418	The King of Comedies! 
+0071853	marac-1	10	20041128	Wonderful movie!  
+0081505	yancyscott1	9	20070409	timeless terror 
+0081505	FlickJunkie	9	20010724	Amazing achievement in filmmaking and the art of terror. 
+0081505	Smells_Like_Cheese	10	20031123	One of my favorite films 
+0081505	Anonymous_Maxine	10	20010402	The greatest horror movie of all time. 
+0101675	gridoon	4	20030101	Inept sci-fi. 
+0101675	Coventry	4	20100712	Alright people, we have two days to make this movie so let's hurry! 
+0101675	Aaron1375	3	20101122	Dead Space aka the Forbidden World remake. 
+0101675	the_northlander	1	20001007	Possibly the worst movie ever
+0462499	ivo-cobra8	10	20180102	Essential action film best Rambo film in the action genre my second personal favorite 
+0462499	chrisalsop1213	9	20080125	Pure action!! Solid Movie. 
+0462499	Norse_Sage	7	20080122	Rambo is back and better than ever! 
+0462499	mknez	10	20080125	Return of the action movie as we know it
+1206885	kobrasec	10	20190920	If you're a John Rambo fan you'll love it 
+1206885	ymyuseda	9	20190918	Stallone Has Truly Done It Again 
+1206885	stewartwoods-23908	10	20190920	Don't listen to the critics, this movie is gold. 
+1206885	bbraddock-49896	10	20190920	Stallone really knows how to rip your heart out 
+1663662	alr126	7	20131127	Cliche'd, but entertaining 
+1663662	drummer303	7	20131110	It's certainly not clever, but it is fun. 
+1663662	land-840-861366	7	20131127	Not bad, not great 
+1663662	ersinkdotcom	2	20130717	Pacific Rim looks great but lacks everything else a movie needs to be good 
+2557478	peterp-450-298716	3	20180817	I should stick to my plan not to watch sequels anymore. 
+2557478	patrickgebhard	2	20190226	A MONDAY EVENING I WILL NEVER GET BACK 
+2557478	qqh-57167	3	20181020	I Suppose There Isn't Much Room To Criticize This Film 
+2557478	Permalink	2	20181203	A Japanese tale, Japanese fantasy, Japanese lore, Japanese imagination... 
+3448226	Deadiron29	7	20140830	It's all about the message 
+3448226	alkalinetrio1010-108-844328	8	20140922	I know what you're thinking... 
+3448226	erniecolorado1	7	20140827	bold and thought provoking 
+3448226	Occult_Detective	9	20140820	I really enjoyed it. 
+4146622	Mack Lambert	2	20161014	Self-aggrandizing, patting one's self on the back... 
+4146622	hollybellet	4	20170108	Could have been better. 
+4146622	wfrazierusa	1	20161006	Awful, 99 minutes of agony 
+4146622	jimkirk-1	1	20180610	Don't waste your time 
+8328716	jamiedee-45573	1	20191001	By far worse then the rock doom. 
+8328716	backup-50362	1	20191001	We made a generic STROOOONG WHAMAAAAAAAAAN 
+8328716	TwistedContent	2	20191001	Cheap, Flat, Ridden With Cliches & Disrespectful of the Source Material 
+8328716	Darkfyre_rn	2	20191003	Diarrhea Masterpiece 
+4651520	54987449	2	20160801	Absolutely awful. 
+0247638	0650255	6	20020713	Typically Disney  
+6663582	5921267	7	20190119	Funny, Relatable, Not To Be Taken Too Seriously 
+5164214	23240045	6	20180608	Disappointing When Comparing The Previous Films 
+6095472	106590572	10	20190813	Best Comedy & Family movie. 
+0817177	8766134	8	20101128	A simple, classic, heartwarming story 
+0381061	5935953	8	20061108	One of the best Bond movies in years 
+1216496	21829222	8	20090803	A slow burning thriller that rewards the viewer 
+1935859	70317264	4	20161212	An amazing visual experience lacking good plot and storytelling 
+0121164	5951946	9	20051001	The Corpse Bride Is To Die For 
+0384537	10279905	9	20060420	Finally, a good, accurate game/film crossover. 
+1211837	53150945	8	20170405	Superb Visuals Accompanied by a Solid Script 
+0091064	1142410	10	20030716	Better than the original and one of the best horror films ever made 
+3498820	15140057	10	20170702	I don't understand the hate a descent awesome MCU super action superhero - Captain America is the king 
+3967856	33939154	10	20170629	Okja, a whole new look on livestock 
+0351283	1090950	8	20050529	Madagascar - a great ride! 
+0479952	1965782	8	20081025	You Got To Move It, Move It! 
+1277953	2625007	7	20120609	Best one yet! 
+0814255	2206295	1	20100212	hris Columbus should be ashamed!!!! 
+1854564	2848075	4	20130809	A Complete Embarrassment 
+1220719	1990395	8	20081214	Powerhouse performance by Donnie Yen 
+0317219	1389490	8	20060609	It's kind of nice to slow down every once in a while.
+2888046	3379319	10	20151223	Ip Man 3 is a touching ending to the Ip Man Trilogy, a movie with more depth than the previous two 
+4481414	3828595	10	20171010	Should Be Better Known 
+2239822	4060500	7	20180212	Wrong actors in a otherwise good movie 
+2510894	3324615	10	20150927	Surprised that this film is great indeed for kids and adults too. 
+0837562	2680414	8	20120928	Let the child in you enjoy this adventure 
+5220122	4239272	10	20180715	Fun for whole family
+0448157	0448157	7	20080701	Not your typical superhero movie, but still good
+0266543	1194203	9	20051015	Pixar's best feature to date
+0092067	DarkEye	10	20000724	You need a 20 out of 10 ratings to rate Miyazaki's films
+6966692	mhope-91601	10	20181124	A (mostly) true story of two men of completely different backgrounds overcoming their own prejudices and the stifling racism of the Deep South of the early 1960s.
+1474276	dee.reid	10	20110823	The film is a dazzling display of vibrant, pretty colors, computer-generated backgrounds/scenery, and lively three-dimensional characters.?
+1063669	sesmallz	8	20080225	Die Welle (The Wave) is truly a brilliant tale that lures viewers into its cleverly developed plot just as Wenger lures his unsuspecting students into a sense of fascism.
+0434409	paxatron	10	20060308	With solid acting, great action, and fantastic technical wizardry, it sounds just like another Matrix-style ripoff. But the biggest difference in V is that it is a story of real ideas - not a fantastic, science fiction creation, but a genuine examination of the human condition.
+0367594	thurberdrawing	8	20050718	If Tim Burton's out there I just want to thank him for bringing the spirit of the book's original illustrations to the screen.
+0325980	eak-1	10	20051127	This is not just another entry in the summer blockbust sweepstakes. It is an exquisite work of fantasy and inventiveness, a true classic, on the order of The Wizard of Oz.
+0180093	Brian Scott Mednick	9	20010212	You will not so much as want to take a sip of wine after watching this mesmerizing film about the horrors of drug addiction.
+0120382	Mark1988	10	20070409	It has comedy, drama, strong character development, atmosphere, originality, superb visuals, a superb score, tight writing, raises interesting moral questions as well as providing insight into the human condition.
+0119217	Gath	10	19990223	If you've not seen it, Good Will Hunting is without doubt a renter, and I think after seeing it, it's one you'll want to own to watch again and again.
+1637725	JeffTheBadger	8	20120703	I really should start this with a warning: This film is not for everyone! If you are easily offended (by swearing, sexual references, casual racism and various stereotypes) then you should read no further and give this one a miss. However, if you are a fan of Seth MacFarlane's other projects (Family Guy, American Dad) and maybe you call yourself an 80's child (so many pop culture references to this time) you are going to love this.
+2283336	yeolit	8	20190727	I watched almost all if not all of the past instalments, feels pretty M.I.B-ish to me, though at some points it was kind of cliched.
+2322441	gangstah_vino	1	20150210	I don't want to spoil a lot, so ill just give ratings with a brief description on certain elements of this so-called film.
+3659388	Sleepin_Dragon	8	20151018	If you've ever wondered if Tom Hanks went even further adrift in Castaway then this could be the answer you're looking for.
+5093026	jrbond-57624	5	20181028	This isn't a bad remake, but McQueen and Hoffman deliver such amazing performances in the original film, this film was always going to find that impossible to get close to. Whilst it's a reasonable stand-alone film and not a bad movie, you just find yourself comparing it to the original at every turn.
+0114924	bks-508-290401	10	20160208	If you want a gentle, unbelievably romantic film to watch on a cold evening, this is the one for you.
+0120616	BaronBl00d	8	20031007	The Mummy is an adventurous yarn in the vein of Indiana Jones. It's a lot of fun, very charming, and never tries to be more than what it is.
+0268978	ccthemovieman-1	9	20060201	The more I watch Russell Crowe, the more I am becoming a big fan of his acting talent. Here again, he demonstrates his skills in a role that had me spellbound. Of course, mentally-ill people are usually fascinating. Look how popular the cable television show Monk has become.
+0366174	CuriosityKilledShawn	6	20060930	The snakes themselves look okay, nothing special. Little keeps them hidden for as long as possible, only offering brief glimpses here and there. A snake is an awkward looking villain, so keeping it hidden is probably wiser. There is also, thank heavens, no dodgy animatronics.
+0427944	bitcetc	8	20060324	You'll need to inhale, then exhale slowly and relax before plunging into the world of Nick Naylor (Aaron Eckhart), lobbyist and bag man for the Tobacco Industry. The laughs are some of the best abdominal exercise I've ever had at the movies. Thank You for Smoking is far and away the best satire to come out of Hollywood in years.
+0077651	baumer	10	19990728	The personification of fear
+0107120	clay-8	9	19991009	I don't what the critics were talking about, but I found Hocus Pocus to be extreme fun, from start to finish. The use of color and the sets is all magical, giving the movie a strange fairy-tale feel. I also found it to be very funny with great special-effects. The movie's just plain fun. The three witches, thankfully, aren't flat and dull. This movie is scary without being profane (ala Mighty Joe Young) or super duper frightening. A great film that's much better than most Disney live-action films today.
+1302006	gary-simm	9	20191014	I was worried about the length of the film before i attended the screening, but i can honestly say, i was gripped all the way through, De Niro back to his best, Pesci was fantastic, Pacino was electric, Keitel was menacing & Stephen Graham held his own amongst this legendary cast. A return to this world that Scorsese has mastered with some of his best films & this film sits right up there right next to them. Get comfy & enjoy the great story telling ability of these masters at work.
+4068576	KensaoLightbringer	7	20190730	This revenge film is not for everyone, to say the least. The story is great, but the movie is extremely violent. The first 30 minutes of the film are hard to see, and for a lot of people, even hard to tolerate. One could argue that the director needed all this violence to properly portray the abuse against women that occurred at that time. A powerful experience, from which we do not emerge unscathed
+5294518	mmundoiii	6	20191019	This was not a bad movie at all and some of the negative reviews on here are way off mark. It's not a scary movie, in my opinion, (unless you scare easily) but it is interetsting and entertaining. I like twists and this one had a decent one. If you like TV Shows like Supernatural or others like it then you will probably enjoy this movie.
+6139732	kmylonopoulos33	3	20190807	Its a musical not a film it could have been much bettet, its only for kids
+0409459	A_different_Drummer	10	20130912	I have a serious problem with this film. I have seen it a half-dozen times, taken it apart, put it back together, tried to find something wrong with it and I cannot. I am coming to the reluctant conclusion it may be one of the greatest films ever made, likely a top-10, right up there with Citizen Kane, Alien, Godfather, you know the drill. The story is dazzling, action-packed, politically aware, and brilliant. As good or better than Sin City. The actors, many of whom (sigh) I am not familiar with are brilliant. Jackie Earle Haley practically picks the film up bodily and carries it. The direction is not merely good it is perfect. Even the sound track seems to move the story along. (And I am no fan of Zack Synder outside of this film. MAN OF STEEL was a sellout to the action crowd, creating chaos out of order. Ditto Sucker Punch). But art is like that. Sometimes it surprises you. Many critics have said that Social Network is the new Citizen Kane. But they confabulate. This film could actually be.
+8079248	oshanda	6	20190701	The original premise of the movie was fantastic - only one man knows that The Beatles ever existed and brings their music to the world. It could have been really really great. Unfortunately the idea was under developed, it felt as if the film's makers weren't quite sure what to do with it.  It ended up being nice and sweet when it could have been brilliant.
+8772262	rivertam26	6	20190703	Gorgeous visuals, creative cinematography and solid performances but the movie feels long winded and disconnected. The characters are underdeveloped and the plot is a little all over the place. The movie does however manage to be intentionally funny at times but not scary or very disturbing.
+6924650	rgregsheppard	8	20191205	A bit Hollywood but a good movie. Much better than the embarrassment of the movie Pearl Harbor.
+0079501	cliffhan	7.0 	19981109 	It looks like Mel but doesn't sound like Mel!
+0082694	ivo-cobra8	10.0 	20151003 	Mad Max 2: The Road Warrior is the best classic epic Post-Apocalyptic Action Science Fiction film in the Mad Max Franchise.
+0089530	slayer-3	6.0 	19981230 	Please don't waste your time & $$$.
+1392190	ivo-cobra8	10.0 	20151003 	Finally yes Finally I have seen a good Action Film from 2015. Mad Max: Fury Road is the finest blockbuster of 2015!
+0454945	cdelacroix1	8.0 	20060318 	Wonderful entertainment from beginning to end ... check it out!
+1703199	nephythys	8.0 	20110831 	If you have to nit-pick a movie to death you have way too much time on your hands.....HAVE FUN!
+0117731	ashley-120	10.0 	20050223 	First Contact is one film I enjoy watching again & again. The flight of the Phoenix is one scene I totally love, along with the end scenes.
+0111282	kersus	8.0 	20050518 	What grabbed me about this movie was the potential it had. There was just so much that could be done with this dynamite idea.
+0212720	Movie-12	9.0 	20010802 	One of the year's best films -- thought-provoking and deeply moving.
+0437086	na_icecream	9.0 	20190205 	I really love this movie. The storyline is really great. Exciting from start to finish.
+0348568	lu_morning	10.0 	20040306 	This is a beautiful picturesque movie about first love, a touching tale about love, sacrifice, and friendship crossing two generations.
+0468704	keal	10.0 	20061019 	lone, I'd say the Korean version is a nice love story that I'd watch once in awhile.
+0870967	polsixe	6.0 	20080117 	All in all, a straightforward message movie, well played.
+1233461	mrwickedproductions	8.0 	20130704 	I highly recommend giving it a watch, especially if you're a fan of Korean dramas.
+4273886	heniekb	9.0 	20181221 	Simply because we get used to the sound of his voice so we get at least one chance to be familiar with the protagonist. 
+2592808	KineticSeoul	4.0 	20130414 	I tried to like this one but it just got way too sappy, melodramatic, and just so darn predictable.
+5586914	peamapeam	7.0 	20160615 	This film is about a girl that have 10 years relationship with her boyfriend. And one day she met a strange guy on train and she was asked to one night stand with him.
+3694790	MartinHafer	6.0 	20140428 	Not a bad film at all but not one that without problems.
+0940642	kojisuzuki	8.0 	20070416 	200 pounds? That's a lot! The movie is very good, but not as good as some other Korean movies such as The Classic and Sassy Girl.
+0264464	camcmahon	8.0 	20050331 	This was an entertaining and fun piece of film making from the ever-reliable Steven Spielberg. 
+0945513	stephisthekingpin	8.0 	20110511 	Source Code is the 2nd feature film from English Director Duncan Jones (son of David Bowie).
+0363771	arabianardour	10.0 	20051223 	The Lion the Witch and the Wardrobe should go down in the history books right up there with the likes of Lord of the Rings.
+0980970	Gordon-11	10.0 	20101202 	This film is about the Pevensies and their cousin entering Narnia again, in order to help Prince Caspian gather all seven swords of the lords to fight against dark forces.
+0107614	GrantCAGE	9.0 	20010818 	I saw this movie at the cinema in 1993 and thought it was fantastic! It has everything you could ever really want in a comedy.
+0097523	kenjha	7.0 	20060509 	Absent-minded genius Moranis accidentally shrinks his kids to microscopic size and they end up in the yard.
+0377092	l-70607	9.0 	20170826 	This film is fun. You laugh, you get angry and you enjoy the show (literally, there is one!) This film is sexy.
+5700672	rishvikharveer	6.0 	20190921 	While everyone keeps talking about the cheerleader I like to point out that she may have legs and feminine hair of a cheerleader, but she is dressed in her school unform.
+2315152	reallyevilboy	10.0 	20140828 	I still look at this movie, just the front cover, a year after I have seen it and I feel a little tear roll down my cheek.
+2082180	paul_haakonsen	9.0 	20151231 	"Always" (aka "O-jik geu-dae-man") is the type of movie that you simply owe to yourself to watch, because it is a beautiful and touching movie, up alongside "Failan", "Oasis" and "Fly Me to Polaris".
+0428870	dexelex	10.0 	20120603 	First of all, I would like to mention that I'm a 19 years old medium-tough boy and I last cried like this when I released our grown up domestic rabbits in the forest with my mum a decade ago.
+1190080	pololmbob	7	20091115	It's the end of the world, not anybody's career
+0948470	jeddjong	8	20120626	The untold story? Not quite, but a well-told story? Definitely.
+2039393	damos	9	20150627	Very good, but requires connection with main character
+5027774	senisonic	9	20180217	Anger, what it begets, and what to do about it
+7784604	sportsmonkey1020	10	20190609	I never want to see this film again
+5649144	ferguson-6	8	20171018	Greetings again from the darkness
+5776858	statuskuo	8	20180117	Go See This With Caution
+5580390	TheKing87	10	20180605	Many people misunderstood this movie! There is a twist in the story!
+1396484	MovieGuy_abc123	9	20170831	Terrifyingly brilliant. You'll float too.
+1211956	Jerghal	7	20140226	Give it a chance
+0088763	ivo-cobra8	10.0	20170417	A classic masterpiece the original the only best my favorite time travel film of all time
+0103064	SeminolePhenom	10.0	20151014	Words cannot describe the greatness of this movie
+0110413	Methos-7	10.0	19990516	Gripping story with well-crafted characters
+0114814	TIDQ	10.0	20040908	The most enjoyment you'll have seeing a movie for the *second* time
+0172495	Spikeopath	10.0	20140806	They said you were a giant. They said you can crush a man's skull with one hand.
+0253474	Smells_Like_Cheese	10.0	20041101	Excellent, depressing, but excellent
+0381681	FilmBuff77	10.0	20041119	Absolutely fantastic. Easily the best film of the year.
+0477348	chaswe-28402	10.0	20180301	Marvellous Ending
+1130884	ruhsa	10.0	20170924	The movie is perfect psycho drama
+1386697	elie-md	7.0	20160801	Good movie but it could've been better
+6320628	khelfrich-71019	10.0	20190913	Great movie if you're 8 yrs old
+3783958	Marcus_Markou	10.0	20161010	My Most Memorable Cinematic Experience Since Star Wars - when I was six
+3397884	lbunyak	9.0	20191112	Non-stop
+1038988	teresaband	9.0	20080224	I was a wreck after watching this (ho ho)
+1270797	GuanXing	9.0	20181003	Very fun movie
+0259324	mystywolf	9.0	20070218	Somewhere Between X-Men and Spiderman
+2036416	Mikaban-315-449138	10.0	20120311	Wonderful moment....
+0328107	bt-wells99-1	9.0	20100204	Underrated and ignored, but a bit of a classic
+0277027	alphabettysoup	10.0	20020701	stunning performances
+1637688	skepsci	5.0	20111030	Time is wasting and you may want your time back at the end of the film
+0120804	enekephalian07	8	20050116	Good survival horror
+0318627	Darth_Nebuchadnezzr	6	20040930	Apocalypse' doesn't do everything wrong, but it certainly doesn't do everything right.
+0432021	otaku_miroku	8	20070921	A lot better than I expected!
+1220634	manjodude	6	20110822	Resident Evil(series) needs Fresh Blood or R.I.P.!
+0458525	DavidSim240183	9	20090508	Wolverine claws his way back on to the big screen
+1430132	chunkmeal2	3	20130127	WORST X-men movie ever (by far).
+1855325	m-a-elsewhere	6	20130203	Should be titled Resident Evil: Boss Battles
+2592614	jamgood-842-440804	5	20170301	A big let down for me.
+3315342	badmanlykme	10	20170218	Logan is everything you wanted it to be and more
+1046173	serennishiyama	7	20090809	The critics should remove the stick!
+0232500	baumer	8	20010625	Every summer a film comes around that takes everyone by surprise.
+0322259	masonsaul	6	20190726	It's not as good as the first and repeats the first film's plot but 2 Fast 2 Furious is still fun due to great performances from Paul Walker and Tyrese Gibson and their great chemistry. The enjoyable and over the top action helps as well.
+0463985	CinemaCocoa	8	20170413	Branching away from any original cast members of the first two films, thankfully, Tokyo Drift provides a refreshingly new look to the fanchise.
+1013752	ccthemovieman-1	7	20090819	This is one of these 107-minute testosterone movies guys crave every once in awhile, some more than others. Being a somewhat-old guy, I don't look as these as often anymore but every once in awhile it's fun to kick back and just watch fast cars, loose women, wild action and fairly-brainless film.
+1049413	michael11391	10	20090521	What can I say about Pixar? Amazing?? Perfect?? Got to see this at the Cannes Film Festival in France (went on a trip with my family) and Pixar gives us another instant classic: Up.
+1596343	CMTiago	9	20130826	Without a shadow of a doubt, The Fast And Furious Franchise reaches it's peak in this installment with breathtaking action and a sense of friendship and brotherhood shared by the lead characters.
+1905041	ivo-cobra8	10	20150817	Fast & Furious 6 (2013) is the best of the best Action film in the series franchise! It's Justin Lin's Masterpiece and I love it to death.
+2820852	ivo-cobra8	7	20170815	One last ride - not a bad action flick i like it
+4630562	BiiivAL	8	20180609	Blockbuster-soap opera with elements of comedy
+6806448	akcenat	7	20191003	Adrenaline-fueled ride absurd in terms of its believability but fun

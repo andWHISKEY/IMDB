@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost/roles.php -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>IMDB</title>
+
+<style>
+
+table {
+width: 65%;
+border: 1px solid #444444;
+    border-collapse: collapse;
+    margin-left: 200px;
+}
+th, td {
+border: 1px solid #444444;
+}
+#menu{
+background-color: #2d2d2d;
+height: 70px;
+border: 1px solid #ccc;
+border-width: 1px 0;
+}
+#topMenu {
+height: 60px;
+width: 1300px;
+align: 0 auto;
+}
+#topMenu ul li{
+list-style: none;
+color: white;
+background-color: #2d2d2d;
+float: left;
+line-height: 50px;
+vertical-align: middle;
+text-align: center;
+text-align: center;
+}
+#menu .right{
+float: right;
+
+}
+#Menu ul li{
+/* float: none; 세로 출력*/
+background-color: #636363;
+}
+#topMenu li ul{
+background-color: #636363;
+position:absolute;
+display:none;
+}
+#topMenu li:hover ul {
+display:block;
+}
+#topMenu .menuLink {
+text-decoration:none;
+color: white;
+display: block;
+width: 150px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuLink:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#topMenu .menuL {
+text-decoration:none;
+color: white;
+display: block;
+width: 170px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuL:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#delete_step label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+#updateform label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.form-search{
+height: 25px;
+width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#delete_step .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+}
+#updateform .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#search{
+font-size: 20px;
+width: 90px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#search_btn{
+height: 25px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step1{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step2{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step3{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-delete{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.step{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+color: red;
+}
+body { text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */ }
+
+.input:hover{
+cursor:pointer;
+}
+#home{
+font-size: 60px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+color: black;
+}
+#updatestep1{
+display: none
+}
+#updatestep2{
+display: none
+}
+#updatestep3{
+display: none
+}
+#delete_step{
+display: none
+}
+</style>
+</head>
+<body>
+<a id="home" href="http://localhost/index.php">8조 IMDB</a>
+<br>
+<div id="menu">
+<nav id="topMenu">
+<ul>
+<li><a class="menuLink" href="http://localhost/roles.php#">Movie</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie.php">movies</a></li>
+<li><a class="menuL" href="http://localhost/movie_genres.php">movie_genres</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/roles.php#">Actor</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/actors.php">actors</a></li>
+<li><a class="menuL" href="http://localhost/roles.php">roles</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/roles.php#">Director</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie_directors.php">movie_directors</a></li>
+<li><a class="menuL" href="http://localhost/directors_genres.php">directors_genres</a></li>
+<li><a class="menuL" href="http://localhost/directors.php">directors</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/roles.php#">Review</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/reviews.php">reviews</a></li>
+</ul>
+</nav>
+</li>
+<li class="right">
+<form name="mysearchbar" action="http://localhost/search.php" method="post">
+<div class="input-group">
+
+<select id="search" name="search">
+<option value="movie">movie</option>
+<option value="actor">actor</option>
+<option value="director">director</option>
+<option value="genre">genre</option>
+</select>
+<input name="Search_name" type="text" class="form-search" placeholder="search">
+&nbsp;&nbsp;
+<button type="submit" id="search_btn">검색</button>
+</div>
+</form>
+</li>
+<li class="right"><a class="menuLink" href="http://localhost/roles.php#" id="update_step1">Update</a></li>
+<li class="right"><a class="menuLink" href="http://localhost/roles.php#" id="delete">Delete</a></li>
+</ul>
+</nav>
+</div>
+<br><br>
+
+<!-- delete -->
+<form action="http://localhost/delete_data.php" method="post">
+<div id="delete_step">
+<h2 class="step">DELETE DATA</h2>
+<br><br><br>
+<div class="form-group">
+<label for="delete_movie_id">Movie Name</label>
+<br><br>
+<input type="delete_movie_id" class="form-control" name="movie_name" id="delete_movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-delete">Delete</button>
+</div>
+</form>
+
+
+<!-- update -->
+<form action="http://localhost/insert_data.php" method="post">
+<div id="updateform">
+
+
+<!-- STEP1: INPUT MOVIES TABLE -->
+
+<div id="updatestep1">
+<h2 class="step">STEP1: INPUT MOVIES TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_name">Movie Name</label>
+<br><br>
+<input type="movie_name" class="form-control" name="movie_name" id="movie_name" placeholder="Enter movie name here (e.g., Gattaca)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_year">Movie Year</label>
+<br><br>
+<input type="movie_year" class="form-control" name="movie_year" id="movie_year" placeholder="Enter movie year here (e.g., 1965)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_genres">Movie Genres</label>
+<br><br>
+<input type="movie_genres" class="form-control" name="movie_genres" id="movie_genres" placeholder="Enter movie genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="runtime_rating">Runtime</label>
+<br><br>
+<input type="runtime_rating" class="form-control" name="runtime_rating" id="runtime_rating" placeholder="Enter runtime rating here (e.g., 172)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="rating">Rating</label>
+<br><br>
+<input type="rating" class="form-control" name="rating" id="rating" placeholder="Enter Rating here (e.g., 7.1)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="plot">Plot</label>
+<br><br>
+<input type="plot" class="form-control" name="plot" id="plot" placeholder="Enter plot here (e.g., A woman leaves an Austrian convent t.....)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="budget">Budget</label>
+<br><br>
+<input type="budget" class="form-control" name="budget" id="budget" placeholder="Enter budget here (e.g., 8200000)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="gross_glob">Gross glob</label>
+<br><br>
+<input type="gross_glob" class="form-control" name="gross_glob" id="gross_glob" placeholder="Enter Gross glob here (e.g., 159413574)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="submitter_id">Submitter ID</label>
+<br><br>
+<input type="submitter_id" class="form-control" name="submitter_id" id="submitter_id" placeholder="Enter submitter id here (e.g., 2017113323)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step1">next</button>
+</div>
+
+<!-- STEP2: INPUT ACTORS TABLE -->
+
+<div id="updatestep2">
+<h2 class="step">STEP2: INPUT ACTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_id">Actor ID</label>
+<br><br>
+<input type="actor_id" class="form-control" name="actor_id" id="actor_id" placeholder="Enter actor ID here (e.g., 0000267)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_name">Actor Name</label>
+<br><br>
+<input type="actor_name" class="form-control" name="actor_name" id="actor_name" placeholder="Enter actor name here (e.g., Julie Andrews)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_gender">Actor Gender</label>
+<br><br>
+<input type="actor_gender" class="form-control" name="actor_gender" id="actor_gender" placeholder="Enter actor gender here (e.g., F)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="role">Role</label>
+<br><br>
+<input type="role" class="form-control" name="role" id="role" placeholder="Enter role here (e.g., Maria)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step2">next</button>
+</div>
+
+<!-- STEP3: INPUT DIRECTORS TABLE -->
+
+<div id="updatestep3">
+<h2 class="step">STEP3: INPUT DIRECTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_id">Director ID</label>
+<br><br>
+<input type="director_id" class="form-control" name="director_id" id="director_id" placeholder="Enter director ID here (e.g., 0936404)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_name">Director Name</label>
+<br><br>
+<input type="director_name" class="form-control" name="director_name" id="director_name" placeholder="Enter director name here (e.g., Robert Wise)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_genres">Director Genres</label>
+<br><br>
+<input type="director_genres" class="form-control" name="director_genres" id="director_genres" placeholder="Enter actor genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-step3">Insert</button>
+</div>
+</div>
+</form>
+<script language="javascript">
+document.getElementById("delete").onclick = function() {
+    document.getElementById("delete_step").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updatestep3").style.display="none";
+
+}
+document.getElementById("btn-delete").onclick = function() {
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+
+document.getElementById("update_step1").onclick = function() {
+    document.getElementById("updatestep1").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+
+}
+
+document.getElementById("btn-step1").onclick = function() {
+    document.getElementById("updatestep2").style.display="block";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step2").onclick = function() {
+    document.getElementById("updatestep3").style.display="block";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step3").onclick = function() {
+    document.getElementById("updatestep3").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+</script>
+<div id="all_table">
+
+				  			  <p></p><h3> ROLE table (Currently 1263 roles in database)</h3><p></p>
+
+ 			  <table cellspacing="0" width="100%">
+ 			    <thead>
+ 			    <tr>
+ 			      <th>Role</th>
+ 			      <th>Actor ID</th>
+ 			      <th>Movie ID</th>
+ 			    </tr>
+ 			    </thead>
+
+ 			    <tbody>
+ 			    <tr><td>Ilsa Lund</td><td>0000006</td><td>0034583</td></tr><tr><td>Rick Blaine</td><td>0000007</td><td>0034583</td></tr><tr><td>Don Vito Corleone</td><td>0000008</td><td>0068646</td></tr><tr><td>Christine</td><td>0000017</td><td>0051201</td></tr><tr><td>Juror 8</td><td>0000020</td><td>0050083</td></tr><tr><td>Rhett Butler</td><td>0000022</td><td>0031381</td></tr><tr><td>Dorothy</td><td>0000023</td><td>0032138</td></tr><tr><td>Don Lockwood</td><td>0000037</td><td>0045152</td></tr><tr><td>Scarlett</td><td>0000046</td><td>0031381</td></tr><tr><td>Doc Hudson</td><td>0000056</td><td>0317219</td></tr><tr><td>Leonard Vole</td><td>0000061</td><td>0051201</td></tr><tr><td>John 'Scottie' Ferguson</td><td>0000071</td><td>0052357</td></tr><tr><td>Second Swallow-Savvy Guard / The Black Knight / Peasant 3 / Sir Launcelot the Brave / Taunting French Guard / Tim the Enchanter</td><td>0000092</td><td>0071853</td></tr><tr><td>Achilles</td><td>0000093</td><td>0332452</td></tr><tr><td>Cliff Booth</td><td>0000093</td><td>7131622</td></tr><tr><td>Lt. Aldo Raine</td><td>0000093</td><td>0361748</td></tr><tr><td>Mills</td><td>0000093</td><td>0114369</td></tr><tr><td>Roy McBride</td><td>0000093</td><td>2935510</td></tr><tr><td>Rusty Ryan</td><td>0000093</td><td>0496806</td></tr><tr><td>Tyler Durden</td><td>0000093</td><td>0137523</td></tr><tr><td>Grace Connelly</td><td>0000098</td><td>0315327</td></tr><tr><td>Jack Swigert</td><td>0000102</td><td>0112384</td></tr><tr><td>Gertie</td><td>0000106</td><td>0083866</td></tr><tr><td>Dobby</td><td>0000110</td><td>0295297</td></tr><tr><td>Hamlet</td><td>0000110</td><td>0116477</td></tr><tr><td>Sam</td><td>0000112</td><td>0795421</td></tr><tr><td>Stu</td><td>0000112</td><td>0107614</td></tr><tr><td>Annie</td><td>0000113</td><td>0111257</td></tr><tr><td>Debbie Ocean</td><td>0000113</td><td>5164214</td></tr><tr><td>Lucy</td><td>0000113</td><td>0114924</td></tr><tr><td>Ryan Stone</td><td>0000113</td><td>1254468</td></tr><tr><td>Johnny Blaze / Ghost Rider</td><td>0000115</td><td>0259324</td></tr><tr><td>Bruce Nolan</td><td>0000120</td><td>0315327</td></tr><tr><td>Mr.Popper</td><td>0000120</td><td>1396218</td></tr><tr><td>Truman Burbank</td><td>0000120</td><td>0120382</td></tr><tr><td>A Tramp</td><td>0000122</td><td>0021749</td></tr><tr><td>Danny Ocean</td><td>0000123</td><td>0496806</td></tr><tr><td>Matt Kowalski</td><td>0000123</td><td>1254468</td></tr><tr><td>Alicia Nash</td><td>0000124</td><td>0268978</td></tr><tr><td>Chiren</td><td>0000124</td><td>0437086</td></tr><tr><td>Javert</td><td>0000128</td><td>1707386</td></tr><tr><td>Maximus</td><td>0000128</td><td>0172495</td></tr><tr><td>Ethan Hunt</td><td>0000129</td><td>0117060</td></tr><tr><td>Ethan Hunt</td><td>0000129</td><td>0120755</td></tr><tr><td>Ethan Hunt</td><td>0000129</td><td>0317919</td></tr><tr><td>Ethan Hunt</td><td>0000129</td><td>1229238</td></tr><tr><td>Ethan Hunt</td><td>0000129</td><td>2381249</td></tr><tr><td>Ethan Hunt</td><td>0000129</td><td>4912910</td></tr><tr><td>Laurie Strode</td><td>0000130</td><td>0077651</td></tr><tr><td>Ed</td><td>0000131</td><td>0309698</td></tr><tr><td>Jackson Curtis</td><td>0000131</td><td>1190080</td></tr><tr><td>Juliet</td><td>0000132</td><td>0117509</td></tr><tr><td>Veronica Quaife</td><td>0000133</td><td>0091064</td></tr><tr><td>Ben</td><td>0000134</td><td>2361509</td></tr><tr><td>Frank Sheeran</td><td>0000134</td><td>1302006</td></tr><tr><td>Jake La Motta</td><td>0000134</td><td>0081398</td></tr><tr><td>James Conway</td><td>0000134</td><td>0099685</td></tr><tr><td>Murray Franklin</td><td>0000134</td><td>7286456</td></tr><tr><td>Noodles</td><td>0000134</td><td>0087843</td></tr><tr><td>Vito Corleone</td><td>0000134</td><td>0071562</td></tr><tr><td>Grindelwald</td><td>0000136</td><td>4123430</td></tr><tr><td>Jack Sparrow</td><td>0000136</td><td>0325980</td></tr><tr><td>Jack Sparrow</td><td>0000136</td><td>0383574</td></tr><tr><td>Jack Sparrow</td><td>0000136</td><td>0449088</td></tr><tr><td>Jack Sparrow</td><td>0000136</td><td>1790809</td></tr><tr><td>Mad Hatter</td><td>0000136</td><td>1014759</td></tr><tr><td>Victor Van Dort</td><td>0000136</td><td>0121164</td></tr><tr><td>Willy Wonka</td><td>0000136</td><td>0367594</td></tr><tr><td>Calvin Candie</td><td>0000138</td><td>1853728</td></tr><tr><td>Cobb</td><td>0000138</td><td>1375666</td></tr><tr><td>Frank Abagnale Jr.</td><td>0000138</td><td>0264464</td></tr><tr><td>Hugh Glass</td><td>0000138</td><td>1663202</td></tr><tr><td>Jack Dawson</td><td>0000138</td><td>0120338</td></tr><tr><td>Jay Gatsby</td><td>0000138</td><td>1343092</td></tr><tr><td>Jordan Belfort</td><td>0000138</td><td>0993846</td></tr><tr><td>Rick Dalton</td><td>0000138</td><td>7131622</td></tr><tr><td>Romeo</td><td>0000138</td><td>0117509</td></tr><tr><td>Teddy Daniels</td><td>0000138</td><td>1130884</td></tr><tr><td>Blondie</td><td>0000142</td><td>0060196</td></tr><tr><td>Dr. Lawrence Gordon</td><td>0000144</td><td>0387564</td></tr><tr><td>Amon Goeth</td><td>0000146</td><td>0108052</td></tr><tr><td>Lord Voldemort</td><td>0000146</td><td>0330373</td></tr><tr><td>Lord Voldemort</td><td>0000146</td><td>0926084</td></tr><tr><td>Lord Voldemort</td><td>0000146</td><td>1201607</td></tr><tr><td>M. Gustave</td><td>0000146</td><td>2278388</td></tr><tr><td>Jamie</td><td>0000147</td><td>0314331</td></tr><tr><td>King George VI</td><td>0000147</td><td>1504320</td></tr><tr><td>Han Solo</td><td>0000148</td><td>0076759</td></tr><tr><td>Han Solo</td><td>0000148</td><td>0080684</td></tr><tr><td>Han Solo</td><td>0000148</td><td>2488496</td></tr><tr><td>Rick Deckard</td><td>0000148</td><td>0083658</td></tr><tr><td>Clarice Starling</td><td>0000149</td><td>0102926</td></tr><tr><td>Marty McFly</td><td>0000150</td><td>0088763</td></tr><tr><td>Ellis Boyd 'Red' Redding</td><td>0000151</td><td>0111161</td></tr><tr><td>God</td><td>0000151</td><td>0315327</td></tr><tr><td>God</td><td>0000151</td><td>0413099</td></tr><tr><td>Somerset</td><td>0000151</td><td>0114369</td></tr><tr><td>Regina (voice)</td><td>0000153</td><td>4429160</td></tr><tr><td>Max</td><td>0000154</td><td>0079501</td></tr><tr><td>Max</td><td>0000154</td><td>0082694</td></tr><tr><td>Max</td><td>0000154</td><td>0089530</td></tr><tr><td>Seth Brundle</td><td>0000156</td><td>0091064</td></tr><tr><td> Sarah Connor</td><td>0000157</td><td>6450804</td></tr><tr><td>Sarah connor</td><td>0000157</td><td>0088247</td></tr><tr><td>Sarah Connor</td><td>0000157</td><td>0103064</td></tr><tr><td>Captain Miller</td><td>0000158</td><td>0120815</td></tr><tr><td>Carl Hanratty</td><td>0000158</td><td>0264464</td></tr><tr><td>Forrest Gump</td><td>0000158</td><td>0109830</td></tr><tr><td>Jim Lovell</td><td>0000158</td><td>0112384</td></tr><tr><td>Paul Edgecomb</td><td>0000158</td><td>0120689</td></tr><tr><td>Viktor Navorski</td><td>0000158</td><td>0362227</td></tr><tr><td>Woody</td><td>0000158</td><td>0120363</td></tr><tr><td>Woody</td><td>0000158</td><td>0435761</td></tr><tr><td>Jesse</td><td>0000160</td><td>0112471</td></tr><tr><td>Jesse</td><td>0000160</td><td>0381681</td></tr><tr><td>Jesse</td><td>0000160</td><td>2209418</td></tr><tr><td>Todd Anderson</td><td>0000160</td><td>0097165</td></tr><tr><td>Dr. Amy Barnes</td><td>0000162</td><td>0120461</td></tr><tr><td>Ben Braddock</td><td>0000163</td><td>0061722</td></tr><tr><td>Shifu</td><td>0000163</td><td>0441773</td></tr><tr><td>Shifu</td><td>0000163</td><td>1302011</td></tr><tr><td>Shifu</td><td>0000163</td><td>2267968</td></tr><tr><td>Dr. Hannibal Lecter</td><td>0000164</td><td>0102926</td></tr><tr><td>Barron</td><td>0000168</td><td>1935859</td></tr><tr><td>Danny Roman</td><td>0000168</td><td>0120768</td></tr><tr><td>Darius Kincaid</td><td>0000168</td><td>1959563</td></tr><tr><td>Jules Winnfield</td><td>0000168</td><td>0110912</td></tr><tr><td>Lucius Best / Frozone (voice)</td><td>0000168</td><td>0317705</td></tr><tr><td>Mace Windu</td><td>0000168</td><td>0121766</td></tr><tr><td>Major Marquis Warren</td><td>0000168</td><td>3460252</td></tr><tr><td>Agent K</td><td>0000169</td><td>1409024</td></tr><tr><td>Ed Tom Bell</td><td>0000169</td><td>0477348</td></tr><tr><td>H. Clifford McBride</td><td>0000169</td><td>2935510</td></tr><tr><td>Kay</td><td>0000169</td><td>0119654</td></tr><tr><td>Kay</td><td>0000169</td><td>0120912</td></tr><tr><td>Mike Roark</td><td>0000169</td><td>0120461</td></tr><tr><td>Alice</td><td>0000170</td><td>0120804</td></tr><tr><td>Alice</td><td>0000170</td><td>0318627</td></tr><tr><td>Alice</td><td>0000170</td><td>0432021</td></tr><tr><td>Alice</td><td>0000170</td><td>1220634</td></tr><tr><td>Alice</td><td>0000170</td><td>1855325</td></tr><tr><td>Alice</td><td>0000170</td><td>2592614</td></tr><tr><td>Mr. White / Larry</td><td>0000172</td><td>0105236</td></tr><tr><td>Dr. John Watson</td><td>0000179</td><td>0988045</td></tr><tr><td>Gigolo Joe</td><td>0000179</td><td>0212720</td></tr><tr><td>Cooper</td><td>0000190</td><td>816692</td></tr><tr><td>Danny Torrance</td><td>0000191</td><td>5606664</td></tr><tr><td>Obi-Wan Kenobi</td><td>0000191</td><td>0120915</td></tr><tr><td>Obi-Wan Kenobi</td><td>0000191</td><td>0121765</td></tr><tr><td>Jack Torrance</td><td>0000197</td><td>0081505</td></tr><tr><td>R.P. McMurphy</td><td>0000197</td><td>0073486</td></tr><tr><td>Commissioner Gordon</td><td>0000198</td><td>1345836</td></tr><tr><td>Shen</td><td>0000198</td><td>1302011</td></tr><tr><td>Sirius Black</td><td>0000198</td><td>0304141</td></tr><tr><td>Stansfield</td><td>0000198</td><td>0110413</td></tr><tr><td>Don Michael Corleone</td><td>0000199</td><td>0099674</td></tr><tr><td>Jimmy Hoffa</td><td>0000199</td><td>1302006</td></tr><tr><td>John Milton</td><td>0000199</td><td>0118971</td></tr><tr><td>Lt. Col. Frank Slade</td><td>0000199</td><td>0105323</td></tr><tr><td>Michael</td><td>0000199</td><td>0068646</td></tr><tr><td>Michael</td><td>0000199</td><td>0071562</td></tr><tr><td>Fred Haise</td><td>0000200</td><td>0112384</td></tr><tr><td>Rita</td><td>0000201</td><td>0277027</td></tr><tr><td>Evey</td><td>0000204</td><td>0434409</td></tr><tr><td>Mathilda</td><td>0000204</td><td>0110413</td></tr><tr><td>Padmé</td><td>0000204</td><td>0121765</td></tr><tr><td>Queen Amidala / Padmé</td><td>0000204</td><td>0120915</td></tr><tr><td>Jack Traven</td><td>0000206</td><td>0111257</td></tr><tr><td>John Constantine</td><td>0000206</td><td>0360486</td></tr><tr><td>John Wick</td><td>0000206</td><td>2911666</td></tr><tr><td>John Wick</td><td>0000206</td><td>4425200</td></tr><tr><td>John Wick</td><td>0000206</td><td>6146586</td></tr><tr><td>Kevin Lomax</td><td>0000206</td><td>0118971</td></tr><tr><td>Neo</td><td>0000206</td><td>0133093</td></tr><tr><td>Andy Dufresne</td><td>0000209</td><td>0111161</td></tr><tr><td>Anna Scott</td><td>0000210</td><td>0125439</td></tr><tr><td> T-800</td><td>0000216</td><td>6450804</td></tr><tr><td>Rottmayer</td><td>0000216</td><td>1211956</td></tr><tr><td>Terminator</td><td>0000216</td><td>0088247</td></tr><tr><td>The Terminator</td><td>0000216</td><td>0103064</td></tr><tr><td>Jack Miller</td><td>0000219</td><td>0406661</td></tr><tr><td>Agent J</td><td>0000226</td><td>1409024</td></tr><tr><td>Deadshot</td><td>0000226</td><td>1386697</td></tr><tr><td>Genie/Mariner</td><td>0000226</td><td>6139732</td></tr><tr><td>Jay</td><td>0000226</td><td>0119654</td></tr><tr><td>Jay</td><td>0000226</td><td>0120912</td></tr><tr><td>John Hancock</td><td>0000226</td><td>0448157</td></tr><tr><td>Robert Neville</td><td>0000226</td><td>0480249</td></tr><tr><td>Chris Sabian</td><td>0000228</td><td>0120768</td></tr><tr><td>Lester Burnham</td><td>0000228</td><td>0169547</td></tr><tr><td>Breslin</td><td>0000230</td><td>1211956</td></tr><tr><td>John Rambo</td><td>0000230</td><td>0462499</td></tr><tr><td>John Rambo</td><td>0000230</td><td>1206885</td></tr><tr><td>Rocky</td><td>0000230</td><td>0075148</td></tr><tr><td>Imperator Furiosa</td><td>0000234</td><td>1392190</td></tr><tr><td>Mary</td><td>0000234</td><td>0448157</td></tr><tr><td>Mary Ann Lomax</td><td>0000234</td><td>0118971</td></tr><tr><td>Morticia Addams</td><td>0000234</td><td>1620981</td></tr><tr><td>Black Mamba</td><td>0000235</td><td>0378194</td></tr><tr><td>Irene</td><td>0000235</td><td>4651520</td></tr><tr><td>Mia Wallace</td><td>0000235</td><td>0110912</td></tr><tr><td>Vincent Vega</td><td>0000237</td><td>0110912</td></tr><tr><td>Cade Yeager</td><td>0000242</td><td>2109248</td></tr><tr><td>Jim Bennett</td><td>0000242</td><td>2039393</td></tr><tr><td>John Bennett</td><td>0000242</td><td>1637725</td></tr><tr><td>John W. Creasy</td><td>0000243</td><td>0328107</td></tr><tr><td>Ripley</td><td>0000244</td><td>0078748</td></tr><tr><td>Daniel Hillard&nbsp;/&nbsp;Mrs. Doubtfire</td><td>0000245</td><td>0107614</td></tr><tr><td>John Keating</td><td>0000245</td><td>0097165</td></tr><tr><td>Teddy Roosevelt</td><td>0000245</td><td>2692250</td></tr><tr><td>Malcolm Crowe</td><td>0000246</td><td>0167404</td></tr><tr><td>Max</td><td>0000249</td><td>0087843</td></tr><tr><td>Chuckie</td><td>0000255</td><td>0119217</td></tr><tr><td>Pamela Landy</td><td>0000260</td><td>0372183</td></tr><tr><td>Maria</td><td>0000267</td><td>0059742</td></tr><tr><td>Queen Clarisse Renaldi</td><td>0000267</td><td>0247638</td></tr><tr><td>Sam</td><td>0000276</td><td>0120737</td></tr><tr><td>Sam</td><td>0000276</td><td>0167261</td></tr><tr><td>Moses Randolph</td><td>0000285</td><td>0385887</td></tr><tr><td>McManus</td><td>0000286</td><td>0114814</td></tr><tr><td>Alfred Borden</td><td>0000288</td><td>0482571</td></tr><tr><td>Bruce Wayne</td><td>0000288</td><td>0468569</td></tr><tr><td>Bruce Wayne</td><td>0000288</td><td>1345836</td></tr><tr><td>Christopher Da Silva</td><td>0000293</td><td>0384537</td></tr><tr><td>Kyle Reese</td><td>0000299</td><td>0088247</td></tr><tr><td>Jane Burnham</td><td>0000301</td><td>0169547</td></tr><tr><td>Clayton&nbsp;(voice)</td><td>0000306</td><td>0120855</td></tr><tr><td>Bellatrix Lestrange</td><td>0000307</td><td>0926084</td></tr><tr><td>Corpse Bride</td><td>0000307</td><td>0121164</td></tr><tr><td>Queen Elizabeth</td><td>0000307</td><td>1504320</td></tr><tr><td>Red Queen</td><td>0000307</td><td>1014759</td></tr><tr><td>Keaton</td><td>0000321</td><td>0114814</td></tr><tr><td>Steve</td><td>0000321</td><td>7784604</td></tr><tr><td>Claire</td><td>0000322</td><td>0117060</td></tr><tr><td>Mike</td><td>0000345</td><td>0198781</td></tr><tr><td>Mike</td><td>0000345</td><td>1453405</td></tr><tr><td>Kevin</td><td>0000346</td><td>0099785</td></tr><tr><td>Kevin</td><td>0000346</td><td>0104431</td></tr><tr><td>Jessie the Yodeling Cowgirl</td><td>0000349</td><td>0120363</td></tr><tr><td>Jessie the Yodeling Cowgirl</td><td>0000349</td><td>0435761</td></tr><tr><td>  Vulko</td><td>0000353</td><td>1477834</td></tr><tr><td>Jopling</td><td>0000353</td><td>2278388</td></tr><tr><td>Bourne</td><td>0000354</td><td>0258463</td></tr><tr><td>Jason Bourne</td><td>0000354</td><td>0372183</td></tr><tr><td>Linus Caldwell</td><td>0000354</td><td>0496806</td></tr><tr><td>Mark Watney</td><td>0000354</td><td>3659388</td></tr><tr><td>Will</td><td>0000354</td><td>0119217</td></tr><tr><td>Reynolds Woodcock</td><td>0000358</td><td>5776858</td></tr><tr><td>Patsy Loski</td><td>0000360</td><td>0817177</td></tr><tr><td>Céline</td><td>0000365</td><td>0112471</td></tr><tr><td>Celine</td><td>0000365</td><td>0381681</td></tr><tr><td>Celine</td><td>0000365</td><td>2209418</td></tr><tr><td>Sherlock Holmes</td><td>0000375</td><td>0988045</td></tr><tr><td>Tony Stark</td><td>0000375</td><td>0371746</td></tr><tr><td>Tony Stark / Iron Man</td><td>0000375</td><td>0848228</td></tr><tr><td>Tony Stark / Iron Man</td><td>0000375</td><td>1228705</td></tr><tr><td>Tony Stark / Iron Man</td><td>0000375</td><td>1300854</td></tr><tr><td>Tony Stark / Iron Man</td><td>0000375</td><td>2250912</td></tr><tr><td>Tony Stark / Iron Man</td><td>0000375</td><td>2395427</td></tr><tr><td>Tony Stark / Iron Man</td><td>0000375</td><td>3498820</td></tr><tr><td>Tony Stark / Iron Man</td><td>0000375</td><td>4154756</td></tr><tr><td>Tony Stark / Iron Man</td><td>0000375</td><td>4154796</td></tr><tr><td>Jane&nbsp;(voice)</td><td>0000378</td><td>0120855</td></tr><tr><td>Tom Hagen</td><td>0000380</td><td>0071562</td></tr><tr><td>Army Sarge</td><td>0000388</td><td>0114709</td></tr><tr><td>Miranda Hillard</td><td>0000398</td><td>0107614</td></tr><tr><td>Mrs. Gump</td><td>0000398</td><td>0109830</td></tr><tr><td>Laurel</td><td>0000400</td><td>0119654</td></tr><tr><td>Morpheus</td><td>0000401</td><td>0133093</td></tr><tr><td>Princess Leia</td><td>0000402</td><td>0080684</td></tr><tr><td>Princess Leia Organa</td><td>0000402</td><td>0076759</td></tr><tr><td>Princess Leia</td><td>0000402/</td><td>2488496</td></tr><tr><td>Vernita Green</td><td>0000407</td><td>0378194</td></tr><tr><td>Riker</td><td>0000408</td><td>0117731</td></tr><tr><td>John Connor</td><td>0000411</td><td>0103064</td></tr><tr><td>Vincent Mancini</td><td>0000412</td><td>0099674</td></tr><tr><td>Detective David Tapp</td><td>0000418</td><td>0387564</td></tr><tr><td>Sullivan</td><td>0000422</td><td>0198781</td></tr><tr><td>Sullivan</td><td>0000422</td><td>1453405</td></tr><tr><td>William Thacker</td><td>0000424</td><td>0125439</td></tr><tr><td>Luke Skywalker</td><td>0000434</td><td>0076759</td></tr><tr><td>Luke Skywalker</td><td>0000434</td><td>0080684</td></tr><tr><td>Luke Skywalker</td><td>0000434</td><td>2488496</td></tr><tr><td>Luke Skywalker / Dobbu Scay</td><td>0000434</td><td>2527336</td></tr><tr><td>Beckett</td><td>0000437</td><td>3778644</td></tr><tr><td>Tallahassee</td><td>0000437</td><td>1156398</td></tr><tr><td>Tallahassee</td><td>0000437</td><td>1560220</td></tr><tr><td>Parcher</td><td>0000438</td><td>0268978</td></tr><tr><td>Wilford</td><td>0000438</td><td>1706620</td></tr><tr><td>Roy Batty</td><td>0000442</td><td>0083658</td></tr><tr><td>Kelly Roark</td><td>0000451</td><td>0120461</td></tr><tr><td>Howard Payne</td><td>0000454</td><td>0111257</td></tr><tr><td>Helen Parr / Elastigirl (voice)</td><td>0000456</td><td>0317705</td></tr><tr><td>Helen Parr / Elastigirl (voice)</td><td>0000456</td><td>3606756</td></tr><tr><td>Kane</td><td>0000457</td><td>0078748</td></tr><tr><td>Rikkin</td><td>0000460</td><td>2094766</td></tr><tr><td>Mufasa&nbsp;(voice)</td><td>0000469</td><td>6105098</td></tr><tr><td>Kay Adams Michelson</td><td>0000473</td><td>0099674</td></tr><tr><td>Adrian Toomes / Vulture</td><td>0000474</td><td>2250912</td></tr><tr><td>Tybalt</td><td>0000491</td><td>0117509</td></tr><tr><td>Daisy Domergue</td><td>0000492</td><td>3460252</td></tr><tr><td>Neil Perry</td><td>0000494</td><td>0097165</td></tr><tr><td>Henry Hill</td><td>0000501</td><td>0099685</td></tr><tr><td>Rhodes</td><td>0000501</td><td>0309698</td></tr><tr><td>Dr. Emmett Brown</td><td>0000502</td><td>0088763</td></tr><tr><td>Mr. Blonde / Vic Vega</td><td>0000514</td><td>0105236</td></tr><tr><td>Mildred</td><td>0000531</td><td>5027774</td></tr><tr><td>Momma&nbsp;(voice)</td><td>0000531</td><td>1979388</td></tr><tr><td>Winifred</td><td>0000541</td><td>0107120</td></tr><tr><td>Oskar Schindler</td><td>0000553</td><td>0108052</td></tr><tr><td>Qui-Gon Jinn</td><td>0000553</td><td>0120915</td></tr><tr><td>Charlie Simms</td><td>0000563</td><td>0105323</td></tr><tr><td>Pepper Potts</td><td>0000569</td><td>1228705</td></tr><tr><td>Pepper Potts</td><td>0000569</td><td>1300854</td></tr><tr><td>Tracy</td><td>0000569</td><td>0114369</td></tr><tr><td>Sarah</td><td>0000572</td><td>0107120</td></tr><tr><td>Sam Dawson</td><td>0000576</td><td>0277027</td></tr><tr><td>Javert</td><td>0000578</td><td>0077936</td></tr><tr><td>Norman Bates</td><td>0000578</td><td>0054215</td></tr><tr><td>Harry</td><td>0000582</td><td>0099785</td></tr><tr><td>Harry</td><td>0000582</td><td>0104431</td></tr><tr><td>Tommy DeVito</td><td>0000582</td><td>0099685</td></tr><tr><td>Gloria</td><td>0000586</td><td>0351283</td></tr><tr><td>Gloria</td><td>0000586</td><td>0479952</td></tr><tr><td>Gloria</td><td>0000586</td><td>1277953</td></tr><tr><td>Dr. Loomis</td><td>0000587</td><td>0077651</td></tr><tr><td>Jack</td><td>0000597</td><td>0114924</td></tr><tr><td>Franklin</td><td>0000604</td><td>1242460</td></tr><tr><td>Ralph</td><td>0000604</td><td>5848272</td></tr><tr><td>Ralph&nbsp;(voice)</td><td>0000604</td><td>1772341</td></tr><tr><td>Leon</td><td>0000606</td><td>0110413</td></tr><tr><td>Luther</td><td>0000609</td><td>0317919</td></tr><tr><td>Luther</td><td>0000609</td><td>2381249</td></tr><tr><td>Luther Stickell</td><td>0000609</td><td>4912910</td></tr><tr><td>Mr. Orange / Freddy</td><td>0000619</td><td>0105236</td></tr><tr><td>Colonel Jonathan 'Jack' O'Nell</td><td>0000621</td><td>0111282</td></tr><tr><td>John Ruth</td><td>0000621</td><td>3460252</td></tr><tr><td>Dallas</td><td>0000643</td><td>0078748</td></tr><tr><td>Dr. Daniel Jackson</td><td>0000652</td><td>0111282</td></tr><tr><td>Data</td><td>0000653</td><td>0117731</td></tr><tr><td>Miranda Priestly</td><td>0000658</td><td>0458352</td></tr><tr><td>Carolyn Perron</td><td>0000666</td><td>1457767</td></tr><tr><td>Professor Lupin</td><td>0000667</td><td>0304141</td></tr><tr><td>Agent O</td><td>0000668</td><td>1409024</td></tr><tr><td>Petra</td><td>0000668</td><td>8623904</td></tr><tr><td>Lorraine Baines</td><td>0000670</td><td>0088763</td></tr><tr><td>Director Josef</td><td>0000683</td><td>4651520</td></tr><tr><td>Jim Phelps</td><td>0000685</td><td>0117060</td></tr><tr><td>Frank Abagnale</td><td>0000686</td><td>0264464</td></tr><tr><td>Clementine Kruczynski</td><td>0000701</td><td>0338013</td></tr><tr><td>Rose Dewitt Bukater</td><td>0000701</td><td>0120338</td></tr><tr><td>Frodo</td><td>0000704</td><td>0167260</td></tr><tr><td>Rachael</td><td>0000707</td><td>0083658</td></tr><tr><td>Cal Hockley</td><td>0000708</td><td>0120338</td></tr><tr><td>Buzz Lightyear</td><td>0000741</td><td>0120363</td></tr><tr><td>Buzz Lightyear</td><td>0000741</td><td>0435761</td></tr><tr><td>Carl Fredricksen</td><td>0000799</td><td>1049413</td></tr><tr><td>Juror 1</td><td>0000842</td><td>0050083</td></tr><tr><td>Mrs. Robinson</td><td>0000843</td><td>0061722</td></tr><tr><td>Anton Chigurh</td><td>0000849</td><td>0477348</td></tr><tr><td>Captain Salazar</td><td>0000849</td><td>1790809</td></tr><tr><td>Silva</td><td>0000849</td><td>1074638</td></tr><tr><td>Nick Wilde</td><td>0000867</td><td>2948356</td></tr><tr><td>Ray</td><td>0000867</td><td>0448157</td></tr><tr><td>Carolyn Burnham</td><td>0000906</td><td>0169547</td></tr><tr><td>Sofia</td><td>0000932</td><td>6146586</td></tr><tr><td>Galadriel</td><td>0000949</td><td>0120737</td></tr><tr><td>Galadriel</td><td>0000949</td><td>0167261</td></tr><tr><td>Lou</td><td>0000949</td><td>5164214</td></tr><tr><td>Stepmother</td><td>0000949</td><td>1661199</td></tr><tr><td>Valka (voice)</td><td>0000949</td><td>1646971</td></tr><tr><td>Jack Malik</td><td>0000965</td><td>8079248</td></tr><tr><td>Ernesto de la Cruz</td><td>0000973</td><td>2380307</td></tr><tr><td>Llewelyn Moss</td><td>0000982</td><td>0477348</td></tr><tr><td>Matt Graver</td><td>0000982</td><td>3397884</td></tr><tr><td>Marlin</td><td>0000983</td><td>0266543</td></tr><tr><td>Dr. Karen Fletcher</td><td>0000990</td><td>4972582</td></tr><tr><td>Sara Goldfarb</td><td>0000995</td><td>0180093</td></tr><tr><td>Sonny Corleone</td><td>0001001</td><td>0068646</td></tr><tr><td>Father MacAvoy</td><td>0001015</td><td>0471041</td></tr><tr><td>King Arthur / Voice of God / Middle Head / Hiccoughing Guard</td><td>0001037</td><td>0071853</td></tr><tr><td>Gertrude</td><td>0001046</td><td>0116477</td></tr><tr><td>Lynn Sear</td><td>0001057</td><td>0167404</td></tr><tr><td>Hagrid</td><td>0001059</td><td>0241527</td></tr><tr><td>Jedediah Leland&nbsp;/&nbsp;Screening Room Reporter</td><td>0001072</td><td>0033467</td></tr><tr><td>Keys</td><td>0001075</td><td>0083866</td></tr><tr><td>Dr. Manhattan / Jon Osterman</td><td>0001082</td><td>0409459</td></tr><tr><td>Ra</td><td>0001109</td><td>0111282</td></tr><tr><td>Dory</td><td>0001122</td><td>0266543</td></tr><tr><td>Alejandro</td><td>0001125</td><td>3397884</td></tr><tr><td>Fenster</td><td>0001125</td><td>0114814</td></tr><tr><td>M</td><td>0001132</td><td>1074638</td></tr><tr><td>Wendy Torrance</td><td>0001167</td><td>0081505</td></tr><tr><td>Destro</td><td>0001172</td><td>1046173</td></tr><tr><td>Joe</td><td>0001185</td><td>0247638</td></tr><tr><td>Dracula</td><td>0001191</td><td>0837562</td></tr><tr><td>Dracula</td><td>0001191</td><td>2510894</td></tr><tr><td>Dracula</td><td>0001191</td><td>5220122</td></tr><tr><td>Joel Barish</td><td>000120</td><td>0338013</td></tr><tr><td>Shan-Yu</td><td>0001208</td><td>0120762</td></tr><tr><td>Yao</td><td>0001213</td><td>0120762</td></tr><tr><td>Nurse Ratched</td><td>0001221</td><td>0073486</td></tr><tr><td>Big Russ Thompson</td><td>0001242</td><td>0097523</td></tr><tr><td>Tarzan&nbsp;(voice)</td><td>0001282</td><td>0120855</td></tr><tr><td>Harold Attinger</td><td>0001288</td><td>2109248</td></tr><tr><td>Amanda</td><td>0001303</td><td>1396218</td></tr><tr><td>Rebecca</td><td>0001303</td><td>0477347</td></tr><tr><td>Jonathan Carnahan</td><td>0001314</td><td>0120616</td></tr><tr><td>Albus Dumbledore</td><td>0001321</td><td>0241527</td></tr><tr><td>Professor Quirrell</td><td>0001324</td><td>0241527</td></tr><tr><td>Samantha Andrews</td><td>0001349</td><td>0332136</td></tr><tr><td>Sally Carrera</td><td>0001372</td><td>0317219</td></tr><tr><td>Dead Collector / Peasant 1 / Sir Robin the Not-Quite-So-Brave-as-Sir Launcelot / First Swamp Castle Guard / Concorde / Roger the Shrubber / Brother Maynard</td><td>0001385</td><td>0071853</td></tr><tr><td>Maleficent</td><td>0001401</td><td>4777008</td></tr><tr><td>Tigress</td><td>0001401</td><td>0441773</td></tr><tr><td>Tigress</td><td>0001401</td><td>1302011</td></tr><tr><td>Tigress</td><td>0001401</td><td>2267968</td></tr><tr><td>Marge Simpson</td><td>0001413</td><td>0462538</td></tr><tr><td>Ed</td><td>0001421</td><td>2039393</td></tr><tr><td>Dr. Cawley</td><td>0001426</td><td>1130884</td></tr><tr><td>Itzhak Stern</td><td>0001426</td><td>0108052</td></tr><tr><td>Mr.Van Gundy</td><td>0001450</td><td>1396218</td></tr><tr><td>Sir Wilfrid Roberts</td><td>0001452</td><td>0051201</td></tr><tr><td>Harry Goldfarb</td><td>0001467</td><td>0180093</td></tr><tr><td>Meryl Burbank / Hannah Gill</td><td>0001473</td><td>0120382</td></tr><tr><td>Supreme Chancellor Palpatine</td><td>0001519</td><td>0121766</td></tr><tr><td>Deborah</td><td>0001527</td><td>0087843</td></tr><tr><td>Robert 'Bob' Paulsen</td><td>0001533</td><td>0137523</td></tr><tr><td>Wayne Szalinski</td><td>0001548</td><td>0097523</td></tr><tr><td>Vickie La Motta</td><td>0001550</td><td>0081398</td></tr><tr><td>Brutus 'Brutal' Howell</td><td>0001556</td><td>0120689</td></tr><tr><td>Aragorn</td><td>0001557</td><td>0167260</td></tr><tr><td>Tony Lip</td><td>0001557</td><td>6966692</td></tr><tr><td>Mary</td><td>0001562</td><td>0107120</td></tr><tr><td>Lucilla</td><td>0001567</td><td>0172495</td></tr><tr><td>Lionel Essrog</td><td>0001570</td><td>0385887</td></tr><tr><td>The Narrator</td><td>0001570</td><td>0137523</td></tr><tr><td>Madeleine Elster&nbsp;/&nbsp;Judy Barton</td><td>0001571</td><td>0052357</td></tr><tr><td>Teddy</td><td>0001592</td><td>0209144</td></tr><tr><td>Leonard</td><td>0001602</td><td>0209144</td></tr><tr><td>Kate Curtis</td><td>0001605</td><td>1190080</td></tr><tr><td>Paris</td><td>0001605</td><td>0309698</td></tr><tr><td> Arthur Fleck</td><td>0001618</td><td>7286456</td></tr><tr><td>Commodus</td><td>0001618</td><td>0172495</td></tr><tr><td>Theodore</td><td>0001618</td><td>1798709</td></tr><tr><td>Captain Von Trapp</td><td>0001626</td><td>0059742</td></tr><tr><td>Charles Muntz</td><td>0001626</td><td>1049413</td></tr><tr><td>Marty</td><td>0001674</td><td>0351283</td></tr><tr><td>Marty</td><td>0001674</td><td>0479952</td></tr><tr><td>Marty</td><td>0001674</td><td>1277953</td></tr><tr><td>Barbossa</td><td>0001691</td><td>0325980</td></tr><tr><td>Captain Hector Barbossa</td><td>0001691</td><td>1790809</td></tr><tr><td>Lionel Logue</td><td>0001691</td><td>1504320</td></tr><tr><td>Adrian</td><td>0001735</td><td>0075148</td></tr><tr><td>Commander Steve Krieger</td><td>0001743</td><td>0101675</td></tr><tr><td>Sergeant Horvath</td><td>0001744</td><td>0120815</td></tr><tr><td>Senator Bail Organa</td><td>0001751</td><td>0121766</td></tr><tr><td>Wormtail</td><td>0001758</td><td>0330373</td></tr><tr><td>Charles</td><td>0001772</td><td>3315342</td></tr><tr><td>Picard</td><td>0001772</td><td>0117731</td></tr><tr><td>Alex</td><td>0001774</td><td>0351283</td></tr><tr><td>Alex</td><td>0001774</td><td>0479952</td></tr><tr><td>Alex</td><td>0001774</td><td>1277953</td></tr><tr><td>Larry Daley</td><td>0001774</td><td>0477347</td></tr><tr><td>Larry Daley</td><td>0001774</td><td>1078912</td></tr><tr><td>Larry Daley</td><td>0001774</td><td>2692250</td></tr><tr><td>Elliott</td><td>0001794</td><td>0083866</td></tr><tr><td>Zed</td><td>0001800</td><td>0120912</td></tr><tr><td>Caesar Flickerman</td><td>0001804</td><td>1392170</td></tr><tr><td>Joshua Joyce</td><td>0001804</td><td>2109248</td></tr><tr><td>Sentenza / Angel Eyes</td><td>0001812</td><td>0060196</td></tr><tr><td>Cecil</td><td>0001813</td><td>0477347</td></tr><tr><td>Victoria Everglot</td><td>0001833</td><td>0121164</td></tr><tr><td>Angela Dodson&nbsp;/&nbsp;Isabel Dodson</td><td>0001838</td><td>0360486</td></tr><tr><td>Evelyn Carnahan</td><td>0001838</td><td>0120616</td></tr><tr><td>Big Harold</td><td>0001845</td><td>0091763</td></tr><tr><td>Amelia Warren</td><td>0001876</td><td>0362227</td></tr><tr><td>Juror 3</td><td>0002011</td><td>0050083</td></tr><tr><td>Professor Albus Dumbledore</td><td>0002091</td><td>0417741</td></tr><tr><td>Commander Stone Hopper</td><td>0002907</td><td>1440129</td></tr><tr><td>A Prizefighter</td><td>0003424</td><td>0021749</td></tr><tr><td>John Coffey</td><td>0003817</td><td>0120689</td></tr><tr><td>Andy Sachs</td><td>0004266</td><td>0458352</td></tr><tr><td>Brand</td><td>0004266</td><td>816692</td></tr><tr><td>Daphne Kluger</td><td>0004266</td><td>5164214</td></tr><tr><td>Jules</td><td>0004266</td><td>2361509</td></tr><tr><td>Mia Thermopolis</td><td>0004266</td><td>0247638</td></tr><tr><td>Marie</td><td>0004376</td><td>0258463</td></tr><tr><td>Marie</td><td>0004376</td><td>0372183</td></tr><tr><td>Sarah</td><td>0004748</td><td>0462499</td></tr><tr><td>Wladyslaw Szpilman</td><td>0004778</td><td>0253474</td></tr><tr><td>Viola</td><td>0004789</td><td>0454945</td></tr><tr><td>Bart Simpson</td><td>0004813</td><td>0462538</td></tr><tr><td>Dominic Toretto</td><td>0004874</td><td>0232500</td></tr><tr><td>Dominic Toretto</td><td>0004874</td><td>1013752</td></tr><tr><td>Dominic Toretto</td><td>0004874</td><td>1596343</td></tr><tr><td>Dominic Toretto</td><td>0004874</td><td>1905041</td></tr><tr><td>Dominic Toretto</td><td>0004874</td><td>2820852</td></tr><tr><td>Dominic Toretto</td><td>0004874</td><td>4630562</td></tr><tr><td>Groot (voice)</td><td>0004874</td><td>2015381</td></tr><tr><td>Carlos Olivera</td><td>0004912</td><td>0432021</td></tr><tr><td>Medivh</td><td>0004936</td><td>0803096</td></tr><tr><td>Django</td><td>0004937</td><td>1853728</td></tr><tr><td>Gusteau&nbsp;(voice)</td><td>0004951</td><td>0382932</td></tr><tr><td>Lai Lai Zhen</td><td>0005026</td><td>0471041</td></tr><tr><td>Amy</td><td>0005109</td><td>4651520</td></tr><tr><td>Audrey</td><td>0005109</td><td>6663582</td></tr><tr><td>Lori Collins</td><td>0005109</td><td>1637725</td></tr><tr><td>Claire</td><td>0005123</td><td>0432021</td></tr><tr><td>Claire</td><td>0005123</td><td>1220634</td></tr><tr><td>Claire</td><td>0005123</td><td>2592614</td></tr><tr><td>Patrick Verona</td><td>0005132</td><td>0147800</td></tr><tr><td>Gandalf</td><td>0005212</td><td>0167260</td></tr><tr><td>Natalie</td><td>0005251</td><td>0209144</td></tr><tr><td>Trinity</td><td>0005251</td><td>0133093</td></tr><tr><td>Bob Parr / Mr. Incredible (voice)</td><td>0005266</td><td>3606756</td></tr><tr><td>Cole Sear</td><td>0005286</td><td>0167404</td></tr><tr><td>David</td><td>0005286</td><td>0212720</td></tr><tr><td>Amelia Roussel</td><td>0005351</td><td>1959563</td></tr><tr><td>Detective Pikachu</td><td>0005351</td><td>5884052</td></tr><tr><td>Wade / Deadpool</td><td>0005351</td><td>1431045</td></tr><tr><td>Wade / Deadpool</td><td>0005351</td><td>5463162</td></tr><tr><td>Wade wilson</td><td>0005351</td><td>0458525</td></tr><tr><td>Deckard Shaw</td><td>0005458</td><td>4630562</td></tr><tr><td>Deckard Shaw</td><td>0005458</td><td>6806448</td></tr><tr><td>Kat Stratford</td><td>0005466</td><td>0147800</td></tr><tr><td>Will Salas</td><td>0005493</td><td>1637688</td></tr><tr><td>Marcus Copeland</td><td>0005541</td><td>0381707</td></tr><tr><td>Gil</td><td>0005562</td><td>1605783</td></tr><tr><td>Jedediah</td><td>0005562</td><td>1078912</td></tr><tr><td>Jedediah</td><td>0005562</td><td>2692250</td></tr><tr><td>Lightning McQueen</td><td>0005562</td><td>0317219</td></tr><tr><td>Amelia Earhart</td><td>0010736</td><td>1078912</td></tr><tr><td>Amy</td><td>0010736</td><td>1798709</td></tr><tr><td>Baymax</td><td>0012523</td><td>2245084</td></tr><tr><td>Laurie Jupiter/Silk Spectre2</td><td>0015196</td><td>0409459</td></tr><tr><td>Court Official</td><td>0016852</td><td>0396171</td></tr><tr><td>Adolescent Bambi</td><td>0017013</td><td>0034492</td></tr><tr><td>Young Roxanne Simpson</td><td>0018161</td><td>0259324</td></tr><tr><td>Young Flower</td><td>0018755</td><td>0034492</td></tr><tr><td>Serge X.</td><td>0023832</td><td>2278388</td></tr><tr><td>Rob</td><td>0026687</td><td>0087298</td></tr><tr><td>Samantha</td><td>0036978</td><td>0087298</td></tr><tr><td>Doc</td><td>0041165</td><td>0029583</td></tr><tr><td>Sofî&nbsp;(voice)</td><td>0047962</td><td>0347149</td></tr><tr><td>Young Tina Shepard</td><td>0052079</td><td>0095179</td></tr><tr><td>Griggs</td><td>0054697</td><td>1386697</td></tr><tr><td>Eric</td><td>0055549</td><td>0097757</td></tr><tr><td>Vinnie</td><td>0057450</td><td>0089173</td></tr><tr><td>Doug</td><td>0059228</td><td>0087298</td></tr><tr><td>Hiccup (voice)</td><td>0059431</td><td>0892769</td></tr><tr><td>Hiccup (voice)</td><td>0059431</td><td>1646971</td></tr><tr><td>Hiccup (voice)</td><td>0059431</td><td>2386490</td></tr><tr><td>Trusty</td><td>0061649</td><td>0048280</td></tr><tr><td>Young Thumper</td><td>0066951</td><td>0034492</td></tr><tr><td>Anna&nbsp;(voice)</td><td>0068338</td><td>2294629</td></tr><tr><td>Ariel</td><td>0072533</td><td>0097757</td></tr><tr><td>Dewey Finn</td><td>0085312</td><td>0332379</td></tr><tr><td>Po</td><td>0085312</td><td>0441773</td></tr><tr><td>Po</td><td>0085312</td><td>1302011</td></tr><tr><td>Po</td><td>0085312</td><td>2267968</td></tr><tr><td>Sean Boswell</td><td>0085407</td><td>0463985</td></tr><tr><td>Clara</td><td>0086697</td><td>1588398</td></tr><tr><td>Legolas</td><td>0089217</td><td>0167261</td></tr><tr><td>Will Turner</td><td>0089217</td><td>0383574</td></tr><tr><td>Will Turner</td><td>0089217</td><td>0449088</td></tr><tr><td>FBI Instructor</td><td>0095029</td><td>0102926</td></tr><tr><td>Mia</td><td>0108287</td><td>1013752</td></tr><tr><td>Mia</td><td>0108287</td><td>1596343</td></tr><tr><td>Miss Minchin</td><td>0111376</td><td>0113670</td></tr><tr><td>Jason</td><td>0111777</td><td>0083972</td></tr><tr><td>Lucy</td><td>0115161</td><td>1588398</td></tr><tr><td>Clay</td><td>0117022</td><td>0463985</td></tr><tr><td>Toecutter</td><td>0117412</td><td>0079501</td></tr><tr><td>Huntsman</td><td>0118081</td><td>0029583</td></tr><tr><td>Private Reiben</td><td>0122653</td><td>0120815</td></tr><tr><td>WALL·E&nbsp;/&nbsp;M-O&nbsp;/&nbsp;Robots&nbsp;(voice)</td><td>0123785</td><td>0910970</td></tr><tr><td>King Leonidas</td><td>0124930</td><td>0416449</td></tr><tr><td>Stoick (voice)</td><td>0124930</td><td>0892769</td></tr><tr><td>Rayna Boyanov</td><td>0126284</td><td>3079380</td></tr><tr><td>Renai Lambert</td><td>0126284</td><td>1591095</td></tr><tr><td>Jim Miller</td><td>0129445</td><td>0097388</td></tr><tr><td>Evan Baxter</td><td>0136797</td><td>0413099</td></tr><tr><td>Ben</td><td>0136988</td><td>0032976</td></tr><tr><td>Man 1</td><td>0140952</td><td>1588398</td></tr><tr><td>Snow White</td><td>0143314</td><td>0029583</td></tr><tr><td>Homer Simpson</td><td>0144657</td><td>0462538</td></tr><tr><td>August Walker</td><td>0147147</td><td>4912910</td></tr><tr><td>A Blind Girl</td><td>0156039</td><td>0021749</td></tr><tr><td>David Kim</td><td>0158626</td><td>7668870</td></tr><tr><td>Go-ni</td><td>0158648</td><td>0875025</td></tr><tr><td>jun-ho</td><td>0158648</td><td>0348568</td></tr><tr><td>Dae-su Oh</td><td>0158856</td><td>0364569</td></tr><tr><td>Jang Kyung-chul</td><td>0158856</td><td>1588170</td></tr><tr><td>Anakin Skywalker</td><td>0159789</td><td>0121765</td></tr><tr><td>David Rice</td><td>0159789</td><td>0489099</td></tr><tr><td>Bennett</td><td>0167649</td><td>1220634</td></tr><tr><td>Jedediah Jr.</td><td>0168284</td><td>0089530</td></tr><tr><td>Susan Alexander Kane</td><td>0173827</td><td>0033467</td></tr><tr><td>Fin</td><td>0175305</td><td>0332280</td></tr><tr><td>Megan</td><td>0177438</td><td>0091080</td></tr><tr><td>Sofia</td><td>0182839</td><td>2094766</td></tr><tr><td>James Bond</td><td>0185819</td><td>0381061</td></tr><tr><td>James Bond</td><td>0185819</td><td>1074638</td></tr><tr><td>Lord Asriel</td><td>0185819</td><td>0385752</td></tr><tr><td>Dr. Frank Darden</td><td>0186505</td><td>0101675</td></tr><tr><td>Li</td><td>0186505</td><td>2267968</td></tr><tr><td>Winnie the Pooh</td><td>0191906</td><td>1449283</td></tr><tr><td>Guard 1 Dungeon</td><td>0192173</td><td>0396171</td></tr><tr><td>Rennie Wickham</td><td>0196762</td><td>0097388</td></tr><tr><td>King</td><td>0202966</td><td>0091763</td></tr><tr><td>Leaven</td><td>0207498</td><td>0123755</td></tr><tr><td>Frank Crawley</td><td>0219666</td><td>0032976</td></tr><tr><td>Summer</td><td>0221046</td><td>1022603</td></tr><tr><td>Eddie</td><td>0228884</td><td>0089173</td></tr><tr><td>Bookstore Manager</td><td>0229943</td><td>0381681</td></tr><tr><td>Marc</td><td>0233304</td><td>3448226</td></tr><tr><td>Ahsoka Tano (voice)</td><td>0237065</td><td>1185834</td></tr><tr><td>Captain Lennox</td><td>0241049</td><td>0418279</td></tr><tr><td>Captain Lennox</td><td>0241049</td><td>1055369</td></tr><tr><td>Evelyn Adler</td><td>0242026</td><td>4481414</td></tr><tr><td>La Mousme</td><td>0247237</td><td>3262342</td></tr><tr><td>Tom Buchanan</td><td>0249291</td><td>1343092</td></tr><tr><td>Columbus</td><td>0251986</td><td>1156398</td></tr><tr><td>Columbus</td><td>0251986</td><td>1560220</td></tr><tr><td>J. Daniel Atlas</td><td>0251986</td><td>1670345</td></tr><tr><td>Adrian Helmsley</td><td>0252230</td><td>1190080</td></tr><tr><td>Mordo</td><td>0252230</td><td>1211837</td></tr><tr><td>Seraphina Picquery</td><td>0252238</td><td>4123430</td></tr><tr><td>Brixton</td><td>0252961</td><td>6806448</td></tr><tr><td>Chief Bogo</td><td>0252961</td><td>2948356</td></tr><tr><td>Stacker Pentecost</td><td>0252961</td><td>1663662</td></tr><tr><td>Captain America / Steve Rogers</td><td>0262635</td><td>0458339</td></tr><tr><td>Captain America / Steve Rogers</td><td>0262635</td><td>0848228</td></tr><tr><td>Captain America / Steve Rogers</td><td>0262635</td><td>2395427</td></tr><tr><td>Captain America / Steve Rogers</td><td>0262635</td><td>4154756</td></tr><tr><td>Captain America / Steve Rogers</td><td>0262635</td><td>4154796</td></tr><tr><td>Curtis</td><td>0262635</td><td>1706620</td></tr><tr><td>Frank Adler</td><td>0262635</td><td>4481414</td></tr><tr><td>Steve Rogers / Captain America</td><td>0262635</td><td>3498820</td></tr><tr><td>Lucy</td><td>0266824</td><td>0277027</td></tr><tr><td>Lupita Ramos</td><td>0266824</td><td>0328107</td></tr><tr><td>Colleen Goodwin</td><td>0267812</td><td>0945513</td></tr><tr><td>Kate</td><td>0267812</td><td>1148204</td></tr><tr><td>Lorraine Warren</td><td>0267812</td><td>1457767</td></tr><tr><td>Happy Hogan</td><td>0269463</td><td>1228705</td></tr><tr><td>Happy Hogan</td><td>0269463</td><td>1300854</td></tr><tr><td>Draco Malfoy</td><td>0271657</td><td>0241527</td></tr><tr><td>Aunt Sarah</td><td>0271658</td><td>0048280</td></tr><tr><td>Rose the Hat</td><td>0272581</td><td>5606664</td></tr><tr><td>Ms. Norbury</td><td>0275486</td><td>0377092</td></tr><tr><td>Joe</td><td>0279524</td><td>0314331</td></tr><tr><td>Henley Reeves</td><td>0279545</td><td>1670345</td></tr><tr><td>Bill Williamson</td><td>0281956</td><td>3448226</td></tr><tr><td>Bill Williamson</td><td>0281956</td><td>4146622</td></tr><tr><td>Conan Edogawa (voice)</td><td>0283253</td><td>7880466</td></tr><tr><td>Dorota</td><td>0288976</td><td>0253474</td></tr><tr><td>Buzz Lightyear</td><td>0289710</td><td>0114709</td></tr><tr><td>Paul</td><td>029885</td><td>0082418</td></tr><tr><td>Héctor</td><td>0305558</td><td>2380307</td></tr><tr><td>Captain&nbsp;(voice)</td><td>0307531</td><td>0910970</td></tr><tr><td>Holloway</td><td>0309914</td><td>0123755</td></tr><tr><td>Stathis Borans</td><td>0315288</td><td>0091064</td></tr><tr><td>Boo</td><td>0316701</td><td>0198781</td></tr><tr><td>Dr.Isaacs</td><td>0322513</td><td>2592614</td></tr><tr><td>Hugh Alexander</td><td>0328828</td><td>2084970</td></tr><tr><td>Judy Hopps</td><td>0329481</td><td>2948356</td></tr><tr><td>Arthur</td><td>0330687</td><td>1375666</td></tr><tr><td>Tom</td><td>0330687</td><td>1022603</td></tr><tr><td>Noah</td><td>0331516</td><td>0332280</td></tr><tr><td>Sebastian</td><td>0331516</td><td>3783958</td></tr><tr><td>Joan Baxter</td><td>0334179</td><td>0413099</td></tr><tr><td>Ron Weasley</td><td>0342488</td><td>0241527</td></tr><tr><td>Ron Weasley</td><td>0342488</td><td>0295297</td></tr><tr><td>Ron Weasley</td><td>0342488</td><td>0304141</td></tr><tr><td>Ron Weasley</td><td>0342488</td><td>0330373</td></tr><tr><td>Ron Weasley</td><td>0342488</td><td>0417741</td></tr><tr><td>Ron Weasley</td><td>0342488</td><td>0926084</td></tr><tr><td>Ron Weasley</td><td>0342488</td><td>1201607</td></tr><tr><td>Jill Valentine</td><td>0347149</td><td>0318627</td></tr><tr><td>Jill Valentine</td><td>0347149</td><td>1855325</td></tr><tr><td>Warden Norton</td><td>0348409</td><td>0111161</td></tr><tr><td>Colter Stevens</td><td>0350453</td><td>0945513</td></tr><tr><td>ji-ho</td><td>0351710</td><td>1233461</td></tr><tr><td>Woody</td><td>0360028</td><td>0114709</td></tr><tr><td>Esther</td><td>0361823</td><td>0052618</td></tr><tr><td>Bane</td><td>0362766</td><td>1345836</td></tr><tr><td>Eddie Brock / Venom</td><td>0362766</td><td>1270797</td></tr><tr><td>Farrier</td><td>0362766</td><td>5013056</td></tr><tr><td>John Fitzgerald</td><td>0362766</td><td>1663202</td></tr><tr><td>Max Rockatansky</td><td>0362766</td><td>1392190</td></tr><tr><td>Mi-do</td><td>0364569</td><td>0364569</td></tr><tr><td>Quintus Arrius</td><td>0370144</td><td>0052618</td></tr><tr><td>Katherine G. Johnson</td><td>0378245</td><td>4846340</td></tr><tr><td>Worth</td><td>0382110</td><td>0123755</td></tr><tr><td>Satsuki</td><td>0383022</td><td>0096283</td></tr><tr><td>Charlie Bucket</td><td>0383630</td><td>0367594</td></tr><tr><td>Chihiro Ogino&nbsp;/&nbsp;Sen&nbsp;(voice)</td><td>0383708</td><td>0245429</td></tr><tr><td>Fujin (voice)</td><td>0383708</td><td>0876563</td></tr><tr><td>Jason Voorhees</td><td>0387987</td><td>0097388</td></tr><tr><td>Cybil Bennett</td><td>0390229</td><td>0384537</td></tr><tr><td>Nux</td><td>0396558</td><td>1392190</td></tr><tr><td>Stryker</td><td>0396812</td><td>0458525</td></tr><tr><td>Henri Charriere(Papillon)</td><td>0402271</td><td>5093026</td></tr><tr><td>Raleigh Becket</td><td>0402271</td><td>1663662</td></tr><tr><td>The Lizard / Dr. Curt Connors</td><td>0406975</td><td>0948470</td></tr><tr><td>Ivan</td><td>0410667</td><td>8623904</td></tr><tr><td>Tatsuo Kusakabe</td><td>0411790</td><td>0096283</td></tr><tr><td>Jean Valjean</td><td>0413168</td><td>1707386</td></tr><tr><td>Logan</td><td>0413168</td><td>0458525</td></tr><tr><td>Logan</td><td>0413168</td><td>1430132</td></tr><tr><td>Logan</td><td>0413168</td><td>3315342</td></tr><tr><td>P.T. Barnum</td><td>0413168</td><td>1485796</td></tr><tr><td>Robert Angier</td><td>0413168</td><td>0482571</td></tr><tr><td> Natasha Romanoff / Black Widow</td><td>0424060</td><td>3498820</td></tr><tr><td>Natasha Romanoff / Black Widow</td><td>0424060</td><td>0848228</td></tr><tr><td>Natasha Romanoff / Black Widow</td><td>0424060</td><td>1228705</td></tr><tr><td>Natasha Romanoff / Black Widow</td><td>0424060</td><td>1300854</td></tr><tr><td>Natasha Romanoff / Black Widow</td><td>0424060</td><td>2395427</td></tr><tr><td>Natasha Romanoff / Black Widow</td><td>0424060</td><td>4154756</td></tr><tr><td>Natasha Romanoff / Black Widow</td><td>0424060</td><td>4154796</td></tr><tr><td>Olivia Wenscombe</td><td>0424060</td><td>0482571</td></tr><tr><td>Samantha</td><td>0424060</td><td>1798709</td></tr><tr><td>Anastasia Steele</td><td>0424848</td><td>2322441</td></tr><tr><td>Anastasia Steele</td><td>0424848</td><td>4477536</td></tr><tr><td>Hobbs</td><td>0425005</td><td>1905041</td></tr><tr><td>Hobbs</td><td>0425005</td><td>2820852</td></tr><tr><td>Hobbs</td><td>0425005</td><td>4630562</td></tr><tr><td>Hobbs</td><td>0425005</td><td>6806448</td></tr><tr><td>Maui</td><td>0425005</td><td>3521164</td></tr><tr><td>Jane Hawking</td><td>0428065</td><td>2980516</td></tr><tr><td>Zeta</td><td>0428656</td><td>6095472</td></tr><tr><td>Gilderoy Lockhart</td><td>0429363</td><td>0295297</td></tr><tr><td>Erik Killmonger</td><td>0430107</td><td>1825683</td></tr><tr><td>Jean Valjean</td><td>0430151</td><td>0077936</td></tr><tr><td>Sang-jun</td><td>0431701</td><td>0940642</td></tr><tr><td>Hye-young</td><td>0432428</td><td>0468704</td></tr><tr><td>Cheol-su</td><td>0432601</td><td>0428870</td></tr><tr><td>Park Yi</td><td>0432601</td><td>0468704</td></tr><tr><td>Sheriff Garris</td><td>0434563</td><td>0091080</td></tr><tr><td>Dr. Crews</td><td>0435218</td><td>0095179</td></tr><tr><td>Han</td><td>0437646</td><td>0463985</td></tr><tr><td>Penny</td><td>0448204</td><td>3544112</td></tr><tr><td>Ranchoddas 'Rancho' Shyamaldas Chanchad</td><td>0451148</td><td>1187043</td></tr><tr><td>Adult Pi Patel</td><td>0451234</td><td>0454876</td></tr><tr><td>Alice Ribbons</td><td>0452748</td><td>0119303</td></tr><tr><td>Madam Jung</td><td>0453476</td><td>0875025</td></tr><tr><td>Chris</td><td>0454011</td><td>0083972</td></tr><tr><td>Hauru&nbsp;(voice)</td><td>0454120</td><td>0347149</td></tr><tr><td>Alice</td><td>0454415</td><td>0080761</td></tr><tr><td>Alice</td><td>0454415</td><td>0082418</td></tr><tr><td>Heather Vandergeld</td><td>0454809</td><td>0381707</td></tr><tr><td>Pam</td><td>0455687</td><td>0089173</td></tr><tr><td>Elizabeth Swann</td><td>0461136</td><td>0449088</td></tr><tr><td>Gretta</td><td>0461136</td><td>1980929</td></tr><tr><td>Joan Clarke</td><td>0461136</td><td>2084970</td></tr><tr><td>Nala&nbsp;(voice)</td><td>0461498</td><td>6105098</td></tr><tr><td>Petr Beaupre</td><td>0472762</td><td>0119303</td></tr><tr><td>Sam Witwicky</td><td>0479471</td><td>0418279</td></tr><tr><td>Sam Witwicky</td><td>0479471</td><td>1055369</td></tr><tr><td>Sam Witwicky</td><td>0479471</td><td>1399103</td></tr><tr><td>Ha-seon&nbsp;/&nbsp;King Gwang-hae</td><td>0496932</td><td>2290840</td></tr><tr><td>Kim Soo-hyeon</td><td>0496932</td><td>1588170</td></tr><tr><td>Storm Shadow</td><td>0496932</td><td>1046173</td></tr><tr><td>Harada</td><td>0498449</td><td>1430132</td></tr><tr><td>Percy Jackson</td><td>0503567</td><td>0814255</td></tr><tr><td>Percy Jackson</td><td>0503567</td><td>1854564</td></tr><tr><td>Alex Pruitt</td><td>0513281</td><td>0119303</td></tr><tr><td>Danny</td><td>0515950</td><td>0081505</td></tr><tr><td>Cady Heron</td><td>0517820</td><td>0377092</td></tr><tr><td>Eeyore</td><td>0524726</td><td>1449283</td></tr><tr><td>Joan Lunden</td><td>0526406</td><td>0427944</td></tr><tr><td>Vidal</td><td>0530365</td><td>0457430</td></tr><tr><td>Matt</td><td>0531095</td><td>0318627</td></tr><tr><td>Prince</td><td>0534635</td><td>1661199</td></tr><tr><td>Dr. Malcolm Betruger</td><td>0535582</td><td>8328716</td></tr><tr><td>School Boy</td><td>0550452</td><td>0462499</td></tr><tr><td>Tommy</td><td>0558726</td><td>0091080</td></tr><tr><td>Sara Crewe</td><td>0560093</td><td>0113670</td></tr><tr><td>Dennis</td><td>0564215</td><td>4972582</td></tr><tr><td>Mulroy</td><td>0564277</td><td>0362227</td></tr><tr><td>Tony</td><td>0564500</td><td>0125439</td></tr><tr><td>Susan Cooper</td><td>0565250</td><td>3079380</td></tr><tr><td>Skipper</td><td>0569891</td><td>1911658</td></tr><tr><td>Morgan</td><td>0571952</td><td>6663582</td></tr><tr><td>Tai Lung</td><td>0574534</td><td>0441773</td></tr><tr><td>Winston</td><td>0574534</td><td>4425200</td></tr><tr><td>Sorrento</td><td>0578853</td><td>1677720</td></tr><tr><td>Monica Fuentes</td><td>0578949</td><td>0322259</td></tr><tr><td>Roxanne Simpson</td><td>0578949</td><td>0259324</td></tr><tr><td>Elsa&nbsp;(voice)</td><td>0579953</td><td>2294629</td></tr><tr><td>Bill Johnson</td><td>0582257</td><td>0366174</td></tr><tr><td> Le Chiffre</td><td>0586568</td><td>0381061</td></tr><tr><td>Lila Crane</td><td>0587256</td><td>0054215</td></tr><tr><td>Jack</td><td>0592135</td><td>5028340</td></tr><tr><td>Rose Da Silva</td><td>0593664</td><td>0384537</td></tr><tr><td>Gerald O'Hara</td><td>0593775</td><td>0031381</td></tr><tr><td>Arechi no Majo (voice)</td><td>0594271</td><td>0347149</td></tr><tr><td>Hana&nbsp;(voice)</td><td>0594497</td><td>2140203</td></tr><tr><td>Takaki Tohno&nbsp;(voice)</td><td>0594647</td><td>0983213</td></tr><tr><td> Arthur</td><td>0597388</td><td>1477834</td></tr><tr><td>Rapunzel</td><td>0601553</td><td>0398286</td></tr><tr><td>Michael Myers</td><td>0602985</td><td>0077651</td></tr><tr><td>Professor Marvel&nbsp;/&nbsp;The Wizard of Oz&nbsp;/&nbsp;The Gatekeeper&nbsp;/&nbsp;The Carriage Driver&nbsp;/&nbsp;The Guard</td><td>0604656</td><td>0032138</td></tr><tr><td>Mary Lou</td><td>0608090</td><td>3183660</td></tr><tr><td>Peter Pevensie</td><td>0608440</td><td>0363771</td></tr><tr><td>Chip Parker - The News Anchor</td><td>0613147</td><td>3448226</td></tr><tr><td>Yubaba&nbsp;/&nbsp;Zeniba&nbsp;(voice)</td><td>0622412</td><td>0245429</td></tr><tr><td>Nyah Hall</td><td>0628601</td><td>0120755</td></tr><tr><td>Ian Wyndham</td><td>0629493</td><td>0332136</td></tr><tr><td>Billy Mack</td><td>0631490</td><td>0314331</td></tr><tr><td>Viggo Tarasov</td><td>0638824</td><td>2911666</td></tr><tr><td>Cosmo Brown</td><td>0640307</td><td>0045152</td></tr><tr><td>Monica Swinton</td><td>0640323</td><td>0212720</td></tr><tr><td>Henri</td><td>0648249</td><td>1464540</td></tr><tr><td>Wolf Man&nbsp;(voice)</td><td>0651534</td><td>2140203</td></tr><tr><td>Remy&nbsp;(voice)</td><td>0652663</td><td>0382932</td></tr><tr><td>Mr. John Shepard</td><td>0652965</td><td>0095179</td></tr><tr><td>Commander Arun Filitt</td><td>0654110</td><td>2239822</td></tr><tr><td>Seo Yeong-min</td><td>0656759</td><td>0428870</td></tr><tr><td>Mrs. Voorhees</td><td>0658133</td><td>0080761</td></tr><tr><td>The Baroness</td><td>0662223</td><td>0059742</td></tr><tr><td>Margot</td><td>0663546</td><td>3846674</td></tr><tr><td>Theo</td><td>0664238</td><td>0332379</td></tr><tr><td>Tobey Marshall</td><td>0666739</td><td>2369135</td></tr><tr><td> Benji</td><td>0670408</td><td>1229238</td></tr><tr><td>Benji</td><td>0670408</td><td>2381249</td></tr><tr><td>Hugo Martínez</td><td>0673824</td><td>1206885</td></tr><tr><td>Ariadne</td><td>0680983</td><td>1375666</td></tr><tr><td>Chuckie O'Brien</td><td>0687146</td><td>1302006</td></tr><tr><td>Joy</td><td>0688132</td><td>2096673</td></tr><tr><td>Jim Preston</td><td>0695435</td><td>1355644</td></tr><tr><td>Peter Quill</td><td>0695435</td><td>2015381</td></tr><tr><td>Peter Quill / Star-Lord</td><td>0695435</td><td>3896198</td></tr><tr><td>Pappagallo</td><td>0696463</td><td>0082694</td></tr><tr><td>Harry Potter</td><td>0705356</td><td>0241527</td></tr><tr><td>Harry Potter</td><td>0705356</td><td>0295297</td></tr><tr><td>Harry Potter</td><td>0705356</td><td>0304141</td></tr><tr><td>Harry Potter</td><td>0705356</td><td>0330373</td></tr><tr><td>Harry Potter</td><td>0705356</td><td>0417741</td></tr><tr><td>Harry Potter</td><td>0705356</td><td>0926084</td></tr><tr><td>Harry Potter</td><td>0705356</td><td>1201607</td></tr><tr><td>Harry Potter</td><td>0705356</td><td>373889</td></tr><tr><td>Mr. Trask</td><td>0714310</td><td>0105323</td></tr><tr><td>Rose</td><td>0717709</td><td>5294518</td></tr><tr><td>Tramp</td><td>0731333</td><td>0048280</td></tr><tr><td>Letty</td><td>0735442</td><td>0232500</td></tr><tr><td>Rain</td><td>0735442</td><td>0120804</td></tr><tr><td>Rain</td><td>0735442</td><td>1855325</td></tr><tr><td>Linguini&nbsp;(voice)</td><td>0738918</td><td>0382932</td></tr><tr><td>Tiana</td><td>0741242</td><td>0780521</td></tr><tr><td>Sgt. Donny Donowitz</td><td>0744834</td><td>0361748</td></tr><tr><td>Chuck Aule</td><td>0749263</td><td>1130884</td></tr><tr><td>Dan</td><td>0749263</td><td>1980929</td></tr><tr><td>Mei</td><td>0757076</td><td>0096283</td></tr><tr><td>Yukiatsu (voice)</td><td>0757327</td><td>2323836</td></tr><tr><td>Gamora</td><td>0757855</td><td>3896198</td></tr><tr><td>Chief Bromden</td><td>0760225</td><td>0073486</td></tr><tr><td>Jessie</td><td>0760394</td><td>0079501</td></tr><tr><td>John</td><td>0765597</td><td>1148204</td></tr><tr><td>Ali</td><td>0767352</td><td>0083972</td></tr><tr><td>Sean Ambrose</td><td>0779084</td><td>0120755</td></tr><tr><td>Richard Strickland</td><td>0788335</td><td>5580390</td></tr><tr><td>Arthur</td><td>0790688</td><td>1355644</td></tr><tr><td>Fa Li</td><td>0791467</td><td>0120762</td></tr><tr><td>Sergeant Srinivas</td><td>0795661</td><td>1010048</td></tr><tr><td>Vanellope</td><td>0798971</td><td>5848272</td></tr><tr><td>Vanellope&nbsp;(voice)</td><td>0798971</td><td>1772341</td></tr><tr><td>Miles Slade</td><td>0813812</td><td>0471041</td></tr><tr><td>Kim Ki-taek</td><td>0814280</td><td>6751668</td></tr><tr><td>Namgoong Minsoo</td><td>0814280</td><td>1706620</td></tr><tr><td>Jedediah the Pilot</td><td>0817748</td><td>0089530</td></tr><tr><td>The Gyro Captain</td><td>0817748</td><td>0082694</td></tr><tr><td>Dorothy Vaughan</td><td>0818055</td><td>4846340</td></tr><tr><td>Will</td><td>0819850</td><td>6472976</td></tr><tr><td>Ginny</td><td>082438</td><td>0082418</td></tr><tr><td>Marv</td><td>0827663</td><td>0099785</td></tr><tr><td>Marv</td><td>0827663</td><td>0104431</td></tr><tr><td>Bella Swan</td><td>0829576</td><td>1099212</td></tr><tr><td>Diane Szalinski</td><td>0833519</td><td>0097523</td></tr><tr><td>Sam Rogers</td><td>0834380</td><td>0366174</td></tr><tr><td>Mr. Perlman</td><td>0836121</td><td>5726616</td></tr><tr><td>Red</td><td>0837177</td><td>6095472</td></tr><tr><td>Eva Khatchadourian</td><td>0842770</td><td>1242460</td></tr><tr><td>Lucy Mirando</td><td>0842770</td><td>3967856</td></tr><tr><td>Pazu</td><td>0849028</td><td>0092067</td></tr><tr><td>Dr. Marissa Salinger</td><td>0851163</td><td>0101675</td></tr><tr><td>Obi-Wan Kenobi / 4-A7 / Medical Droid (voice)</td><td>0852517</td><td>1185834</td></tr><tr><td>Marcie</td><td>0852551</td><td>0080761</td></tr><tr><td>Roman Pearce</td><td>0879085</td><td>0322259</td></tr><tr><td>Carmen Delgado</td><td>0891895</td><td>1206885</td></tr><tr><td>Ángela</td><td>0892299</td><td>1038988</td></tr><tr><td>Mercedes</td><td>0893941</td><td>0457430</td></tr><tr><td>Rainer Wenger</td><td>0900915</td><td>1063669</td></tr><tr><td>Brian O'Conner</td><td>0908094</td><td>0232500</td></tr><tr><td>Brian O'Conner</td><td>0908094</td><td>0322259</td></tr><tr><td>Brian O'Conner</td><td>0908094</td><td>1013752</td></tr><tr><td>Brian O'Conner</td><td>0908094</td><td>1596343</td></tr><tr><td>Brian O'Conner</td><td>0908094</td><td>1905041</td></tr><tr><td>Brian O'Conner</td><td>0908094</td><td>2820852</td></tr><tr><td>Tuco</td><td>0908919</td><td>0060196</td></tr><tr><td>Col. Hans Landa</td><td>0910607</td><td>0361748</td></tr><tr><td>Dr. Dyson Ido</td><td>0910607</td><td>0437086</td></tr><tr><td>Dr. King Schultz</td><td>0910607</td><td>1853728</td></tr><tr><td>Hermione Granger</td><td>0914612</td><td>0417741</td></tr><tr><td>Hermione Granger</td><td>0914612</td><td>373889</td></tr><tr><td>Hermone Granger</td><td>0914612</td><td>0241527</td></tr><tr><td>Hermone Granger</td><td>0914612</td><td>0295297</td></tr><tr><td>Hermone Granger</td><td>0914612</td><td>0304141</td></tr><tr><td>Hermone Granger</td><td>0914612</td><td>0330373</td></tr><tr><td>Hermone Granger</td><td>0914612</td><td>0926084</td></tr><tr><td>Hermone Granger</td><td>0914612</td><td>1201607</td></tr><tr><td>Kevin Copeland</td><td>0915465</td><td>0381707</td></tr><tr><td>Johann Schmidt / Red Skull</td><td>0915989</td><td>0458339</td></tr><tr><td>V</td><td>0915989</td><td>0434409</td></tr><tr><td>Jean-Baptiste Grenouille</td><td>0924210</td><td>0396171</td></tr><tr><td>Michael Banks</td><td>0924210</td><td>5028340</td></tr><tr><td>Taxi Driver</td><td>0929489</td><td>0332136</td></tr><tr><td>Anne Weying</td><td>0931329</td><td>1270797</td></tr><tr><td>Charity Barnum</td><td>0931329</td><td>1485796</td></tr><tr><td>Nurse at Park Bench</td><td>0931508</td><td>0109830</td></tr><tr><td>Ed Warren</td><td>0933940</td><td>1457767</td></tr><tr><td>Edwin Layton</td><td>0933940</td><td>6924650</td></tr><tr><td>Josh Lambert</td><td>0933940</td><td>1591095</td></tr><tr><td>Hazel</td><td>0940362</td><td>2582846</td></tr><tr><td>Poppa&nbsp;(voice)</td><td>0942482</td><td>1979388</td></tr><tr><td>Sebastian</td><td>0942787</td><td>0097757</td></tr><tr><td>Quan</td><td>0945189</td><td>1220719</td></tr><tr><td>Ip Man</td><td>0947447</td><td>1220719</td></tr><tr><td>Ip Man</td><td>0947447</td><td>2888046</td></tr><tr><td>Sheeta</td><td>0948445</td><td>0092067</td></tr><tr><td>Woo-jin Lee</td><td>0949167</td><td>0364569</td></tr><tr><td>Yeo-jeong Yoon</td><td>0950926</td><td>0870967</td></tr><tr><td>Jurek</td><td>0954076</td><td>0253474</td></tr><tr><td>Rico</td><td>0970447</td><td>1911658</td></tr><tr><td>Dr. Donald Shirley</td><td>0991810</td><td>6966692</td></tr><tr><td>Haku&nbsp;(voice)</td><td>0997115</td><td>0245429</td></tr><tr><td>Shôya Ishida (voice)</td><td>0997115</td><td>5323662</td></tr><tr><td>Dino Brewster</td><td>1002641</td><td>2369135</td></tr><tr><td>Amano Hina&nbsp;(voice)</td><td>10030720</td><td>9426210</td></tr><tr><td>Mr.Grey</td><td>1011675</td><td>0120804</td></tr><tr><td>Cheung Tin-chi</td><td>1018221</td><td>2888046</td></tr><tr><td>Jeong Woo</td><td>1018373</td><td>0468704</td></tr><tr><td>Sauron</td><td>1019674</td><td>0120737</td></tr><tr><td>Elisa Esposito</td><td>1020089</td><td>5580390</td></tr><tr><td>Seung-ryong</td><td>1028580</td><td>1233461</td></tr><tr><td>Morishima Hodaka&nbsp;(voice)</td><td>10321662</td><td>9426210</td></tr><tr><td>Tim Stoltefuss</td><td>1035643</td><td>1063669</td></tr><tr><td>Grover</td><td>1040365</td><td>0814255</td></tr><tr><td>Grover</td><td>1040365</td><td>1854564</td></tr><tr><td>Ko Gwang-ryeol</td><td>1041999</td><td>0875025</td></tr><tr><td>Allie</td><td>1046097</td><td>0332280</td></tr><tr><td>Dr. Christine Palmer</td><td>1046097</td><td>1211837</td></tr><tr><td>Inez</td><td>1046097</td><td>1605783</td></tr><tr><td>Irene Adler</td><td>1046097</td><td>0988045</td></tr><tr><td>Mary</td><td>1046097</td><td>2194499</td></tr><tr><td>Regina George</td><td>1046097</td><td>0377092</td></tr><tr><td>Yoon Do-joon</td><td>1047193</td><td>1216496</td></tr><tr><td>Cal Lynch</td><td>1055413</td><td>2094766</td></tr><tr><td>Astrid (voice)</td><td>1065229</td><td>2386490</td></tr><tr><td> Mother</td><td>1067547</td><td>1216496</td></tr><tr><td>Jin-tae</td><td>1067547</td><td>1216496</td></tr><tr><td>Nemo</td><td>1071252</td><td>0266543</td></tr><tr><td>Vanessa</td><td>1072555</td><td>1431045</td></tr><tr><td>Vanessa</td><td>1072555</td><td>5463162</td></tr><tr><td>Cover Girl</td><td>1081656</td><td>1046173</td></tr><tr><td>Captain Lennox</td><td>1083271</td><td>1399103</td></tr><tr><td>Mikaela Banes</td><td>1083271</td><td>0418279</td></tr><tr><td>Mikaela Banes</td><td>1083271</td><td>1055369</td></tr><tr><td>Sophie</td><td>1086543</td><td>0795421</td></tr><tr><td>Sylvia Weis</td><td>1086543</td><td>1637688</td></tr><tr><td>Young Kate</td><td>10916154</td><td>8623904</td></tr><tr><td>Aurora</td><td>1102577</td><td>4777008</td></tr><tr><td>Kim</td><td>1104224</td><td>0406661</td></tr><tr><td>Lucy Stevens</td><td>1105980</td><td>5884052</td></tr><tr><td>Choi</td><td>1120328</td><td>2082180</td></tr><tr><td>Kenji Koiso</td><td>1126340</td><td>1474276</td></tr><tr><td>Taki Tachibana&nbsp;(voice)</td><td>1126340</td><td>5311514</td></tr><tr><td>Flynn Rider</td><td>1157048</td><td>0398286</td></tr><tr><td>Christina Warren</td><td>1157358</td><td>0945513</td></tr><tr><td>Julia</td><td>1157358</td><td>0317919</td></tr><tr><td>ji-hae</td><td>1162030</td><td>0348568</td></tr><tr><td>Su-jin</td><td>1162030</td><td>0428870</td></tr><tr><td>Agent H</td><td>1165110</td><td>2283336</td></tr><tr><td>Thor</td><td>1165110</td><td>0848228</td></tr><tr><td>Thor</td><td>1165110</td><td>2395427</td></tr><tr><td>Thor</td><td>1165110</td><td>4154756</td></tr><tr><td>Thor</td><td>1165110</td><td>4154796</td></tr><tr><td>Kanae Sumida (voice)</td><td>1178570</td><td>0983213</td></tr><tr><td>Moon Yu-jung</td><td>1187273</td><td>0870967</td></tr><tr><td>Adam Faulkner-Stanheight</td><td>1191481</td><td>0387564</td></tr><tr><td>SaRang</td><td>1194446</td><td>0406661</td></tr><tr><td>Miss Peregrine</td><td>1200692</td><td>1935859</td></tr><tr><td>Vesper Lynd</td><td>1200692</td><td>0381061</td></tr><tr><td>Professor Severus Snape</td><td>1201607</td><td>1201607</td></tr><tr><td>Older Sun-yi</td><td>1208172</td><td>2315152</td></tr><tr><td>Gomez Addams</td><td>1209966</td><td>1620981</td></tr><tr><td>Alan Turing</td><td>1212722</td><td>2084970</td></tr><tr><td>Dr. Stephen Strange</td><td>1212722</td><td>1211837</td></tr><tr><td>Cheol-min</td><td>1234414</td><td>2082180</td></tr><tr><td>Santino D'Antonio</td><td>1249052</td><td>4425200</td></tr><tr><td>sang-min</td><td>1251770</td><td>0348568</td></tr><tr><td>Chuck</td><td>1265802</td><td>6095472</td></tr><tr><td>Annabeth</td><td>1275259</td><td>0814255</td></tr><tr><td>Annabeth</td><td>1275259</td><td>1854564</td></tr><tr><td>Kate Macer</td><td>1289434</td><td>3397884</td></tr><tr><td>Mary Poppins</td><td>1289434</td><td>5028340</td></tr><tr><td>Gwen Stacy</td><td>1297015</td><td>0948470</td></tr><tr><td>Mia</td><td>1297015</td><td>3783958</td></tr><tr><td>Wichita</td><td>1297015</td><td>1156398</td></tr><tr><td>Wichita</td><td>1297015</td><td>1560220</td></tr><tr><td>Neil</td><td>1306097</td><td>0332379</td></tr><tr><td>Rachel Salas</td><td>1312575</td><td>1637688</td></tr><tr><td>Hee Bong</td><td>1322404</td><td>3967856</td></tr><tr><td>Pyung Gyung-jang</td><td>1328575</td><td>0875025</td></tr><tr><td>Edmund Pevensie</td><td>1342727</td><td>0363771</td></tr><tr><td>Edmund Pevensie</td><td>1342727</td><td>0980970</td></tr><tr><td>Gramma Tala</td><td>1344302</td><td>3521164</td></tr><tr><td>Olivia Lennox</td><td>1377561</td><td>0454945</td></tr><tr><td>Anduin Lothar</td><td>1379938</td><td>0803096</td></tr><tr><td>woo-jin</td><td>1392075</td><td>4273886</td></tr><tr><td>Mavis</td><td>1411125</td><td>0837562</td></tr><tr><td>Mavis</td><td>1411125</td><td>2510894</td></tr><tr><td>Mavis</td><td>1411125</td><td>5220122</td></tr><tr><td>Disgust</td><td>1411676</td><td>2096673</td></tr><tr><td>Ofelia</td><td>1419440</td><td>0457430</td></tr><tr><td>Felix (voice)</td><td>1442113</td><td>1772341</td></tr><tr><td>Yancy Becket</td><td>1459109</td><td>1663662</td></tr><tr><td>Azumi Yûsuke (voice)</td><td>1465001</td><td>6317962</td></tr><tr><td>Duke</td><td>1475594</td><td>0454945</td></tr><tr><td>Edward Cullen</td><td>1500155</td><td>1099212</td></tr><tr><td>Jung Yun-su</td><td>1504868</td><td>0870967</td></tr><tr><td>Seok-woo</td><td>1508003</td><td>5700672</td></tr><tr><td>Newt</td><td>1519666</td><td>3183660</td></tr><tr><td>Stephen Hawking</td><td>1519666</td><td>2980516</td></tr><tr><td>Nikki</td><td>1549953</td><td>0378194</td></tr><tr><td>Lance Preston</td><td>1556638</td><td>1703199</td></tr><tr><td>Melissa Lewis</td><td>1567113</td><td>3659388</td></tr><tr><td>Murph</td><td>1567113</td><td>816692</td></tr><tr><td>T'Challa / Black Panther</td><td>1569276</td><td>1825683</td></tr><tr><td>Caspian</td><td>1602660</td><td>0980970</td></tr><tr><td>Juli Baker</td><td>1630992</td><td>0817177</td></tr><tr><td>Snow White&nbsp;(voice)</td><td>1631269</td><td>4429160</td></tr><tr><td>Wednesday Addams</td><td>1631269</td><td>1620981</td></tr><tr><td>John</td><td>1641117</td><td>1464540</td></tr><tr><td>Jerry Hartfield</td><td>1649128</td><td>1703199</td></tr><tr><td>James Buchanan 'Bucky' Barnes</td><td>1659221</td><td>0458339</td></tr><tr><td>Daisy Buchanan</td><td>1659547</td><td>1343092</td></tr><tr><td>Young Johnny Blaze</td><td>1668265</td><td>0259324</td></tr><tr><td>Lucy Pevensie</td><td>1670137</td><td>0363771</td></tr><tr><td>Lucy Pevensie</td><td>1670137</td><td>0980970</td></tr><tr><td>Jonathan</td><td>1676221</td><td>0837562</td></tr><tr><td>Jonathan</td><td>1676221</td><td>2510894</td></tr><tr><td>Jonathan</td><td>1676221</td><td>5220122</td></tr><tr><td>Shen Chia-Yi / Yan-Hsi Chen</td><td>1701227</td><td>2036416</td></tr><tr><td>Donnie Azoff</td><td>1706767</td><td>0993846</td></tr><tr><td>Uhm Bok-Dong</td><td>1713653</td><td>9764654</td></tr><tr><td>kang-il</td><td>1714968</td><td>2592808</td></tr><tr><td>Mera</td><td>1720028</td><td>1477834</td></tr><tr><td>Tim</td><td>1727304</td><td>2194499</td></tr><tr><td>Garona</td><td>1745736</td><td>0803096</td></tr><tr><td>Jane</td><td>1745736</td><td>1229238</td></tr><tr><td>President Choi</td><td>1753862</td><td>0940642</td></tr><tr><td>Julia Maddon</td><td>1782299</td><td>2369135</td></tr><tr><td>Anakin Skywalker (voice)</td><td>1782667</td><td>1185834</td></tr><tr><td>Freddie Mercury</td><td>1785339</td><td>1727824</td></tr><tr><td>Laura Rose</td><td>1813221</td><td>0385887</td></tr><tr><td>Isaac</td><td>1822659</td><td>2582846</td></tr><tr><td>Robin Williger</td><td>1836658</td><td>0427944</td></tr><tr><td>Peter</td><td>1842974</td><td>7784604</td></tr><tr><td>Kowalski</td><td>1844237</td><td>1911658</td></tr><tr><td>Viktor</td><td>1845048</td><td>6663582</td></tr><tr><td>Park Yeon-kyo</td><td>1856097</td><td>6751668</td></tr><tr><td>Seong-kyeong</td><td>1869756</td><td>5700672</td></tr><tr><td>Kim Jae-hyeon</td><td>1881661</td><td>5586914</td></tr><tr><td>Sasha Parker</td><td>1925168</td><td>1703199</td></tr><tr><td>Agent M</td><td>1935086</td><td>2283336</td></tr><tr><td>Spider-Man / Peter Parker</td><td>1940449</td><td>0948470</td></tr><tr><td>Christian Grey</td><td>1946193</td><td>2322441</td></tr><tr><td>Christian Grey</td><td>1946193</td><td>4477536</td></tr><tr><td>Number 6</td><td>1954240</td><td>1464540</td></tr><tr><td>Policía joven</td><td>1970851</td><td>1038988</td></tr><tr><td>Petty Officer Cora 'Weps' Raikes</td><td>1982597</td><td>1440129</td></tr><tr><td>Alice Kingsleigh</td><td>1985859</td><td>1014759</td></tr><tr><td>Nennete</td><td>2016723</td><td>5093026</td></tr><tr><td>Peggy Carter</td><td>2017943</td><td>0458339</td></tr><tr><td>Lieutenant Alex Hopper</td><td>2018237</td><td>1440129</td></tr><tr><td>Tadashi</td><td>2024644</td><td>2245084</td></tr><tr><td>Poe</td><td>2030779</td><td>6472976</td></tr><tr><td>Diane</td><td>2032098</td><td>1179904</td></tr><tr><td>Yukiho Hagiwara (voice)</td><td>2056026</td><td>3306854</td></tr><tr><td>Hank</td><td>2089090</td><td>2209418</td></tr><tr><td>Yoon Jin-sook</td><td>2098258</td><td>3694790</td></tr><tr><td>Nakia</td><td>2143282</td><td>1825683</td></tr><tr><td>Peter B. Parker</td><td>2159926</td><td>4633694</td></tr><tr><td>hong-yi-soo</td><td>2174122</td><td>4273886</td></tr><tr><td>Jeong-hwa</td><td>2174122</td><td>2082180</td></tr><tr><td>Queen</td><td>2174122</td><td>2290840</td></tr><tr><td>Nate Lambert</td><td>2207222</td><td>2557478</td></tr><tr><td>Katie</td><td>2209370</td><td>1179904</td></tr><tr><td>Aurora Lane</td><td>2225369</td><td>1355644</td></tr><tr><td>Katniss Everdeen</td><td>2225369</td><td>1392170</td></tr><tr><td>Lieutenant Joan Dark</td><td>2240061</td><td>8328716</td></tr><tr><td>Simba&nbsp;(voice)</td><td>2255973</td><td>6105098</td></tr><tr><td>EVE&nbsp;(voice)</td><td>2264184</td><td>0910970</td></tr><tr><td>Esther</td><td>2265157</td><td>1148204</td></tr><tr><td>Abernathy</td><td>2295590</td><td>4123430</td></tr><tr><td>Lyra</td><td>2301950</td><td>0385752</td></tr><tr><td>Oliver</td><td>2309517</td><td>5726616</td></tr><tr><td>Tae-oh</td><td>2352559</td><td>8119680</td></tr><tr><td>Older Jamal</td><td>2353862</td><td>1010048</td></tr><tr><td>Arlo&nbsp;(voice)</td><td>2358105</td><td>1979388</td></tr><tr><td>Mary Austin</td><td>2377903</td><td>1727824</td></tr><tr><td>Bridger</td><td>2401020</td><td>1663202</td></tr><tr><td>Han Solo</td><td>2403277</td><td>3778644</td></tr><tr><td>A-gwi</td><td>2412823</td><td>0875025</td></tr><tr><td>Hyung-min</td><td>2412823</td><td>8119680</td></tr><tr><td>Heo Gyun</td><td>2440627</td><td>2290840</td></tr><tr><td>Carly</td><td>2492819</td><td>1399103</td></tr><tr><td>Teresa</td><td>2546012</td><td>1790864</td></tr><tr><td>Teresa</td><td>2546012</td><td>4046784</td></tr><tr><td>Teresa</td><td>2546012</td><td>4500922</td></tr><tr><td>Park Jeong-min</td><td>2613190</td><td>0940642</td></tr><tr><td>Jake</td><td>2633535</td><td>1935859</td></tr><tr><td>Red Welby</td><td>2655177</td><td>5027774</td></tr><tr><td>Akari Shinohara (voice)</td><td>2710673</td><td>0983213</td></tr><tr><td>Young Jim</td><td>2743940</td><td>2039393</td></tr><tr><td>Bryce Loski</td><td>2786608</td><td>0817177</td></tr><tr><td>Gwen Stacy</td><td>2794962</td><td>4633694</td></tr><tr><td>Hardin Scott</td><td>2842005</td><td>4126476</td></tr><tr><td>Major Valerian</td><td>2851530</td><td>2239822</td></tr><tr><td>Chastity Barebone</td><td>2893183</td><td>3183660</td></tr><tr><td>Micah</td><td>2913790</td><td>1179904</td></tr><tr><td>Christian</td><td>2930503</td><td>8772262</td></tr><tr><td>Rosie Dunne</td><td>2934314</td><td>1638002</td></tr><tr><td>Older Latika</td><td>2951768</td><td>1010048</td></tr><tr><td>Anaru (voice)</td><td>2955927</td><td>2323836</td></tr><tr><td>Russell</td><td>2973712</td><td>1049413</td></tr><tr><td>Sayaka Natori&nbsp;(voice)</td><td>2976492</td><td>5311514</td></tr><tr><td>Yuzuru Nishimiya (voice)</td><td>2976492</td><td>5323662</td></tr><tr><td>Shoko Nishimiya&nbsp;(voice)</td><td>2977461</td><td>5323662</td></tr><tr><td>Tsuruko (voice)</td><td>2977461</td><td>2323836</td></tr><tr><td>Kevin, Teenager</td><td>3009232</td><td>1242460</td></tr><tr><td>Sang-hwa</td><td>3011350</td><td>5700672</td></tr><tr><td>Dr. Bennett Stone</td><td>3012604</td><td>8328716</td></tr><tr><td>Young Ji-ho</td><td>3016345</td><td>1233461</td></tr><tr><td>Sôsuke (voice)</td><td>3023690</td><td>0876563</td></tr><tr><td>Ponyo&nbsp;(voice)</td><td>3027837</td><td>0876563</td></tr><tr><td>Alma</td><td>3043279</td><td>5776858</td></tr><tr><td>Harley Quinn</td><td>3053338</td><td>1386697</td></tr><tr><td>Naomi Lapaglia</td><td>3053338</td><td>0993846</td></tr><tr><td>Sharon Tate</td><td>3053338</td><td>7131622</td></tr><tr><td>Natsuki Shinohara</td><td>3142576</td><td>1474276</td></tr><tr><td>Armand Roulin</td><td>3150488</td><td>3262342</td></tr><tr><td>Brian May</td><td>3152605</td><td>1727824</td></tr><tr><td>Elio</td><td>3154303</td><td>5726616</td></tr><tr><td>Peter</td><td>3170207</td><td>3846674</td></tr><tr><td>Cheung Wing-sing</td><td>3237713</td><td>1220719</td></tr><tr><td>Cheung Wing-sing</td><td>3237713</td><td>2888046</td></tr><tr><td>Younger Sun-yi</td><td>3291520</td><td>2315152</td></tr><tr><td>Pamela Nam Kim</td><td>3337639</td><td>7668870</td></tr><tr><td>Producer (voice)</td><td>3401643</td><td>3306854</td></tr><tr><td>FBI Agent James Molokai</td><td>3486753</td><td>4146622</td></tr><tr><td>Alex Stewart</td><td>3510471</td><td>1638002</td></tr><tr><td>Hawkins</td><td>3510471</td><td>4068576</td></tr><tr><td>Merlin&nbsp;(voice)</td><td>3510471</td><td>4429160</td></tr><tr><td>Will Traynor</td><td>3510471</td><td>2674426</td></tr><tr><td>Lou Clark</td><td>3592338</td><td>2674426</td></tr><tr><td>Chul-Su</td><td>3609366</td><td>2315152</td></tr><tr><td>Sakamoto</td><td>3641180</td><td>9764654</td></tr><tr><td>Hyeon-kyeong</td><td>3663948</td><td>2592808</td></tr><tr><td>Thomas</td><td>3729721</td><td>1790864</td></tr><tr><td>Thomas</td><td>3729721</td><td>4046784</td></tr><tr><td>Thomas</td><td>3729721</td><td>4500922</td></tr><tr><td>Se-jung</td><td>3750788</td><td>1588170</td></tr><tr><td>Do Jae-Hyun</td><td>3755026</td><td>5034276</td></tr><tr><td>sgt park</td><td>3755026</td><td>3694790</td></tr><tr><td>Mija</td><td>3777533</td><td>3967856</td></tr><tr><td>Minho</td><td>3859624</td><td>1790864</td></tr><tr><td>Minho</td><td>3859624</td><td>4046784</td></tr><tr><td>Minho</td><td>3859624</td><td>4500922</td></tr><tr><td>Hye-won</td><td>3892241</td><td>6083230</td></tr><tr><td>Finn</td><td>3915784</td><td>2527336</td></tr><tr><td>Jake Pentecost</td><td>3915784</td><td>2557478</td></tr><tr><td>The Zouave</td><td>3917744</td><td>3262342</td></tr><tr><td>MJ</td><td>3918035</td><td>6320628</td></tr><tr><td>Ame&nbsp;(voice)</td><td>3945747</td><td>2140203</td></tr><tr><td>Alicia</td><td>3948952</td><td>2674426</td></tr><tr><td>Hiro</td><td>3994407</td><td>2245084</td></tr><tr><td>Alita</td><td>4023073</td><td>0437086</td></tr><tr><td>Shimada Norimichi (voice)</td><td>4027243</td><td>6317962</td></tr><tr><td>Peter Parker / Spider-Man</td><td>4043618</td><td>2250912</td></tr><tr><td>Peter Parker / Spider-Man</td><td>4043618</td><td>6320628</td></tr><tr><td>Alex</td><td>4089170</td><td>5013056</td></tr><tr><td>Collins</td><td>4110963</td><td>5013056</td></tr><tr><td>Pi Patel</td><td>4139037</td><td>0454876</td></tr><tr><td>Cinderella</td><td>4141252</td><td>1661199</td></tr><tr><td>Ellie Appleton</td><td>4141252</td><td>8079248</td></tr><tr><td>Dopinder</td><td>4175221</td><td>1431045</td></tr><tr><td>Dopinder</td><td>4175221</td><td>5463162</td></tr><tr><td>The Homeless Guy</td><td>4221489</td><td>4146622</td></tr><tr><td>Kim Hyung-shin</td><td>4258129</td><td>9764654</td></tr><tr><td>Miles Morales</td><td>4271336</td><td>4633694</td></tr><tr><td>Lee Ho-tae</td><td>4276462</td><td>3694790</td></tr><tr><td>Yuki&nbsp;(voice)</td><td>4429739</td><td>2140203</td></tr><tr><td>Menma (voice)</td><td>4438173</td><td>2323836</td></tr><tr><td>Parzival&nbsp;/&nbsp;Wade</td><td>4446467</td><td>1677720</td></tr><tr><td> Grace</td><td>4496875</td><td>6450804</td></tr><tr><td>Dick Best</td><td>4534098</td><td>6924650</td></tr><tr><td>Aladdin</td><td>4565815</td><td>6139732</td></tr><tr><td>Ko Ching-teng / Ko-teng</td><td>4584685</td><td>2036416</td></tr><tr><td>Bae Soo-jeong</td><td>4623624</td><td>5586914</td></tr><tr><td>Stella</td><td>4726634</td><td>6472976</td></tr><tr><td>Mitsuha Miyamizu&nbsp;(voice)</td><td>4759838</td><td>5311514</td></tr><tr><td>Mitsuhiko Tsuburaya (voice)</td><td>4808080</td><td>7880466</td></tr><tr><td>Pi Patel (11-12 Years)</td><td>4853568</td><td>0454876</td></tr><tr><td>Purpel</td><td>4855868</td><td>10349550</td></tr><tr><td>Clare</td><td>4957233</td><td>4068576</td></tr><tr><td>Art3mis&nbsp;/&nbsp;Samantha</td><td>4972453</td><td>1677720</td></tr><tr><td>Bradley Trevor</td><td>5016878</td><td>5606664</td></tr><tr><td>Gus</td><td>5052065</td><td>2582846</td></tr><tr><td>Mary Adler</td><td>5085683</td><td>4481414</td></tr><tr><td>Mariko</td><td>5148840</td><td>1430132</td></tr><tr><td>Jintan (voice)</td><td>5203221</td><td>2323836</td></tr><tr><td>Sergeant Laureline</td><td>5353321</td><td>2239822</td></tr><tr><td>Rey</td><td>5397459</td><td>2527336</td></tr><tr><td>ha-yoon</td><td>5408115</td><td>2592808</td></tr><tr><td>Ben Hanscom</td><td>5582294</td><td>1396484</td></tr><tr><td>Oikawa Nazuna (voice)</td><td>5620173</td><td>6317962</td></tr><tr><td>Miguel</td><td>5645519</td><td>2380307</td></tr><tr><td>Ann</td><td>5801651</td><td>3544112</td></tr><tr><td>Casey Cooke</td><td>5896355</td><td>4972582</td></tr><tr><td>Bill Denbrough</td><td>5897057</td><td>1396484</td></tr><tr><td>Sophie Dumond</td><td>5939164</td><td>7286456</td></tr><tr><td>Dani</td><td>6073955</td><td>8772262</td></tr><tr><td>woo-jin</td><td>6124994</td><td>4273886</td></tr><tr><td>Prince Philip</td><td>6170168</td><td>4777008</td></tr><tr><td>Shiho Kitazawa (voice)</td><td>6233871</td><td>3306854</td></tr><tr><td>Eli</td><td>6339026</td><td>5294518</td></tr><tr><td>Tessa Young</td><td>6466214</td><td>4126476</td></tr><tr><td>Kim Ki-jung</td><td>6476224</td><td>6751668</td></tr><tr><td>Negasonic Teenage Warhead</td><td>6552202</td><td>1431045</td></tr><tr><td>Negasonic Teenage Warhead</td><td>6552202</td><td>5463162</td></tr><tr><td>Laura</td><td>6748436</td><td>3315342</td></tr><tr><td>Tim Goodman</td><td>6819854</td><td>5884052</td></tr><tr><td>Conor</td><td>6916321</td><td>3544112</td></tr><tr><td>Jae-ha</td><td>6916719</td><td>6083230</td></tr><tr><td>Chewbacca</td><td>6934058</td><td>3778644</td></tr><tr><td>Katsuhiko Teshigawara&nbsp;(voice)</td><td>6954008</td><td>5311514</td></tr><tr><td>Bank</td><td>7081087</td><td>6788942</td></tr><tr><td>Lara Jean</td><td>7093076</td><td>3846674</td></tr><tr><td>Ko Kyung-rim</td><td>7591921</td><td>5034276</td></tr><tr><td>Department Head Kim</td><td>7591922</td><td>5034276</td></tr><tr><td>Pat</td><td>7628415</td><td>6788942</td></tr><tr><td>Moana</td><td>7635388</td><td>3521164</td></tr><tr><td>Moonee</td><td>7737419</td><td>5649144</td></tr><tr><td>Tommy</td><td>7887725</td><td>5013056</td></tr><tr><td>Coach</td><td>8027734</td><td>5586914</td></tr><tr><td>Eun-sook</td><td>8044334</td><td>6083230</td></tr><tr><td>Margot</td><td>8045046</td><td>7668870</td></tr><tr><td>Amara Namani</td><td>8314228</td><td>2557478</td></tr><tr><td>Scooty</td><td>8912882</td><td>5649144</td></tr><tr><td>Lynn</td><td>8927531</td><td>6788942</td></tr> 			    </tbody>
+ 			  </table>
+      </div>
+
+  
+
+</body></html>

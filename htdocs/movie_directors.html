@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://localhost/movie_directors.php -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>IMDB</title>
+
+<style>
+
+table {
+width: 65%;
+border: 1px solid #444444;
+    border-collapse: collapse;
+    margin-left: 200px;
+}
+th, td {
+border: 1px solid #444444;
+}
+#menu{
+background-color: #2d2d2d;
+height: 70px;
+border: 1px solid #ccc;
+border-width: 1px 0;
+}
+#topMenu {
+height: 60px;
+width: 1300px;
+align: 0 auto;
+}
+#topMenu ul li{
+list-style: none;
+color: white;
+background-color: #2d2d2d;
+float: left;
+line-height: 50px;
+vertical-align: middle;
+text-align: center;
+text-align: center;
+}
+#menu .right{
+float: right;
+
+}
+#Menu ul li{
+/* float: none; 세로 출력*/
+background-color: #636363;
+}
+#topMenu li ul{
+background-color: #636363;
+position:absolute;
+display:none;
+}
+#topMenu li:hover ul {
+display:block;
+}
+#topMenu .menuLink {
+text-decoration:none;
+color: white;
+display: block;
+width: 150px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuLink:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#topMenu .menuL {
+text-decoration:none;
+color: white;
+display: block;
+width: 170px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuL:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#delete_step label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+#updateform label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.form-search{
+height: 25px;
+width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#delete_step .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+}
+#updateform .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#search{
+font-size: 20px;
+width: 90px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#search_btn{
+height: 25px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step1{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step2{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step3{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-delete{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.step{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+color: red;
+}
+body { text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */ }
+
+.input:hover{
+cursor:pointer;
+}
+#home{
+font-size: 60px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+color: black;
+}
+#updatestep1{
+display: none
+}
+#updatestep2{
+display: none
+}
+#updatestep3{
+display: none
+}
+#delete_step{
+display: none
+}
+</style>
+</head>
+<body>
+<a id="home" href="http://localhost/index.php">8조 IMDB</a>
+<br>
+<div id="menu">
+<nav id="topMenu">
+<ul>
+<li><a class="menuLink" href="http://localhost/movie_directors.php#">Movie</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie.php">movies</a></li>
+<li><a class="menuL" href="http://localhost/movie_genres.php">movie_genres</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/movie_directors.php#">Actor</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/actors.php">actors</a></li>
+<li><a class="menuL" href="http://localhost/roles.php">roles</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/movie_directors.php#">Director</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie_directors.php">movie_directors</a></li>
+<li><a class="menuL" href="http://localhost/directors_genres.php">directors_genres</a></li>
+<li><a class="menuL" href="http://localhost/directors.php">directors</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/movie_directors.php#">Review</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/reviews.php">reviews</a></li>
+</ul>
+</nav>
+</li>
+<li class="right">
+<form name="mysearchbar" action="http://localhost/search.php" method="post">
+<div class="input-group">
+
+<select id="search" name="search">
+<option value="movie">movie</option>
+<option value="actor">actor</option>
+<option value="director">director</option>
+<option value="genre">genre</option>
+</select>
+<input name="Search_name" type="text" class="form-search" placeholder="search">
+&nbsp;&nbsp;
+<button type="submit" id="search_btn">검색</button>
+</div>
+</form>
+</li>
+<li class="right"><a class="menuLink" href="http://localhost/movie_directors.php#" id="update_step1">Update</a></li>
+<li class="right"><a class="menuLink" href="http://localhost/movie_directors.php#" id="delete">Delete</a></li>
+</ul>
+</nav>
+</div>
+<br><br>
+
+<!-- delete -->
+<form action="http://localhost/delete_data.php" method="post">
+<div id="delete_step">
+<h2 class="step">DELETE DATA</h2>
+<br><br><br>
+<div class="form-group">
+<label for="delete_movie_id">Movie Name</label>
+<br><br>
+<input type="delete_movie_id" class="form-control" name="movie_name" id="delete_movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-delete">Delete</button>
+</div>
+</form>
+
+
+<!-- update -->
+<form action="http://localhost/insert_data.php" method="post">
+<div id="updateform">
+
+
+<!-- STEP1: INPUT MOVIES TABLE -->
+
+<div id="updatestep1">
+<h2 class="step">STEP1: INPUT MOVIES TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_name">Movie Name</label>
+<br><br>
+<input type="movie_name" class="form-control" name="movie_name" id="movie_name" placeholder="Enter movie name here (e.g., Gattaca)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_year">Movie Year</label>
+<br><br>
+<input type="movie_year" class="form-control" name="movie_year" id="movie_year" placeholder="Enter movie year here (e.g., 1965)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_genres">Movie Genres</label>
+<br><br>
+<input type="movie_genres" class="form-control" name="movie_genres" id="movie_genres" placeholder="Enter movie genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="runtime_rating">Runtime</label>
+<br><br>
+<input type="runtime_rating" class="form-control" name="runtime_rating" id="runtime_rating" placeholder="Enter runtime rating here (e.g., 172)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="rating">Rating</label>
+<br><br>
+<input type="rating" class="form-control" name="rating" id="rating" placeholder="Enter Rating here (e.g., 7.1)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="plot">Plot</label>
+<br><br>
+<input type="plot" class="form-control" name="plot" id="plot" placeholder="Enter plot here (e.g., A woman leaves an Austrian convent t.....)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="budget">Budget</label>
+<br><br>
+<input type="budget" class="form-control" name="budget" id="budget" placeholder="Enter budget here (e.g., 8200000)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="gross_glob">Gross glob</label>
+<br><br>
+<input type="gross_glob" class="form-control" name="gross_glob" id="gross_glob" placeholder="Enter Gross glob here (e.g., 159413574)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="submitter_id">Submitter ID</label>
+<br><br>
+<input type="submitter_id" class="form-control" name="submitter_id" id="submitter_id" placeholder="Enter submitter id here (e.g., 2017113323)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step1">next</button>
+</div>
+
+<!-- STEP2: INPUT ACTORS TABLE -->
+
+<div id="updatestep2">
+<h2 class="step">STEP2: INPUT ACTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_id">Actor ID</label>
+<br><br>
+<input type="actor_id" class="form-control" name="actor_id" id="actor_id" placeholder="Enter actor ID here (e.g., 0000267)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_name">Actor Name</label>
+<br><br>
+<input type="actor_name" class="form-control" name="actor_name" id="actor_name" placeholder="Enter actor name here (e.g., Julie Andrews)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_gender">Actor Gender</label>
+<br><br>
+<input type="actor_gender" class="form-control" name="actor_gender" id="actor_gender" placeholder="Enter actor gender here (e.g., F)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="role">Role</label>
+<br><br>
+<input type="role" class="form-control" name="role" id="role" placeholder="Enter role here (e.g., Maria)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step2">next</button>
+</div>
+
+<!-- STEP3: INPUT DIRECTORS TABLE -->
+
+<div id="updatestep3">
+<h2 class="step">STEP3: INPUT DIRECTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_id">Director ID</label>
+<br><br>
+<input type="director_id" class="form-control" name="director_id" id="director_id" placeholder="Enter director ID here (e.g., 0936404)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_name">Director Name</label>
+<br><br>
+<input type="director_name" class="form-control" name="director_name" id="director_name" placeholder="Enter director name here (e.g., Robert Wise)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_genres">Director Genres</label>
+<br><br>
+<input type="director_genres" class="form-control" name="director_genres" id="director_genres" placeholder="Enter actor genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-step3">Insert</button>
+</div>
+</div>
+</form>
+<script language="javascript">
+document.getElementById("delete").onclick = function() {
+    document.getElementById("delete_step").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updatestep3").style.display="none";
+
+}
+document.getElementById("btn-delete").onclick = function() {
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+
+document.getElementById("update_step1").onclick = function() {
+    document.getElementById("updatestep1").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+
+}
+
+document.getElementById("btn-step1").onclick = function() {
+    document.getElementById("updatestep2").style.display="block";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step2").onclick = function() {
+    document.getElementById("updatestep3").style.display="block";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step3").onclick = function() {
+    document.getElementById("updatestep3").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+</script>
+<div id="all_table">
+
+
+	<!-- MOVIE_DIRECTORS table -->
+		<p></p><h3> MOVIE_DIRECTOR table (Currently 462 movie_directors in database)</h3><p></p>
+
+	<table cellspacing="0" width="100%">
+		<thead>
+		<tr>
+			<th>Director ID</th>
+			<th>Movie ID</th>
+		</tr>
+		</thead>
+
+		<tbody>
+		<tr><td>0000122</td><td>0021749</td></tr><tr><td>0183183</td><td>0029583</td></tr><tr><td>0002030</td><td>0031381</td></tr><tr><td>0281808</td><td>0031381</td></tr><tr><td>0281808</td><td>0032138</td></tr><tr><td>0000033</td><td>0032976</td></tr><tr><td>0000080</td><td>0033467</td></tr><tr><td>0019282</td><td>0034492</td></tr><tr><td>0002031</td><td>0034583</td></tr><tr><td>0002045</td><td>0045152</td></tr><tr><td>0314671</td><td>0048280</td></tr><tr><td>0001486</td><td>0050083</td></tr><tr><td>0000697</td><td>0051201</td></tr><tr><td>0000033</td><td>0052357</td></tr><tr><td>0943758</td><td>0052618</td></tr><tr><td>0000033</td><td>0054215</td></tr><tr><td>0936404</td><td>0059742</td></tr><tr><td>0001466</td><td>0060196</td></tr><tr><td>0001566</td><td>0061722</td></tr><tr><td>0000338</td><td>0068646</td></tr><tr><td>0000338</td><td>0071562</td></tr><tr><td>0000416</td><td>0071853</td></tr><tr><td>0001402</td><td>0071853</td></tr><tr><td>0001232</td><td>0073486</td></tr><tr><td>0000814</td><td>0075148</td></tr><tr><td>0000184</td><td>0076759</td></tr><tr><td>0000118</td><td>0077651</td></tr><tr><td>0429958</td><td>0077936</td></tr><tr><td>0000631</td><td>0078748</td></tr><tr><td>0004306</td><td>0079501</td></tr><tr><td>0449984</td><td>0080684</td></tr><tr><td>0192446</td><td>0080761</td></tr><tr><td>0000217</td><td>0081398</td></tr><tr><td>0000040</td><td>0081505</td></tr><tr><td>0591171</td><td>0082418</td></tr><tr><td>0004306</td><td>0082694</td></tr><tr><td>0000631</td><td>0083658</td></tr><tr><td>0000229</td><td>0083866</td></tr><tr><td>0591171</td><td>0083972</td></tr><tr><td>0957263</td><td>0087298</td></tr><tr><td>0001466</td><td>0087843</td></tr><tr><td>0000116</td><td>0088247</td></tr><tr><td>0000709</td><td>0088763</td></tr><tr><td>0826164</td><td>0089173</td></tr><tr><td>0004306</td><td>0089530</td></tr><tr><td>0000343</td><td>0091064</td></tr><tr><td>0572951</td><td>0091080</td></tr><tr><td>0000231</td><td>0091763</td></tr><tr><td>0594503</td><td>0092067</td></tr><tr><td>0119106</td><td>0095179</td></tr><tr><td>0594503</td><td>0096283</td></tr><tr><td>0001837</td><td>0097165</td></tr><tr><td>0373154</td><td>0097388</td></tr><tr><td>0002653</td><td>0097523</td></tr><tr><td>0166256</td><td>0097757</td></tr><tr><td>0000338</td><td>0099674</td></tr><tr><td>0000217</td><td>0099685</td></tr><tr><td>0001060</td><td>0099785</td></tr><tr><td>0303030</td><td>0101675</td></tr><tr><td>0001129</td><td>0102926</td></tr><tr><td>0000116</td><td>0103064</td></tr><tr><td>0001060</td><td>0104431</td></tr><tr><td>0000233</td><td>0105236</td></tr><tr><td>0000976</td><td>0105323</td></tr><tr><td>0650905</td><td>0107120</td></tr><tr><td>0001060</td><td>0107614</td></tr><tr><td>0000229</td><td>0108052</td></tr><tr><td>0000709</td><td>0109830</td></tr><tr><td>0000108</td><td>0110413</td></tr><tr><td>0000233</td><td>0110912</td></tr><tr><td>0001104</td><td>0111161</td></tr><tr><td>0000957</td><td>0111257</td></tr><tr><td>0000386</td><td>0111282</td></tr><tr><td>0000165</td><td>0112384</td></tr><tr><td>0000500</td><td>0112471</td></tr><tr><td>0190859</td><td>0113670</td></tr><tr><td>0000399</td><td>0114369</td></tr><tr><td>0005124</td><td>0114709</td></tr><tr><td>0001741</td><td>0114814</td></tr><tr><td>0005509</td><td>0114924</td></tr><tr><td>0000110</td><td>0116477</td></tr><tr><td>0000361</td><td>0117060</td></tr><tr><td>0525303</td><td>0117509</td></tr><tr><td>0000408</td><td>0117731</td></tr><tr><td>0000431</td><td>0118971</td></tr><tr><td>0001814</td><td>0119217</td></tr><tr><td>0331532</td><td>0119303</td></tr><tr><td>0001756</td><td>0119654</td></tr><tr><td>0000116</td><td>0120338</td></tr><tr><td>0005124</td><td>0120363</td></tr><tr><td>0001837</td><td>0120382</td></tr><tr><td>0413875</td><td>0120461</td></tr><tr><td>0814085</td><td>0120616</td></tr><tr><td>0001104</td><td>0120689</td></tr><tr><td>0001392</td><td>0120737</td></tr><tr><td>0000247</td><td>0120755</td></tr><tr><td>0051643</td><td>0120762</td></tr><tr><td>0336620</td><td>0120768</td></tr><tr><td>0027271</td><td>0120804</td></tr><tr><td>0000229</td><td>0120815</td></tr><tr><td>0118333</td><td>0120855</td></tr><tr><td>0510674</td><td>0120855</td></tr><tr><td>0001756</td><td>0120912</td></tr><tr><td>0000184</td><td>0120915</td></tr><tr><td>0000318</td><td>0121164</td></tr><tr><td>0000184</td><td>0121765</td></tr><tr><td>0000184</td><td>0121766</td></tr><tr><td>0622112</td><td>0123755</td></tr><tr><td>0585011</td><td>0125439</td></tr><tr><td>0905152</td><td>0133093</td></tr><tr><td>0905154</td><td>0133093</td></tr><tr><td>0000399</td><td>0137523</td></tr><tr><td>0432627</td><td>0147800</td></tr><tr><td>0001392</td><td>0167260</td></tr><tr><td>0001392</td><td>0167261</td></tr><tr><td>0796117</td><td>0167404</td></tr><tr><td>0005222</td><td>0169547</td></tr><tr><td>0000631</td><td>0172495</td></tr><tr><td>0004716</td><td>0180093</td></tr><tr><td>0230032</td><td>0198781</td></tr><tr><td>0634240</td><td>0209144</td></tr><tr><td>0000229</td><td>0212720</td></tr><tr><td>0003418</td><td>0232500</td></tr><tr><td>0001060</td><td>0241527</td></tr><tr><td>0594503</td><td>0245429</td></tr><tr><td>0005190</td><td>0247638</td></tr><tr><td>0000591</td><td>0253474</td></tr><tr><td>0510731</td><td>0258463</td></tr><tr><td>0425756</td><td>0259324</td></tr><tr><td>0000229</td><td>0264464</td></tr><tr><td>0004056</td><td>0266543</td></tr><tr><td>0000165</td><td>0268978</td></tr><tr><td>0625458</td><td>0277027</td></tr><tr><td>0001060</td><td>0295297</td></tr><tr><td>0190859</td><td>0304141</td></tr><tr><td>0003506</td><td>0309698</td></tr><tr><td>0193485</td><td>0314331</td></tr><tr><td>0001723</td><td>0315327</td></tr><tr><td>0005124</td><td>0317219</td></tr><tr><td>0083348</td><td>0317705</td></tr><tr><td>0009190</td><td>0317919</td></tr><tr><td>0936838</td><td>0318627</td></tr><tr><td>0005436</td><td>0322259</td></tr><tr><td>0893659</td><td>0325980</td></tr><tr><td>0001716</td><td>0328107</td></tr><tr><td>0001565</td><td>0330373</td></tr><tr><td>0432627</td><td>0332136</td></tr><tr><td>0001024</td><td>0332280</td></tr><tr><td>0000500</td><td>0332379</td></tr><tr><td>0000583</td><td>0332452</td></tr><tr><td>0327273</td><td>0338013</td></tr><tr><td>0594503</td><td>0347149</td></tr><tr><td>1030706</td><td>0348568</td></tr><tr><td>0201509</td><td>0351283</td></tr><tr><td>1349376</td><td>0360486</td></tr><tr><td>0000233</td><td>0361748</td></tr><tr><td>0000229</td><td>0362227</td></tr><tr><td>0011470</td><td>0363771</td></tr><tr><td>0661791</td><td>0364569</td></tr><tr><td>0514546</td><td>0366174</td></tr><tr><td>0000318</td><td>0367594</td></tr><tr><td>0269463</td><td>0371746</td></tr><tr><td>0339030</td><td>0372183</td></tr><tr><td>0914134</td><td>0377092</td></tr><tr><td>0000233</td><td>0378194</td></tr><tr><td>0132709</td><td>0381061</td></tr><tr><td>0000500</td><td>0381681</td></tr><tr><td>0005540</td><td>0381707</td></tr><tr><td>0083348</td><td>0382932</td></tr><tr><td>0684342</td><td>0382932</td></tr><tr><td>0893659</td><td>0383574</td></tr><tr><td>0304521</td><td>0384537</td></tr><tr><td>0919363</td><td>0385752</td></tr><tr><td>0001570</td><td>0385887</td></tr><tr><td>1490123</td><td>0387564</td></tr><tr><td>0878756</td><td>0396171</td></tr><tr><td>1977355</td><td>0398286</td></tr><tr><td>1310383</td><td>0406661</td></tr><tr><td>0811583</td><td>0409459</td></tr><tr><td>0001723</td><td>0413099</td></tr><tr><td>0811583</td><td>0416449</td></tr><tr><td>0946734</td><td>0417741</td></tr><tr><td>0000881</td><td>0418279</td></tr><tr><td>0718646</td><td>0427944</td></tr><tr><td>0497565</td><td>0428870</td></tr><tr><td>0611683</td><td>0432021</td></tr><tr><td>0574625</td><td>0434409</td></tr><tr><td>0881279</td><td>0435761</td></tr><tr><td>0001675</td><td>0437086</td></tr><tr><td>0651706</td><td>0441773</td></tr><tr><td>0828970</td><td>0441773</td></tr><tr><td>0000916</td><td>0448157</td></tr><tr><td>0893659</td><td>0449088</td></tr><tr><td>0000487</td><td>0454876</td></tr><tr><td>0275698</td><td>0454945</td></tr><tr><td>0868219</td><td>0457430</td></tr><tr><td>0002653</td><td>0458339</td></tr><tr><td>0291205</td><td>0458352</td></tr><tr><td>0004303</td><td>0458525</td></tr><tr><td>0000230</td><td>0462499</td></tr><tr><td>0798899</td><td>0462538</td></tr><tr><td>0510912</td><td>0463985</td></tr><tr><td>0490487</td><td>0468704</td></tr><tr><td>1470993</td><td>0471041</td></tr><tr><td>0506613</td><td>0477347</td></tr><tr><td>0001053</td><td>0477348</td></tr><tr><td>0201509</td><td>0479952</td></tr><tr><td>0634240</td><td>0482571</td></tr><tr><td>0001752</td><td>0496806</td></tr><tr><td>1630273</td><td>0795421</td></tr><tr><td>1512910</td><td>0803096</td></tr><tr><td>0001060</td><td>0814255</td></tr><tr><td>0001661</td><td>0817177</td></tr><tr><td>0850733</td><td>0837562</td></tr><tr><td>0923736</td><td>0848228</td></tr><tr><td>1012219</td><td>0870967</td></tr><tr><td>1569807</td><td>0875025</td></tr><tr><td>0594503</td><td>0876563</td></tr><tr><td>0213450</td><td>0892769</td></tr><tr><td>0761498</td><td>0892769</td></tr><tr><td>0004056</td><td>0910970</td></tr><tr><td>0946734</td><td>0926084</td></tr><tr><td>1420683</td><td>0940642</td></tr><tr><td>1512910</td><td>0945513</td></tr><tr><td>1989536</td><td>0948470</td></tr><tr><td>0000776</td><td>0980970</td></tr><tr><td>1396121</td><td>0983213</td></tr><tr><td>0005363</td><td>0988045</td></tr><tr><td>0000217</td><td>0993846</td></tr><tr><td>0000965</td><td>1010048</td></tr><tr><td>0510912</td><td>1013752</td></tr><tr><td>0000318</td><td>1014759</td></tr><tr><td>1989536</td><td>1022603</td></tr><tr><td>4700656</td><td>10349550</td></tr><tr><td>0049371</td><td>1038988</td></tr><tr><td>0687042</td><td>1038988</td></tr><tr><td>0814085</td><td>1046173</td></tr><tr><td>0230032</td><td>1049413</td></tr><tr><td>0000881</td><td>1055369</td></tr><tr><td>0304541</td><td>1063669</td></tr><tr><td>0005222</td><td>1074638</td></tr><tr><td>0506613</td><td>1078912</td></tr><tr><td>0362566</td><td>1099212</td></tr><tr><td>0000217</td><td>1130884</td></tr><tr><td>1429471</td><td>1148204</td></tr><tr><td>0281508</td><td>1156398</td></tr><tr><td>2305431</td><td>1179904</td></tr><tr><td>1396048</td><td>1185834</td></tr><tr><td>0386246</td><td>1187043</td></tr><tr><td>0000386</td><td>1190080</td></tr><tr><td>0946734</td><td>1201607</td></tr><tr><td>0344496</td><td>1206885</td></tr><tr><td>0220600</td><td>1211837</td></tr><tr><td>0405632</td><td>1211956</td></tr><tr><td>0094435</td><td>1216496</td></tr><tr><td>0027271</td><td>1220634</td></tr><tr><td>0948159</td><td>1220719</td></tr><tr><td>0269463</td><td>1228705</td></tr><tr><td>0083348</td><td>1229238</td></tr><tr><td>0453559</td><td>1233461</td></tr><tr><td>0708903</td><td>1242460</td></tr><tr><td>0190859</td><td>1254468</td></tr><tr><td>0281508</td><td>1270797</td></tr><tr><td>0201509</td><td>1277953</td></tr><tr><td>0000948</td><td>1300854</td></tr><tr><td>0000217</td><td>1302006</td></tr><tr><td>0950775</td><td>1302011</td></tr><tr><td>0525303</td><td>1343092</td></tr><tr><td>0634240</td><td>1345836</td></tr><tr><td>0878763</td><td>1355644</td></tr><tr><td>0634240</td><td>1375666</td></tr><tr><td>0043742</td><td>1386697</td></tr><tr><td>0002657</td><td>1392170</td></tr><tr><td>0004306</td><td>1392190</td></tr><tr><td>0914134</td><td>1396218</td></tr><tr><td>1396484</td><td>1396484</td></tr><tr><td>0000881</td><td>1399103</td></tr><tr><td>0001756</td><td>1409024</td></tr><tr><td>0003506</td><td>1430132</td></tr><tr><td>1783265</td><td>1431045</td></tr><tr><td>0000916</td><td>1440129</td></tr><tr><td>0027459</td><td>1449283</td></tr><tr><td>0768959</td><td>1453405</td></tr><tr><td>1490123</td><td>1457767</td></tr><tr><td>0142286</td><td>1464540</td></tr><tr><td>0396074</td><td>1474276</td></tr><tr><td>1490123</td><td>1477834</td></tr><tr><td>1243905</td><td>1485796</td></tr><tr><td>0393799</td><td>1504320</td></tr><tr><td>0281508</td><td>1560220</td></tr><tr><td>0453518</td><td>1588170</td></tr><tr><td>3772967</td><td>1588398</td></tr><tr><td>1490123</td><td>1591095</td></tr><tr><td>0510912</td><td>1596343</td></tr><tr><td>0000095</td><td>1605783</td></tr><tr><td>0862911</td><td>1620981</td></tr><tr><td>0629272</td><td>1637688</td></tr><tr><td>0532235</td><td>1637725</td></tr><tr><td>0228542</td><td>1638002</td></tr><tr><td>0213450</td><td>1646971</td></tr><tr><td>0000110</td><td>1661199</td></tr><tr><td>0327944</td><td>1663202</td></tr><tr><td>0252961</td><td>1663662</td></tr><tr><td>0504642</td><td>1670345</td></tr><tr><td>0000229</td><td>1677720</td></tr><tr><td>4017355</td><td>1703199</td></tr><tr><td>0094435</td><td>1706620</td></tr><tr><td>0393799</td><td>1707386</td></tr><tr><td>0001741</td><td>1727824</td></tr><tr><td>0601781</td><td>1772341</td></tr><tr><td>1650283</td><td>1790809</td></tr><tr><td>1226871</td><td>1790864</td></tr><tr><td>0005069</td><td>1798709</td></tr><tr><td>3363032</td><td>1825683</td></tr><tr><td>0000233</td><td>1853728</td></tr><tr><td>0001060</td><td>1854564</td></tr><tr><td>0027271</td><td>1855325</td></tr><tr><td>0510912</td><td>1905041</td></tr><tr><td>0201509</td><td>1911658</td></tr><tr><td>0000318</td><td>1935859</td></tr><tr><td>0400850</td><td>1959563</td></tr><tr><td>0812307</td><td>1979388</td></tr><tr><td>0138809</td><td>1980929</td></tr><tr><td>0348181</td><td>2015381</td></tr><tr><td>3321182</td><td>2036416</td></tr><tr><td>1012501</td><td>2039393</td></tr><tr><td>0814271</td><td>2082180</td></tr><tr><td>0878763</td><td>2084970</td></tr><tr><td>2355933</td><td>2094766</td></tr><tr><td>0230032</td><td>2096673</td></tr><tr><td>0000881</td><td>2109248</td></tr><tr><td>0396074</td><td>2140203</td></tr><tr><td>0193485</td><td>2194499</td></tr><tr><td>0000500</td><td>2209418</td></tr><tr><td>0000108</td><td>2239822</td></tr><tr><td>0930261</td><td>2245084</td></tr><tr><td>1218281</td><td>2250912</td></tr><tr><td>0950775</td><td>2267968</td></tr><tr><td>1868917</td><td>2267968</td></tr><tr><td>0027572</td><td>2278388</td></tr><tr><td>0336620</td><td>2283336</td></tr><tr><td>2039220</td><td>2290840</td></tr><tr><td>0118333</td><td>2294629</td></tr><tr><td>3644812</td><td>2315152</td></tr><tr><td>0853374</td><td>2322441</td></tr><tr><td>2171473</td><td>2323836</td></tr><tr><td>0583600</td><td>2361509</td></tr><tr><td>0915304</td><td>2369135</td></tr><tr><td>0629272</td><td>2380307</td></tr><tr><td>2937122</td><td>2380307</td></tr><tr><td>0003160</td><td>2381249</td></tr><tr><td>0213450</td><td>2386490</td></tr><tr><td>0923736</td><td>2395427</td></tr><tr><td>0009190</td><td>2488496</td></tr><tr><td>0850733</td><td>2510894</td></tr><tr><td>0426059</td><td>2527336</td></tr><tr><td>0215299</td><td>2557478</td></tr><tr><td>1837748</td><td>2582846</td></tr><tr><td>0027271</td><td>2592614</td></tr><tr><td>3719598</td><td>2592808</td></tr><tr><td>4824763</td><td>2674426</td></tr><tr><td>0506613</td><td>2692250</td></tr><tr><td>1490123</td><td>2820852</td></tr><tr><td>0948159</td><td>2888046</td></tr><tr><td>0821432</td><td>2911666</td></tr><tr><td>0336695</td><td>2935510</td></tr><tr><td>0397174</td><td>2948356</td></tr><tr><td>1016428</td><td>2980516</td></tr><tr><td>0082450</td><td>3079380</td></tr><tr><td>0946734</td><td>3183660</td></tr><tr><td>1364790</td><td>3262342</td></tr><tr><td>3699790</td><td>3262342</td></tr><tr><td>2031461</td><td>3306854</td></tr><tr><td>0003506</td><td>3315342</td></tr><tr><td>0898288</td><td>3397884</td></tr><tr><td>0093051</td><td>3448226</td></tr><tr><td>0000233</td><td>3460252</td></tr><tr><td>0751577</td><td>3498820</td></tr><tr><td>0166256</td><td>3521164</td></tr><tr><td>0138809</td><td>3544112</td></tr><tr><td>0083348</td><td>3606756</td></tr><tr><td>0000631</td><td>3659388</td></tr><tr><td>6456477</td><td>3694790</td></tr><tr><td>0946734</td><td>373889</td></tr><tr><td>0000165</td><td>3778644</td></tr><tr><td>3227090</td><td>3783958</td></tr><tr><td>0426287</td><td>3846674</td></tr><tr><td>0348181</td><td>3896198</td></tr><tr><td>0094435</td><td>3967856</td></tr><tr><td>1226871</td><td>4046784</td></tr><tr><td>0448768</td><td>4068576</td></tr><tr><td>0946734</td><td>4123430</td></tr><tr><td>1788310</td><td>4126476</td></tr><tr><td>0093051</td><td>4146622</td></tr><tr><td>0751577</td><td>4154756</td></tr><tr><td>0751648</td><td>4154756</td></tr><tr><td>0751577</td><td>4154796</td></tr><tr><td>0751648</td><td>4154796</td></tr><tr><td>6972592</td><td>4273886</td></tr><tr><td>0821432</td><td>4425200</td></tr><tr><td>1406845</td><td>4429160</td></tr><tr><td>7464857</td><td>4429160</td></tr><tr><td>9045599</td><td>4429160</td></tr><tr><td>0001226</td><td>4477536</td></tr><tr><td>1989536</td><td>4481414</td></tr><tr><td>1226871</td><td>4500922</td></tr><tr><td>0336620</td><td>4630562</td></tr><tr><td>0709056</td><td>4633694</td></tr><tr><td>2130108</td><td>4633694</td></tr><tr><td>0524190</td><td>4651520</td></tr><tr><td>1461392</td><td>4777008</td></tr><tr><td>0577647</td><td>4846340</td></tr><tr><td>0003160</td><td>4912910</td></tr><tr><td>0796117</td><td>4972582</td></tr><tr><td>0634240</td><td>5013056</td></tr><tr><td>1732981</td><td>5027774</td></tr><tr><td>0551128</td><td>5028340</td></tr><tr><td>7591919</td><td>5034276</td></tr><tr><td>1840064</td><td>5093026</td></tr><tr><td>0002657</td><td>5164214</td></tr><tr><td>0850733</td><td>5220122</td></tr><tr><td>1164602</td><td>5294518</td></tr><tr><td>1396121</td><td>5311514</td></tr><tr><td>2210720</td><td>5323662</td></tr><tr><td>0500610</td><td>5463162</td></tr><tr><td>0868219</td><td>5580390</td></tr><tr><td>8027731</td><td>5586914</td></tr><tr><td>1093039</td><td>5606664</td></tr><tr><td>0048918</td><td>5649144</td></tr><tr><td>3613566</td><td>5700672</td></tr><tr><td>0345174</td><td>5726616</td></tr><tr><td>0000759</td><td>5776858</td></tr><tr><td>1601882</td><td>5848272</td></tr><tr><td>1224299</td><td>5884052</td></tr><tr><td>0948027</td><td>6083230</td></tr><tr><td>3006131</td><td>6095472</td></tr><tr><td>0269463</td><td>6105098</td></tr><tr><td>0005363</td><td>6139732</td></tr><tr><td>0821432</td><td>6146586</td></tr><tr><td>0793840</td><td>6317962</td></tr><tr><td>1218281</td><td>6320628</td></tr><tr><td>1783265</td><td>6450804</td></tr><tr><td>1682573</td><td>6472976</td></tr><tr><td>2573005</td><td>6663582</td></tr><tr><td>0094435</td><td>6751668</td></tr><tr><td>5464371</td><td>6788942</td></tr><tr><td>0500610</td><td>6806448</td></tr><tr><td>0000386</td><td>6924650</td></tr><tr><td>0268380</td><td>6966692</td></tr><tr><td>0000233</td><td>7131622</td></tr><tr><td>0680846</td><td>7286456</td></tr><tr><td>3792134</td><td>7668870</td></tr><tr><td>4170048</td><td>7784604</td></tr><tr><td>5117369</td><td>7880466</td></tr><tr><td>2797744</td><td>8079248</td></tr><tr><td>7916579</td><td>8119680</td></tr><tr><td>0634240</td><td>816692</td></tr><tr><td>0317638</td><td>8328716</td></tr><tr><td>0082450</td><td>8623904</td></tr><tr><td>4170048</td><td>8772262</td></tr><tr><td>1396121</td><td>9426210</td></tr><tr><td>10468241</td><td>9764654</td></tr>		</tbody>
+	</table>
+</div>
+
+
+
+
+
+</body></html>

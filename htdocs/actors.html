@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost/actors.php -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>IMDB</title>
+
+<style>
+
+table {
+width: 65%;
+border: 1px solid #444444;
+    border-collapse: collapse;
+    margin-left: 200px;
+}
+th, td {
+border: 1px solid #444444;
+}
+#menu{
+background-color: #2d2d2d;
+height: 70px;
+border: 1px solid #ccc;
+border-width: 1px 0;
+}
+#topMenu {
+height: 60px;
+width: 1300px;
+align: 0 auto;
+}
+#topMenu ul li{
+list-style: none;
+color: white;
+background-color: #2d2d2d;
+float: left;
+line-height: 50px;
+vertical-align: middle;
+text-align: center;
+text-align: center;
+}
+#menu .right{
+float: right;
+
+}
+#Menu ul li{
+/* float: none; 세로 출력*/
+background-color: #636363;
+}
+#topMenu li ul{
+background-color: #636363;
+position:absolute;
+display:none;
+}
+#topMenu li:hover ul {
+display:block;
+}
+#topMenu .menuLink {
+text-decoration:none;
+color: white;
+display: block;
+width: 150px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuLink:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#topMenu .menuL {
+text-decoration:none;
+color: white;
+display: block;
+width: 170px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuL:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#delete_step label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+#updateform label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.form-search{
+height: 25px;
+width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#delete_step .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+}
+#updateform .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#search{
+font-size: 20px;
+width: 90px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#search_btn{
+height: 25px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step1{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step2{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step3{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-delete{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.step{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+color: red;
+}
+body { text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */ }
+
+.input:hover{
+cursor:pointer;
+}
+#home{
+font-size: 60px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+color: black;
+}
+#updatestep1{
+display: none
+}
+#updatestep2{
+display: none
+}
+#updatestep3{
+display: none
+}
+#delete_step{
+display: none
+}
+</style>
+</head>
+<body>
+<a id="home" href="http://localhost/index.php">8조 IMDB</a>
+<br>
+<div id="menu">
+<nav id="topMenu">
+<ul>
+<li><a class="menuLink" href="http://localhost/actors.php#">Movie</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie.php">movies</a></li>
+<li><a class="menuL" href="http://localhost/movie_genres.php">movie_genres</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/actors.php#">Actor</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/actors.php">actors</a></li>
+<li><a class="menuL" href="http://localhost/roles.php">roles</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/actors.php#">Director</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie_directors.php">movie_directors</a></li>
+<li><a class="menuL" href="http://localhost/directors_genres.php">directors_genres</a></li>
+<li><a class="menuL" href="http://localhost/directors.php">directors</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/actors.php#">Review</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/reviews.php">reviews</a></li>
+</ul>
+</nav>
+</li>
+<li class="right">
+<form name="mysearchbar" action="http://localhost/search.php" method="post">
+<div class="input-group">
+
+<select id="search" name="search">
+<option value="movie">movie</option>
+<option value="actor">actor</option>
+<option value="director">director</option>
+<option value="genre">genre</option>
+</select>
+<input name="Search_name" type="text" class="form-search" placeholder="search">
+&nbsp;&nbsp;
+<button type="submit" id="search_btn">검색</button>
+</div>
+</form>
+</li>
+<li class="right"><a class="menuLink" href="http://localhost/actors.php#" id="update_step1">Update</a></li>
+<li class="right"><a class="menuLink" href="http://localhost/actors.php#" id="delete">Delete</a></li>
+</ul>
+</nav>
+</div>
+<br><br>
+
+<!-- delete -->
+<form action="http://localhost/delete_data.php" method="post">
+<div id="delete_step">
+<h2 class="step">DELETE DATA</h2>
+<br><br><br>
+<div class="form-group">
+<label for="delete_movie_id">Movie Name</label>
+<br><br>
+<input type="delete_movie_id" class="form-control" name="movie_name" id="delete_movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-delete">Delete</button>
+</div>
+</form>
+
+
+<!-- update -->
+<form action="http://localhost/insert_data.php" method="post">
+<div id="updateform">
+
+
+<!-- STEP1: INPUT MOVIES TABLE -->
+
+<div id="updatestep1">
+<h2 class="step">STEP1: INPUT MOVIES TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_name">Movie Name</label>
+<br><br>
+<input type="movie_name" class="form-control" name="movie_name" id="movie_name" placeholder="Enter movie name here (e.g., Gattaca)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_year">Movie Year</label>
+<br><br>
+<input type="movie_year" class="form-control" name="movie_year" id="movie_year" placeholder="Enter movie year here (e.g., 1965)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_genres">Movie Genres</label>
+<br><br>
+<input type="movie_genres" class="form-control" name="movie_genres" id="movie_genres" placeholder="Enter movie genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="runtime_rating">Runtime</label>
+<br><br>
+<input type="runtime_rating" class="form-control" name="runtime_rating" id="runtime_rating" placeholder="Enter runtime rating here (e.g., 172)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="rating">Rating</label>
+<br><br>
+<input type="rating" class="form-control" name="rating" id="rating" placeholder="Enter Rating here (e.g., 7.1)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="plot">Plot</label>
+<br><br>
+<input type="plot" class="form-control" name="plot" id="plot" placeholder="Enter plot here (e.g., A woman leaves an Austrian convent t.....)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="budget">Budget</label>
+<br><br>
+<input type="budget" class="form-control" name="budget" id="budget" placeholder="Enter budget here (e.g., 8200000)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="gross_glob">Gross glob</label>
+<br><br>
+<input type="gross_glob" class="form-control" name="gross_glob" id="gross_glob" placeholder="Enter Gross glob here (e.g., 159413574)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="submitter_id">Submitter ID</label>
+<br><br>
+<input type="submitter_id" class="form-control" name="submitter_id" id="submitter_id" placeholder="Enter submitter id here (e.g., 2017113323)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step1">next</button>
+</div>
+
+<!-- STEP2: INPUT ACTORS TABLE -->
+
+<div id="updatestep2">
+<h2 class="step">STEP2: INPUT ACTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_id">Actor ID</label>
+<br><br>
+<input type="actor_id" class="form-control" name="actor_id" id="actor_id" placeholder="Enter actor ID here (e.g., 0000267)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_name">Actor Name</label>
+<br><br>
+<input type="actor_name" class="form-control" name="actor_name" id="actor_name" placeholder="Enter actor name here (e.g., Julie Andrews)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_gender">Actor Gender</label>
+<br><br>
+<input type="actor_gender" class="form-control" name="actor_gender" id="actor_gender" placeholder="Enter actor gender here (e.g., F)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="role">Role</label>
+<br><br>
+<input type="role" class="form-control" name="role" id="role" placeholder="Enter role here (e.g., Maria)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step2">next</button>
+</div>
+
+<!-- STEP3: INPUT DIRECTORS TABLE -->
+
+<div id="updatestep3">
+<h2 class="step">STEP3: INPUT DIRECTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_id">Director ID</label>
+<br><br>
+<input type="director_id" class="form-control" name="director_id" id="director_id" placeholder="Enter director ID here (e.g., 0936404)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_name">Director Name</label>
+<br><br>
+<input type="director_name" class="form-control" name="director_name" id="director_name" placeholder="Enter director name here (e.g., Robert Wise)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_genres">Director Genres</label>
+<br><br>
+<input type="director_genres" class="form-control" name="director_genres" id="director_genres" placeholder="Enter actor genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-step3">Insert</button>
+</div>
+</div>
+</form>
+<script language="javascript">
+document.getElementById("delete").onclick = function() {
+    document.getElementById("delete_step").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updatestep3").style.display="none";
+
+}
+document.getElementById("btn-delete").onclick = function() {
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+
+document.getElementById("update_step1").onclick = function() {
+    document.getElementById("updatestep1").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+
+}
+
+document.getElementById("btn-step1").onclick = function() {
+    document.getElementById("updatestep2").style.display="block";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step2").onclick = function() {
+    document.getElementById("updatestep3").style.display="block";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step3").onclick = function() {
+    document.getElementById("updatestep3").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+</script>
+
+
+<div id="all_table">
+	<!-- ACTORS table -->
+		<p></p><h3> ACTORS table (Currently 844 actors in database)</h3><p></p>
+
+	<table cellspacing="0" width="100%">
+		<thead>
+		<tr>
+			<th>Actor ID</th>
+			<th>Name</th>
+			<th>Gender</th>
+		</tr>
+		</thead>
+
+		<tbody>
+		<tr><td></td><td></td><td></td></tr><tr><td>0000006</td><td>Ingrid Bergman</td><td>F</td></tr><tr><td>0000007</td><td>Humphrey Bogart</td><td>M</td></tr><tr><td>0000008</td><td>Marlon Brando</td><td>M</td></tr><tr><td>0000017</td><td>Marlene Dietrich</td><td>F</td></tr><tr><td>0000020</td><td>Henry Fonda</td><td>M</td></tr><tr><td>0000022</td><td>Clark Gable</td><td>M</td></tr><tr><td>0000023</td><td>Judy Garland</td><td>F</td></tr><tr><td>0000037</td><td>Gene Kelly</td><td>M</td></tr><tr><td>0000046</td><td>Vivien Leigh&nbsp;</td><td>F</td></tr><tr><td>0000056</td><td>Paul Newman</td><td>M</td></tr><tr><td>0000061</td><td>Tyrone Power</td><td>M</td></tr><tr><td>0000071</td><td>James Stewart</td><td>M</td></tr><tr><td>0000092</td><td>John Cleese </td><td>M</td></tr><tr><td>0000093</td><td>Brad Pitt</td><td>M</td></tr><tr><td>0000098</td><td>Jennifer Aniston</td><td>F</td></tr><tr><td>0000102</td><td>Kevin Bacon</td><td>M</td></tr><tr><td>0000106</td><td>Drew Barrymore</td><td>F</td></tr><tr><td>0000110</td><td>Toby Jones</td><td>M</td></tr><tr><td>0000112</td><td>Pierce Brosnan</td><td>M</td></tr><tr><td>0000113</td><td>Sandra Bullock</td><td>F</td></tr><tr><td>0000115</td><td>Nicolas Cage</td><td>M</td></tr><tr><td>0000120</td><td>Jim Carrey</td><td>M</td></tr><tr><td>0000122</td><td>Charles Chaplin</td><td>M</td></tr><tr><td>0000123</td><td>George Clooney</td><td>M</td></tr><tr><td>0000124</td><td>Jennifer Connelly</td><td>F</td></tr><tr><td>0000128</td><td>Russell Crowe</td><td>M</td></tr><tr><td>0000129</td><td>Tom Cruise</td><td>M</td></tr><tr><td>0000130</td><td>Jamie Lee Curtis</td><td>F</td></tr><tr><td>0000131</td><td>John Cusack</td><td>M</td></tr><tr><td>0000132</td><td>Claire Danes</td><td>F</td></tr><tr><td>0000133</td><td>Geena Davis</td><td>F</td></tr><tr><td>0000134</td><td>Robert De Niro</td><td>M</td></tr><tr><td>0000136</td><td>Johnny Depp</td><td>M</td></tr><tr><td>0000138</td><td>Leonardo DiCaprio</td><td>M</td></tr><tr><td>0000142</td><td>Clint Eastwood</td><td>M</td></tr><tr><td>0000144</td><td>Cary Elwes</td><td>M</td></tr><tr><td>0000146</td><td>Ralph Fiennes </td><td>M</td></tr><tr><td>0000147</td><td>Colin Firth</td><td>M</td></tr><tr><td>0000148</td><td>Harrison Ford</td><td>M</td></tr><tr><td>0000149</td><td>Jodie Foster</td><td>F</td></tr><tr><td>0000150</td><td>Michael J. Fox</td><td>M</td></tr><tr><td>0000151</td><td>Morgan Freeman</td><td>M</td></tr><tr><td>0000153</td><td>Gina Gershon</td><td>F</td></tr><tr><td>0000154</td><td>Mel Gibson</td><td>M</td></tr><tr><td>0000156</td><td>Jeff Goldblum </td><td>M</td></tr><tr><td>0000157</td><td>Linda Hamilton </td><td>F</td></tr><tr><td>0000158</td><td>Tom Hanks</td><td>M</td></tr><tr><td>0000160</td><td>Ethan Hawke</td><td>M</td></tr><tr><td>0000162</td><td>Anne Heche</td><td>F</td></tr><tr><td>0000163</td><td>Dustin Hoffman</td><td>M</td></tr><tr><td>0000164</td><td>Anthony Hopkins</td><td>M</td></tr><tr><td>0000168</td><td>Samuel L. Jackson</td><td>M</td></tr><tr><td>0000169</td><td>Tommy Lee Jones</td><td>M</td></tr><tr><td>0000170</td><td>Milla Jovovich</td><td>F</td></tr><tr><td>0000172</td><td>Harvey Keitel</td><td>M</td></tr><tr><td>0000179</td><td>Jude Law</td><td>M</td></tr><tr><td>0000190</td><td>Matthew McConaughey</td><td>M</td></tr><tr><td>0000191</td><td>Ewan McGregor</td><td>M</td></tr><tr><td>0000197</td><td>Jack Nicholson</td><td>M</td></tr><tr><td>0000198</td><td>Gary Oldman</td><td>M</td></tr><tr><td>0000199</td><td>Al Pacino</td><td>M</td></tr><tr><td>0000200</td><td>Bill Paxton</td><td>M</td></tr><tr><td>0000201</td><td>Michelle Pfeiffer</td><td>F</td></tr><tr><td>0000204</td><td>Natalie Portman</td><td>F</td></tr><tr><td>0000206</td><td>Keanu Reeves</td><td>M</td></tr><tr><td>0000209</td><td>Tim Robbins</td><td>M</td></tr><tr><td>0000210</td><td>Julia Roberts</td><td>F</td></tr><tr><td>0000216</td><td>Arnold Schwarzenegger </td><td>M</td></tr><tr><td>0000219</td><td>Steven Seagal</td><td>M</td></tr><tr><td>0000226</td><td>Will Smith</td><td>M</td></tr><tr><td>0000228</td><td>Kevin Spacey</td><td>M</td></tr><tr><td>0000230</td><td>Sylvester Stallone</td><td>M</td></tr><tr><td>0000234</td><td>Charlize Theron</td><td>F</td></tr><tr><td>0000235</td><td>Uma Thurman</td><td>F</td></tr><tr><td>0000237</td><td>John Travolta</td><td>M</td></tr><tr><td>0000242</td><td>Mark Wahlberg</td><td>M</td></tr><tr><td>0000243</td><td>Denzel Washington</td><td>M</td></tr><tr><td>0000244</td><td>Sigourney Weaver</td><td>F</td></tr><tr><td>0000245</td><td>Robin Williams</td><td>M</td></tr><tr><td>0000246</td><td>Bruce Willis</td><td>M</td></tr><tr><td>0000249</td><td>James Woods</td><td>M</td></tr><tr><td>0000255</td><td>Ben Affleck</td><td>M</td></tr><tr><td>0000260</td><td>Joan Allen</td><td>F</td></tr><tr><td>0000267</td><td>Julie Andrews</td><td>F</td></tr><tr><td>0000276</td><td>Sean Astin</td><td>M</td></tr><tr><td>0000285</td><td>Alec Baldwin</td><td>M</td></tr><tr><td>0000286</td><td>Stephen Baldwin</td><td>M</td></tr><tr><td>0000288</td><td>Christian Bale</td><td>M</td></tr><tr><td>0000293</td><td>Sean Bean</td><td>M</td></tr><tr><td>0000299</td><td>Michael Biehn</td><td>M</td></tr><tr><td>0000301</td><td>Thora Birch</td><td>F</td></tr><tr><td>0000306</td><td>Brian Blessed</td><td>M</td></tr><tr><td>0000307</td><td>Helena Bonham Carter </td><td>F</td></tr><tr><td>0000321</td><td>Gabriel Byrne</td><td>M</td></tr><tr><td>0000322</td><td>Emmanuelle Béart</td><td>F</td></tr><tr><td>0000345</td><td>Billy Crystal</td><td>M</td></tr><tr><td>0000346</td><td>Macaulay Culkin</td><td>M</td></tr><tr><td>0000349</td><td>Joan Cusack</td><td>F</td></tr><tr><td>0000353</td><td>Willem Dafoe</td><td>M</td></tr><tr><td>0000354</td><td>Matt Damon</td><td>M</td></tr><tr><td>0000358</td><td>Daniel Day-Lewis</td><td>M</td></tr><tr><td>0000360</td><td>Rebecca De Mornay</td><td>F</td></tr><tr><td>0000365</td><td>Julie Delpy</td><td>F</td></tr><tr><td>0000375</td><td>Robert Downey Jr.</td><td>M</td></tr><tr><td>0000378</td><td>Minnie Driver</td><td>F</td></tr><tr><td>0000380</td><td>Robert Duvall</td><td>M</td></tr><tr><td>0000388</td><td>R. Lee Ermey</td><td>M</td></tr><tr><td>0000398</td><td>Sally Field</td><td>F</td></tr><tr><td>0000400</td><td>Linda Fiorentino</td><td>F</td></tr><tr><td>0000401</td><td>Laurence Fishburne</td><td>M</td></tr><tr><td>0000402</td><td>Carrie Fisher</td><td>F</td></tr><tr><td>0000402/</td><td>Carrie Fisher</td><td>F</td></tr><tr><td>0000407</td><td>Vivica A. Fox</td><td>F</td></tr><tr><td>0000408</td><td>Jonathan Frakes</td><td>M</td></tr><tr><td>0000411</td><td>Edward Furlong</td><td>M</td></tr><tr><td>0000412</td><td>Andy Garcia</td><td>M</td></tr><tr><td>0000418</td><td>Danny Glover</td><td>M</td></tr><tr><td>0000422</td><td>John Goodman</td><td>M</td></tr><tr><td>0000424</td><td>Hugh Grant</td><td>M</td></tr><tr><td>0000434</td><td>Mark Hamill</td><td>M</td></tr><tr><td>0000437</td><td>Woody Harrelson</td><td>M</td></tr><tr><td>0000438</td><td>Ed Harris</td><td>M</td></tr><tr><td>0000442</td><td>Ruter Hauer</td><td>M</td></tr><tr><td>0000451</td><td>Gaby Hoffmann</td><td>F</td></tr><tr><td>0000454</td><td>Dennis Hopper</td><td>M</td></tr><tr><td>0000456</td><td>Holly Hunter</td><td>F</td></tr><tr><td>0000457</td><td>John Hurt</td><td>M</td></tr><tr><td>0000460</td><td>Jeremy Irons</td><td>M</td></tr><tr><td>0000469</td><td>James Earl Jones</td><td>M</td></tr><tr><td>0000473</td><td>Diane Keaton</td><td>F</td></tr><tr><td>0000474</td><td>Michael Keaton</td><td>M</td></tr><tr><td>0000491</td><td>John Leguizamo</td><td>M</td></tr><tr><td>0000492</td><td>Jennifer Jason Leigh</td><td>F</td></tr><tr><td>0000494</td><td>Robert Sean Leonard</td><td>M</td></tr><tr><td>0000501</td><td>Ray Liotta</td><td>M</td></tr><tr><td>0000502</td><td>Christopher Lloyd</td><td>M</td></tr><tr><td>0000514</td><td>Michael Madsen</td><td>M</td></tr><tr><td>0000531</td><td>Frances McDormand</td><td>F</td></tr><tr><td>0000541</td><td>Bette Midler</td><td>F</td></tr><tr><td>0000553</td><td>Liam Neeson</td><td>M</td></tr><tr><td>0000563</td><td>Chris O'Donnell</td><td>M</td></tr><tr><td>0000569</td><td>Gwyneth Paltrow</td><td>F</td></tr><tr><td>0000572</td><td>Sarah Jessica Parker</td><td>F</td></tr><tr><td>0000576</td><td>Sean Penn</td><td>M</td></tr><tr><td>0000578</td><td>Anthony Perkins</td><td>M</td></tr><tr><td>0000582</td><td>Joe Pesci</td><td>M</td></tr><tr><td>0000586</td><td>Jada Pinkett Smith</td><td>F</td></tr><tr><td>0000587</td><td>Donald Pleasence </td><td>M</td></tr><tr><td>0000597</td><td>Bill Pullman</td><td>M</td></tr><tr><td>0000604</td><td>John C. Reilly</td><td>M</td></tr><tr><td>0000606</td><td>Jean Reno</td><td>M</td></tr><tr><td>0000609</td><td>Ving Rhames</td><td>M</td></tr><tr><td>0000619</td><td>Tim Roth</td><td>M</td></tr><tr><td>0000621</td><td>Kurt Russell</td><td>M</td></tr><tr><td>0000643</td><td>Tom Skerritt</td><td>M</td></tr><tr><td>0000652</td><td>James Spader</td><td>M</td></tr><tr><td>0000653</td><td>Brent Spiner</td><td>M</td></tr><tr><td>0000658</td><td>Meryl Streep</td><td>F</td></tr><tr><td>0000666</td><td>Lili Taylor</td><td>F</td></tr><tr><td>0000667</td><td>David Thewlis</td><td>M</td></tr><tr><td>0000668</td><td>Emma Thompson</td><td>F</td></tr><tr><td>0000670</td><td>Lea Thompson</td><td>F</td></tr><tr><td>0000683</td><td>Gore Vidal</td><td>M</td></tr><tr><td>0000685</td><td>Jon Voight</td><td>M</td></tr><tr><td>0000686</td><td>Christopher Walken </td><td>m</td></tr><tr><td>0000701</td><td>Kate Winslet</td><td>F</td></tr><tr><td>0000704</td><td>Elijah Wood</td><td>M</td></tr><tr><td>0000707</td><td>Sean Young</td><td>F</td></tr><tr><td>0000708</td><td>Bily Zane</td><td>M</td></tr><tr><td>0000741</td><td> Tim Allen</td><td>M</td></tr><tr><td>0000799</td><td>Edward Asner</td><td>M</td></tr><tr><td>0000842</td><td>Martin Balsam</td><td>M</td></tr><tr><td>0000843</td><td>Anne Bancroft</td><td>F</td></tr><tr><td>0000849</td><td>Javier Bardem</td><td>M</td></tr><tr><td>0000867</td><td>Jason Bateman</td><td>M</td></tr><tr><td>0000906</td><td>Annette Bening</td><td>F</td></tr><tr><td>0000932</td><td>Halle Berry</td><td>F</td></tr><tr><td>0000949</td><td>Cate Blanchett</td><td>F</td></tr><tr><td>0000965</td><td>Danny Boyle</td><td>M</td></tr><tr><td>0000973</td><td>Benjamin Bratt</td><td>M</td></tr><tr><td>0000982</td><td>Josh Brolin</td><td>M</td></tr><tr><td>0000983</td><td>Albert Brooks</td><td>M</td></tr><tr><td>0000990</td><td>Betty Buckley </td><td>F</td></tr><tr><td>0000995</td><td>Ellen Burstyn</td><td>F</td></tr><tr><td>0001001</td><td>James Caan</td><td>M</td></tr><tr><td>0001015</td><td>Robert Carlyle</td><td>M</td></tr><tr><td>0001037</td><td>Graham Chapman</td><td>M</td></tr><tr><td>0001046</td><td>Julie Christie</td><td>F</td></tr><tr><td>0001057</td><td>Toni Collette</td><td>F</td></tr><tr><td>0001059</td><td>Robbie Coltrane</td><td>M</td></tr><tr><td>0001072</td><td>Joseph Cotten</td><td>M</td></tr><tr><td>0001075</td><td>Peter Coyote</td><td>M</td></tr><tr><td>0001082</td><td>Billy Crudup</td><td>M</td></tr><tr><td>0001109</td><td>Jaye Davidson</td><td>M</td></tr><tr><td>0001122</td><td>Ellen DeGeneres</td><td>F</td></tr><tr><td>0001125</td><td>Benicio Del Toro</td><td>M</td></tr><tr><td>0001132</td><td>Judi Dench</td><td>F</td></tr><tr><td>0001167</td><td>Shelley Duvall </td><td>F</td></tr><tr><td>0001172</td><td>Christopher Eccleston</td><td>M</td></tr><tr><td>0001185</td><td>Hector Elizondo </td><td>M</td></tr><tr><td>0001191</td><td>Adam Sandler</td><td>M</td></tr><tr><td>000120</td><td>Jim Carrey</td><td>M</td></tr><tr><td>0001208</td><td>Miguel Ferrer</td><td>M</td></tr><tr><td>0001213</td><td>Harvey Fierstein</td><td>M</td></tr><tr><td>0001221</td><td>Louise Fletcher</td><td>F</td></tr><tr><td>0001242</td><td>Matt Frewer</td><td>m</td></tr><tr><td>0001282</td><td>Tony Goldwyn</td><td>M</td></tr><tr><td>0001288</td><td>Kelsey Grammer</td><td>M</td></tr><tr><td>0001303</td><td>Carla Gugino</td><td>F</td></tr><tr><td>0001314</td><td>John Hannah</td><td>M</td></tr><tr><td>0001321</td><td>Richard Harris</td><td>M</td></tr><tr><td>0001324</td><td>Ian Hart</td><td>M</td></tr><tr><td>0001349</td><td>Jennifer Love Hewitt</td><td>F</td></tr><tr><td>0001372</td><td>Bonnie Hunt</td><td>F</td></tr><tr><td>0001385</td><td>Eric Idle</td><td>M</td></tr><tr><td>0001401</td><td>Angelina Jolie </td><td>F</td></tr><tr><td>0001413</td><td>Julie Kavner</td><td>F</td></tr><tr><td>0001421</td><td>George Kennedy</td><td>M</td></tr><tr><td>0001426</td><td>Ben Kingsley</td><td>M</td></tr><tr><td>0001450</td><td>Angela Lansbury</td><td>F</td></tr><tr><td>0001452</td><td>Charles Laughton</td><td>M</td></tr><tr><td>0001467</td><td>Jared Leto</td><td>M</td></tr><tr><td>0001473</td><td>Laura Linney</td><td>F</td></tr><tr><td>0001519</td><td>Ian McDiarmid</td><td>M</td></tr><tr><td>0001527</td><td>Elizabeth McGovern</td><td>F</td></tr><tr><td>0001533</td><td>Meat Loaf</td><td>M</td></tr><tr><td>0001548</td><td>Rick Moranis</td><td>m</td></tr><tr><td>0001550</td><td>Cathy Moriarty</td><td>F</td></tr><tr><td>0001556</td><td>David Morse</td><td>M</td></tr><tr><td>0001557</td><td>Viggo Mortensen</td><td>M</td></tr><tr><td>0001562</td><td>Kathy Najimy</td><td>F</td></tr><tr><td>0001567</td><td>Connie Nielsen</td><td>F</td></tr><tr><td>0001570</td><td>Edward Norton</td><td>M</td></tr><tr><td>0001571</td><td>Kim Novak</td><td>F</td></tr><tr><td>0001592</td><td>Joe Pantoliano</td><td>M</td></tr><tr><td>0001602</td><td>Guy Pearce</td><td>M</td></tr><tr><td>0001605</td><td>Amanda Peet</td><td>F</td></tr><tr><td>0001618</td><td>Joaquin Phoenix </td><td>M</td></tr><tr><td>0001626</td><td>Christopher Plummer</td><td>M</td></tr><tr><td>0001674</td><td>Chris Rock</td><td>M</td></tr><tr><td>0001691</td><td>Geoffrey Rush</td><td>M</td></tr><tr><td>0001735</td><td>Talia Shire</td><td>F</td></tr><tr><td>0001743</td><td>Marc Singer </td><td>M</td></tr><tr><td>0001744</td><td>Tom Sizemore</td><td>M</td></tr><tr><td>0001751</td><td>Jimmy Smits</td><td>M</td></tr><tr><td>0001758</td><td>Timothy Spall </td><td>M</td></tr><tr><td>0001772</td><td>Patrick Stewart</td><td>M</td></tr><tr><td>0001774</td><td>Ben Stiller</td><td>M</td></tr><tr><td>0001794</td><td>Henry Thomas</td><td>M</td></tr><tr><td>0001800</td><td>Rip Torn</td><td>M</td></tr><tr><td>0001804</td><td>Stanley Tucci</td><td>M</td></tr><tr><td>0001812</td><td>Lee Van Cleef</td><td>M</td></tr><tr><td>0001813</td><td>Dick Van Dyke</td><td>M</td></tr><tr><td>0001833</td><td>Emily Watson</td><td>F</td></tr><tr><td>0001838</td><td>Rachel Weisz</td><td>F</td></tr><tr><td>0001845</td><td>Forest Whitaker</td><td>M</td></tr><tr><td>0001876</td><td>Catherine Zeta-Jones</td><td>F</td></tr><tr><td>0002011</td><td>Lee J. Cobb</td><td>M</td></tr><tr><td>0002091</td><td>Michael Gambon</td><td>M</td></tr><tr><td>0002907</td><td>Alexander Skarsgård</td><td>M</td></tr><tr><td>0003424</td><td> Hank Mann</td><td>M</td></tr><tr><td>0003817</td><td>Michael Clarke Duncan</td><td>M</td></tr><tr><td>0004266</td><td>Anne Hathaway</td><td>F</td></tr><tr><td>0004376</td><td>Franka Potente</td><td>F</td></tr><tr><td>0004748</td><td>Julie Benz </td><td>M</td></tr><tr><td>0004778</td><td>Adrien Brody</td><td>M</td></tr><tr><td>0004789</td><td>Amanda Bynes</td><td>F</td></tr><tr><td>0004813</td><td>Nancy Cartwright</td><td>F</td></tr><tr><td>0004874</td><td>Vin Diesel</td><td>M</td></tr><tr><td>0004912</td><td>Oded Fehr</td><td>M</td></tr><tr><td>0004936</td><td>Ben Foster</td><td>M</td></tr><tr><td>0004937</td><td>Jamie Foxx</td><td>M</td></tr><tr><td>0004951</td><td>Brad Garrett&nbsp;</td><td>M</td></tr><tr><td>0005026</td><td>Kelly Hu</td><td>F</td></tr><tr><td>0005109</td><td>Mila Kunis </td><td>F</td></tr><tr><td>0005123</td><td>Ali Larter</td><td>F</td></tr><tr><td>0005132</td><td>Heath Ldeger</td><td>M</td></tr><tr><td>0005212</td><td>Ian McKellen</td><td>M</td></tr><tr><td>0005251</td><td>Carrie-Anne Moss</td><td>F</td></tr><tr><td>0005266</td><td>Craig T. Nelson</td><td>M</td></tr><tr><td>0005286</td><td>Haley Joel Osment</td><td>M</td></tr><tr><td>0005351</td><td>Ryan Reynolds</td><td>M</td></tr><tr><td>0005458</td><td>Jason Statham</td><td>M</td></tr><tr><td>0005466</td><td>Julia Stiles</td><td>F</td></tr><tr><td>0005493</td><td>Justin Timberlake</td><td>M</td></tr><tr><td>0005541</td><td>Marlon Wayans</td><td>M</td></tr><tr><td>0005562</td><td>Owen Wilson</td><td>M</td></tr><tr><td>0010736</td><td>Amy Adams </td><td>F</td></tr><tr><td>0012523</td><td>Scott Adsit</td><td>M</td></tr><tr><td>0015196</td><td>Malin Akerman</td><td>F</td></tr><tr><td>0016852</td><td>Francesc Albiol</td><td>M</td></tr><tr><td>0017013</td><td>Hardie Albright</td><td>M</td></tr><tr><td>0018161</td><td>Raquel Alessi</td><td>F</td></tr><tr><td>0018755</td><td>Stan Alexander</td><td>F</td></tr><tr><td>0023832</td><td>Mathieu Amalric</td><td>M</td></tr><tr><td>0026687</td><td>Erich Anderson</td><td>M</td></tr><tr><td>0036978</td><td>Judie Aronson</td><td>F</td></tr><tr><td>0041165</td><td>Roy Atwell</td><td>M</td></tr><tr><td>0047962</td><td>Chieko Baishô</td><td>F</td></tr><tr><td>0052079</td><td>Jennifer Banko</td><td>F</td></tr><tr><td>0054697</td><td>Ike Barinholtz</td><td>M</td></tr><tr><td>0055549</td><td>Christopher Daniel Barnes</td><td>M</td></tr><tr><td>0057450</td><td>Anthony Barrile</td><td>M</td></tr><tr><td>0059228</td><td>Peter Barton</td><td>M</td></tr><tr><td>0059431</td><td>Jay Baruchel</td><td>M</td></tr><tr><td>0061649</td><td>Bill Baucom</td><td>M</td></tr><tr><td>0066951</td><td>Peter Behn</td><td>M</td></tr><tr><td>0068338</td><td>Kristen Bell</td><td>F</td></tr><tr><td>0072533</td><td>Jodi Benson</td><td>F</td></tr><tr><td>0085312</td><td>Jack Black</td><td>M</td></tr><tr><td>0085407</td><td>Lucas Black</td><td>M</td></tr><tr><td>0086697</td><td>Rachael Blake</td><td>F</td></tr><tr><td>0089217</td><td>Orlando Bloom</td><td>M</td></tr><tr><td>0095029</td><td>Lawrence A. Bonney </td><td>M</td></tr><tr><td>0108287</td><td>Jordana Brewster</td><td>F</td></tr><tr><td>0111376</td><td>Eleanor Bron</td><td>F</td></tr><tr><td>0111777</td><td>Richard Brooker</td><td>M</td></tr><tr><td>0115161</td><td>Emily Browning</td><td>F</td></tr><tr><td>0117022</td><td>Zachery Ty Bryan</td><td>M</td></tr><tr><td>0117412</td><td>Hugh Keays-Byrne</td><td>M</td></tr><tr><td>0118081</td><td>Stuart Buchanan</td><td>M</td></tr><tr><td>0122653</td><td>Edward Burns</td><td>M</td></tr><tr><td>0123785</td><td>Ben Burtt</td><td>M</td></tr><tr><td>0124930</td><td>Gerard Butler</td><td>M</td></tr><tr><td>0126284</td><td>Rose Byrne</td><td>F</td></tr><tr><td>0129445</td><td>Todd Caldecott</td><td>M</td></tr><tr><td>0136797</td><td>Steve Carell</td><td>M</td></tr><tr><td>0136988</td><td>Leonard Carey</td><td>M</td></tr><tr><td>0140952</td><td>Peter Carroll</td><td>M</td></tr><tr><td>0143314</td><td>Adriana Caselotti</td><td>F</td></tr><tr><td>0144657</td><td>Dan Castellaneta</td><td>M</td></tr><tr><td>0147147</td><td>Henry Cavill</td><td>M</td></tr><tr><td>0156039</td><td>Virginia Cherrill</td><td>F</td></tr><tr><td>0158626</td><td>John Cho</td><td>M</td></tr><tr><td>0158648</td><td>Seung-woo Cho</td><td>M</td></tr><tr><td>0158856</td><td>Min-sik Choi</td><td>M</td></tr><tr><td>0159789</td><td>Hayden Christensen</td><td>M</td></tr><tr><td>0167649</td><td>Kim Coates</td><td>M</td></tr><tr><td>0168284</td><td>Adam Cockburn</td><td>M</td></tr><tr><td>0173827</td><td>Dorothy Comingore</td><td>F</td></tr><tr><td>0175305</td><td>Kevin Connolly</td><td>M</td></tr><tr><td>0177438</td><td>Jennifer Cooke</td><td>F</td></tr><tr><td>0182839</td><td>Marion Cotillard</td><td>F</td></tr><tr><td>0185819</td><td>Daniel Craig</td><td>M</td></tr><tr><td>0186505</td><td>Bryan Cranston</td><td>M</td></tr><tr><td>0191906</td><td>Jim Cummings</td><td>M</td></tr><tr><td>0192173</td><td>Gonzalo Cunill</td><td>M</td></tr><tr><td>0196762</td><td>Jensen Daggett</td><td>F</td></tr><tr><td>0202966</td><td>Keith David</td><td>M</td></tr><tr><td>0207498</td><td>Nicole de Boer</td><td>F</td></tr><tr><td>0219666</td><td>Reginald Denny</td><td>M</td></tr><tr><td>0221046</td><td>Zooey Deschanel</td><td>F</td></tr><tr><td>0228884</td><td>John Robert Dixon </td><td>M</td></tr><tr><td>0229943</td><td>Vernon Dobtcheff</td><td>M</td></tr><tr><td>0233304</td><td>Mike Dopud </td><td>M</td></tr><tr><td>0237065</td><td>Ashley Eckstein</td><td>F</td></tr><tr><td>0241049</td><td>Josh Duhamel</td><td>M</td></tr><tr><td>0242026</td><td>Lindsay Duncan</td><td>F</td></tr><tr><td>0247237</td><td>Holly Earl</td><td>F</td></tr><tr><td>0249291</td><td>Joel Edgerton</td><td>M</td></tr><tr><td>0251986</td><td>Jesse Eisenberg</td><td>M</td></tr><tr><td>0252230</td><td>Chiwetel Ejiofor</td><td>M</td></tr><tr><td>0252238</td><td>Carmen Ejogo</td><td>F</td></tr><tr><td>0252961</td><td>Idris Elba</td><td>M</td></tr><tr><td>0262635</td><td>Chris Evans</td><td>M</td></tr><tr><td>0266824</td><td>Dakota Fanning</td><td>F</td></tr><tr><td>0267812</td><td>Vera Farmiga</td><td>F</td></tr><tr><td>0269463</td><td>Jon Favreau</td><td>M</td></tr><tr><td>0271657</td><td>Tom Felton</td><td>M</td></tr><tr><td>0271658</td><td>Verna Felton</td><td>F</td></tr><tr><td>0272581</td><td>Rebecca Ferguson</td><td>F</td></tr><tr><td>0275486</td><td>Tina Fey</td><td>f</td></tr><tr><td>0279524</td><td>Gregor Fisher</td><td>M</td></tr><tr><td>0279545</td><td>Isla Fisher</td><td>F</td></tr><tr><td>0281956</td><td>Brendan Fletcher </td><td>M</td></tr><tr><td>0283253</td><td>Wendee Lee</td><td>F</td></tr><tr><td>0288976</td><td>Emilia Fox</td><td>F</td></tr><tr><td>0289710</td><td>Pat Fraley</td><td>M</td></tr><tr><td>029885</td><td>John Furey</td><td>M</td></tr><tr><td>0305558</td><td>Gael García Bernal</td><td>M</td></tr><tr><td>0307531</td><td>Jeff Garlin</td><td>M</td></tr><tr><td>0309914</td><td>Nicky Guadagni</td><td>F</td></tr><tr><td>0315288</td><td>John Getz</td><td>M</td></tr><tr><td>0316701</td><td>Mary Gibbs</td><td>F</td></tr><tr><td>0322513</td><td>Iain Glen</td><td>M</td></tr><tr><td>0328828</td><td>Matthew Goode</td><td>M</td></tr><tr><td>0329481</td><td>Ginnifer Goodwin</td><td>F</td></tr><tr><td>0330687</td><td>Joseph Gordon-Levitt</td><td>M</td></tr><tr><td>0331516</td><td>Ryan Gosling</td><td>M</td></tr><tr><td>0334179</td><td>Lauren Graham</td><td>F</td></tr><tr><td>0342488</td><td>Rupert Grint</td><td>M</td></tr><tr><td>0347149</td><td>Sienna Guillory</td><td>F</td></tr><tr><td>0348409</td><td>Bob Gunton</td><td>M</td></tr><tr><td>0350453</td><td>Jake Gyllenhaal</td><td>m</td></tr><tr><td>0351710</td><td>Ji-won Ha </td><td>w</td></tr><tr><td>0360028</td><td>Jim Hanks</td><td>M</td></tr><tr><td>0361823</td><td>Haya Harareet</td><td>F</td></tr><tr><td>0362766</td><td>Tom Hardy</td><td>M</td></tr><tr><td>0364569</td><td>Hye-jeong Kang</td><td>F</td></tr><tr><td>0370144</td><td>Jack Hawkins</td><td>M</td></tr><tr><td>0378245</td><td>Taraji P. Henson</td><td>F</td></tr><tr><td>0382110</td><td>David Hewlett</td><td>M</td></tr><tr><td>0383022</td><td>Noriko Hidaka</td><td>F</td></tr><tr><td>0383630</td><td>Freddie Highmore</td><td>M</td></tr><tr><td>0383708</td><td>Rumi Hiiragi</td><td>F</td></tr><tr><td>0387987</td><td>Kane Hodder</td><td>M</td></tr><tr><td>0390229</td><td>Laurie Holden</td><td>F</td></tr><tr><td>0396558</td><td>Nicholas Hoult</td><td>M</td></tr><tr><td>0396812</td><td>Danny Huston</td><td>M</td></tr><tr><td>0402271</td><td>Charlie Hunnam</td><td>M</td></tr><tr><td>0406975</td><td>Rhys Ifans</td><td>M</td></tr><tr><td>0410667</td><td>Boris Isakovic</td><td>M</td></tr><tr><td>0411790</td><td>Shigesato Itoi</td><td>M</td></tr><tr><td>0413168</td><td>Hugh Jackman</td><td>M</td></tr><tr><td>0424060</td><td>Scarlett Johansson</td><td>F</td></tr><tr><td>0424848</td><td>Dakota Johnson</td><td>F</td></tr><tr><td>0425005</td><td>Dwayne Johnson </td><td>M</td></tr><tr><td>0428065</td><td>Felicity Jones</td><td>F</td></tr><tr><td>0428656</td><td>Leslie Jones</td><td>M</td></tr><tr><td>0429363</td><td>Kenneth Branagh</td><td>M</td></tr><tr><td>0430107</td><td>Michael B. Jordan</td><td>M</td></tr><tr><td>0430151</td><td>Richard Jordan</td><td>M</td></tr><tr><td>0430817</td><td>Sharman Joshi</td><td>M</td></tr><tr><td>0431701</td><td>Jin-mo Ju </td><td>m</td></tr><tr><td>0432428</td><td>Ji-Hyun Jun </td><td>w</td></tr><tr><td>0432601</td><td>Woo-sung Jung </td><td>m</td></tr><tr><td>0434563</td><td>David Kagen</td><td>M</td></tr><tr><td>0435218</td><td>Terry Kiser</td><td>M</td></tr><tr><td>0437646</td><td>Sung Kang</td><td>M</td></tr><tr><td>0448204</td><td>Maria Doyle Kennedy</td><td>F</td></tr><tr><td>0451148</td><td>Aamir Khan</td><td>M</td></tr><tr><td>0451234</td><td>Irrfan Khan</td><td>M</td></tr><tr><td>0452748</td><td>Rya Kihlstedt</td><td>F</td></tr><tr><td>0453476</td><td>Hye-su Kim</td><td>F</td></tr><tr><td>0454011</td><td>Dana Kimmell</td><td>F</td></tr><tr><td>0454120</td><td>Takuya Kimura</td><td>M</td></tr><tr><td>0454415</td><td>Adrienne King</td><td>F</td></tr><tr><td>0454809</td><td>Jaime King</td><td>F</td></tr><tr><td>0455687</td><td>Melanie Kinnaman</td><td>F</td></tr><tr><td>0461136</td><td>Keira Knightley</td><td>F</td></tr><tr><td>0461498</td><td>Beyoncé</td><td>F</td></tr><tr><td>0472762</td><td>Olek Krupa</td><td>M</td></tr><tr><td>0479471</td><td>Shia LaBeouf</td><td>M</td></tr><tr><td>0496932</td><td>Byung-Hun Lee</td><td>M</td></tr><tr><td>0498449</td><td>Will Yun Lee</td><td>M</td></tr><tr><td>0503567</td><td>Logan Lerman</td><td>M</td></tr><tr><td>0513281</td><td>Alex D. Linz</td><td>M</td></tr><tr><td>0515950</td><td>Danny Lloyd </td><td>M</td></tr><tr><td>0517820</td><td>Lindsay Lohan</td><td>f</td></tr><tr><td>0524726</td><td>Bud Luckey</td><td>M</td></tr><tr><td>0526406</td><td>Joan Lunden</td><td>F</td></tr><tr><td>0530365</td><td>Sergi López</td><td>M</td></tr><tr><td>0531095</td><td>Eric Mabius</td><td>M</td></tr><tr><td>0534635</td><td>Richard Madden </td><td>M</td></tr><tr><td>0534856</td><td>Madhavan</td><td>M</td></tr><tr><td>0535582</td><td>Dominic Mafham</td><td>M</td></tr><tr><td>0550452</td><td>Matthew Marsden </td><td>M</td></tr><tr><td>0558726</td><td>Thom Mathews</td><td>M</td></tr><tr><td>0560093</td><td>Liesel Matthews</td><td>F</td></tr><tr><td>0564215</td><td>James McAvoy </td><td>M</td></tr><tr><td>0564277</td><td>Chi McBride</td><td>M</td></tr><tr><td>0564500</td><td>Richard McCabe</td><td>M</td></tr><tr><td>0565250</td><td>Melissa McCarthy</td><td>F</td></tr><tr><td>0569891</td><td>Tom McGrath</td><td>M</td></tr><tr><td>0571952</td><td>Kate McKinnon </td><td>F</td></tr><tr><td>0574534</td><td>Ian McShane</td><td>M</td></tr><tr><td>0578853</td><td>Ben Mendelsohn&nbsp;</td><td>M</td></tr><tr><td>0578949</td><td>Eva Mendes</td><td>F</td></tr><tr><td>0579953</td><td>Idina Menzel</td><td>F</td></tr><tr><td>0582257</td><td>Johnny Messner</td><td>M</td></tr><tr><td>0586568</td><td>Mads Mikkelsen</td><td>M</td></tr><tr><td>0587256</td><td>Vera Miles</td><td>F</td></tr><tr><td>0592135</td><td>Lin-Manuel Miranda</td><td>M</td></tr><tr><td>0593664</td><td>Radha Mitchell</td><td>F</td></tr><tr><td>0593775</td><td>Thomas Mitchell</td><td>M</td></tr><tr><td>0594271</td><td>Akihiro Miwa</td><td>M</td></tr><tr><td>0594497</td><td>Aoi Miyazaki</td><td>F</td></tr><tr><td>0594647</td><td>Kenji Mizuhashi</td><td>M</td></tr><tr><td>0597388</td><td>Jason Momoa </td><td>M</td></tr><tr><td>0601553</td><td>Mandy Moore</td><td>F</td></tr><tr><td>0602985</td><td>Tony Moran</td><td>M</td></tr><tr><td>0604656</td><td>Frank Morgan</td><td>M</td></tr><tr><td>0608090</td><td>Samantha Morton</td><td>F</td></tr><tr><td>0608440</td><td>William Moseley</td><td>m</td></tr><tr><td>0613147</td><td>Lochlyn Munro</td><td>M</td></tr><tr><td>0622412</td><td>Mari Natsuki</td><td>F</td></tr><tr><td>0628601</td><td>Thandie Newton</td><td>F</td></tr><tr><td>0629493</td><td>Paul Nicholls</td><td>M</td></tr><tr><td>0631490</td><td>Bill Nighy</td><td>M</td></tr><tr><td>0638824</td><td>Michael Nyqvist</td><td>M</td></tr><tr><td>0640307</td><td>Donald O'Connor</td><td>M</td></tr><tr><td>0640323</td><td>Frances O'Connor</td><td>F</td></tr><tr><td>0648249</td><td>Timothy Olyphant</td><td>M</td></tr><tr><td>0651534</td><td>Takao Ohsawa</td><td>M</td></tr><tr><td>0652663</td><td>Patton Oswalt</td><td>M</td></tr><tr><td>0652965</td><td>John Otrin</td><td>M</td></tr><tr><td>0654110</td><td>Clive Owen</td><td>M</td></tr><tr><td>0656759</td><td>Jong-hak Baek</td><td>m</td></tr><tr><td>0658133</td><td>Betsy Palmer</td><td>F</td></tr><tr><td>0662223</td><td>Eleanor Parker</td><td>F</td></tr><tr><td>0663546</td><td>Janel Parrish</td><td>F</td></tr><tr><td>0664238</td><td>Adam Pascal</td><td>M</td></tr><tr><td>0666739</td><td>Aaron Paul</td><td>M</td></tr><tr><td>0670408</td><td>Simon Pegg</td><td>M</td></tr><tr><td>0673824</td><td>Sergio Peris-Mencheta </td><td>M</td></tr><tr><td>0680983</td><td>Ellen Page</td><td>F</td></tr><tr><td>0687146</td><td>Jesse Plemons</td><td>M</td></tr><tr><td>0688132</td><td>Amy Poehler</td><td>F</td></tr><tr><td>0695435</td><td>Chris Pratt</td><td>M</td></tr><tr><td>0696463</td><td>Michael Preston</td><td>M</td></tr><tr><td>0705356</td><td>Daniel Radcliffe</td><td>M</td></tr><tr><td>0714310</td><td>James Rebhorn</td><td>M</td></tr><tr><td>0717709</td><td>Kelly Reilly</td><td>F</td></tr><tr><td>0731333</td><td>Larry Roberts</td><td>M</td></tr><tr><td>0735442</td><td>Michelle Rodriguez</td><td>F</td></tr><tr><td>0738918</td><td>Lou Romano</td><td>M</td></tr><tr><td>0741242</td><td>Anika Noni Rose</td><td>F</td></tr><tr><td>0744834</td><td>Eli Roth</td><td>M</td></tr><tr><td>0749263</td><td>Mark Ruffalo</td><td>M</td></tr><tr><td>0757076</td><td>Chika Sakamoto</td><td>F</td></tr><tr><td>0757327</td><td>Takahiro Sakurai</td><td>M</td></tr><tr><td>0757855</td><td>Zoe Saldana</td><td>F</td></tr><tr><td>0760225</td><td>Will Sampson</td><td>M</td></tr><tr><td>0760394</td><td>Joanne Samuel</td><td>F</td></tr><tr><td>0765597</td><td>Peter Sarsgaard</td><td>M</td></tr><tr><td>0767352</td><td>Nick Savage</td><td>M</td></tr><tr><td>0779084</td><td>Dougray Scott</td><td>M</td></tr><tr><td>0788335</td><td>Michael Shannon</td><td>M</td></tr><tr><td>0790688</td><td>Michael Sheen</td><td>M</td></tr><tr><td>0791467</td><td>Freda Foh Shen</td><td>F</td></tr><tr><td>0795661</td><td>Saurabh Shukla </td><td>M</td></tr><tr><td>0798971</td><td>Sarah Silverman</td><td>F</td></tr><tr><td>0813812</td><td>Ian Somerhalder</td><td>M</td></tr><tr><td>0814280</td><td>Kang-ho Song</td><td>M</td></tr><tr><td>0817748</td><td>Bruce Spence</td><td>M</td></tr><tr><td>0818055</td><td>Octavia Spencer</td><td>F</td></tr><tr><td>0819850</td><td>Cole Sprouse</td><td>M</td></tr><tr><td>082438</td><td>Amy Steel</td><td>F</td></tr><tr><td>0827663</td><td>Daniel Stern</td><td>M</td></tr><tr><td>0829576</td><td>Kristen Stewart</td><td>F</td></tr><tr><td>0833519</td><td>Marcia Strassman</td><td>f</td></tr><tr><td>0834380</td><td>KaDee Strickland</td><td>F</td></tr><tr><td>0836121</td><td>Michael Stuhlbarg</td><td>M</td></tr><tr><td>0837177</td><td>Jason Sudeikis</td><td>M</td></tr><tr><td>0842770</td><td>Tilda Swinton</td><td>F</td></tr><tr><td>0849028</td><td>Mayumi Tanaka</td><td>F</td></tr><tr><td>0851163</td><td>Laura Mae Tate </td><td>M</td></tr><tr><td>0852517</td><td>James Arnold Taylor</td><td>M</td></tr><tr><td>0852551</td><td>Jeannine Taylor</td><td>F</td></tr><tr><td>0879085</td><td>Tyrese Gibson</td><td>M</td></tr><tr><td>0891895</td><td>Paz Vega</td><td>F</td></tr><tr><td>0892299</td><td>Manuela Velasco</td><td>F</td></tr><tr><td>0893941</td><td>Maribel Verdú</td><td>F</td></tr><tr><td>0900915</td><td>Jürgen Vogel</td><td>M</td></tr><tr><td>0908094</td><td>Paul Walker</td><td>M</td></tr><tr><td>0908919</td><td>Eli Wallach</td><td>M</td></tr><tr><td>0910607</td><td>Christoph Waltz</td><td>M</td></tr><tr><td>0914612</td><td>Emma Watson</td><td>F</td></tr><tr><td>0915465</td><td>Shawn Wayans</td><td>M</td></tr><tr><td>0915989</td><td>Hugo Weaving</td><td>M</td></tr><tr><td>0924210</td><td>Ben Whishaw</td><td>M</td></tr><tr><td>0929489</td><td>Tom Wilkinson</td><td>M</td></tr><tr><td>0931329</td><td>Michelle Williams</td><td>F</td></tr><tr><td>0931508</td><td>Rebecca Williams</td><td>F</td></tr><tr><td>0933940</td><td>Patrick Wilson</td><td>M</td></tr><tr><td>0940362</td><td>Shailene Woodley</td><td>F</td></tr><tr><td>0942482</td><td>Jeffrey Wright</td><td>M</td></tr><tr><td>0942787</td><td>Samuel E. Wright</td><td>M</td></tr><tr><td>0945189</td><td>Simon Yam</td><td>M</td></tr><tr><td>0947447</td><td>Donnie Yen</td><td>M</td></tr><tr><td>0948445</td><td>Keiko Yokozawa</td><td>F</td></tr><tr><td>0949167</td><td>Ji-Tae Yoo</td><td>M</td></tr><tr><td>0950926</td><td>Yuh Jung Youn </td><td>w</td></tr><tr><td>0954076</td><td>Michal Zebrowski</td><td>M</td></tr><tr><td>0970447</td><td>Conrad Vernon</td><td>M</td></tr><tr><td>0991810</td><td>Mahershala Ali</td><td>M</td></tr><tr><td>0997115</td><td>Miyu Irino</td><td>M</td></tr><tr><td>1002641</td><td>Dominic Cooper</td><td>M</td></tr><tr><td>10030720</td><td>Nana Mori</td><td>F</td></tr><tr><td>1011675</td><td>Ryan McCluskey</td><td>M</td></tr><tr><td>1018221</td><td>Jin Zhang</td><td>M</td></tr><tr><td>1018373</td><td>Sung-Jae Lee </td><td>m</td></tr><tr><td>1019674</td><td>Sala Baker</td><td>M</td></tr><tr><td>1020089</td><td>Sally Hawkins</td><td>F</td></tr><tr><td>1028580</td><td>Tae-Hyun Cha </td><td>m</td></tr><tr><td>10321662</td><td>Kotaro Daigo</td><td>M</td></tr><tr><td>1035643</td><td>Frederick Lau</td><td>M</td></tr><tr><td>1040365</td><td>Brandon T. Jackson</td><td>M</td></tr><tr><td>1041999</td><td>Hae-jin Yoo</td><td>M</td></tr><tr><td>1046097</td><td>Rachel McAdams</td><td>F</td></tr><tr><td>1047193</td><td>Won Bin </td><td>M</td></tr><tr><td>1055413</td><td>Michael Fassbender</td><td>M</td></tr><tr><td>1065229</td><td>America Ferrera</td><td>F</td></tr><tr><td>1067547</td><td>Hye-ja Kim</td><td>F</td></tr><tr><td>1071252</td><td>Alexander Gould</td><td>M</td></tr><tr><td>1072555</td><td>Morena Baccarin</td><td>F</td></tr><tr><td>1081656</td><td>Karolina Kurkova</td><td>F</td></tr><tr><td>1083271</td><td>Megan Fox</td><td>F</td></tr><tr><td>1086543</td><td>Amanda Seyfried</td><td>F</td></tr><tr><td>10916154</td><td>Madison Ingoldsby</td><td>F</td></tr><tr><td>1102577</td><td>Elle Fanning </td><td>F</td></tr><tr><td>1104224</td><td>Dong-jun Lee</td><td>M</td></tr><tr><td>1105980</td><td>Kathryn Newton</td><td>F</td></tr><tr><td>1120328</td><td>Shin-il Kang</td><td>m</td></tr><tr><td>1126340</td><td>Ryûnosuke Kamiki</td><td>M</td></tr><tr><td>1157048</td><td>Zachary Levi</td><td>M</td></tr><tr><td>1157358</td><td>Michelle Monaghan</td><td>F</td></tr><tr><td>1162030</td><td>Ye-jin Son </td><td>w</td></tr><tr><td>1165110</td><td>Chris Hemsworth</td><td>M</td></tr><tr><td>1178570</td><td>Satomi Hanamura</td><td>F</td></tr><tr><td>1187273</td><td>Nayoung Lee </td><td>w</td></tr><tr><td>1191481</td><td>Leigh Whannell</td><td>M</td></tr><tr><td>1194446</td><td>Seo-woo Eun</td><td>F</td></tr><tr><td>1200692</td><td>Eva Green</td><td>F</td></tr><tr><td>1201607</td><td>Alan Rickman </td><td>M</td></tr><tr><td>1208172</td><td>Yeong-ran Lee</td><td>f</td></tr><tr><td>1209966</td><td>Oscar Isaac</td><td>M</td></tr><tr><td>1212722</td><td>Benedict Cumberbatch</td><td>M</td></tr><tr><td>1234414</td><td>Ji-seob So</td><td>m</td></tr><tr><td>1249052</td><td>Riccardo Scamarcio</td><td>M</td></tr><tr><td>1251770</td><td>In-Sung Jo </td><td>m</td></tr><tr><td>1265802</td><td>Josh Gad</td><td>M</td></tr><tr><td>1275259</td><td>Alexandra Daddario</td><td>F</td></tr><tr><td>1289434</td><td>Emily Blunt</td><td>F</td></tr><tr><td>1297015</td><td>Emma Stone</td><td>F</td></tr><tr><td>1306097</td><td>Lucas Papaelias</td><td>M</td></tr><tr><td>1312575</td><td>Olivia Wilde</td><td>F</td></tr><tr><td>1322404</td><td>Hee-Bong Byun</td><td>M</td></tr><tr><td>1328575</td><td>Yun-shik Baek</td><td>M</td></tr><tr><td>1342727</td><td>Skandar Keynes</td><td>m</td></tr><tr><td>1344302</td><td>Rachel House </td><td>M</td></tr><tr><td>1377561</td><td>Laura Ramsey</td><td>F</td></tr><tr><td>1379938</td><td>Travis Fimmel</td><td>M</td></tr><tr><td>1392075</td><td>Juri Ueno </td><td>w</td></tr><tr><td>1411125</td><td>Selena Gomez</td><td>F</td></tr><tr><td>1411676</td><td>Mindy Kaling</td><td>F</td></tr><tr><td>1419440</td><td>Ivana Baquero</td><td>F</td></tr><tr><td>1442113</td><td>Jack McBrayer</td><td>M</td></tr><tr><td>1459109</td><td>Diego Klattenhoff </td><td>M</td></tr><tr><td>1465001</td><td>Mamoru Miyano</td><td>M</td></tr><tr><td>1475594</td><td>Channing Tatum</td><td>M</td></tr><tr><td>1500155</td><td>Robert Pattinson</td><td>M</td></tr><tr><td>1504868</td><td>Dong-won Gang </td><td>m</td></tr><tr><td>1508003</td><td>Yoo Gong</td><td>m</td></tr><tr><td>1519666</td><td>Eddie Redmayne</td><td>M</td></tr><tr><td>1549953</td><td>Ambrosia Kelley</td><td>F</td></tr><tr><td>1556638</td><td>Sean Rogerson</td><td>M</td></tr><tr><td>1567113</td><td>Jessica Chastain</td><td>F</td></tr><tr><td>1569276</td><td>Chadwick Boseman</td><td>M</td></tr><tr><td>1602660</td><td>Ben Barnes</td><td>m</td></tr><tr><td>1630992</td><td>Madeline Carroll </td><td>F</td></tr><tr><td>1631269</td><td>Chloë Grace Moretz</td><td>F</td></tr><tr><td>1641117</td><td>Alex Pettyfer</td><td>M</td></tr><tr><td>1649128</td><td>Ben Wilkinson</td><td>M</td></tr><tr><td>1659221</td><td>Sebastian Stan</td><td>M</td></tr><tr><td>1659547</td><td>Carey Mulligan</td><td>F</td></tr><tr><td>1668265</td><td>Matt Long</td><td>M</td></tr><tr><td>1670137</td><td>Georgie Henley</td><td>f</td></tr><tr><td>1676221</td><td>Andy Samberg</td><td>M</td></tr><tr><td>1701227</td><td>Michelle Chen</td><td>F</td></tr><tr><td>1706767</td><td>Jonah Hill</td><td>M</td></tr><tr><td>1713653</td><td>Rain</td><td>M</td></tr><tr><td>1714968</td><td>soo go</td><td>m</td></tr><tr><td>1720028</td><td>Amber Heard </td><td>F</td></tr><tr><td>1727304</td><td>Domhnall Gleeson</td><td>M</td></tr><tr><td>1745736</td><td>Paula Patton</td><td>F</td></tr><tr><td>1753862</td><td>Dong-il Sung </td><td>m</td></tr><tr><td>1782299</td><td>Imogen Poots</td><td>F</td></tr><tr><td>1782667</td><td>Matt Lanter</td><td>M</td></tr><tr><td>1785339</td><td>Rami Malek</td><td>M</td></tr><tr><td>1813221</td><td>Gugu Mbatha-Raw</td><td>F</td></tr><tr><td>1822659</td><td>Nat Wolff</td><td>M</td></tr><tr><td>1836658</td><td>Eric Haberman</td><td>M</td></tr><tr><td>1842974</td><td>Alex Wolff</td><td>M</td></tr><tr><td>1844237</td><td>Chris Miller</td><td>M</td></tr><tr><td>1845048</td><td>Dustin Demri-Burns </td><td>M</td></tr><tr><td>1856097</td><td>Yeo-jeong Jo</td><td>F</td></tr><tr><td>1869756</td><td>Yu-mi Jung</td><td>f</td></tr><tr><td>1881661</td><td>Yeon-Seok Yoo</td><td>m</td></tr><tr><td>1925168</td><td>Ashleigh Gryzko</td><td>F</td></tr><tr><td>1935086</td><td>Tessa Thompson</td><td>W</td></tr><tr><td>1940449</td><td>Andrew Garfield</td><td>M</td></tr><tr><td>1946193</td><td>Jamie Dornan</td><td>M</td></tr><tr><td>1954240</td><td>Teresa Palmer</td><td>F</td></tr><tr><td>1970851</td><td>Jorge-Yamam Serrano</td><td>M</td></tr><tr><td>1982597</td><td>Rihanna</td><td>F</td></tr><tr><td>1985859</td><td>Mia Wasikowska</td><td>F</td></tr><tr><td>2016723</td><td>Eve Hewson</td><td>W</td></tr><tr><td>2017943</td><td>Hayley Atwell</td><td>F</td></tr><tr><td>2018237</td><td>Taylor Kitsch</td><td>M</td></tr><tr><td>2024644</td><td>Daniel Henny</td><td>M</td></tr><tr><td>2030779</td><td>Moises Arias</td><td>M</td></tr><tr><td>2032098</td><td>Ashley Palmer</td><td>F</td></tr><tr><td>2056026</td><td>Azumi Asakura</td><td>F</td></tr><tr><td>2089090</td><td>Seamus Davey-Fitzpatrick</td><td>M</td></tr><tr><td>2098258</td><td>Ah-jung Kim </td><td>w</td></tr><tr><td>2143282</td><td>Lupita Nyong'o</td><td>F</td></tr><tr><td>2159926</td><td>Jake Johnson</td><td>M</td></tr><tr><td>2174122</td><td>Hyo-Joo Han</td><td>F</td></tr><tr><td>2207222</td><td>Scott Eastwood</td><td>M</td></tr><tr><td>2209370</td><td>Katie Featherston</td><td>F</td></tr><tr><td>2225369</td><td>Jennifer Lawrence</td><td>F</td></tr><tr><td>2240061</td><td>Amy Manson </td><td>F</td></tr><tr><td>2255973</td><td>Donald Glover</td><td>M</td></tr><tr><td>2264184</td><td>Elissa Knight</td><td>F</td></tr><tr><td>2265157</td><td>Isabelle Fuhrman</td><td>F</td></tr><tr><td>2295590</td><td>Kevin Guthrie</td><td>M</td></tr><tr><td>2301950</td><td>Dakota Blue Richards</td><td>F</td></tr><tr><td>2309517</td><td>Armie Hammer</td><td>M</td></tr><tr><td>2352559</td><td>Ji-Hoon Ju</td><td>M</td></tr><tr><td>2353862</td><td>Dev Patel</td><td>M</td></tr><tr><td>2358105</td><td>Raymond Ochoa</td><td>M</td></tr><tr><td>2377903</td><td>Lucy Boynton</td><td>F</td></tr><tr><td>2401020</td><td>Will Poulter</td><td>M</td></tr><tr><td>2403277</td><td>Alden Ehrenreich</td><td>M</td></tr><tr><td>2412823</td><td>Yoon-seok Kim</td><td>M</td></tr><tr><td>2440627</td><td>Seung-ryong Ryu</td><td>M</td></tr><tr><td>2492819</td><td>Rosie Huntington-Whiteley</td><td>F</td></tr><tr><td>2546012</td><td>Kaya Scodelario</td><td>F</td></tr><tr><td>2613190</td><td>Hyun-sook Kim </td><td>w</td></tr><tr><td>2633535</td><td>Asa Butterfield</td><td>M</td></tr><tr><td>2655177</td><td>Caleb Landry Jones</td><td>M</td></tr><tr><td>2710673</td><td>Yoshimi Kondou</td><td>F</td></tr><tr><td>2743940</td><td>Griffin Cleveland</td><td>M</td></tr><tr><td>2786608</td><td>Callan McAuliffe </td><td>M</td></tr><tr><td>2794962</td><td>Hailee Steinfeld</td><td>F</td></tr><tr><td>2842005</td><td>Hero Fiennes Tiffin</td><td>M</td></tr><tr><td>2851530</td><td>Dane DeHaan</td><td>M</td></tr><tr><td>2893183</td><td>Jenn Murray</td><td>F</td></tr><tr><td>2913790</td><td>Micah Sloat</td><td>M</td></tr><tr><td>2930503</td><td>Jack Reynor</td><td>M</td></tr><tr><td>2934314</td><td>Lily Collins</td><td>F</td></tr><tr><td>2951768</td><td>Freida Pinto</td><td>F</td></tr><tr><td>2955927</td><td>Haruka Tomatsu</td><td>F</td></tr><tr><td>2973712</td><td>Jordan Nagai</td><td>M</td></tr><tr><td>2976492</td><td>Aoi Yûki</td><td>F</td></tr><tr><td>2977461</td><td>Saori Hayami</td><td>F</td></tr><tr><td>3009232</td><td>Ezra Miller</td><td>M</td></tr><tr><td>3011350</td><td>Dong-seok Ma</td><td>m</td></tr><tr><td>3012604</td><td>Luke Allen-Gale</td><td>M</td></tr><tr><td>3016345</td><td>Sulli Choi </td><td>w</td></tr><tr><td>3023690</td><td>Hiroki Doi</td><td>M</td></tr><tr><td>3027837</td><td>Yuria Nara</td><td>F</td></tr><tr><td>3043279</td><td>Vicky Krieps</td><td>F</td></tr><tr><td>3053338</td><td>Margot Robbie</td><td>F</td></tr><tr><td>3142576</td><td>Nanami Sakuraba</td><td>F</td></tr><tr><td>3150488</td><td>Douglas Booth</td><td>M</td></tr><tr><td>3152605</td><td>Gwilym Lee</td><td>M</td></tr><tr><td>3154303</td><td>Timothée Chalamet</td><td>M</td></tr><tr><td>3170207</td><td>Noah Centineo</td><td>M</td></tr><tr><td>3237713</td><td>Lynn Xiong</td><td>F</td></tr><tr><td>3291520</td><td>Bo-Young Park</td><td>f</td></tr><tr><td>3337639</td><td>Sara Sohn</td><td>F</td></tr><tr><td>3401643</td><td>Kenji Akabane</td><td>M</td></tr><tr><td>3486753</td><td>Steve Baran </td><td>M</td></tr><tr><td>3510471</td><td>Sam Claflin</td><td>M</td></tr><tr><td>3592338</td><td>Emilia Clarke</td><td>F</td></tr><tr><td>3609366</td><td>Joong-Ki Song</td><td>m</td></tr><tr><td>3641180</td><td>Hee-won Kim</td><td>M</td></tr><tr><td>3663948</td><td>Jyu-ni Hyun </td><td>w</td></tr><tr><td>3729721</td><td>Dylan O'Brien</td><td>M</td></tr><tr><td>3750788</td><td>In-seo Kim</td><td>F</td></tr><tr><td>3755026</td><td>Sung-Woo Bae</td><td>M</td></tr><tr><td>3777533</td><td>Sheena Kamal</td><td>F</td></tr><tr><td>3859624</td><td>Ki Hong Lee</td><td>M</td></tr><tr><td>3892241</td><td>Tae-ri Kim</td><td>F</td></tr><tr><td>3915784</td><td>John Boyega</td><td>M</td></tr><tr><td>3917744</td><td>Josh Burdett</td><td>M</td></tr><tr><td>3918035</td><td>Zendaya</td><td>F</td></tr><tr><td>3945747</td><td>Yukito Nishii</td><td>F</td></tr><tr><td>3948952</td><td>Vanessa Kirby</td><td>F</td></tr><tr><td>3994407</td><td>Ryan Potter</td><td>M</td></tr><tr><td>4023073</td><td>Rosa Salazar</td><td>F</td></tr><tr><td>4027243</td><td>Masaki Suda</td><td>M</td></tr><tr><td>4043618</td><td>Tom Holland</td><td>M</td></tr><tr><td>4089170</td><td>Harry Styles</td><td>M</td></tr><tr><td>4110963</td><td>Jack Lowden</td><td>M</td></tr><tr><td>4139037</td><td>Suraj Sharma</td><td>M</td></tr><tr><td>4141252</td><td>Lily James </td><td>F</td></tr><tr><td>4175221</td><td>Karan Soni</td><td>M</td></tr><tr><td>4221489</td><td>Bruce Blain </td><td>M</td></tr><tr><td>4258129</td><td>So-ra Kang</td><td>F</td></tr><tr><td>4271336</td><td>Shameik Moore</td><td>M</td></tr><tr><td>4276462</td><td>Joo Won </td><td>m</td></tr><tr><td>4429739</td><td>Haru Kuroki</td><td>F</td></tr><tr><td>4438173</td><td>Ai Kayano</td><td>F</td></tr><tr><td>4446467</td><td>Tye Sheridan</td><td>M</td></tr><tr><td>4496875</td><td>Mackenzie Davis </td><td>F</td></tr><tr><td>4534098</td><td>Ed Skrein</td><td>M</td></tr><tr><td>4565815</td><td>Mena Massoud</td><td>M</td></tr><tr><td>4584685</td><td>Kai Ko</td><td>M</td></tr><tr><td>4623624</td><td>Chae-won Moon </td><td>w</td></tr><tr><td>4726634</td><td>Haley Lu Richardson</td><td>F</td></tr><tr><td>4759838</td><td>Mone Kamishiraishi</td><td>F</td></tr><tr><td>4808080</td><td>Erika Harlacher</td><td>F</td></tr><tr><td>4853568</td><td>Ayush Tandon</td><td>M</td></tr><tr><td>4855868</td><td>Kendall Vertes</td><td>F</td></tr><tr><td>4957233</td><td>Aisling Franciosi</td><td>F</td></tr><tr><td>4972453</td><td>Olivia Cooke</td><td>F</td></tr><tr><td>5016878</td><td>Jacob Tremblay</td><td>F</td></tr><tr><td>5052065</td><td>Ansel Elgort</td><td>M</td></tr><tr><td>5085683</td><td>Mckenna Grace</td><td>F</td></tr><tr><td>5148840</td><td>Tao Okamoto</td><td>F</td></tr><tr><td>5203221</td><td>Yumi Irino</td><td>M</td></tr><tr><td>5353321</td><td>Cara Delevingne</td><td>F</td></tr><tr><td>5397459</td><td>Daisy Ridley</td><td>F</td></tr><tr><td>5408115</td><td>Seo-Yeon Jin </td><td>w</td></tr><tr><td>5582294</td><td>Jeremy Ray Taylor</td><td>M</td></tr><tr><td>5620173</td><td>Suzu Hirose</td><td>F</td></tr><tr><td>5645519</td><td>Anthony Gonzalez</td><td>M</td></tr><tr><td>5801651</td><td>Kelly Thornton</td><td>F</td></tr><tr><td>5896355</td><td>Anya Taylor-Joy </td><td>F</td></tr><tr><td>5897057</td><td>Jaeden Martell</td><td>M</td></tr><tr><td>5939164</td><td>Zazie Beetz </td><td>F</td></tr><tr><td>6073955</td><td>Florence Pugh</td><td>F</td></tr><tr><td>6124994</td><td>Seo-joon Park</td><td>m</td></tr><tr><td>6170168</td><td>Harris Dickinson </td><td>M</td></tr><tr><td>6233871</td><td>Sora Amamiya</td><td>F</td></tr><tr><td>6339026</td><td>Charlie Shotwell</td><td>F</td></tr><tr><td>6466214</td><td>Josephine Langford</td><td>F</td></tr><tr><td>6476224</td><td>So-dam Park</td><td>F</td></tr><tr><td>6552202</td><td>Brianna Hildebrand</td><td>F</td></tr><tr><td>6748436</td><td>Dafne Keen</td><td>F</td></tr><tr><td>6819854</td><td>Justice Smith</td><td>M</td></tr><tr><td>6916321</td><td>Ferdia Walsh-Peelo</td><td>M</td></tr><tr><td>6916719</td><td>Jun-yeol Ryu</td><td>M</td></tr><tr><td>6934058</td><td>Joonas Suotamo</td><td>M</td></tr><tr><td>6954008</td><td>Ryô Narita</td><td>M</td></tr><tr><td>7081087</td><td>Chanon Santinatornkul</td><td>M</td></tr><tr><td>7093076</td><td>Lana Condor</td><td>F</td></tr><tr><td>7591921</td><td>No Jeong-ee</td><td>F</td></tr><tr><td>7591922</td><td>Jang In-sub</td><td>M</td></tr><tr><td>7628415</td><td>Teeradon Supapunpinyo</td><td>M</td></tr><tr><td>7635388</td><td>Auli'i Cravalho </td><td>F</td></tr><tr><td>7737419</td><td>Brooklynn Prince</td><td>F</td></tr><tr><td>7887725</td><td>Fionn Whitehead</td><td>M</td></tr><tr><td>8027734</td><td>Kim Dae-Ryung </td><td>m</td></tr><tr><td>8044334</td><td>Ki-joo Jin</td><td>F</td></tr><tr><td>8045046</td><td>Michelle La</td><td>F</td></tr><tr><td>8314228</td><td>Cailee Spaeny </td><td>F</td></tr><tr><td>8912882</td><td>Scooty</td><td>F</td></tr><tr><td>8927531</td><td>Chutimon Chuengcharoensukying</td><td>F</td></tr><tr><td>9570628</td><td>Jennifer Gasca</td><td>F</td></tr>		</tbody>
+	</table>
+</div>
+
+
+
+
+</body></html>

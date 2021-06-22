@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost/movie_genres.php -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>IMDB</title>
+
+<style>
+
+table {
+width: 65%;
+border: 1px solid #444444;
+    border-collapse: collapse;
+    margin-left: 200px;
+}
+th, td {
+border: 1px solid #444444;
+}
+#menu{
+background-color: #2d2d2d;
+height: 70px;
+border: 1px solid #ccc;
+border-width: 1px 0;
+}
+#topMenu {
+height: 60px;
+width: 1300px;
+align: 0 auto;
+}
+#topMenu ul li{
+list-style: none;
+color: white;
+background-color: #2d2d2d;
+float: left;
+line-height: 50px;
+vertical-align: middle;
+text-align: center;
+text-align: center;
+}
+#menu .right{
+float: right;
+
+}
+#Menu ul li{
+/* float: none; 세로 출력*/
+background-color: #636363;
+}
+#topMenu li ul{
+background-color: #636363;
+position:absolute;
+display:none;
+}
+#topMenu li:hover ul {
+display:block;
+}
+#topMenu .menuLink {
+text-decoration:none;
+color: white;
+display: block;
+width: 150px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuLink:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#topMenu .menuL {
+text-decoration:none;
+color: white;
+display: block;
+width: 170px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuL:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#delete_step label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+#updateform label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.form-search{
+height: 25px;
+width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#delete_step .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+}
+#updateform .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#search{
+font-size: 20px;
+width: 90px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#search_btn{
+height: 25px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step1{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step2{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step3{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-delete{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.step{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+color: red;
+}
+body { text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */ }
+
+.input:hover{
+cursor:pointer;
+}
+#home{
+font-size: 60px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+color: black;
+}
+#updatestep1{
+display: none
+}
+#updatestep2{
+display: none
+}
+#updatestep3{
+display: none
+}
+#delete_step{
+display: none
+}
+</style>
+</head>
+<body>
+<a id="home" href="http://localhost/index.php">8조 IMDB</a>
+<br>
+<div id="menu">
+<nav id="topMenu">
+<ul>
+<li><a class="menuLink" href="http://localhost/movie_genres.php#">Movie</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie.php">movies</a></li>
+<li><a class="menuL" href="http://localhost/movie_genres.php">movie_genres</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/movie_genres.php#">Actor</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/actors.php">actors</a></li>
+<li><a class="menuL" href="http://localhost/roles.php">roles</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/movie_genres.php#">Director</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie_directors.php">movie_directors</a></li>
+<li><a class="menuL" href="http://localhost/directors_genres.php">directors_genres</a></li>
+<li><a class="menuL" href="http://localhost/directors.php">directors</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/movie_genres.php#">Review</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/reviews.php">reviews</a></li>
+</ul>
+</nav>
+</li>
+<li class="right">
+<form name="mysearchbar" action="http://localhost/search.php" method="post">
+<div class="input-group">
+
+<select id="search" name="search">
+<option value="movie">movie</option>
+<option value="actor">actor</option>
+<option value="director">director</option>
+<option value="genre">genre</option>
+</select>
+<input name="Search_name" type="text" class="form-search" placeholder="search">
+&nbsp;&nbsp;
+<button type="submit" id="search_btn">검색</button>
+</div>
+</form>
+</li>
+<li class="right"><a class="menuLink" href="http://localhost/movie_genres.php#" id="update_step1">Update</a></li>
+<li class="right"><a class="menuLink" href="http://localhost/movie_genres.php#" id="delete">Delete</a></li>
+</ul>
+</nav>
+</div>
+<br><br>
+
+<!-- delete -->
+<form action="http://localhost/delete_data.php" method="post">
+<div id="delete_step">
+<h2 class="step">DELETE DATA</h2>
+<br><br><br>
+<div class="form-group">
+<label for="delete_movie_id">Movie Name</label>
+<br><br>
+<input type="delete_movie_id" class="form-control" name="movie_name" id="delete_movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-delete">Delete</button>
+</div>
+</form>
+
+
+<!-- update -->
+<form action="http://localhost/insert_data.php" method="post">
+<div id="updateform">
+
+
+<!-- STEP1: INPUT MOVIES TABLE -->
+
+<div id="updatestep1">
+<h2 class="step">STEP1: INPUT MOVIES TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_name">Movie Name</label>
+<br><br>
+<input type="movie_name" class="form-control" name="movie_name" id="movie_name" placeholder="Enter movie name here (e.g., Gattaca)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_year">Movie Year</label>
+<br><br>
+<input type="movie_year" class="form-control" name="movie_year" id="movie_year" placeholder="Enter movie year here (e.g., 1965)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_genres">Movie Genres</label>
+<br><br>
+<input type="movie_genres" class="form-control" name="movie_genres" id="movie_genres" placeholder="Enter movie genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="runtime_rating">Runtime</label>
+<br><br>
+<input type="runtime_rating" class="form-control" name="runtime_rating" id="runtime_rating" placeholder="Enter runtime rating here (e.g., 172)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="rating">Rating</label>
+<br><br>
+<input type="rating" class="form-control" name="rating" id="rating" placeholder="Enter Rating here (e.g., 7.1)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="plot">Plot</label>
+<br><br>
+<input type="plot" class="form-control" name="plot" id="plot" placeholder="Enter plot here (e.g., A woman leaves an Austrian convent t.....)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="budget">Budget</label>
+<br><br>
+<input type="budget" class="form-control" name="budget" id="budget" placeholder="Enter budget here (e.g., 8200000)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="gross_glob">Gross glob</label>
+<br><br>
+<input type="gross_glob" class="form-control" name="gross_glob" id="gross_glob" placeholder="Enter Gross glob here (e.g., 159413574)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="submitter_id">Submitter ID</label>
+<br><br>
+<input type="submitter_id" class="form-control" name="submitter_id" id="submitter_id" placeholder="Enter submitter id here (e.g., 2017113323)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step1">next</button>
+</div>
+
+<!-- STEP2: INPUT ACTORS TABLE -->
+
+<div id="updatestep2">
+<h2 class="step">STEP2: INPUT ACTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_id">Actor ID</label>
+<br><br>
+<input type="actor_id" class="form-control" name="actor_id" id="actor_id" placeholder="Enter actor ID here (e.g., 0000267)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_name">Actor Name</label>
+<br><br>
+<input type="actor_name" class="form-control" name="actor_name" id="actor_name" placeholder="Enter actor name here (e.g., Julie Andrews)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_gender">Actor Gender</label>
+<br><br>
+<input type="actor_gender" class="form-control" name="actor_gender" id="actor_gender" placeholder="Enter actor gender here (e.g., F)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="role">Role</label>
+<br><br>
+<input type="role" class="form-control" name="role" id="role" placeholder="Enter role here (e.g., Maria)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step2">next</button>
+</div>
+
+<!-- STEP3: INPUT DIRECTORS TABLE -->
+
+<div id="updatestep3">
+<h2 class="step">STEP3: INPUT DIRECTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_id">Director ID</label>
+<br><br>
+<input type="director_id" class="form-control" name="director_id" id="director_id" placeholder="Enter director ID here (e.g., 0936404)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_name">Director Name</label>
+<br><br>
+<input type="director_name" class="form-control" name="director_name" id="director_name" placeholder="Enter director name here (e.g., Robert Wise)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_genres">Director Genres</label>
+<br><br>
+<input type="director_genres" class="form-control" name="director_genres" id="director_genres" placeholder="Enter actor genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-step3">Insert</button>
+</div>
+</div>
+</form>
+<script language="javascript">
+document.getElementById("delete").onclick = function() {
+    document.getElementById("delete_step").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updatestep3").style.display="none";
+
+}
+document.getElementById("btn-delete").onclick = function() {
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+
+document.getElementById("update_step1").onclick = function() {
+    document.getElementById("updatestep1").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+
+}
+
+document.getElementById("btn-step1").onclick = function() {
+    document.getElementById("updatestep2").style.display="block";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step2").onclick = function() {
+    document.getElementById("updatestep3").style.display="block";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step3").onclick = function() {
+    document.getElementById("updatestep3").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+</script>
+<div id="all_table">
+
+	<!-- MOVIE_GENRES table -->
+		<p></p><h3> MOVIE_GENRES table (Currently 1311 movie_genres in database)</h3><p></p>
+
+	<table cellspacing="0" width="100%">
+		<thead>
+		<tr>
+			<th>Movie ID</th>
+			<th>Genre</th>
+		</tr>
+		</thead>
+
+		<tbody>
+		<tr><td>0021749</td><td>Comedy</td></tr><tr><td>0021749</td><td>Drama</td></tr><tr><td>0021749</td><td>Romance</td></tr><tr><td>0029583</td><td>Adventure</td></tr><tr><td>0029583</td><td>Animation</td></tr><tr><td>0029583</td><td>Comedy</td></tr><tr><td>0031381</td><td>Drama</td></tr><tr><td>0031381</td><td>History</td></tr><tr><td>0031381</td><td>Romance</td></tr><tr><td>0031381</td><td>War</td></tr><tr><td>0032138</td><td>Adventure</td></tr><tr><td>0032138</td><td>Family</td></tr><tr><td>0032138</td><td>Fantasy</td></tr><tr><td>0032138</td><td>Musical</td></tr><tr><td>0032976</td><td>Drama</td></tr><tr><td>0032976</td><td>Mystery</td></tr><tr><td>0032976</td><td>Romance</td></tr><tr><td>0032976</td><td>Thriller</td></tr><tr><td>0033467</td><td>Drama</td></tr><tr><td>0033467</td><td>Mystery</td></tr><tr><td>0034492</td><td>Adventure</td></tr><tr><td>0034492</td><td>Animation</td></tr><tr><td>0034492</td><td>Comedy</td></tr><tr><td>0034583</td><td>Drama</td></tr><tr><td>0034583</td><td>Romance</td></tr><tr><td>0034583</td><td>War</td></tr><tr><td>0045152</td><td>Comedy</td></tr><tr><td>0045152</td><td>Musical</td></tr><tr><td>0045152</td><td>Romance</td></tr><tr><td>0048280</td><td>Adventure</td></tr><tr><td>0048280</td><td>Animation</td></tr><tr><td>0048280</td><td>Comedy</td></tr><tr><td>0050083</td><td>Drama</td></tr><tr><td>0051201</td><td>Crime</td></tr><tr><td>0051201</td><td>Drama</td></tr><tr><td>0051201</td><td>Film-Noir</td></tr><tr><td>0051201</td><td>Mystery</td></tr><tr><td>0051201</td><td>Thriller</td></tr><tr><td>0052357</td><td>Mystery</td></tr><tr><td>0052357</td><td>Romance</td></tr><tr><td>0052357</td><td>Thriller</td></tr><tr><td>0052618</td><td>Adventure</td></tr><tr><td>0052618</td><td>Drama</td></tr><tr><td>0052618</td><td>History</td></tr><tr><td>0054215</td><td>Horror</td></tr><tr><td>0054215</td><td>Mystery</td></tr><tr><td>0054215</td><td>Thriller</td></tr><tr><td>0059742</td><td>Drama</td></tr><tr><td>0059742</td><td>Family</td></tr><tr><td>0059742</td><td>Musical</td></tr><tr><td>0060196</td><td>Western</td></tr><tr><td>0061722</td><td>Comedy</td></tr><tr><td>0061722</td><td>Drama</td></tr><tr><td>0061722</td><td>Romance</td></tr><tr><td>0068646</td><td>Crime</td></tr><tr><td>0068646</td><td>Drama</td></tr><tr><td>0071562</td><td>Crime</td></tr><tr><td>0071562</td><td>Drama</td></tr><tr><td>0071853</td><td>Adventure</td></tr><tr><td>0071853</td><td>Comedy</td></tr><tr><td>0071853</td><td>Fantasy</td></tr><tr><td>0073486</td><td>Drama</td></tr><tr><td>0075148</td><td>Drama</td></tr><tr><td>0075148</td><td>Sport</td></tr><tr><td>0076759</td><td>Action</td></tr><tr><td>0076759</td><td>Adventure</td></tr><tr><td>0076759</td><td>Fantasy</td></tr><tr><td>0076759</td><td>Sci-Fi</td></tr><tr><td>0077651</td><td>Horror</td></tr><tr><td>0077651</td><td>Thriller</td></tr><tr><td>0077936</td><td>Drama</td></tr><tr><td>0077936</td><td>Sci-Fi</td></tr><tr><td>0077936</td><td>Thriller</td></tr><tr><td>0078748</td><td>Horror</td></tr><tr><td>0078748</td><td>Sci-Fi</td></tr><tr><td>0079501</td><td>Action</td></tr><tr><td>0079501</td><td>Adventure</td></tr><tr><td>0079501</td><td>Sci-fi</td></tr><tr><td>0080684</td><td>Action</td></tr><tr><td>0080684</td><td>Adventure</td></tr><tr><td>0080684</td><td>Fantasy</td></tr><tr><td>0080684</td><td>Sci-Fi</td></tr><tr><td>0080761</td><td>Horror</td></tr><tr><td>0080761</td><td>Mystery</td></tr><tr><td>0080761</td><td>Thriller</td></tr><tr><td>0081398</td><td>Biography</td></tr><tr><td>0081398</td><td>Drama</td></tr><tr><td>0081398</td><td>Sport</td></tr><tr><td>0081505</td><td>Drama</td></tr><tr><td>0081505</td><td>Horror</td></tr><tr><td>0082418</td><td>Horror</td></tr><tr><td>0082418</td><td>Mystery</td></tr><tr><td>0082418</td><td>Thriller</td></tr><tr><td>0082694</td><td>Action</td></tr><tr><td>0082694</td><td>Adventure</td></tr><tr><td>0082694</td><td>Sci-fi</td></tr><tr><td>0083658</td><td>Action</td></tr><tr><td>0083658</td><td>Sci-Fi</td></tr><tr><td>0083658</td><td>Thriller</td></tr><tr><td>0083866</td><td>Family</td></tr><tr><td>0083866</td><td>Sci-Fi</td></tr><tr><td>0083972</td><td>Horror</td></tr><tr><td>0083972</td><td>Thriller</td></tr><tr><td>0087298</td><td>Horror</td></tr><tr><td>0087298</td><td>Thriller</td></tr><tr><td>0087843</td><td>Crime</td></tr><tr><td>0087843</td><td>Drama</td></tr><tr><td>0088247</td><td>cyborg</td></tr><tr><td>0088247</td><td>robotics</td></tr><tr><td>0088247</td><td>time travel</td></tr><tr><td>0088763</td><td>Adventure</td></tr><tr><td>0088763</td><td>Comedy</td></tr><tr><td>0088763</td><td>Sci-Fi</td></tr><tr><td>0089173</td><td>Horror</td></tr><tr><td>0089173</td><td>Mystery</td></tr><tr><td>0089173</td><td>Thriller</td></tr><tr><td>0089530</td><td>Action</td></tr><tr><td>0089530</td><td>Adventure</td></tr><tr><td>0089530</td><td>Sci-fi</td></tr><tr><td>0091064</td><td>Drama</td></tr><tr><td>0091064</td><td>Horror</td></tr><tr><td>0091064</td><td>Sci-Fi</td></tr><tr><td>0091080</td><td>Horror</td></tr><tr><td>0091080</td><td>Thriller</td></tr><tr><td>0091763</td><td>Drama</td></tr><tr><td>0091763</td><td>War</td></tr><tr><td>0092067</td><td>Adventure</td></tr><tr><td>0092067</td><td>Animation</td></tr><tr><td>0092067</td><td>Drama</td></tr><tr><td>0095179</td><td>Horror</td></tr><tr><td>0095179</td><td>Thriller</td></tr><tr><td>0096283</td><td>Animation</td></tr><tr><td>0096283</td><td>Family</td></tr><tr><td>0096283</td><td>Fantasy</td></tr><tr><td>0097165</td><td>Comedy</td></tr><tr><td>0097165</td><td>Drama</td></tr><tr><td>0097388</td><td>Adventure</td></tr><tr><td>0097388</td><td>Horror</td></tr><tr><td>0097388</td><td>Thriller</td></tr><tr><td>0097523</td><td>Adventure</td></tr><tr><td>0097523</td><td>Comedy</td></tr><tr><td>0097523</td><td>Family</td></tr><tr><td>0097757</td><td>Animation</td></tr><tr><td>0097757</td><td>Family</td></tr><tr><td>0097757</td><td>Fantasy</td></tr><tr><td>0099674</td><td>Crime</td></tr><tr><td>0099674</td><td>Drama</td></tr><tr><td>0099685</td><td>Biography</td></tr><tr><td>0099685</td><td>Crime</td></tr><tr><td>0099685</td><td>Drama</td></tr><tr><td>0099785</td><td>Comedy</td></tr><tr><td>0099785</td><td>Family</td></tr><tr><td>0101675</td><td>Horror</td></tr><tr><td>0101675</td><td>Sci-Fi</td></tr><tr><td>0102926</td><td>Crime</td></tr><tr><td>0102926</td><td>Drama</td></tr><tr><td>0102926</td><td>Thriller</td></tr><tr><td>0103064</td><td>Action</td></tr><tr><td>0103064</td><td>Sci-Fi</td></tr><tr><td>0104431</td><td>Adventure</td></tr><tr><td>0104431</td><td>Comedy</td></tr><tr><td>0104431</td><td>Crime</td></tr><tr><td>0105236</td><td>Crime</td></tr><tr><td>0105236</td><td>Drama</td></tr><tr><td>0105236</td><td>Thriller</td></tr><tr><td>0105323</td><td>Drama</td></tr><tr><td>0107120</td><td>Comedy</td></tr><tr><td>0107120</td><td>Family</td></tr><tr><td>0107120</td><td>Fantasy</td></tr><tr><td>0107614</td><td>Comedy</td></tr><tr><td>0107614</td><td>Drama</td></tr><tr><td>0107614</td><td>Family</td></tr><tr><td>0108052</td><td>Biography</td></tr><tr><td>0108052</td><td>Drama</td></tr><tr><td>0108052</td><td>History</td></tr><tr><td>0109830</td><td>Drama</td></tr><tr><td>0109830</td><td>Romance</td></tr><tr><td>0110413</td><td>Action</td></tr><tr><td>0110413</td><td>Crime</td></tr><tr><td>0110413</td><td>Drama</td></tr><tr><td>0110912</td><td>Crime</td></tr><tr><td>0110912</td><td>Drama</td></tr><tr><td>0111161</td><td>Drama</td></tr><tr><td>0111257</td><td>Action</td></tr><tr><td>0111257</td><td>Adventure</td></tr><tr><td>0111257</td><td>Thriller</td></tr><tr><td>0111282</td><td>Action</td></tr><tr><td>0111282</td><td>Adventure</td></tr><tr><td>0111282</td><td>Sci-fi</td></tr><tr><td>0112384</td><td>Adventure</td></tr><tr><td>0112384</td><td>Drama</td></tr><tr><td>0112384</td><td>History</td></tr><tr><td>0112471</td><td>Drama</td></tr><tr><td>0112471</td><td>Romance</td></tr><tr><td>0113670</td><td>Drama</td></tr><tr><td>0113670</td><td>Fantasy</td></tr><tr><td>0113670</td><td>Romance</td></tr><tr><td>0114369</td><td>Crime</td></tr><tr><td>0114369</td><td>Drama</td></tr><tr><td>0114369</td><td>Mystery</td></tr><tr><td>0114709</td><td>Action</td></tr><tr><td>0114709</td><td>Adventure</td></tr><tr><td>0114709</td><td>Family</td></tr><tr><td>0114814</td><td>Crime</td></tr><tr><td>0114814</td><td>Mystery</td></tr><tr><td>0114814</td><td>Thriller</td></tr><tr><td>0114924</td><td>Comedy</td></tr><tr><td>0114924</td><td>Drama</td></tr><tr><td>0114924</td><td>Romance</td></tr><tr><td>0116477</td><td>Drama</td></tr><tr><td>0117060</td><td>Action</td></tr><tr><td>0117060</td><td>Adventure</td></tr><tr><td>0117060</td><td>Thriller</td></tr><tr><td>0117509</td><td>Drama</td></tr><tr><td>0117509</td><td>Romance</td></tr><tr><td>0117731</td><td>Action</td></tr><tr><td>0117731</td><td>Adventure</td></tr><tr><td>0117731</td><td>Drama</td></tr><tr><td>0118971</td><td>Drama</td></tr><tr><td>0118971</td><td>Mystery</td></tr><tr><td>0118971</td><td>Thriller</td></tr><tr><td>0119217</td><td>Drama</td></tr><tr><td>0119217</td><td>Romance</td></tr><tr><td>0119303</td><td>Comedy</td></tr><tr><td>0119303</td><td>Crime</td></tr><tr><td>0119303</td><td>Family</td></tr><tr><td>0119654</td><td>Action</td></tr><tr><td>0119654</td><td>Adventure</td></tr><tr><td>0119654</td><td>Comedy</td></tr><tr><td>0120338</td><td>Drama</td></tr><tr><td>0120338</td><td>Romance</td></tr><tr><td>0120363</td><td>Adventure</td></tr><tr><td>0120363</td><td>Animation</td></tr><tr><td>0120363</td><td>Comedy</td></tr><tr><td>0120382</td><td>Comedy</td></tr><tr><td>0120382</td><td>Drama</td></tr><tr><td>0120382</td><td>Sci-Fi</td></tr><tr><td>0120461</td><td>Action</td></tr><tr><td>0120461</td><td>Drama</td></tr><tr><td>0120461</td><td>Sci-Fi</td></tr><tr><td>0120461</td><td>Thriller</td></tr><tr><td>0120616</td><td>Action</td></tr><tr><td>0120616</td><td>Adventure</td></tr><tr><td>0120616</td><td>Fantasy</td></tr><tr><td>0120689</td><td>Crime</td></tr><tr><td>0120689</td><td>Drama</td></tr><tr><td>0120689</td><td>Fantasy</td></tr><tr><td>0120689</td><td>Mystery</td></tr><tr><td>0120737</td><td>Adventure</td></tr><tr><td>0120737</td><td>Drama</td></tr><tr><td>0120737</td><td>Fantasy</td></tr><tr><td>0120755</td><td>Action</td></tr><tr><td>0120755</td><td>Adventure</td></tr><tr><td>0120755</td><td>Thriller</td></tr><tr><td>0120762</td><td>Adventure</td></tr><tr><td>0120762</td><td>Animation</td></tr><tr><td>0120762</td><td>Family</td></tr><tr><td>0120768</td><td>Action</td></tr><tr><td>0120768</td><td>Crime</td></tr><tr><td>0120768</td><td>Drama</td></tr><tr><td>0120768</td><td>Mystery</td></tr><tr><td>0120768</td><td>Thriller</td></tr><tr><td>0120804</td><td>Action</td></tr><tr><td>0120804</td><td>Horror</td></tr><tr><td>0120804</td><td>Sci-Fi</td></tr><tr><td>0120815</td><td>Drama</td></tr><tr><td>0120815</td><td>War</td></tr><tr><td>0120855</td><td>Adventure</td></tr><tr><td>0120855</td><td>Animation</td></tr><tr><td>0120855</td><td>Family</td></tr><tr><td>0120912</td><td>Action</td></tr><tr><td>0120912</td><td>Adventure</td></tr><tr><td>0120912</td><td>Comedy</td></tr><tr><td>0120915</td><td>Action</td></tr><tr><td>0120915</td><td>Adventure</td></tr><tr><td>0120915</td><td>Fantasy</td></tr><tr><td>0120915</td><td>Sci-Fi</td></tr><tr><td>0121164</td><td>Animation</td></tr><tr><td>0121164</td><td>Drama</td></tr><tr><td>0121164</td><td>Family</td></tr><tr><td>0121765</td><td>Action</td></tr><tr><td>0121765</td><td>Adventure</td></tr><tr><td>0121765</td><td>Fantasy</td></tr><tr><td>0121765</td><td>Sci-Fi</td></tr><tr><td>0121766</td><td>Action</td></tr><tr><td>0121766</td><td>Adventure</td></tr><tr><td>0121766</td><td>Fantasy</td></tr><tr><td>0121766</td><td>Sci-Fi</td></tr><tr><td>0123755</td><td>Drama</td></tr><tr><td>0123755</td><td>Mystery</td></tr><tr><td>0123755</td><td>Sci-Fi</td></tr><tr><td>0125439</td><td>Comedy</td></tr><tr><td>0125439</td><td>Drama</td></tr><tr><td>0125439</td><td>Romance</td></tr><tr><td>0133093</td><td>Action</td></tr><tr><td>0133093</td><td>Sci-Fi</td></tr><tr><td>0137523</td><td>Drama</td></tr><tr><td>0147800</td><td>Comedy</td></tr><tr><td>0147800</td><td>Drama</td></tr><tr><td>0147800</td><td>Romance</td></tr><tr><td>0167260</td><td>Adventure</td></tr><tr><td>0167260</td><td>Drama</td></tr><tr><td>0167260</td><td>Fantasy</td></tr><tr><td>0167261</td><td>Adventure</td></tr><tr><td>0167261</td><td>Drama</td></tr><tr><td>0167261</td><td>Fantasy</td></tr><tr><td>0167404</td><td>Drama</td></tr><tr><td>0167404</td><td>Mystery</td></tr><tr><td>0167404</td><td>Thriller</td></tr><tr><td>0169547</td><td>Drama</td></tr><tr><td>0172495</td><td>Action</td></tr><tr><td>0172495</td><td>Adventure</td></tr><tr><td>0172495</td><td>Drama</td></tr><tr><td>0180093</td><td>Drama</td></tr><tr><td>0198781</td><td>Adventure</td></tr><tr><td>0198781</td><td>Animation</td></tr><tr><td>0198781</td><td>Comedy</td></tr><tr><td>0209144</td><td>Mystery</td></tr><tr><td>0209144</td><td>Thriller</td></tr><tr><td>0212720</td><td>Drama</td></tr><tr><td>0212720</td><td>Sci-fi</td></tr><tr><td>0232500</td><td>Action</td></tr><tr><td>0232500</td><td>Crime</td></tr><tr><td>0232500</td><td>Thriller</td></tr><tr><td>0241527</td><td>Adventure</td></tr><tr><td>0241527</td><td>Family</td></tr><tr><td>0241527</td><td>Fantasy</td></tr><tr><td>0245429</td><td>Adventure</td></tr><tr><td>0245429</td><td>Animation</td></tr><tr><td>0245429</td><td>Family</td></tr><tr><td>0247638</td><td>Comedy</td></tr><tr><td>0247638</td><td>Family</td></tr><tr><td>0247638</td><td>Romance</td></tr><tr><td>0253474</td><td>Biography</td></tr><tr><td>0253474</td><td>Drama</td></tr><tr><td>0253474</td><td>Music</td></tr><tr><td>0258463</td><td>Action</td></tr><tr><td>0258463</td><td>Mystery</td></tr><tr><td>0258463</td><td>Thriller</td></tr><tr><td>0259324</td><td>Action</td></tr><tr><td>0259324</td><td>Fantasy</td></tr><tr><td>0259324</td><td>Thriller</td></tr><tr><td>0264464</td><td>Biography</td></tr><tr><td>0264464</td><td>Crime</td></tr><tr><td>0264464</td><td>Drama</td></tr><tr><td>0266543</td><td>Adventure</td></tr><tr><td>0266543</td><td>Animation</td></tr><tr><td>0266543</td><td>Comedy</td></tr><tr><td>0268978</td><td>Biography</td></tr><tr><td>0268978</td><td>Drama</td></tr><tr><td>0277027</td><td>Drama</td></tr><tr><td>0295297</td><td>Adventure</td></tr><tr><td>0295297</td><td>Family</td></tr><tr><td>0295297</td><td>Fantasy</td></tr><tr><td>0304141</td><td>Adventure</td></tr><tr><td>0304141</td><td>Family</td></tr><tr><td>0304141</td><td>Fantasy</td></tr><tr><td>0309698</td><td>Mystery</td></tr><tr><td>0309698</td><td>Thriller</td></tr><tr><td>0314331</td><td>Comedy</td></tr><tr><td>0314331</td><td>Drama</td></tr><tr><td>0314331</td><td>Romance</td></tr><tr><td>0315327</td><td>Comedy</td></tr><tr><td>0315327</td><td>Drama</td></tr><tr><td>0315327</td><td>Fantasy</td></tr><tr><td>0317219</td><td>Animation</td></tr><tr><td>0317219</td><td>Comedy</td></tr><tr><td>0317219</td><td>Family</td></tr><tr><td>0317705</td><td>Action</td></tr><tr><td>0317705</td><td>Adventure</td></tr><tr><td>0317705</td><td>Animation</td></tr><tr><td>0317705</td><td>Family</td></tr><tr><td>0317919</td><td>Action</td></tr><tr><td>0317919</td><td>Adventure</td></tr><tr><td>0317919</td><td>Thriller</td></tr><tr><td>0318627</td><td>Action</td></tr><tr><td>0318627</td><td>Horror</td></tr><tr><td>0318627</td><td>Sci-Fi</td></tr><tr><td>0322259</td><td>Action</td></tr><tr><td>0322259</td><td>Crime</td></tr><tr><td>0322259</td><td>Thriller</td></tr><tr><td>0325980</td><td>Action</td></tr><tr><td>0325980</td><td>Adventure</td></tr><tr><td>0325980</td><td>Fantasy</td></tr><tr><td>0328107</td><td>Action</td></tr><tr><td>0328107</td><td>Crime</td></tr><tr><td>0328107</td><td>Drama</td></tr><tr><td>0328107</td><td>Thriller</td></tr><tr><td>0330373</td><td>Adventure</td></tr><tr><td>0330373</td><td>Family</td></tr><tr><td>0330373</td><td>Fantasy</td></tr><tr><td>0332136</td><td>Comedy</td></tr><tr><td>0332136</td><td>Drama</td></tr><tr><td>0332136</td><td>Fantasy</td></tr><tr><td>0332280</td><td>Drama</td></tr><tr><td>0332280</td><td>Romance</td></tr><tr><td>0332379</td><td>Comedy</td></tr><tr><td>0332379</td><td>Music</td></tr><tr><td>0332452</td><td>Drama</td></tr><tr><td>0332452</td><td>History</td></tr><tr><td>0338013</td><td>Drama</td></tr><tr><td>0338013</td><td>Romance</td></tr><tr><td>0338013</td><td>Sci-Fi</td></tr><tr><td>0347149</td><td>Adventure</td></tr><tr><td>0347149</td><td>Animation</td></tr><tr><td>0347149</td><td>Family</td></tr><tr><td>0348568</td><td>Drama</td></tr><tr><td>0348568</td><td>Romance</td></tr><tr><td>0351283</td><td>Adventure</td></tr><tr><td>0351283</td><td>Animation</td></tr><tr><td>0351283</td><td>Comedy</td></tr><tr><td>0360486</td><td>Action</td></tr><tr><td>0360486</td><td>Fantasy</td></tr><tr><td>0360486</td><td>Horror</td></tr><tr><td>0360486</td><td>Mystery</td></tr><tr><td>0361748</td><td>Adventure</td></tr><tr><td>0361748</td><td>Drama</td></tr><tr><td>0361748</td><td>War</td></tr><tr><td>0362227</td><td>Comedy</td></tr><tr><td>0362227</td><td>Drama</td></tr><tr><td>0362227</td><td>Romance</td></tr><tr><td>0363771</td><td>Adventure</td></tr><tr><td>0363771</td><td>Family</td></tr><tr><td>0363771</td><td>Fantasy</td></tr><tr><td>0364569</td><td>Action</td></tr><tr><td>0364569</td><td>Drama</td></tr><tr><td>0364569</td><td>Mystery</td></tr><tr><td>0364569</td><td>Thriller</td></tr><tr><td>0366174</td><td>Action</td></tr><tr><td>0366174</td><td>Adventure</td></tr><tr><td>0366174</td><td>Horror</td></tr><tr><td>0366174</td><td>Thriller</td></tr><tr><td>0367594</td><td>Adventure</td></tr><tr><td>0367594</td><td>Comedy</td></tr><tr><td>0367594</td><td>Family</td></tr><tr><td>0371746</td><td>Action</td></tr><tr><td>0371746</td><td>Adventure</td></tr><tr><td>0371746</td><td>Sci-Fi</td></tr><tr><td>0372183</td><td>Action</td></tr><tr><td>0372183</td><td>Mystery</td></tr><tr><td>0372183</td><td>Thriller</td></tr><tr><td>0377092</td><td>Comedy</td></tr><tr><td>0378194</td><td>Action</td></tr><tr><td>0378194</td><td>Crime</td></tr><tr><td>0378194</td><td>Thriller</td></tr><tr><td>0381061</td><td>Action</td></tr><tr><td>0381061</td><td>Adventure</td></tr><tr><td>0381061</td><td>Thriller</td></tr><tr><td>0381681</td><td>Drama</td></tr><tr><td>0381681</td><td>Romance</td></tr><tr><td>0381707</td><td>Comedy</td></tr><tr><td>0381707</td><td>Crime</td></tr><tr><td>0382932</td><td>Adventure</td></tr><tr><td>0382932</td><td>Animation</td></tr><tr><td>0382932</td><td>Comdey</td></tr><tr><td>0383574</td><td>Action</td></tr><tr><td>0383574</td><td>Adventure</td></tr><tr><td>0383574</td><td>Fantasy</td></tr><tr><td>0384537</td><td>Horror</td></tr><tr><td>0385752</td><td>Adventure</td></tr><tr><td>0385752</td><td>Family</td></tr><tr><td>0385752</td><td>Fantasy</td></tr><tr><td>0385887</td><td>Crime</td></tr><tr><td>0385887</td><td>Drama</td></tr><tr><td>0387564</td><td>Horror</td></tr><tr><td>0387564</td><td>Mystery</td></tr><tr><td>0387564</td><td>Thriller</td></tr><tr><td>0396171</td><td>Crime</td></tr><tr><td>0396171</td><td>Drama</td></tr><tr><td>0398286</td><td>Adventure</td></tr><tr><td>0398286</td><td>Animation</td></tr><tr><td>0398286</td><td>Comedy</td></tr><tr><td>0406661</td><td>Action</td></tr><tr><td>0406661</td><td>Drama</td></tr><tr><td>0409459</td><td>Action</td></tr><tr><td>0409459</td><td>Drama</td></tr><tr><td>0409459</td><td>Mystery</td></tr><tr><td>0413099</td><td>Comedy</td></tr><tr><td>0413099</td><td>Family</td></tr><tr><td>0413099</td><td>Fantasy</td></tr><tr><td>0416449</td><td>Action</td></tr><tr><td>0416449</td><td>Drama</td></tr><tr><td>0416449</td><td>Fantasy</td></tr><tr><td>0417741</td><td>Action</td></tr><tr><td>0417741</td><td>Adventure</td></tr><tr><td>0417741</td><td>Family</td></tr><tr><td>0418279</td><td>Action</td></tr><tr><td>0418279</td><td>Adventure</td></tr><tr><td>0418279</td><td>Sci-Fi</td></tr><tr><td>0427944</td><td>Comedy</td></tr><tr><td>0427944</td><td>Drama</td></tr><tr><td>0428870</td><td>Drama</td></tr><tr><td>0428870</td><td>Romance</td></tr><tr><td>0432021</td><td>Action</td></tr><tr><td>0432021</td><td>Horror</td></tr><tr><td>0432021</td><td>Sci-Fi</td></tr><tr><td>0434409</td><td>Action</td></tr><tr><td>0434409</td><td>Drama</td></tr><tr><td>0434409</td><td>Sci-Fi</td></tr><tr><td>0435761</td><td>Adventure</td></tr><tr><td>0435761</td><td>Animation</td></tr><tr><td>0435761</td><td>Comedy</td></tr><tr><td>0437086</td><td>Action</td></tr><tr><td>0437086</td><td>Adventure</td></tr><tr><td>0437086</td><td>Sci-fi</td></tr><tr><td>0441773</td><td>Action</td></tr><tr><td>0441773</td><td>Adventure</td></tr><tr><td>0441773</td><td>Animation</td></tr><tr><td>0441773</td><td>Comedy</td></tr><tr><td>0441773</td><td>Family</td></tr><tr><td>0448157</td><td>Action</td></tr><tr><td>0448157</td><td>Fantasy</td></tr><tr><td>0449088</td><td>Action</td></tr><tr><td>0449088</td><td>Adventure</td></tr><tr><td>0449088</td><td>Fantasy</td></tr><tr><td>0454876</td><td>Adventure</td></tr><tr><td>0454876</td><td>Drama</td></tr><tr><td>0454876</td><td>Fantasy</td></tr><tr><td>0454945</td><td>Comedy</td></tr><tr><td>0454945</td><td>Romance</td></tr><tr><td>0454945</td><td>Sport</td></tr><tr><td>0457430</td><td>Drama</td></tr><tr><td>0457430</td><td>Fantasy</td></tr><tr><td>0457430</td><td>War</td></tr><tr><td>0458339</td><td>Action</td></tr><tr><td>0458339</td><td>Adventure</td></tr><tr><td>0458339</td><td>Sci-Fi</td></tr><tr><td>0458352</td><td>Comedy</td></tr><tr><td>0458352</td><td>Drama</td></tr><tr><td>0458525</td><td>Action</td></tr><tr><td>0458525</td><td>Adventure</td></tr><tr><td>0458525</td><td>Sci-Fi</td></tr><tr><td>0462499</td><td>Action</td></tr><tr><td>0462499</td><td>Thriller</td></tr><tr><td>0462538</td><td>Adventure</td></tr><tr><td>0462538</td><td>Animation</td></tr><tr><td>0462538</td><td>Comedy</td></tr><tr><td>0463985</td><td>Action</td></tr><tr><td>0463985</td><td>Crime</td></tr><tr><td>0463985</td><td>Thriller</td></tr><tr><td>0468569</td><td>Action</td></tr><tr><td>0468569</td><td>Crime</td></tr><tr><td>0468569</td><td>Drama</td></tr><tr><td>0468704</td><td>Drama</td></tr><tr><td>0468704</td><td>Romance</td></tr><tr><td>0471041</td><td>Action</td></tr><tr><td>0471041</td><td>Thriller</td></tr><tr><td>0477347</td><td>Adventure</td></tr><tr><td>0477347</td><td>Comedy</td></tr><tr><td>0477347</td><td>Family</td></tr><tr><td>0477348</td><td>Crime</td></tr><tr><td>0477348</td><td>Drama</td></tr><tr><td>0477348</td><td>Thriller</td></tr><tr><td>0479952</td><td>Adventure</td></tr><tr><td>0479952</td><td>Animation</td></tr><tr><td>0479952</td><td>Comedy</td></tr><tr><td>0480249</td><td>Drama</td></tr><tr><td>0480249</td><td>Sci-Fi</td></tr><tr><td>0480249</td><td>Thriller</td></tr><tr><td>0482571</td><td>Drama</td></tr><tr><td>0482571</td><td>Mystery</td></tr><tr><td>0482571</td><td>Sci-Fi</td></tr><tr><td>0489099</td><td>Action</td></tr><tr><td>0489099</td><td>Adventure</td></tr><tr><td>0489099</td><td>Sci-Fi</td></tr><tr><td>0496806</td><td>Crime</td></tr><tr><td>0496806</td><td>Thriller</td></tr><tr><td>0780521</td><td>Adventure</td></tr><tr><td>0780521</td><td>Animation</td></tr><tr><td>0780521</td><td>Comedy</td></tr><tr><td>0795421</td><td>Comedy</td></tr><tr><td>0795421</td><td>Musical</td></tr><tr><td>0795421</td><td>Romance</td></tr><tr><td>0803096</td><td>Action</td></tr><tr><td>0803096</td><td>Adventure</td></tr><tr><td>0803096</td><td>Fantasy</td></tr><tr><td>0814255</td><td>Adventure</td></tr><tr><td>0814255</td><td>Family</td></tr><tr><td>0814255</td><td>Fantasy</td></tr><tr><td>0817177</td><td>Comedy</td></tr><tr><td>0817177</td><td>Drama</td></tr><tr><td>0817177</td><td>Romance</td></tr><tr><td>0837562</td><td>Animation</td></tr><tr><td>0837562</td><td>Comedy</td></tr><tr><td>0837562</td><td>Family</td></tr><tr><td>0848228</td><td>Action</td></tr><tr><td>0848228</td><td>Adventure</td></tr><tr><td>0848228</td><td>Sci-Fi</td></tr><tr><td>0870967</td><td>Drama Romance</td></tr><tr><td>0875025</td><td>Comedy</td></tr><tr><td>0875025</td><td>Crime</td></tr><tr><td>0876563</td><td>Adventure</td></tr><tr><td>0876563</td><td>Animation</td></tr><tr><td>0876563</td><td>Comedy</td></tr><tr><td>0892769</td><td>Action</td></tr><tr><td>0892769</td><td>Adventure</td></tr><tr><td>0892769</td><td>Animation</td></tr><tr><td>0892769</td><td>Family</td></tr><tr><td>0892769</td><td>Fantasy</td></tr><tr><td>0910970</td><td>Adventure</td></tr><tr><td>0910970</td><td>Animation</td></tr><tr><td>0910970</td><td>Family</td></tr><tr><td>0910970</td><td>Sci-Fi</td></tr><tr><td>0926084</td><td>Adventure</td></tr><tr><td>0926084</td><td>Family</td></tr><tr><td>0926084</td><td>Fantasy</td></tr><tr><td>0940642</td><td>Comedy</td></tr><tr><td>0940642</td><td>Drama</td></tr><tr><td>0940642</td><td>Music</td></tr><tr><td>0945513</td><td>Action</td></tr><tr><td>0945513</td><td>Drama</td></tr><tr><td>0945513</td><td>Mystery</td></tr><tr><td>0948470</td><td>Action</td></tr><tr><td>0948470</td><td>Sci-FI</td></tr><tr><td>0980970</td><td>Adventure</td></tr><tr><td>0980970</td><td>Family</td></tr><tr><td>0980970</td><td>Fantasy</td></tr><tr><td>0983213</td><td>Animation</td></tr><tr><td>0983213</td><td>Drama</td></tr><tr><td>0983213</td><td>Romance</td></tr><tr><td>0988045</td><td>Action</td></tr><tr><td>0988045</td><td>Adventure</td></tr><tr><td>0988045</td><td>Crime</td></tr><tr><td>0993846</td><td>Biography</td></tr><tr><td>0993846</td><td>Crime</td></tr><tr><td>0993846</td><td>Drama</td></tr><tr><td>1010048</td><td>Drama</td></tr><tr><td>1010048</td><td>Romance</td></tr><tr><td>1013752</td><td>Action</td></tr><tr><td>1013752</td><td>Crime</td></tr><tr><td>1013752</td><td>Thriller</td></tr><tr><td>1014759</td><td>Adventure</td></tr><tr><td>1014759</td><td>Family</td></tr><tr><td>1014759</td><td>Fantasy</td></tr><tr><td>1022603</td><td>Comedy</td></tr><tr><td>1022603</td><td>Drama</td></tr><tr><td>1022603</td><td>Romance</td></tr><tr><td>10349550</td><td>Fantasy</td></tr><tr><td>1038988</td><td>Action</td></tr><tr><td>1038988</td><td>Horror</td></tr><tr><td>1038988</td><td>Mystery</td></tr><tr><td>1038988</td><td>Thriller</td></tr><tr><td>1046173</td><td>Action</td></tr><tr><td>1046173</td><td>Adventure</td></tr><tr><td>1046173</td><td>Sci-Fi</td></tr><tr><td>1049413</td><td>Adventure</td></tr><tr><td>1049413</td><td>Animation</td></tr><tr><td>1049413</td><td>Comedy</td></tr><tr><td>1049413</td><td>Family</td></tr><tr><td>1055369</td><td>Action</td></tr><tr><td>1055369</td><td>Adventure</td></tr><tr><td>1055369</td><td>Sci-Fi</td></tr><tr><td>1063669</td><td>Drama</td></tr><tr><td>1063669</td><td>Thriller</td></tr><tr><td>1074638</td><td>Action</td></tr><tr><td>1074638</td><td>Adventure</td></tr><tr><td>1074638</td><td>Thriller</td></tr><tr><td>1078912</td><td>Adventure</td></tr><tr><td>1078912</td><td>Comedy</td></tr><tr><td>1078912</td><td>Family</td></tr><tr><td>1099212</td><td>Drama</td></tr><tr><td>1099212</td><td>Fantasy</td></tr><tr><td>1099212</td><td>Romance</td></tr><tr><td>1130884</td><td>Mystery</td></tr><tr><td>1130884</td><td>Thriller</td></tr><tr><td>1148204</td><td>Horror</td></tr><tr><td>1148204</td><td>Mystery</td></tr><tr><td>1148204</td><td>Thriller</td></tr><tr><td>1156398</td><td>Adventure</td></tr><tr><td>1156398</td><td>Comedy</td></tr><tr><td>1156398</td><td>Horror</td></tr><tr><td>1156398</td><td>Sci-Fi</td></tr><tr><td>1179904</td><td>Horror</td></tr><tr><td>1179904</td><td>Mystery</td></tr><tr><td>1179904</td><td>Thriller</td></tr><tr><td>1185834</td><td>Action</td></tr><tr><td>1185834</td><td>Adventure</td></tr><tr><td>1185834</td><td>Animation</td></tr><tr><td>1185834</td><td>Family</td></tr><tr><td>1185834</td><td>Fantasy</td></tr><tr><td>1185834</td><td>Sci-Fi</td></tr><tr><td>1187043</td><td>Comedy</td></tr><tr><td>1187043</td><td>Drama</td></tr><tr><td>1190080</td><td>Action</td></tr><tr><td>1190080</td><td>Adventure</td></tr><tr><td>1190080</td><td>Sci-FI</td></tr><tr><td>1201607</td><td>Adventure</td></tr><tr><td>1201607</td><td>Family</td></tr><tr><td>1201607</td><td>Fantasy</td></tr><tr><td>1206885</td><td>Action</td></tr><tr><td>1206885</td><td>Adventure</td></tr><tr><td>1206885</td><td>Thriller</td></tr><tr><td>1211837</td><td>Action</td></tr><tr><td>1211837</td><td>Adventure</td></tr><tr><td>1211837</td><td>Fantasy</td></tr><tr><td>1211956</td><td>Action</td></tr><tr><td>1211956</td><td>Thriller</td></tr><tr><td>1216496</td><td>Crime</td></tr><tr><td>1216496</td><td>Drama</td></tr><tr><td>1216496</td><td>Thriller</td></tr><tr><td>1220634</td><td>Action</td></tr><tr><td>1220634</td><td>Horror</td></tr><tr><td>1220634</td><td>Sci-Fi</td></tr><tr><td>1220719</td><td>Action</td></tr><tr><td>1220719</td><td>Biography</td></tr><tr><td>1220719</td><td>Drama</td></tr><tr><td>1228705</td><td>Action</td></tr><tr><td>1228705</td><td>Adventure</td></tr><tr><td>1228705</td><td>Sci-Fi</td></tr><tr><td>1229238</td><td>Action</td></tr><tr><td>1229238</td><td>Adventure</td></tr><tr><td>1229238</td><td>Thriller</td></tr><tr><td>1233461</td><td>Comedy</td></tr><tr><td>1233461</td><td>Romance</td></tr><tr><td>1242460</td><td>Drama</td></tr><tr><td>1242460</td><td>Mystery</td></tr><tr><td>1242460</td><td>Thriller</td></tr><tr><td>1254468</td><td>Drama</td></tr><tr><td>1254468</td><td>Sci-Fi</td></tr><tr><td>1254468</td><td>Thriller</td></tr><tr><td>1270797</td><td>Action</td></tr><tr><td>1270797</td><td>Sci-Fi</td></tr><tr><td>1270797</td><td>Thriller</td></tr><tr><td>1277953</td><td>Adventure</td></tr><tr><td>1277953</td><td>Animation</td></tr><tr><td>1277953</td><td>Comedy</td></tr><tr><td>1300854</td><td>Action</td></tr><tr><td>1300854</td><td>Adventure</td></tr><tr><td>1300854</td><td>Sci-Fi</td></tr><tr><td>1302006</td><td>Biography</td></tr><tr><td>1302006</td><td>Crime</td></tr><tr><td>1302006</td><td>Drama</td></tr><tr><td>1302011</td><td>Action</td></tr><tr><td>1302011</td><td>Adventure</td></tr><tr><td>1302011</td><td>Animation</td></tr><tr><td>1302011</td><td>Comedy</td></tr><tr><td>1302011</td><td>Family</td></tr><tr><td>1302011</td><td>Fantasy</td></tr><tr><td>1343092</td><td>Drama</td></tr><tr><td>1343092</td><td>Romance</td></tr><tr><td>1345836</td><td>Action</td></tr><tr><td>1345836</td><td>Thriller</td></tr><tr><td>1355644</td><td>Drama</td></tr><tr><td>1355644</td><td>Romance</td></tr><tr><td>1355644</td><td>Sci-Fi</td></tr><tr><td>1375666</td><td>Action</td></tr><tr><td>1375666</td><td>Adventure</td></tr><tr><td>1375666</td><td>Sci-Fi</td></tr><tr><td>1375666</td><td>Thriller</td></tr><tr><td>1386697</td><td>Action</td></tr><tr><td>1386697</td><td>Adventure</td></tr><tr><td>1386697</td><td>Fantasy</td></tr><tr><td>1392170</td><td>Action</td></tr><tr><td>1392170</td><td>Adventure</td></tr><tr><td>1392170</td><td>Sci-Fi</td></tr><tr><td>1392170</td><td>Thriller</td></tr><tr><td>1392190</td><td>Action</td></tr><tr><td>1392190</td><td>Adventure</td></tr><tr><td>1392190</td><td>Sci-fi</td></tr><tr><td>1396218</td><td>Comedy</td></tr><tr><td>1396218</td><td>Family</td></tr><tr><td>1396218</td><td>Fantasy</td></tr><tr><td>1396484</td><td>Horror</td></tr><tr><td>1399103</td><td>Action</td></tr><tr><td>1399103</td><td>Adventure</td></tr><tr><td>1399103</td><td>Sci-Fi</td></tr><tr><td>1409024</td><td>Action</td></tr><tr><td>1409024</td><td>Adventure</td></tr><tr><td>1409024</td><td>Comedy</td></tr><tr><td>1409024</td><td>Sci-Fi</td></tr><tr><td>1430132</td><td>Action</td></tr><tr><td>1430132</td><td>Adventure</td></tr><tr><td>1430132</td><td>Sci-Fi</td></tr><tr><td>1431045</td><td>Action</td></tr><tr><td>1431045</td><td>Adventure</td></tr><tr><td>1431045</td><td>Comedy</td></tr><tr><td>1440129</td><td>Action</td></tr><tr><td>1440129</td><td>Adventure</td></tr><tr><td>1440129</td><td>Sci-Fi</td></tr><tr><td>1440129</td><td>Thriller</td></tr><tr><td>1449283</td><td>Adventure</td></tr><tr><td>1449283</td><td>Animation</td></tr><tr><td>1449283</td><td>Comedy</td></tr><tr><td>1453405</td><td>Adventure</td></tr><tr><td>1453405</td><td>Animation</td></tr><tr><td>1453405</td><td>Comedy</td></tr><tr><td>1457767</td><td>Horror</td></tr><tr><td>1457767</td><td>Mystery</td></tr><tr><td>1457767</td><td>Thriller</td></tr><tr><td>1464540</td><td>Action</td></tr><tr><td>1464540</td><td>Adventure</td></tr><tr><td>1464540</td><td>Sci-Fi</td></tr><tr><td>1474276</td><td>Action</td></tr><tr><td>1474276</td><td>Animation</td></tr><tr><td>1474276</td><td>Comedy</td></tr><tr><td>1477834</td><td>Action</td></tr><tr><td>1477834</td><td>Adventure</td></tr><tr><td>1477834</td><td>Fantasy</td></tr><tr><td>1477834</td><td>Sci-Fi</td></tr><tr><td>1485796</td><td>Biography</td></tr><tr><td>1485796</td><td>Drama</td></tr><tr><td>1485796</td><td>Musical</td></tr><tr><td>1504320</td><td>Biography</td></tr><tr><td>1504320</td><td>Drama</td></tr><tr><td>1504320</td><td>History</td></tr><tr><td>1560220</td><td>Action</td></tr><tr><td>1560220</td><td>Comedy</td></tr><tr><td>1560220</td><td>Horror</td></tr><tr><td>1588170</td><td>Action</td></tr><tr><td>1588170</td><td>Crime</td></tr><tr><td>1588170</td><td>Drama</td></tr><tr><td>1588170</td><td>Horror</td></tr><tr><td>1588170</td><td>Thriller</td></tr><tr><td>1588398</td><td>Drama</td></tr><tr><td>1588398</td><td>Romance</td></tr><tr><td>1588398</td><td>Thriller</td></tr><tr><td>1591095</td><td>Horror</td></tr><tr><td>1591095</td><td>Mystery</td></tr><tr><td>1591095</td><td>Thriler</td></tr><tr><td>1596343</td><td>Action</td></tr><tr><td>1596343</td><td>Crime</td></tr><tr><td>1596343</td><td>Thriller</td></tr><tr><td>1605783</td><td>Comedy</td></tr><tr><td>1605783</td><td>Fantasy</td></tr><tr><td>1605783</td><td>Romance</td></tr><tr><td>1620981</td><td>Animation</td></tr><tr><td>1620981</td><td>Comedy</td></tr><tr><td>1620981</td><td>Family</td></tr><tr><td>1637688</td><td>Action</td></tr><tr><td>1637688</td><td>Sci-Fi</td></tr><tr><td>1637688</td><td>Thriller</td></tr><tr><td>1637725</td><td>Comedy</td></tr><tr><td>1638002</td><td>Comedy</td></tr><tr><td>1638002</td><td>Romance</td></tr><tr><td>1646971</td><td>Action</td></tr><tr><td>1646971</td><td>Adventure</td></tr><tr><td>1646971</td><td>Animation</td></tr><tr><td>1646971</td><td>Family</td></tr><tr><td>1646971</td><td>Fantasy</td></tr><tr><td>1661199</td><td>Drama</td></tr><tr><td>1661199</td><td>Family</td></tr><tr><td>1661199</td><td>Fantasy</td></tr><tr><td>1661199</td><td>Romance</td></tr><tr><td>1663202</td><td>Action</td></tr><tr><td>1663202</td><td>Adventure</td></tr><tr><td>1663202</td><td>Biography</td></tr><tr><td>1663202</td><td>Drama</td></tr><tr><td>1663202</td><td>Western</td></tr><tr><td>1663662</td><td>Action</td></tr><tr><td>1663662</td><td>Adventure</td></tr><tr><td>1663662</td><td>Sci-Fi</td></tr><tr><td>1670345</td><td>Crime</td></tr><tr><td>1670345</td><td>Mystery</td></tr><tr><td>1670345</td><td>Thriller</td></tr><tr><td>1677720</td><td>Action</td></tr><tr><td>1677720</td><td>Adventure</td></tr><tr><td>1677720</td><td>Sci-Fi</td></tr><tr><td>1703199</td><td>Horror</td></tr><tr><td>1706620</td><td>Action</td></tr><tr><td>1706620</td><td>Drama</td></tr><tr><td>1706620</td><td>Sci-Fi</td></tr><tr><td>1707386</td><td>Drama</td></tr><tr><td>1707386</td><td>History</td></tr><tr><td>1707386</td><td>Musical</td></tr><tr><td>1727824</td><td>Biography</td></tr><tr><td>1727824</td><td>Drama</td></tr><tr><td>1727824</td><td>Music</td></tr><tr><td>1772341</td><td>Adventure</td></tr><tr><td>1772341</td><td>Animation</td></tr><tr><td>1772341</td><td>Comdey</td></tr><tr><td>1772341</td><td>Family</td></tr><tr><td>1772341</td><td>Fantasy</td></tr><tr><td>1790809</td><td>Action</td></tr><tr><td>1790809</td><td>Adventure</td></tr><tr><td>1790809</td><td>Fantasy</td></tr><tr><td>1790864</td><td>Action</td></tr><tr><td>1790864</td><td>Mystery</td></tr><tr><td>1790864</td><td>Sci-Fi</td></tr><tr><td>1798709</td><td>Drama</td></tr><tr><td>1798709</td><td>Romance</td></tr><tr><td>1798709</td><td>Sci-Fi</td></tr><tr><td>1825683</td><td>Action</td></tr><tr><td>1825683</td><td>Adventure</td></tr><tr><td>1825683</td><td>Sci-Fi</td></tr><tr><td>1853728</td><td>Drama</td></tr><tr><td>1853728</td><td>Western</td></tr><tr><td>1854564</td><td>Adventure</td></tr><tr><td>1854564</td><td>Family</td></tr><tr><td>1854564</td><td>Fantasy</td></tr><tr><td>1855325</td><td>Action</td></tr><tr><td>1855325</td><td>Horror</td></tr><tr><td>1855325</td><td>Sci-Fi</td></tr><tr><td>1905041</td><td>Action</td></tr><tr><td>1905041</td><td>Crime</td></tr><tr><td>1905041</td><td>Thriller</td></tr><tr><td>1911658</td><td>Adventure</td></tr><tr><td>1911658</td><td>Animation</td></tr><tr><td>1911658</td><td>Comedy</td></tr><tr><td>1935859</td><td>Adventure</td></tr><tr><td>1935859</td><td>Drama</td></tr><tr><td>1935859</td><td>Fantasy</td></tr><tr><td>1959563</td><td>Action</td></tr><tr><td>1959563</td><td>Comedy</td></tr><tr><td>1959563</td><td>Thriller</td></tr><tr><td>1979388</td><td>Adventure</td></tr><tr><td>1979388</td><td>Animation</td></tr><tr><td>1979388</td><td>Comedy</td></tr><tr><td>1979388</td><td>Drama</td></tr><tr><td>1979388</td><td>Family</td></tr><tr><td>1979388</td><td>Fantasy</td></tr><tr><td>1980929</td><td>Comedy</td></tr><tr><td>1980929</td><td>Drama</td></tr><tr><td>1980929</td><td>Music</td></tr><tr><td>2015381</td><td>Action</td></tr><tr><td>2015381</td><td>Adventure</td></tr><tr><td>2015381</td><td>Comedy</td></tr><tr><td>2015381</td><td>Sci-Fi</td></tr><tr><td>2036416</td><td>Comedy</td></tr><tr><td>2036416</td><td>Drama</td></tr><tr><td>2036416</td><td>Romance</td></tr><tr><td>2039393</td><td>Crime</td></tr><tr><td>2039393</td><td>Drama</td></tr><tr><td>2039393</td><td>Thriller</td></tr><tr><td>2082180</td><td>Action</td></tr><tr><td>2082180</td><td>Drama</td></tr><tr><td>2082180</td><td>Romance</td></tr><tr><td>2084970</td><td>Biography</td></tr><tr><td>2084970</td><td>Drama</td></tr><tr><td>2084970</td><td>Thriller</td></tr><tr><td>2084970</td><td>War</td></tr><tr><td>2094766</td><td>Action</td></tr><tr><td>2094766</td><td>Adventure</td></tr><tr><td>2094766</td><td>Sci-Fi</td></tr><tr><td>2096673</td><td>Adventure</td></tr><tr><td>2096673</td><td>Animation</td></tr><tr><td>2096673</td><td>Comedy</td></tr><tr><td>2109248</td><td>Action</td></tr><tr><td>2109248</td><td>Adventure</td></tr><tr><td>2109248</td><td>Sci-Fi</td></tr><tr><td>2140203</td><td>Animation</td></tr><tr><td>2140203</td><td>Drama</td></tr><tr><td>2140203</td><td>Family</td></tr><tr><td>2194499</td><td>Comedy</td></tr><tr><td>2194499</td><td>Drama</td></tr><tr><td>2194499</td><td>Fantasy</td></tr><tr><td>2209418</td><td>Drama</td></tr><tr><td>2209418</td><td>Romance</td></tr><tr><td>2239822</td><td>Action</td></tr><tr><td>2239822</td><td>Adventure</td></tr><tr><td>2239822</td><td>Fantasy</td></tr><tr><td>2245084</td><td>Action</td></tr><tr><td>2245084</td><td>Adventure</td></tr><tr><td>2245084</td><td>Animation</td></tr><tr><td>2250912</td><td>Action</td></tr><tr><td>2250912</td><td>Adventure</td></tr><tr><td>2250912</td><td>Sci-Fi</td></tr><tr><td>2267968</td><td>Action</td></tr><tr><td>2267968</td><td>Adventure</td></tr><tr><td>2267968</td><td>Animation</td></tr><tr><td>2267968</td><td>Comedy</td></tr><tr><td>2267968</td><td>Family</td></tr><tr><td>2267968</td><td>Fantasy</td></tr><tr><td>2278388</td><td>Adventure</td></tr><tr><td>2278388</td><td>Comedy</td></tr><tr><td>2278388</td><td>Crime</td></tr><tr><td>2283336</td><td>Action</td></tr><tr><td>2283336</td><td>Adventure</td></tr><tr><td>2283336</td><td>Comedy</td></tr><tr><td>2290840</td><td>Drama</td></tr><tr><td>2290840</td><td>History</td></tr><tr><td>2294629</td><td>Adventure</td></tr><tr><td>2294629</td><td>Animation</td></tr><tr><td>2294629</td><td>Comedy</td></tr><tr><td>2315152</td><td>Fantasy</td></tr><tr><td>2315152</td><td>Romance</td></tr><tr><td>2322441</td><td>Drama</td></tr><tr><td>2322441</td><td>Romance</td></tr><tr><td>2322441</td><td>Thriller</td></tr><tr><td>2323836</td><td>Adventure</td></tr><tr><td>2323836</td><td>Animation</td></tr><tr><td>2323836</td><td>Drama</td></tr><tr><td>2361509</td><td>Comedy</td></tr><tr><td>2361509</td><td>Drama</td></tr><tr><td>2369135</td><td>Action</td></tr><tr><td>2369135</td><td>Crime</td></tr><tr><td>2369135</td><td>Thriller</td></tr><tr><td>2380307</td><td>Adventure</td></tr><tr><td>2380307</td><td>Animation</td></tr><tr><td>2380307</td><td>Family</td></tr><tr><td>2381249</td><td>Action</td></tr><tr><td>2381249</td><td>Adventure</td></tr><tr><td>2381249</td><td>Thriller</td></tr><tr><td>2386490</td><td>Action</td></tr><tr><td>2386490</td><td>Adventure</td></tr><tr><td>2386490</td><td>Animation</td></tr><tr><td>2386490</td><td>Family</td></tr><tr><td>2386490</td><td>Fantasy</td></tr><tr><td>2395427</td><td>Action</td></tr><tr><td>2395427</td><td>Adventure</td></tr><tr><td>2395427</td><td>Sci-Fi</td></tr><tr><td>2488496</td><td>Action</td></tr><tr><td>2488496</td><td>Adventure</td></tr><tr><td>2488496</td><td>Sci-Fi</td></tr><tr><td>2510894</td><td>Animation</td></tr><tr><td>2510894</td><td>Comedy</td></tr><tr><td>2510894</td><td>Family</td></tr><tr><td>2527336</td><td>Action</td></tr><tr><td>2527336</td><td>Adventure</td></tr><tr><td>2527336</td><td>Fantasy</td></tr><tr><td>2527336</td><td>Sci-Fi</td></tr><tr><td>2557478</td><td>Action</td></tr><tr><td>2557478</td><td>Adventure</td></tr><tr><td>2557478</td><td>Sci-Fi</td></tr><tr><td>2582846</td><td>Drama</td></tr><tr><td>2582846</td><td>Romance</td></tr><tr><td>2592614</td><td>Action</td></tr><tr><td>2592614</td><td>Horror</td></tr><tr><td>2592614</td><td>Sci-Fi</td></tr><tr><td>2592808</td><td>Comedy</td></tr><tr><td>2592808</td><td>Drama</td></tr><tr><td>2592808</td><td>Romance</td></tr><tr><td>2674426</td><td>Drama</td></tr><tr><td>2674426</td><td>Romance</td></tr><tr><td>2692250</td><td>Adventure</td></tr><tr><td>2692250</td><td>Comedy</td></tr><tr><td>2692250</td><td>Family</td></tr><tr><td>2820852</td><td>Action</td></tr><tr><td>2820852</td><td>Crime</td></tr><tr><td>2820852</td><td>Thriller</td></tr><tr><td>2888046</td><td>Action</td></tr><tr><td>2888046</td><td>Biography</td></tr><tr><td>2888046</td><td>Drama</td></tr><tr><td>2911666</td><td>Action</td></tr><tr><td>2911666</td><td>Crime</td></tr><tr><td>2911666</td><td>Thriller</td></tr><tr><td>2935510</td><td>Adventure</td></tr><tr><td>2935510</td><td>Drama</td></tr><tr><td>2935510</td><td>Mystery</td></tr><tr><td>2935510</td><td>Sci-Fi</td></tr><tr><td>2935510</td><td>Thriller</td></tr><tr><td>2948356</td><td>Adventure</td></tr><tr><td>2948356</td><td>Animation</td></tr><tr><td>2948356</td><td>Comedy</td></tr><tr><td>2980516</td><td>Biography</td></tr><tr><td>2980516</td><td>Drama</td></tr><tr><td>2980516</td><td>Romance</td></tr><tr><td>3079380</td><td>Action</td></tr><tr><td>3079380</td><td>Comedy</td></tr><tr><td>3079380</td><td>Crime</td></tr><tr><td>3183660</td><td>Adventure</td></tr><tr><td>3183660</td><td>Family</td></tr><tr><td>3183660</td><td>Fantasy</td></tr><tr><td>3262342</td><td>Animation</td></tr><tr><td>3262342</td><td>Biography</td></tr><tr><td>3262342</td><td>Crime</td></tr><tr><td>3306854</td><td>Comedy</td></tr><tr><td>3315342</td><td>Action</td></tr><tr><td>3315342</td><td>Drama</td></tr><tr><td>3315342</td><td>Sci-Fi</td></tr><tr><td>3397884</td><td>Action</td></tr><tr><td>3397884</td><td>Crime</td></tr><tr><td>3397884</td><td>Drama</td></tr><tr><td>3397884</td><td>Mystery</td></tr><tr><td>3397884</td><td>Thriller</td></tr><tr><td>3448226</td><td>Action</td></tr><tr><td>3448226</td><td>Crime</td></tr><tr><td>3448226</td><td>Thriller</td></tr><tr><td>3460252</td><td>Crime</td></tr><tr><td>3460252</td><td>Drama</td></tr><tr><td>3460252</td><td>Mystery</td></tr><tr><td>3460252</td><td>Thriller</td></tr><tr><td>3460252</td><td>Western</td></tr><tr><td>3498820</td><td>Action</td></tr><tr><td>3498820</td><td>Adventure</td></tr><tr><td>3498820</td><td>Sci-Fi</td></tr><tr><td>3521164</td><td>Adventure</td></tr><tr><td>3521164</td><td>Animation</td></tr><tr><td>3521164</td><td>Comedy</td></tr><tr><td>3521164</td><td>Family</td></tr><tr><td>3521164</td><td>Fantasy</td></tr><tr><td>3521164</td><td>Musical</td></tr><tr><td>3544112</td><td>Comedy</td></tr><tr><td>3544112</td><td>Drama</td></tr><tr><td>3544112</td><td>Music</td></tr><tr><td>3606756</td><td>Action</td></tr><tr><td>3606756</td><td>Adventure</td></tr><tr><td>3606756</td><td>Animation</td></tr><tr><td>3606756</td><td>Comedy</td></tr><tr><td>3606756</td><td>Family</td></tr><tr><td>3606756</td><td>Sci-Fi</td></tr><tr><td>3659388</td><td>Adventure</td></tr><tr><td>3659388</td><td>Drama</td></tr><tr><td>3659388</td><td>Sci-Fi</td></tr><tr><td>3694790</td><td>Comedy</td></tr><tr><td>3694790</td><td>Romance</td></tr><tr><td>373889</td><td>Action</td></tr><tr><td>373889</td><td>Adventure</td></tr><tr><td>373889</td><td>Family</td></tr><tr><td>3778644</td><td>Action</td></tr><tr><td>3778644</td><td>Adventure</td></tr><tr><td>3778644</td><td>Sci-Fi</td></tr><tr><td>3783958</td><td>Comedy</td></tr><tr><td>3783958</td><td>Drama</td></tr><tr><td>3783958</td><td>Music</td></tr><tr><td>3783958</td><td>Musical</td></tr><tr><td>3783958</td><td>Romance</td></tr><tr><td>3846674</td><td>Drama</td></tr><tr><td>3846674</td><td>Romance</td></tr><tr><td>3896198</td><td>Action</td></tr><tr><td>3896198</td><td>Adventure</td></tr><tr><td>3896198</td><td>Comedy</td></tr><tr><td>3896198</td><td>Sci-Fi</td></tr><tr><td>3967856</td><td>Action</td></tr><tr><td>3967856</td><td>Adventure</td></tr><tr><td>3967856</td><td>Drama</td></tr><tr><td>4046784</td><td>Action</td></tr><tr><td>4046784</td><td>Sci-Fi</td></tr><tr><td>4046784</td><td>Thriller</td></tr><tr><td>4068576</td><td>Adventure</td></tr><tr><td>4068576</td><td>Drama</td></tr><tr><td>4068576</td><td>Thriller</td></tr><tr><td>4123430</td><td>Adventure</td></tr><tr><td>4123430</td><td>Family</td></tr><tr><td>4123430</td><td>Fantasy</td></tr><tr><td>4126476</td><td>Drama</td></tr><tr><td>4126476</td><td>Romance</td></tr><tr><td>4146622</td><td>Action</td></tr><tr><td>4146622</td><td>Crime</td></tr><tr><td>4146622</td><td>Thriller</td></tr><tr><td>4154756</td><td>Action</td></tr><tr><td>4154756</td><td>Adventure</td></tr><tr><td>4154756</td><td>Sci-Fi</td></tr><tr><td>4154796</td><td>Action</td></tr><tr><td>4154796</td><td>Adventure</td></tr><tr><td>4154796</td><td>Drama</td></tr><tr><td>4154796</td><td>Sci-Fi</td></tr><tr><td>4273886</td><td>Drama</td></tr><tr><td>4273886</td><td>Romance</td></tr><tr><td>4425200</td><td>Action</td></tr><tr><td>4425200</td><td>Crime</td></tr><tr><td>4425200</td><td>Thriller</td></tr><tr><td>4429160</td><td>Action</td></tr><tr><td>4429160</td><td>Adventure</td></tr><tr><td>4429160</td><td>Animation</td></tr><tr><td>4429160</td><td>Comedy</td></tr><tr><td>4429160</td><td>Drama</td></tr><tr><td>4429160</td><td>Fantasy</td></tr><tr><td>4429160</td><td>Romance</td></tr><tr><td>4477536</td><td>Drama</td></tr><tr><td>4477536</td><td>Romance</td></tr><tr><td>4477536</td><td>Thriller</td></tr><tr><td>4481414</td><td>Drama</td></tr><tr><td>4500922</td><td>Action</td></tr><tr><td>4500922</td><td>Sci-Fi</td></tr><tr><td>4500922</td><td>Thriller</td></tr><tr><td>4630562</td><td>Action</td></tr><tr><td>4630562</td><td>Crime</td></tr><tr><td>4630562</td><td>Thriller</td></tr><tr><td>4633694</td><td>Action</td></tr><tr><td>4633694</td><td>Adventure</td></tr><tr><td>4633694</td><td>Animation</td></tr><tr><td>4651520</td><td>Comedy</td></tr><tr><td>4777008</td><td>Adventure</td></tr><tr><td>4777008</td><td>Family</td></tr><tr><td>4777008</td><td>Fantasy</td></tr><tr><td>4846340</td><td>Biography</td></tr><tr><td>4846340</td><td>Drama</td></tr><tr><td>4846340</td><td>History</td></tr><tr><td>4912910</td><td>Action</td></tr><tr><td>4912910</td><td>Adventure</td></tr><tr><td>4912910</td><td>Thriller</td></tr><tr><td>4972582</td><td>Horror</td></tr><tr><td>4972582</td><td>Thriller</td></tr><tr><td>5013056</td><td>Action</td></tr><tr><td>5013056</td><td>Drama</td></tr><tr><td>5013056</td><td>History</td></tr><tr><td>5027774</td><td>Comedy</td></tr><tr><td>5027774</td><td>Crime</td></tr><tr><td>5027774</td><td>Drama</td></tr><tr><td>5028340</td><td>Comedy</td></tr><tr><td>5028340</td><td>Family</td></tr><tr><td>5028340</td><td>Fantasy</td></tr><tr><td>5034276</td><td>Action</td></tr><tr><td>5034276</td><td>Mystery</td></tr><tr><td>5034276</td><td>Thriller</td></tr><tr><td>5093026</td><td>Adventure</td></tr><tr><td>5093026</td><td>Biography</td></tr><tr><td>5093026</td><td>Crime</td></tr><tr><td>5164214</td><td>Action</td></tr><tr><td>5164214</td><td>Comedy</td></tr><tr><td>5164214</td><td>Crime</td></tr><tr><td>5220122</td><td>Animation</td></tr><tr><td>5220122</td><td>Comedy</td></tr><tr><td>5220122</td><td>Family</td></tr><tr><td>5294518</td><td>Horror</td></tr><tr><td>5294518</td><td>Thriller</td></tr><tr><td>5311514</td><td>Animation</td></tr><tr><td>5311514</td><td>Drama</td></tr><tr><td>5311514</td><td>Fantasy</td></tr><tr><td>5323662</td><td>Animation</td></tr><tr><td>5323662</td><td>Drama</td></tr><tr><td>5323662</td><td>Romance</td></tr><tr><td>5463162</td><td>Action</td></tr><tr><td>5463162</td><td>Adventure</td></tr><tr><td>5463162</td><td>Comedy</td></tr><tr><td>5580390</td><td>Advanture</td></tr><tr><td>5580390</td><td>Drama</td></tr><tr><td>5580390</td><td>Fantasy</td></tr><tr><td>5586914</td><td>Comedy</td></tr><tr><td>5586914</td><td>Romance</td></tr><tr><td>5606664</td><td>Drama</td></tr><tr><td>5606664</td><td>Fantasy</td></tr><tr><td>5606664</td><td>Horror</td></tr><tr><td>5649144</td><td>Drama</td></tr><tr><td>5700672</td><td>Action</td></tr><tr><td>5700672</td><td>Horror</td></tr><tr><td>5700672</td><td>Thriller</td></tr><tr><td>5726616</td><td>Drama</td></tr><tr><td>5726616</td><td>Romance</td></tr><tr><td>5776858</td><td>Drama</td></tr><tr><td>5776858</td><td>Romance</td></tr><tr><td>5848272</td><td>Adventure</td></tr><tr><td>5848272</td><td>Animation</td></tr><tr><td>5848272</td><td>Comedy</td></tr><tr><td>5884052</td><td>Action</td></tr><tr><td>5884052</td><td>Adventure</td></tr><tr><td>5884052</td><td>Comedy</td></tr><tr><td>6083230</td><td>Drama</td></tr><tr><td>6095472</td><td>Adventure</td></tr><tr><td>6095472</td><td>Animation</td></tr><tr><td>6095472</td><td>Comedy</td></tr><tr><td>6105098</td><td>Adventure</td></tr><tr><td>6105098</td><td>Animation</td></tr><tr><td>6105098</td><td>Drama</td></tr><tr><td>6105098</td><td>Family</td></tr><tr><td>6105098</td><td>Musical</td></tr><tr><td>6139732</td><td>Adventure</td></tr><tr><td>6139732</td><td>Family</td></tr><tr><td>6139732</td><td>Fantasy</td></tr><tr><td>6146586</td><td>Action</td></tr><tr><td>6146586</td><td>Crime</td></tr><tr><td>6146586</td><td>Thriller</td></tr><tr><td>6317962</td><td>Animation</td></tr><tr><td>6317962</td><td>Drama</td></tr><tr><td>6317962</td><td>Family</td></tr><tr><td>6320628</td><td>Action</td></tr><tr><td>6320628</td><td>Adventure</td></tr><tr><td>6320628</td><td>Sci-Fi</td></tr><tr><td>6450804</td><td>Action</td></tr><tr><td>6450804</td><td>Adventure</td></tr><tr><td>6450804</td><td>Sci-Fi</td></tr><tr><td>6472976</td><td>Drama</td></tr><tr><td>6472976</td><td>Romance</td></tr><tr><td>6663582</td><td>Action</td></tr><tr><td>6663582</td><td>Adventure</td></tr><tr><td>6663582</td><td>Comedy</td></tr><tr><td>6751668</td><td>Comedy</td></tr><tr><td>6751668</td><td>Drama</td></tr><tr><td>6751668</td><td>Thriller</td></tr><tr><td>6788942</td><td>Comedy</td></tr><tr><td>6788942</td><td>Crime</td></tr><tr><td>6788942</td><td>Drama</td></tr><tr><td>6788942</td><td>Thriller</td></tr><tr><td>6806448</td><td>Action</td></tr><tr><td>6806448</td><td>Crime</td></tr><tr><td>6806448</td><td>Thriller</td></tr><tr><td>6924650</td><td>Action</td></tr><tr><td>6924650</td><td>Drama</td></tr><tr><td>6924650</td><td>History</td></tr><tr><td>6966692</td><td>Biography</td></tr><tr><td>6966692</td><td>Comedy</td></tr><tr><td>6966692</td><td>Drama</td></tr><tr><td>7131622</td><td>Comedy</td></tr><tr><td>7131622</td><td>Drama</td></tr><tr><td>7286456</td><td>Crime</td></tr><tr><td>7286456</td><td>Drama</td></tr><tr><td>7286456</td><td>Thriller</td></tr><tr><td>7668870</td><td>Drama</td></tr><tr><td>7668870</td><td>Mystery</td></tr><tr><td>7668870</td><td>Thriller</td></tr><tr><td>7784604</td><td>Drama</td></tr><tr><td>7784604</td><td>Horror</td></tr><tr><td>7784604</td><td>Mystery</td></tr><tr><td>7880466</td><td>Action</td></tr><tr><td>7880466</td><td>Adventure</td></tr><tr><td>7880466</td><td>Animation</td></tr><tr><td>7880466</td><td>Crime</td></tr><tr><td>7880466</td><td>Family</td></tr><tr><td>7880466</td><td>Mystery</td></tr><tr><td>7880466</td><td>Thriller</td></tr><tr><td>8079248</td><td>Comedy</td></tr><tr><td>8079248</td><td>Fantasy</td></tr><tr><td>8079248</td><td>Music</td></tr><tr><td>8119680</td><td>Crime</td></tr><tr><td>8119680</td><td>Drama</td></tr><tr><td>816692</td><td>Adventure</td></tr><tr><td>816692</td><td>Drama</td></tr><tr><td>816692</td><td>Sci-Fi</td></tr><tr><td>8328716</td><td>Action</td></tr><tr><td>8328716</td><td>Adventure</td></tr><tr><td>8328716</td><td>Horror</td></tr><tr><td>8623904</td><td>Comedy</td></tr><tr><td>8623904</td><td>Drama</td></tr><tr><td>8623904</td><td>Romance</td></tr><tr><td>8772262</td><td>Drama</td></tr><tr><td>8772262</td><td>Horror</td></tr><tr><td>8772262</td><td>Mystery</td></tr><tr><td>9426210</td><td>Animation</td></tr><tr><td>9426210</td><td>Drama</td></tr><tr><td>9426210</td><td>Fantasy</td></tr><tr><td>9764654</td><td>Drama</td></tr>		</tbody>
+	</table>
+
+</div>
+
+
+
+
+</body></html>

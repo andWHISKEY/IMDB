@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/directors.php -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>IMDB</title>
+
+<style>
+
+table {
+width: 65%;
+border: 1px solid #444444;
+    border-collapse: collapse;
+    margin-left: 200px;
+}
+th, td {
+border: 1px solid #444444;
+}
+#menu{
+background-color: #2d2d2d;
+height: 70px;
+border: 1px solid #ccc;
+border-width: 1px 0;
+}
+#topMenu {
+height: 60px;
+width: 1300px;
+align: 0 auto;
+}
+#topMenu ul li{
+list-style: none;
+color: white;
+background-color: #2d2d2d;
+float: left;
+line-height: 50px;
+vertical-align: middle;
+text-align: center;
+text-align: center;
+}
+#menu .right{
+float: right;
+
+}
+#Menu ul li{
+/* float: none; 세로 출력*/
+background-color: #636363;
+}
+#topMenu li ul{
+background-color: #636363;
+position:absolute;
+display:none;
+}
+#topMenu li:hover ul {
+display:block;
+}
+#topMenu .menuLink {
+text-decoration:none;
+color: white;
+display: block;
+width: 150px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuLink:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#topMenu .menuL {
+text-decoration:none;
+color: white;
+display: block;
+width: 170px;
+font-size: 20px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#topMenu .menuL:hover {
+color: red;
+background-color: #4d4d4d;
+}
+#delete_step label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+#updateform label{
+width:75%;
+font-size: 20px;
+float: left;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.form-search{
+height: 25px;
+width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#delete_step .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+}
+#updateform .form-control{
+font-size: 18px;
+height: 40px;
+width: 600px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+
+
+}
+#search{
+font-size: 20px;
+width: 90px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#search_btn{
+height: 25px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step1{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step2{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-step3{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+#btn-delete{
+font-size: 30px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+}
+
+.step{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Dotum, Arial;
+color: red;
+}
+body { text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */ }
+
+.input:hover{
+cursor:pointer;
+}
+#home{
+font-size: 60px;
+font-weight: bold;
+font-family: "Trebuchet MS", Dotum, Arial;
+color: black;
+}
+#updatestep1{
+display: none
+}
+#updatestep2{
+display: none
+}
+#updatestep3{
+display: none
+}
+#delete_step{
+display: none
+}
+</style>
+</head>
+<body>
+<a id="home" href="http://localhost/index.php">8조 IMDB</a>
+<br>
+<div id="menu">
+<nav id="topMenu">
+<ul>
+<li><a class="menuLink" href="http://localhost/directors.php#">Movie</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie.php">movies</a></li>
+<li><a class="menuL" href="http://localhost/movie_genres.php">movie_genres</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/directors.php#">Actor</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/actors.php">actors</a></li>
+<li><a class="menuL" href="http://localhost/roles.php">roles</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/directors.php#">Director</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/movie_directors.php">movie_directors</a></li>
+<li><a class="menuL" href="http://localhost/directors_genres.php">directors_genres</a></li>
+<li><a class="menuL" href="http://localhost/directors.php">directors</a></li>
+</ul>
+</nav>
+</li>
+<li><a class="menuLink" href="http://localhost/directors.php#">Review</a>
+<nav id="Menu">
+<ul>
+<li><a class="menuL" href="http://localhost/reviews.php">reviews</a></li>
+</ul>
+</nav>
+</li>
+<li class="right">
+<form name="mysearchbar" action="http://localhost/search.php" method="post">
+<div class="input-group">
+
+<select id="search" name="search">
+<option value="movie">movie</option>
+<option value="actor">actor</option>
+<option value="director">director</option>
+<option value="genre">genre</option>
+</select>
+<input name="Search_name" type="text" class="form-search" placeholder="search">
+&nbsp;&nbsp;
+<button type="submit" id="search_btn">검색</button>
+</div>
+</form>
+</li>
+<li class="right"><a class="menuLink" href="http://localhost/directors.php#" id="update_step1">Update</a></li>
+<li class="right"><a class="menuLink" href="http://localhost/directors.php#" id="delete">Delete</a></li>
+</ul>
+</nav>
+</div>
+<br><br>
+
+<!-- delete -->
+<form action="http://localhost/delete_data.php" method="post">
+<div id="delete_step">
+<h2 class="step">DELETE DATA</h2>
+<br><br><br>
+<div class="form-group">
+<label for="delete_movie_id">Movie Name</label>
+<br><br>
+<input type="delete_movie_id" class="form-control" name="movie_name" id="delete_movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-delete">Delete</button>
+</div>
+</form>
+
+
+<!-- update -->
+<form action="http://localhost/insert_data.php" method="post">
+<div id="updateform">
+
+
+<!-- STEP1: INPUT MOVIES TABLE -->
+
+<div id="updatestep1">
+<h2 class="step">STEP1: INPUT MOVIES TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0119177)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_name">Movie Name</label>
+<br><br>
+<input type="movie_name" class="form-control" name="movie_name" id="movie_name" placeholder="Enter movie name here (e.g., Gattaca)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_year">Movie Year</label>
+<br><br>
+<input type="movie_year" class="form-control" name="movie_year" id="movie_year" placeholder="Enter movie year here (e.g., 1965)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="movie_genres">Movie Genres</label>
+<br><br>
+<input type="movie_genres" class="form-control" name="movie_genres" id="movie_genres" placeholder="Enter movie genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="runtime_rating">Runtime</label>
+<br><br>
+<input type="runtime_rating" class="form-control" name="runtime_rating" id="runtime_rating" placeholder="Enter runtime rating here (e.g., 172)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="rating">Rating</label>
+<br><br>
+<input type="rating" class="form-control" name="rating" id="rating" placeholder="Enter Rating here (e.g., 7.1)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="plot">Plot</label>
+<br><br>
+<input type="plot" class="form-control" name="plot" id="plot" placeholder="Enter plot here (e.g., A woman leaves an Austrian convent t.....)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="budget">Budget</label>
+<br><br>
+<input type="budget" class="form-control" name="budget" id="budget" placeholder="Enter budget here (e.g., 8200000)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="gross_glob">Gross glob</label>
+<br><br>
+<input type="gross_glob" class="form-control" name="gross_glob" id="gross_glob" placeholder="Enter Gross glob here (e.g., 159413574)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="submitter_id">Submitter ID</label>
+<br><br>
+<input type="submitter_id" class="form-control" name="submitter_id" id="submitter_id" placeholder="Enter submitter id here (e.g., 2017113323)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step1">next</button>
+</div>
+
+<!-- STEP2: INPUT ACTORS TABLE -->
+
+<div id="updatestep2">
+<h2 class="step">STEP2: INPUT ACTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_id">Actor ID</label>
+<br><br>
+<input type="actor_id" class="form-control" name="actor_id" id="actor_id" placeholder="Enter actor ID here (e.g., 0000267)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_name">Actor Name</label>
+<br><br>
+<input type="actor_name" class="form-control" name="actor_name" id="actor_name" placeholder="Enter actor name here (e.g., Julie Andrews)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="actor_gender">Actor Gender</label>
+<br><br>
+<input type="actor_gender" class="form-control" name="actor_gender" id="actor_gender" placeholder="Enter actor gender here (e.g., F)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="role">Role</label>
+<br><br>
+<input type="role" class="form-control" name="role" id="role" placeholder="Enter role here (e.g., Maria)" required="">
+</div>
+<br><br>
+<button type="button" id="btn-step2">next</button>
+</div>
+
+<!-- STEP3: INPUT DIRECTORS TABLE -->
+
+<div id="updatestep3">
+<h2 class="step">STEP3: INPUT DIRECTORS TABLE</h2>
+<br><br><br>
+<div class="form-group">
+<label for="movie_id">Movie ID</label>
+<br><br>
+<input type="movie_id" class="form-control" name="movie_id" id="movie_id" placeholder="Enter movie ID here (e.g., 0059742)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_id">Director ID</label>
+<br><br>
+<input type="director_id" class="form-control" name="director_id" id="director_id" placeholder="Enter director ID here (e.g., 0936404)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_name">Director Name</label>
+<br><br>
+<input type="director_name" class="form-control" name="director_name" id="director_name" placeholder="Enter director name here (e.g., Robert Wise)" required="">
+</div>
+<br><br>
+<div class="form-group">
+<label for="director_genres">Director Genres</label>
+<br><br>
+<input type="director_genres" class="form-control" name="director_genres" id="director_genres" placeholder="Enter actor genres here (e.g., Drama | Family | Musical)" required="">
+</div>
+<br><br>
+<button type="submit" id="btn-step3">Insert</button>
+</div>
+</div>
+</form>
+<script language="javascript">
+document.getElementById("delete").onclick = function() {
+    document.getElementById("delete_step").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updatestep3").style.display="none";
+
+}
+document.getElementById("btn-delete").onclick = function() {
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+
+document.getElementById("update_step1").onclick = function() {
+    document.getElementById("updatestep1").style.display="block";
+    document.getElementById("all_table").style.display="none";
+    document.getElementById("delete_step").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+
+}
+
+document.getElementById("btn-step1").onclick = function() {
+    document.getElementById("updatestep2").style.display="block";
+    document.getElementById("updatestep1").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step2").onclick = function() {
+    document.getElementById("updatestep3").style.display="block";
+    document.getElementById("updatestep2").style.display="none";
+    document.getElementById("updateform").scrollIntoView();
+}
+document.getElementById("btn-step3").onclick = function() {
+    document.getElementById("updatestep3").style.display="none";
+    document.getElementById("all_table").style.display="block";
+    document.getElementById("home").scrollIntoView();
+}
+</script>
+
+<div id="all_table">
+
+	<!-- DIRECTORS table -->
+		<p></p><h3> DIRECTOR table (Currently 298 directors in database)</h3><p></p>
+
+	<table cellspacing="0" width="100%">
+		<thead>
+		<tr>
+			<th>Director ID</th>
+			<th>Name</th>
+		</tr>
+		</thead>
+
+		<tbody>
+		<tr><td></td><td></td></tr><tr><td>0000033</td><td>Alfred Hitchcock</td></tr><tr><td>0000040</td><td>Stanley Kubrick</td></tr><tr><td>0000080</td><td>Orson Welles</td></tr><tr><td>0000095</td><td>Woody Allen</td></tr><tr><td>0000108</td><td>Luc Besson</td></tr><tr><td>0000110</td><td>Kenneth Branagh</td></tr><tr><td>0000116</td><td>James Cameron</td></tr><tr><td>0000118</td><td>John Carpenter</td></tr><tr><td>0000122</td><td>Charles Chaplin</td></tr><tr><td>0000165</td><td>Ron Howard</td></tr><tr><td>0000184</td><td>George Lucas</td></tr><tr><td>0000217</td><td>Martin Scorsese</td></tr><tr><td>0000229</td><td>Steven Spielberg</td></tr><tr><td>0000230</td><td>Sylvester Stallone</td></tr><tr><td>0000231</td><td>Oliver Stone</td></tr><tr><td>0000233</td><td>Quentin Tarantino</td></tr><tr><td>0000247</td><td>John Woo</td></tr><tr><td>0000318</td><td>Tim Burton</td></tr><tr><td>0000338</td><td>Francis Ford Coppola</td></tr><tr><td>0000343</td><td>David Cronenberg</td></tr><tr><td>0000361</td><td>Brian De Palma</td></tr><tr><td>0000386</td><td>Roland Emmerich</td></tr><tr><td>0000399</td><td>David Fincher</td></tr><tr><td>0000408</td><td>Jonathan Frakes</td></tr><tr><td>0000416</td><td>Terry Gilliam</td></tr><tr><td>0000431</td><td>Taylor Hackford</td></tr><tr><td>0000487</td><td>Ang Lee</td></tr><tr><td>0000500</td><td>Richard Linklater</td></tr><tr><td>0000583</td><td>Wolfgang Petersen</td></tr><tr><td>0000591</td><td>Roman Polanski</td></tr><tr><td>0000631</td><td>Ridley Scott</td></tr><tr><td>0000697</td><td>Billy Wilder</td></tr><tr><td>0000709</td><td>Robert Zemeckis</td></tr><tr><td>0000759</td><td>Paul Thomas Anderson</td></tr><tr><td>0000776</td><td>Michael Apted</td></tr><tr><td>0000814</td><td>John G. Avildsen</td></tr><tr><td>0000881</td><td>Michael Bay</td></tr><tr><td>0000916</td><td>Peter Berg</td></tr><tr><td>0000948</td><td>Shane Black</td></tr><tr><td>0000957</td><td>Jan de Bont</td></tr><tr><td>0000965</td><td>Danny Boyle</td></tr><tr><td>0000976</td><td>Martin Brest</td></tr><tr><td>0001024</td><td>Nick Cassavetes</td></tr><tr><td>0001053</td><td>Ethan Coen</td></tr><tr><td>0001060</td><td>Chris Columbus</td></tr><tr><td>0001104</td><td>Frank Darabont</td></tr><tr><td>0001129</td><td>Jonathan Demme</td></tr><tr><td>0001226</td><td>James Foley</td></tr><tr><td>0001232</td><td>Milos Forman</td></tr><tr><td>0001392</td><td>Peter Jackson</td></tr><tr><td>0001402</td><td>Terry Jones</td></tr><tr><td>0001466</td><td>Sergio Leone</td></tr><tr><td>0001486</td><td>Sidney Lumet</td></tr><tr><td>0001565</td><td>Mike Newell</td></tr><tr><td>0001566</td><td>Mike Nichols</td></tr><tr><td>0001570</td><td>Edward Norton</td></tr><tr><td>0001661</td><td>Rob Reiner</td></tr><tr><td>0001675</td><td>Robert Rodriguez</td></tr><tr><td>0001716</td><td>Tony Scott</td></tr><tr><td>0001723</td><td>Tom Shadyac</td></tr><tr><td>0001741</td><td>Bryan Singer</td></tr><tr><td>0001752</td><td>Steven Soderbergh</td></tr><tr><td>0001756</td><td>Barry Sonnenfeld</td></tr><tr><td>0001814</td><td>Gus Van Sant</td></tr><tr><td>0001837</td><td>Peter Weir</td></tr><tr><td>0002030</td><td>George Cukor</td></tr><tr><td>0002031</td><td>Michael Curtiz</td></tr><tr><td>0002045</td><td>Stanley Donen</td></tr><tr><td>0002653</td><td>Joe Johnston</td></tr><tr><td>0002657</td><td>Gary Ross</td></tr><tr><td>0003160</td><td>Christopher McQuarrie</td></tr><tr><td>0003418</td><td>Rob Cohen</td></tr><tr><td>0003506</td><td>James Mangold</td></tr><tr><td>0004056</td><td>Andrew Stanton</td></tr><tr><td>0004303</td><td>Gavin Hood</td></tr><tr><td>0004306</td><td>George Miller</td></tr><tr><td>0004716</td><td>Darren Aronofsky</td></tr><tr><td>0005069</td><td>Spike Jonze</td></tr><tr><td>0005124</td><td>John Lasseter</td></tr><tr><td>0005190</td><td>Garry Marshall</td></tr><tr><td>0005222</td><td>Sam Mendes</td></tr><tr><td>0005363</td><td>Guy Ritchie</td></tr><tr><td>0005436</td><td>John Singleton</td></tr><tr><td>0005509</td><td>Jon Turteltaub</td></tr><tr><td>0005540</td><td>Keenen Ivory Wayans</td></tr><tr><td>0009190</td><td>J.J. Abrams</td></tr><tr><td>0011470</td><td>Andrew Adamson</td></tr><tr><td>0019282</td><td>James Algar</td></tr><tr><td>0027271</td><td>Paul W.S. Anderson</td></tr><tr><td>0027459</td><td>Stephen J. Anderson</td></tr><tr><td>0027572</td><td>Wes Anderson</td></tr><tr><td>0043742</td><td>David Ayer</td></tr><tr><td>0048918</td><td>Sean Baker</td></tr><tr><td>0049371</td><td>Jaume Balagueró</td></tr><tr><td>0051643</td><td>Tony Bancroft</td></tr><tr><td>0082450</td><td>Paul Feig</td></tr><tr><td>0083348</td><td>Brad Bird</td></tr><tr><td>0093051</td><td>Uwe Boll</td></tr><tr><td>0094435</td><td>Joon-ho Bong</td></tr><tr><td>0118333</td><td>Chris Buck</td></tr><tr><td>0119106</td><td>John Carl Buechler</td></tr><tr><td>0132709</td><td>Martin Campbell</td></tr><tr><td>0138809</td><td>John Carney</td></tr><tr><td>0142286</td><td>D.J.Caruso</td></tr><tr><td>0166256</td><td>Ron Clements</td></tr><tr><td>0183183</td><td>William Cottrell</td></tr><tr><td>0190859</td><td>Alfonso Cuarón</td></tr><tr><td>0192446</td><td>Sean S. Cunningham</td></tr><tr><td>0193485</td><td>Richard Curtis</td></tr><tr><td>0201509</td><td>Eric Darnell</td></tr><tr><td>0213450</td><td>Dean DeBlois</td></tr><tr><td>0215299</td><td>Steven S. DeKnight</td></tr><tr><td>0220600</td><td>Scott Derrickson</td></tr><tr><td>0228542</td><td>Christian Ditter</td></tr><tr><td>0230032</td><td>Pete Docter</td></tr><tr><td>0252961</td><td>Idris Elba</td></tr><tr><td>0268380</td><td>Peter Farrelly</td></tr><tr><td>0269463</td><td>Jon Favreau</td></tr><tr><td>0275698</td><td>Andy Fickman</td></tr><tr><td>0281508</td><td>Ruben Fleischer</td></tr><tr><td>0281808</td><td>Victor Fleming</td></tr><tr><td>0291205</td><td>David Frankel</td></tr><tr><td>0303030</td><td>Fred Gallo</td></tr><tr><td>0304521</td><td>Christophe Gans</td></tr><tr><td>0304541</td><td>Dennis Gansel</td></tr><tr><td>0314671</td><td>Clyde Geronimi</td></tr><tr><td>0317638</td><td>Tony Giglio</td></tr><tr><td>0327273</td><td>Michel Gondry</td></tr><tr><td>0327944</td><td>Alejandro G. Inarritu</td></tr><tr><td>0331532</td><td>Raja Gosnell</td></tr><tr><td>0336620</td><td>F. Gary Gray</td></tr><tr><td>0336695</td><td>James Gray</td></tr><tr><td>0339030</td><td>Paul Greengrass</td></tr><tr><td>0344496</td><td>Adrian Grunberg</td></tr><tr><td>0345174</td><td>Luca Guadagnino</td></tr><tr><td>0348181</td><td>James Gunn</td></tr><tr><td>0362566</td><td>Catherine Hardwicke</td></tr><tr><td>0373154</td><td>Rob Hedden</td></tr><tr><td>0386246</td><td>Rajkumar Hirani</td></tr><tr><td>0393799</td><td>Tom Hooper</td></tr><tr><td>0396074</td><td>Mamoru Hosoda</td></tr><tr><td>0397174</td><td>Byron Howard</td></tr><tr><td>0400850</td><td>Patrick Hughes</td></tr><tr><td>0405632</td><td>Mikael Håfström</td></tr><tr><td>0413875</td><td>Mick Jackson</td></tr><tr><td>0425756</td><td>Mark Steven Johnson</td></tr><tr><td>0426059</td><td>Rian Johnson</td></tr><tr><td>0426287</td><td>Susan Johnson</td></tr><tr><td>0429958</td><td>Glenn Jordan</td></tr><tr><td>0432627</td><td>Gil Junger</td></tr><tr><td>0448768</td><td>Jennifer Kent</td></tr><tr><td>0449984</td><td>Irvin Kershner</td></tr><tr><td>0453518</td><td>Jee-Woon Kim</td></tr><tr><td>0453559</td><td>Jeong-kwon Kim</td></tr><tr><td>0490487</td><td>Andrew Lau</td></tr><tr><td>0497565</td><td>John H. Lee</td></tr><tr><td>0500610</td><td>David Leitch</td></tr><tr><td>0504642</td><td>Louis Leterrier</td></tr><tr><td>0506613</td><td>Shawn Levy</td></tr><tr><td>0510674</td><td>Kevin Lima</td></tr><tr><td>0510731</td><td>Doug Liman</td></tr><tr><td>0510912</td><td>Justin Lin</td></tr><tr><td>0514546</td><td>Dwight H. Little</td></tr><tr><td>0524190</td><td>Jon Lucas</td></tr><tr><td>0525303</td><td>Baz Luhrmann</td></tr><tr><td>0532235</td><td>Seth MacFarlane</td></tr><tr><td>0551128</td><td>Rob Marshall</td></tr><tr><td>0572951</td><td>Tom McLoughlin</td></tr><tr><td>0574625</td><td>James McTeigue</td></tr><tr><td>0577647</td><td>Theodore Melfi</td></tr><tr><td>0583600</td><td>Nancy Meyes</td></tr><tr><td>0585011</td><td>Roger Michell</td></tr><tr><td>0591171</td><td>Steve Miner</td></tr><tr><td>0594503</td><td>Hayao Miyazaki</td></tr><tr><td>0601781</td><td>Rich Moore</td></tr><tr><td>0611683</td><td>Russell Mulcahy</td></tr><tr><td>0622112</td><td>Vincenzo Natali</td></tr><tr><td>0625458</td><td>Jessie Nelson</td></tr><tr><td>0629272</td><td>Andrew Niccol</td></tr><tr><td>0634240</td><td>Christopher Nolan</td></tr><tr><td>0650905</td><td>Kenny Ortega</td></tr><tr><td>0651706</td><td>Mark Osborne</td></tr><tr><td>0661791</td><td>Chan-wook Park</td></tr><tr><td>0680846</td><td>Todd Phillips</td></tr><tr><td>0684342</td><td>Jan Pinkava</td></tr><tr><td>0687042</td><td>Paco Plaza</td></tr><tr><td>0708903</td><td>Lynne Ramsay</td></tr><tr><td>0709056</td><td>Peter Ramsey</td></tr><tr><td>0718646</td><td>Jason Reitman</td></tr><tr><td>0751577</td><td>Anthony Russo</td></tr><tr><td>0751648</td><td>Joe Russo</td></tr><tr><td>0761498</td><td>Chris Sanders</td></tr><tr><td>0768959</td><td>Dan Scanlon</td></tr><tr><td>0793840</td><td>Akiyuki Shinbo</td></tr><tr><td>0796117</td><td>M. Night Shyamalan</td></tr><tr><td>0798899</td><td>David Silverman</td></tr><tr><td>0811583</td><td>Zack Snyder</td></tr><tr><td>0812307</td><td>Peter Sohn</td></tr><tr><td>0814085</td><td>Stephen Sommers</td></tr><tr><td>0814271</td><td>Il-gon Song</td></tr><tr><td>0821432</td><td>Chad Stahelski</td></tr><tr><td>0826164</td><td>Danny Steinmann</td></tr><tr><td>0828970</td><td>John Stevenson</td></tr><tr><td>0850733</td><td>Genndy Tartakovsky</td></tr><tr><td>0853374</td><td>Sam Taylor-Johnson</td></tr><tr><td>0862911</td><td>Greg Tiernan</td></tr><tr><td>0868219</td><td>Guillermo del Toro</td></tr><tr><td>0878756</td><td>Tom Tykwer</td></tr><tr><td>0878763</td><td>Morten Tyldum</td></tr><tr><td>0881279</td><td>Lee Unkrich</td></tr><tr><td>0893659</td><td>Gore Verbinski</td></tr><tr><td>0898288</td><td>Denis Villeneuve</td></tr><tr><td>0905152</td><td>Lilly Wachowski</td></tr><tr><td>0905154</td><td>Lana Wachowski</td></tr><tr><td>0914134</td><td>Mark Waters</td></tr><tr><td>0915304</td><td>Scott Waugh</td></tr><tr><td>0919363</td><td>Chris Weitz</td></tr><tr><td>0923736</td><td>Joss Whedon</td></tr><tr><td>0930261</td><td>Chris Williams</td></tr><tr><td>0936404</td><td>Robert Wise</td></tr><tr><td>0936838</td><td>Alexander Witt</td></tr><tr><td>0943758</td><td>William Wyler</td></tr><tr><td>0946734</td><td>David Yates</td></tr><tr><td>0948027</td><td>Soon-rye Yim</td></tr><tr><td>0948159</td><td>Wilson Yip</td></tr><tr><td>0950775</td><td>Jennifer Yuh Nelson</td></tr><tr><td>0957263</td><td>Joseph Zito</td></tr><tr><td>1012219</td><td>Hae-sung Song</td></tr><tr><td>1012501</td><td>Rupert Wyatt</td></tr><tr><td>1016428</td><td>James Marsh</td></tr><tr><td>1030706</td><td>Jae-young Kwak</td></tr><tr><td>10468241</td><td>Kim Yu Sung</td></tr><tr><td>1093039</td><td>Mike Flanagan</td></tr><tr><td>1164602</td><td>Ciarán Foy</td></tr><tr><td>1218281</td><td>Jon Watts</td></tr><tr><td>1224299</td><td>Rob Letterman</td></tr><tr><td>1226871</td><td>Wes Ball</td></tr><tr><td>1243905</td><td>Michael Gracey</td></tr><tr><td>1310383</td><td>Du-yeong Kim</td></tr><tr><td>1349376</td><td>Francis Lawrence</td></tr><tr><td>1364790</td><td>Hugh Welchman</td></tr><tr><td>1396048</td><td>Dave Filoni</td></tr><tr><td>1396121</td><td>Makoto Shinkai</td></tr><tr><td>1396484</td><td>Andy Muschietti</td></tr><tr><td>1406845</td><td>Sung-ho Hong</td></tr><tr><td>1420683</td><td>Yong-hwa Kim</td></tr><tr><td>1429471</td><td>Jaume Collet-Serra</td></tr><tr><td>1461392</td><td>Joachim Rønning</td></tr><tr><td>1470993</td><td>Scott Mann</td></tr><tr><td>1490123</td><td>James Wan</td></tr><tr><td>1512910</td><td>Duncan Jones</td></tr><tr><td>1569807</td><td>Dong-hoon Choi</td></tr><tr><td>1601882</td><td>Phil Johnston</td></tr><tr><td>1630273</td><td>Phyllida Lloyd</td></tr><tr><td>1650283</td><td>Espen Sandberg</td></tr><tr><td>1682573</td><td>Justin Baldoni</td></tr><tr><td>1732981</td><td>Martin McDonagh</td></tr><tr><td>1783265</td><td>Tim Miller</td></tr><tr><td>1788310</td><td>Jenny Gage</td></tr><tr><td>1837748</td><td>Josh Boone</td></tr><tr><td>1840064</td><td>Michael Noer</td></tr><tr><td>1868917</td><td>Alessandro Carloni</td></tr><tr><td>1977355</td><td>Nathan Greno</td></tr><tr><td>1989536</td><td>Marc Webb</td></tr><tr><td>2031461</td><td>Atsushi Nishigori</td></tr><tr><td>2039220</td><td>Chang-min Choo</td></tr><tr><td>2130108</td><td>Bob Persichetti</td></tr><tr><td>2171473</td><td>Tatsuyuki Nagai</td></tr><tr><td>2210720</td><td>Naoko Yamada</td></tr><tr><td>2305431</td><td>Oren Peli</td></tr><tr><td>2355933</td><td>Justin Kurzel</td></tr><tr><td>2573005</td><td>Susanna Fogel</td></tr><tr><td>2797744</td><td>Himesh Patel</td></tr><tr><td>2937122</td><td>Adrian Molina</td></tr><tr><td>3006131</td><td>Thurop Van Orman</td></tr><tr><td>3227090</td><td>Damien Chazelle</td></tr><tr><td>3321182</td><td>Giddens Ko</td></tr><tr><td>3363032</td><td>Ryan Coogler</td></tr><tr><td>3613566</td><td>Sang-ho Yeon</td></tr><tr><td>3644812</td><td>Sung-hee Jo</td></tr><tr><td>3699790</td><td>Dorota Kobiela</td></tr><tr><td>3719598</td><td>Gi-hoon Jeong</td></tr><tr><td>3772967</td><td>Julia Leigh</td></tr><tr><td>3792134</td><td>Aneesh Chaganty</td></tr><tr><td>4017355</td><td>Colin Minihan</td></tr><tr><td>4170048</td><td>Ari Aster</td></tr><tr><td>4700656</td><td>Steven Salgado</td></tr><tr><td>4824763</td><td>Thea Sharrock</td></tr><tr><td>5117369</td><td>Yuzuru Tachikawa</td></tr><tr><td>5464371</td><td>Nattawut Poonpiriya</td></tr><tr><td>6456477</td><td>Hyun-Jong Lee</td></tr><tr><td>6972592</td><td>Jong-Yeol Baek</td></tr><tr><td>7464857</td><td>Moo-Hyun Jang</td></tr><tr><td>7591919</td><td>Kim Bong-Joo</td></tr><tr><td>7916579</td><td>Tae-Gyun Kim</td></tr><tr><td>8027731</td><td>Jo Kyu-Jang</td></tr><tr><td>9045599</td><td>Young Sik Uhm</td></tr>		</tbody>
+	</table>
+
+</div>
+
+
+
+</body></html>

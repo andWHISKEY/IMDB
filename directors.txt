@@ -1,0 +1,467 @@
+Movie_id	Director_id	Name	Director_genres
+0059742	0936404	Robert Wise	Drama | Family | Musical
+0120338	0000116	James Cameron	Action | Sci-Fi | Adventure
+0125439	0585011	Roger Michell	Mystery | Drama | Romance
+0209144	0634240	Christopher Nolan	Action | Crime | Drama
+0314331	0193485	Richard Curtis	Comedy | Drama | Fantasy
+0332136	0432627	Gil Junger	Comedy | Drama | Romance
+0471041	1470993	Scott Mann	Action | Drama | Thriller
+0482571	0634240	Christopher Nolan	Action | Crime | Drama
+2209418	0000500	Richard Linklater	Comedy | Music | Drama
+8623904	0082450	Paul Feig	Comedy|Crime|Drama
+0080761	0192446	Sean S. Cunningham	Horror | Documentary | Thriller
+0082418	0591171	Steve Miner	Drama | Romance | Family
+0083972	0591171	Steve Miner	Drama | Romance | Family
+0087298	0957263	Joseph Zito	Drama | Adventure | Fantasy
+0089173	0826164	Danny Steinmann	Drama | Horror | Thriller
+0091080	0572951	Tom McLoughlin	Comedy | Horror | Drama
+0095179	0119106	John Carl Buechler	Horror | Sci-Fi | Comedy
+0097388	0373154	Rob Hedden	Drama | Crime | Action
+0112384	0000165	Ron Howard	Comedy | Family | Drama
+0496806	0001752	Steven Soderbergh	Drama | Comedy | Documentary
+1396218	0914134	Mark Waters	Drama|Comedy|Romance
+1620981	0862911	Greg Tiernan	Family|Animation|Comedy
+2245084	0930261	Chris Williams	Animation|Family|Comedy
+4123430	0946734	David Yates	Drama|Documentary|Crime
+5028340	0551128	Rob Marshall	Documentary|Talk-Show|News
+1911658	0201509	Eric Darnell	Animation|Comedy|Short
+0315327	0001723	Tom Shadyac	Comedy|Drama|Documentary
+0413099	0001723	Tom Shadyac	Comedy|Drama|Documentary
+0381707	0005540	Keenen Ivory Wayans	Comedy|Talk-Show|Music
+1355644	0878763	Morten Tyldum	Music|Drama|Thriller
+4126476	1788310	Jenny Gage	 Documentary | Drama | Talk-Show 
+0033467	0000080	Orson Welles	 Documentary | Drama | Comedy 
+0034583	0002031	Michael Curtiz	Drama | Romance | Comedy
+0045152	0002045	Stanley Donen	Comedy | Documentary | Romance
+0052357	0000033	Alfred Hitchcock	Drama | Thriller | Mystery
+0032138	0281808	 Victor Fleming	Drama | Romance | Comedy
+0081398	0000217	Martin Scorsese	Documentary | Drama | Comedy
+0054215	0000033	Alfred Hitchcock	Drama | Thriller | Mystery
+0061722	0001566	Mike Nichols	Comedy | Drama | Documentary
+7880466	5117369	Yuzuru Tachikawa	Animation | Drama | Action
+0112471	0000500	Richard Linklater	Comedy | Documentary | Talk-Show
+0113670	0190859	Alfonso Cuarón	Drama | Short | Documentary
+373889	0946734	David Yates	Drama | Documentary | Crime
+0383574	0893659	Gore Verbinski	Documentary | Short | Adventure
+0458352	0291205	David Frankel	Comedy | Drama | Romance
+0795421	1630273	Phyllida Lloyd	Documentary | Drama | Short
+1591095	1490123	James Wan	Action | Drama | Adventure
+1707386	0393799	Tom Hooper	Drama | Talk-Show | Romance
+2294629	0118333	Chris Buck	Animation | Family | Comedy
+4846340	0577647	Theodore Melfi	Comedy | Drama | Short
+0147800	0432627	Gil Junger	Comedy | Family | Romance
+4633694	2130108	Bob Persichetti	Animation | Family | Adventure
+4633694	0709056	Peter Ramsey	Adventure | Comedy | Drama
+5013056	0634240	Christopher Nolan	Documentary | Short | Talk-Show
+6146586	0821432	Chad Stahelski	Action | Thriller | Sci-Fi
+0241527	0001060	Chris Columbus	Comedy | Family | Documentary
+0295297	0001060	Chris Columbus	Comedy | Family | Documentary
+0304141	0190859	Alfonso Cuarón	Drama | Short | Documentary
+0330373	0001565	Mike Newell	Drama | Comedy | Documentary
+0926084	0946734	David Yates	Drama | Documentary | Crime
+1201607	0946734	David Yates	Drama | Documentary | Crime
+0417741	0946734	David Yates	Drama | Documentary | Crime
+0449088	0893659	Gore Verbinski	Documentary | Short | Adventure
+2278388	0027572	Wes Anderson	Comedy | Documentary | Drama
+1464540	0142286	D.J.Caruso	Drama | Thriller | Crime
+1790809	1650283	Espen Sandberg	Drama | History | Action
+1790864	1226871	Wes Ball	Short | Documentary | Talk-Show
+2692250	0506613	Shawn Levy	Comedy | Drama | Family
+2948356	0397174	Byron Howard	Animation | Family | Comedy
+4046784	1226871	Wes Ball	Short | Documentary | Talk-Show
+0083658	0000631	Ridley Scott	Drama | Crime | Mystery
+0114709	0005124	John Lasseter	Animation | Family | Comedy
+8119680	7916579	Tae-Gyun Kim	Crime | Drama | Talk-Show
+0120363	0005124	John Lasseter	Animation | Family | Comedy
+0198781	0230032	Pete Docter	Animation | Family | Comedy
+0435761	0881279	Lee Unkrich	Drama | Family | Adventure
+1449283	0027459	Stephen J. Anderson	Animation | Adventure | Family
+1453405	0768959	Dan Scanlon	Animation | Family | Comedy
+4500922	1226871	Wes Ball	Short | Documentary | Talk-Show
+5848272	1601882	Phil Johnston	Comedy | Short | Adventure
+6083230	0948027	Soon-rye Yim	Drama | Comedy | Documentary
+0245429	0594503	Hayao Miyazaki	Animation | Family | Adventure
+0347149	0594503	Hayao Miyazaki	Animation | Family | Adventure
+0876563	0594503	Hayao Miyazaki	Animation | Family | Adventure
+0983213	1396121	Makoto Shinkai	Animation | Drama | Short
+2140203	0396074	Mamoru Hosoda	Animation | Thriller | Action
+2323836	2171473	Tatsuyuki Nagai	Animation | Drama | Comedy
+5311514	1396121	Makoto Shinkai	Animation | Drama | Short
+5323662	2210720	Naoko Yamada	Animation | Comedy | Drama
+6317962	0793840	Akiyuki Shinbo	Animation | Comedy | Romance
+9426210	1396121	Makoto Shinkai	Animation | Drama | Short
+2380307	0629272	Andrew Niccol	Animation | Adventure | Comedy
+2380307	2937122	Adrian Molina	 Animation | Adventure | Comedy
+0457430	0868219	Guillermo del Toro	Documentary
+3544112	0138809	John Carney	Comedy | Drama | Music
+0462538	0798899	David Silverman	Animation | Adventure | Comedy
+1825683	3363032	Ryan Coogler	 Action | Adventure | Sci-Fi
+0988045	0005363	Guy Ritchie	Adventure | Family | Fantasy
+3262342	3699790	Dorota Kobiela	Animation | Biography | Crime
+3262342	1364790	Hugh Welchman	Animation | Biography | Crime
+3846674	0426287	Susan Johnson	Drama | Romance
+2582846	1837748	Josh Boone	Drama | Romance
+5726616	0345174	Luca Guadagnino	Drama | Romance
+0364569	0661791	Chan-wook Park	 Action | Drama | Mystery | Thriller
+0087843	0001466	Sergio Leone	Crime|Drama 
+0051201	0000697	Billy Wilder	 Crime | Drama | Film-Noir | Mystery | Thriller
+3778644	0000165	Ron Howard 	 Action | Adventure | Sci-Fi
+1345836	0634240	Christopher Nolan	 Action | Thriller
+2488496	0009190	J.J. Abrams	Action | Adventure | Sci-Fi
+1185834	1396048	Dave Filoni	Animation | Action | Adventure | Family | Fantasy | Sci-Fi
+0120915	0000184	George Lucas	Action | Adventure | Sci-Fi
+0121765	0000184	George Lucas	Action | Adventure | Sci-Fi
+0121766	0000184	George Lucas	Action | Adventure | Sci-Fi
+0099785	0001060	Chris Columbus	Comedy | Family | Documentary
+0104431	0001060	Chris Columbus	Comedy | Family | Documentary
+0119303	0331532	Raja Gosnell	Comedy | Family
+0332379	0000500	Richard Linklater	Comedy | Documentary | Family
+0418279	0000881	Michael Bay	Drama  | Action | Thriller
+1055369	0000881	Michael Bay	Drama  | Action | Thriller
+1399103	0000881	Michael Bay	Drama  | Action | Thriller
+2109248	0000881	Michael Bay	Drama  | Action | Thriller
+0477347	0506613	Shawn Levy	Comedy | Drama | Family
+1078912	0506613	Shawn Levy	Comedy | Drama | Family
+0111257	0000957	Jan de Bont	Documentary | Drama | Short
+0120768	0336620	F. Gary Gray	Documentary | Music | Short
+0258463	0510731	Doug Liman	Comedy | Drama | Thriller
+0360486	1349376	Francis Lawrence	Drama | Music | Short
+0387564	1490123	James Wan	Action | Adventure | Drama
+1254468	0190859	Alfonso Cuarón	Drama | Documentary | Short
+1457767	1490123	James Wan	Action | Adventure | Drama
+1959563	0400850	Patrick Hughes	Action | Short | Thriller
+2290840	2039220	Chang-min Choo	Comedy | Drama | Romance
+2911666	0821432	Chad Stahelski	Action | Sci-Fi | Thriller
+0096283	0594503	Hayao Miyazaki	Animation | Family | Adventure
+0097165	0001837	Peter Weir	Documentary | Drama | Short
+0120461	0413875	Mick Jackson	Drama | Documentary | Thriller
+0309698	0003506	James Mangold	Drama | Mystery | Comedy
+0454876	0000487	Ang Lee	News | Documentary | Talk-Show
+1014759	0000318	Tim Burton	Comedy | Animation | Fantasy
+1440129	0000916	Peter Berg	Drama | Thriller | Mystery
+1706620	0094435	Joon-ho Bong	Drama | Documentary | Short
+5034276	7591919	Kim Bong-Joo	Action | Mystery | Thriller
+2084970	0878763	Morten Tyldum	Music | Drama | Thriller
+1242460	0708903	Lynne Ramsay	Drama | News | Short
+2674426	4824763	Thea Sharrock	Drama | History | Short
+1148204	1429471	Jaume Collet-Serra	News | Thriller | Short
+7668870	3792134	Aneesh Chaganty	Short | Thriller | Drama
+6472976	1682573	Justin Baldoni	Comedy | Drama | Documentary
+1179904	2305431	Oren Peli	Horror | Mystery | Thriller
+0167404	0796117	M. Night Shyamalan	Talk-Show | Drama | Thriller
+6788942	5464371	Nattawut Poonpiriya	Drama | Short | Romance
+0396171	0878756	Tom Tykwer	Drama | Thriller | Mystery
+1588170	0453518	Jee-Woon Kim	Drama | Action | Horror
+0338013	0327273	Michel Gondry	Short | Music | Documentary
+0398286	1977355	Nathan Greno	Animation | Family | Comedy
+1022603	1989536	Marc Webb	Short | Comedy | Drama
+1605783	0000095	Woody Allen	Comedy | Talk-Show | Documentary
+1670345	0504642	Louis Leterrier	Thriller | Adventure | Sci-Fi
+1980929	0138809	John Carney	Comedy | Drama | Romance 
+2096673	0230032	Pete Docter	Animation | Family | Comedy
+2194499	0193485	Richard Curtis	Comedy | Documentary | Family
+2980516	1016428	James Marsh	Documentary | Biography | Drama
+3079380	0082450	Paul Feig	Comedy | Drama | Talk-Show
+0077936	0429958	Glenn Jordan	Drama | Comedy | Family
+0116477	0000110	Kenneth Branagh	Documentary | Talk-Show | Comedy
+0317705	0083348	Brad Bird	Animation | Comedy | Drama
+0892769	0213450	Dean DeBlois	Animation | Family | Comedy
+0892769	0761498	Chris Sanders	Family | Animation | Comedy
+1485796	1243905	Michael Gracey	Fantasy | Comedy | Family
+1646971	0213450	Dean DeBlois	Animation | Family | Comedy
+2015381	0348181	James Gunn	Comedy | Short | Talk-Show
+2386490	0213450	Dean DeBlois	Animation | Family | Comedy
+3606756	0083348	Brad Bird	Animation | Comedy | Drama
+3896198	0348181	James Gunn	Comedy | Short | Talk-Show
+1099212	0362566	Catherine Hardwicke	Drama | Comedy | Documentary
+1392170	0002657	Gary Ross	Documentary | Talk-Show | Short
+1638002	0228542	Christian Ditter	Comedy | Short | Family
+2935510	0336695	James Gray	Drama | Documentary | Crime
+4477536	0001226	James Foley	Drama | Thriller | Short
+0075148	0000814	John G. Avildsen	Drama | Documentary | Comedy
+0032976	0000033	Alfred Hitchcock	Drama | Thriller | Mystery
+0052618	0943758	William Wyler	Drama | Western | Romance
+0091763	0000231	Oliver Stone	Documentary | Talk-Show | News
+0385752	0919363	Chris Weitz	Comedy | Drama | Romance
+1375666	0634240	Christopher Nolan	Documentary | Short | Talk-Show
+1409024	0001756	Barry Sonnenfeld	Comedy | Drama | Adventure
+1588398	3772967	Julia Leigh	News | Drama | Talk-Show
+1661199	0000110	Kenneth Branagh	Documentary | Talk-Show | Comedy
+3521164	0166256	Ron Clements	Family | Animation | Fantasy
+4777008	1461392	Joachim Rønning	Drama | History | Adventure
+1477834	1490123	James Wan 	Action | Drama | Adventure
+4972582	0796117	M. Night Shyamalan 	Talk-Show | Drama | Thriller
+6450804	1783265	Tim Miller 	Sci-Fi | Comedy | Short
+7286456	0680846	Todd Phillips 	Comedy | Talk-Show | Drama
+816692	0634240	Christopher Nolan	Documentary | Short | Talk-Show
+0332452	0000583	Wolfgang Petersen	Documentary | Drama | Short
+0371746	0269463	Jon Favreau	Comedy | Talk-Show | Drama
+0416449	0811583	Zack Snyder	Short | Documentary | Talk-Show
+0468571	0634240	Christopher Nolan	Documentary | Short | Talk-Show
+0480251	1349376	Francis Lawrence	Short | Music | Drama
+0489101	0510731	Doug Liman	Drama | Comedy | Thriller
+0780523	0166256	Ron Clements	Family | Animation | Fantasy
+10349550	4700656	Steven Salgado	Short | Drama | Comedy
+1187043	0386246	Rajkumar Hirani	Drama | Comedy | Romance
+0029583	0183183	William Cottrell	Family | Animation | Short
+0034492	0019282	James Algar	Family | Adventure | Drama
+0048280	0314671	Clyde Geronimi	Animation | Comedy | Short
+0088247	0000116	James Cameron	Action | Scifi | Documentary
+5606664	1093039	Mike Flanagan	Drama | Horror | Realilty-Tv
+0097757	0166256	Ron Clements	Family | Animation | Fantasy
+0119654	0001756	Barry Sonnenfeld	Comedy | Drama | Adventure
+0120762	0051643	Tony Bancroft	Animation | Family | Comedy
+0120912	0001756	Barry Sonnenfeld	Comedy | Drama | Adventure
+0123755	0622112	Vincenzo Natali	Family | Animation | Comedy
+0099674	0000338	Francis Ford Coppola	Crime | Drama
+0102926	0001129	Jonathan Demme	Crime | Drama | Thriller
+0105236	0000233	Quentin Tarantino	Crime | Drama | Thriller
+0105323	0000976	Martin Brest	Drama
+0118971	0000431	Taylor Hackford	Drama | Mystery | Thriller
+0120689	0001104	Frank Darabont	Crime | Drama | Fantasy | Mystery
+0169547	0005222	Sam Mendes	Drama
+0361748	0000233	Quentin Tarantino	Adventure | Drama | War 
+0362227	0000229	Steven Spielberg	Comedy | Drama | Romance
+0372183	0339030	Paul Greengrass	Action | Mystery | Thriller
+0378194	0000233	Quentin Tarantino	Action | Crime | Thriller
+0385887	0001570	Edward Norton	Crime | Drama
+0993846	0000217	Martin Scorsese	Biography | Crime | Drama
+1010048	0000965	Danny Boyle	Drama | Romance
+1504320	0393799	Tom Hooper	Biography | Drama | History
+1663202	0327944	Alejandro G. Inarritu	Action | Adventure | Biography | Drama | Western
+1853728	0000233	Quentin Tarantino	Drama | Western
+3460252	0000233	Quentin Tarantino	Crime | Drama | Mystery | Thriller | Western
+4425200	0821432	Chad Stahelski	Action | Crime | Thriller
+7131622	0000233	Quentin Tarantino	Comedy | Drama
+0021749	0000122	Charles Chaplin	 Comedy | Drama | Romance
+0117060	0000361	Brian De Palma	 Action | Adventure | Thriller
+0120755	0000247	John Woo	Action | Adventure | Thriller
+0317919	0009190	J.J. Abrams	Action | Adventure | Thriller
+0332280	0001024	Nick Cassavetes	 Drama | Romance
+1074638	0005222	Sam Mendes	 Action | Adventure | Thriller
+1229238	0083348	Brad Bird	 Action | Adventure | Thriller
+2381249	0003160	Christopher McQuarrie	Action | Adventure | Thriller
+3183660	0946734	David Yates	 Adventure | Family | Fantasy
+4912910	0003160	Christopher McQuarrie	Action | Adventure | Thriller
+0441773	0651706	Mark Osborne	Animation | Action | Adventure | Comedy | Family
+0441773	0828970	John Stevenson	Animation | Action | Adventure | Comedy | Family
+1302011	0950775	Jennifer Yuh Nelson	Animation | Action | Adventure | Comedy | Family | Fantasy
+2267968	1868917	Alessandro Carloni	Animation | Action | Adventure | Comedy | Family | Fantasy
+2267968	0950775	Jennifer Yuh Nelson	Animation | Action | Adventure | Comedy | Family | Fantasy
+0875025	1569807	Dong-hoon Choi	Comedy | Crime
+1343092	0525303	Baz Luhrmann	Drama | Romance
+1156398	0281508	Ruben Fleischer	Adventure | Comedy | Horror | Sci-Fi
+1560220	0281508	Ruben Fleischer	Action | Comedy | Horror
+2250912	1218281	Jon Watts	Action | Adventure | Sci-Fi
+2527336	0426059	Rian Johnson	Action | Adventure | Fantasy | Sci-Fi
+0083866	0000229	Steven Spielberg	Family | Sci-Fi
+0458339	0002653	Joe Johnston	 Action | Adventure | Sci-Fi
+0848228	0923736	Joss Whedon	 Action | Adventure | Sci-Fi
+2395427	0923736	Joss Whedon	 Action | Adventure | Sci-Fi
+4154756	0751577	Anthony Russo	 Action | Adventure | Sci-Fi
+4154756	0751648	Joe Russo	 Action | Adventure | Sci-Fi
+4154796	0751577	Anthony Russo	 Action | Adventure | Sci-Fi | Drama
+4154796	0751648	Joe Russo	 Action | Adventure | Sci-Fi | Drama
+1228705	0269463	Jon Favreau	 Action | Adventure | Sci-Fi
+1300854	0000948	Shane Black	 Action | Adventure | Sci-Fi
+1431045	1783265	Tim Miller	Action | Adventure | Comedy
+5463162	0500610	David Leitch	Action | Adventure | Comedy
+2361509	0583600	Nancy Meyes	Comedy | Drama
+0031381	0281808	Victor Fleming	Drama | History | Romance | War
+0031381	0002030	George Cukor	Drama | History | Romance | War
+0117509	0525303	Baz Luhrmann	Drama | Romance
+0120855	0118333	Chris Buck	Animation | Adventure | Family
+0120855	0510674	Kevin Lima	Animation | Adventure | Family
+0382932	0083348	Brad Bird	Animation | Adventure | Comdey
+0382932	0684342	Jan Pinkava	Animation | Adventure | Comdey
+0910970	0004056	Andrew Stanton	Animation | Adventure | Family | Sci-Fi
+1772341	0601781	Rich Moore	Animation | Adventure | Comdey | Family | Fantasy
+1979388	0812307	Peter Sohn	Animation | Adventure | Comedy | Drama | Family | Fantasy
+4429160	1406845	Sung-ho Hong	Animation | Action | Adventure | Comedy | Drama | Fantasy | Romance
+4429160	7464857	Moo-Hyun Jang	Animation | Action | Adventure | Comedy | Drama | Fantasy | Romance
+4429160	9045599	Young Sik Uhm	Animation | Action | Adventure | Comedy | Drama | Fantasy | Romance
+6105098	0269463	Jon Favreau	Animation | Adventure | Drama | Family | Musical
+6751668	0094435	Joon-ho Bong	Comedy | Drama | Thriller
+0073486	0001232	Milos Forman	Documentary | Biography | Comedy
+0076759	0000184	George Lucas	Sci-Fi | Adventure | Action
+0080684	0449984	Irvin Kershner	Documentary | Western | Drama
+0099685	0000217	Martin Scorsese	Documentary | Drama | Comedy
+0109830	0000709	Robert Zemeckis	Comedy | Horror | Fantasy
+0114369	0000399	David Fincher	Drama | Short | Music
+0120737	0001392	Peter Jackson	Documentary | Short | News
+0120815	0000229	Steven Spielberg	Comedy | Drama | Sci-Fi
+0133093	0905154	Lana Wachowski	Sci-Fi | Thriller | Drama
+0133093	0905152	Lilly Wachowski	Sci-Fi | Thriller | Drama
+0167261	0001392	Peter Jackson	Documentary | Short | News
+0167260	0001392	Peter Jackson	Documentary | Short | News
+0137523	0000399	David Fincher	Drama | Short | Music
+0111161	0001104	Frank Darabont	Drama | Thriller | Horror
+0110912	0000233	Quentin Tarantino	Talk-Show | Comedy | Documentary
+0108052	0000229	Steven Spielberg	Comedy | Drama | Sci-Fi
+0078748	0000631	Ridley Scott	Drama | Crime | Mystery 
+0071562	0000338	Francis Ford Coppola	Drama | Documentary | Thriller
+0068646	0000338	Francis Ford Coppola	Drama | Documentary | Thriller
+0060196	0001466	Sergio Leone	Drama | Comedy | Western
+0050083	0001486	Sidney Lumet	Drama | Documentary | Crime
+1798709	0005069	Spike Jonze	Drama | Romance | Sci-Fi 
+0803096	1512910	Duncan Jones 	Action | Adventure | Fantasy
+2094766	2355933	Justin Kurzel	Action | Adventure | Sci-Fi
+5884052	1224299	Rob Letterman	Action | Adventure | Comedy
+1677720	0000229	Steven Spielberg	 Action | Adventure | Sci-Fi
+2369135	0915304	Scott Waugh	Action | Crime | Thriller 
+1727824	0001741	Bryan Singer	Biography | Drama | Music 
+9764654	10468241	Kim Yu Sung	Drama 
+0406661	1310383	Du-yeong Kim	Action | Drama
+3306854	2031461	Atsushi Nishigori	Comedy
+0071853	0000416	Terry Gilliam 	Adventure| Comedy| Fantasy
+0071853	0001402	Terry Jones 	Adventure| Comedy| Fantasy
+0081505	0000040	Stanley Kubrick	Drama| Horror
+0101675	0303030	Fred Gallo	Horror| Sci-Fi
+0462499	0000230	Sylvester Stallone	Action|Thriller
+1206885	0344496	Adrian Grunberg	Action|Adventure|Thriller
+1663662	0252961	Idris Elba	Action|Adventure|Sci-Fi
+2557478	0215299	Steven S. DeKnight	Action|Adventure|Sci-Fi
+3448226	0093051	Uwe Boll	Action|Crime|Thriller
+4146622	0093051	Uwe Boll	Action|Crime|Thriller
+8328716	0317638	Tony Giglio	Action|Adventure|Horror
+4651520	0524190	Jon Lucas 	Comedy | Romance | Drama
+0247638	0005190	Garry Marshall	Comedy | Family | Music
+6663582	2573005	Susanna Fogel	Drama | Romance | Family
+5164214	0002657	Gary Ross	Documentary|Talk-Show|Short
+6095472	3006131	Thurop Van Orman 	Animation|Comedy|Family
+0817177	0001661	Rob Reiner 	Comedy|Drama|Talk-Show
+0381061	0132709	Martin Campbell 	Documentary|Drama|Short
+1216496	0094435	Joon-ho Bong	Drama | Documentary | Short
+1935859	0000318	Tim Burton	Comedy|Animation|Fantasy
+0121164	0000318	Tim Burton	Comedy|Animation|Fantasy
+0384537	0304521	Christophe Gans	Documentary|Short|Horror
+1211837	0220600	Scott Derrickson	Thriller|Horror|Short
+0091064	0000343	David Cronenberg	Documentary|Drama|Comedy
+3498820	0751577	Anthony Russo	Comedy|Drama|Talk-Show
+3967856	0094435	Joon-ho Bong	Drama | Documentary | Short
+0351283	0201509	Eric Darnell	Animation|Comedy|Family
+0479952	0201509	Eric Darnell	Animation|Comedy|Family
+1277953	0201509	Eric Darnell	Animation|Comedy|Family
+0814255	0001060	Chris Columbus	Comedy|Family|Documentary
+1854564	0001060	Chris Columbus	Comedy|Family|Documentary
+1220719	0948159	Wilson Yip	Action|Comedy|Drama
+0317219	0005124	John Lasseter	Animation|Comedy|Family
+2888046	0948159	Wilson Yip	Action|Comedy|Drama
+4481414	1989536	Marc Webb	Short|Comedy|Drama
+2239822	0000108	Luc Besson	Action|Drama|Thriller
+2510894	0850733	Genndy Tartakovsky	Animation|Adventure|Family
+0837562	0850733	Genndy Tartakovsky	Animation|Adventure|Family
+5220122	0850733	Genndy Tartakovsky	Animation|Adventure|Family
+0448157	0000916	Peter Berg	Drama|Thriller|Mystery
+0266543	0004056	Andrew Stanton	Family|Animation|Comedy
+0092067	0594503	Hayao Miyazaki	Animation | Family | Adventure
+6966692	0268380	Peter Farrelly	Comedy | Short | Talk-Show
+1474276	0396074	Mamoru Hosoda	Animation | Thriller | Action
+1063669	0304541	Dennis Gansel	Drama | Thriller | short
+0434409	0574625	James McTeigue	Drama | Documentary | Short 
+0367594	0000318	Tim Burton	Comedy | Animation | Fantasy
+0325980	0893659	Gore Verbinski	Documentary | Short | Adventure
+0180093	0004716	Darren Aronofsky	Drama | Documentary | Talk-Show
+0120382	0001837	Peter Weir	Documentary | Short | Drama
+0119217	0001814	Gus Van Sant	Drama | Documentary | Short 
+1637725	0532235	Seth MacFarlane	Comedy
+2283336	0336620	F. Gary Gray	Action | Adventure | Comedy | Sci-Fi
+2322441	0853374	Sam Taylor-Johnson	Drama | Romance | Thriller
+3659388	0000631	Ridely Scott	Adventure | Drama | Sci-Fi
+5093026	1840064	Michael Noer	Adventure | Biography | Crime | Drama
+0114924	0005509	Jon Turteltaub	Comedy | Drama | Romance
+0120616	0814085	Stephen Sommers	Action | Adventure | Fantasy
+0268978	0000165	Ron Howard	Biography | Drama
+0366174	0514546	Dwight H. Little	Action | Adventure | Horror | Thriller
+0427944	0718646	Jason Reitman	Comedy | Drama
+0077651	0000118	John Carpenter 	Documentary | Horror | Short
+0107120	0650905	Kenny Ortega	Drama | Music | Comedy
+1302006	0000217	Martin Scoresese	Documentary | Drama | Comedy
+4068576	0448768	Jennifer Kent	Drama | Crime | Thriller
+5294518	1164602	Ciarán Foy	Horror | Short | Thriller
+6139732	0005363	Guy Ritchie	News | Talk-Show | Short
+0409459	0811583	Zack Snyder	Short | Documentary | Talk-Show
+8079248	2797744	Himesh Patel	Drama | Crime | Romance
+8772262	4170048	Ari Aster	Comedy | Short | News
+6924650	0000386	Roland Emmerich	Sci-Fi | Drama | Action
+0079501	0004306	George Miller	Action | Adventure | Sci-Fi
+0082694	0004306	George Miller	Action | Adventure | Sci-Fi
+0089530	0004306	George Miller	Action | Adventure | Sci-Fi
+1392190	0004306	George Miller	Action | Adventure | Sci-Fi
+0454945	0275698	Andy Fickman	Comedy | Romance | Sport
+1703199	4017355	Colin Minihan	Horror | Thriller
+0117731	0000408	Jonathan Frakes	Action | Adventure | Drama
+0111282	0000386	Roland Emmerich	Action | Drama | Adventure
+0212720	0000229	Steven Spielberg	Comedy | Drama | Adventure
+0437086	0001675	Robert Rodriguez	Action | Crime | Thriller
+0348568	1030706	Jae-young Kwak	Drama, Romance
+0468704	0490487	Andrew Lau 	Drama, Romance
+0870967	1012219	Hae-sung Song	Drama, Romance
+1233461	0453559	Jeong-kwon Kim	Comedy,Romance
+4273886	6972592	Jong-Yeol Baek	Drama, Romance
+2592808	3719598	Gi-hoon Jeong	Comedy, Drama, Romance 
+5586914	8027731	Jo Kyu-Jang	Comedy, Romance
+3694790	6456477	Hyun-Jong Lee	Comedy, Romance
+0940642	1420683	Yong-hwa Kim	Comedy, Drama, Music 
+0264464	0000229	Steven Spielberg	Biography, Crime, Drama
+0945513	1512910	Duncan Jones	 Action, Drama, Mystery
+0363771	0011470	Andrew Adamson 	 Adventure, Family, Fantasy 
+0980970	0000776	Michael Apted	 Adventure, Family, Fantasy 
+0107614	0001060	Chris Columbus	 Comedy, Drama, Family 
+0097523	0002653	Joe Johnston 	 Adventure, Comedy, Family 
+0377092	0914134	Mark Waters	 Comedy
+5700672	3613566	Sang-ho Yeon	 Action, Horror, Thriller 
+2315152	3644812	Sung-hee Jo	 Fantasy, Romance
+2082180	0814271	Il-gon Song	Action, Drama, Romance
+0428870	0497565	John H. Lee	Drama, Romance
+1190080	0000386	Roland Emmerich	Action | Adventure |Sci-FI
+0948470	1989536	Marc Webb	Action | Sci-FI
+2039393	1012501	Rupert Wyatt	Crime | Drama | Thriller 
+5027774	1732981	Martin McDonagh	 Comedy | Crime | Drama
+7784604	4170048	Ari Aster	Drama | Horror | Mystery
+5649144	0048918	Sean Baker	Drama 
+5776858	0000759	Paul Thomas Anderson	Drama | Romance
+5580390	0868219	Guillermo del Toro	Advanture | Drama | Fantasy
+1396484	1396484	Andy Muschietti	Horror
+1211956	0405632	Mikael Håfström	Action | Thriller
+0088763	0000709	Robert Zemeckis	 Adventure | Comedy | Sci-Fi
+0103064	0000116	James Cameron	 Action | Sci-Fi
+0110413	0000108	Luc Besson	 Action | Crime | Drama 
+0114814	0001741	Bryan Singer	 Crime | Mystery | Thriller 
+0172495	0000631	Ridley Scott	 Action | Adventure | Drama
+0253474	0000591	Roman Polanski	 Biography | Drama | Music
+0381681	0000500	Richard Linklater	 Drama | Romance 
+0477348	0001053	Ethan Coen	 Crime | Drama | Thriller 
+1130884	0000217	Martin Scorsese	 Mystery | Thriller
+1386697	0043742	David Ayer	 Action | Adventure | Fantasy 
+6320628	1218281	Jon Watts	Action | Adventure | Sci-Fi
+3783958	3227090	Damien Chazelle	Comedy | Drama | Music | Musical | Romance
+3397884	0898288	Denis Villeneuve	Action | Crime | Drama | Mystery | Thriller
+1038988	0049371	Jaume Balagueró	Action | Horror | Mystery | Thriller
+1038988	0687042	Paco Plaza	Action | Horror | Mystery | Thriller
+1270797	0281508	Ruben Fleischer	Action | Sci-Fi | Thriller
+0259324	0425756	Mark Steven Johnson	Action | Fantasy | Thriller
+2036416	3321182	Giddens Ko	Comedy | Drama | Romance
+0328107	0001716	Tony Scott	Action | Crime | Drama | Thriller
+0277027	0625458	Jessie Nelson	Drama
+1637688	0629272	Andrew Niccol	Action | Sci-Fi | Thriller
+0232500	0003418	Rob Cohen	Action | Adventure | Drama
+0322259	0005436	John Singleton	Documentary | Drama | Talk-Show
+0463985	0510912	Justin Lin	Action | Crime | Drama
+1013752	0510912	Justin Lin	Action | Crime | Drama
+1049413	0230032	Pete Docter	Animation | Family | Comedy
+1596343	0510912	Justin Lin	Action | Crime | Drama
+1905041	0510912	Justin Lin	Action | Crime | Drama
+2820852	1490123	James Wan	Action | Drama | Adventure
+4630562	0336620	F. Gary Gray	Short | Music | Documentary
+6806448	0500610	David Leitch	Action | Drama | Thriller
+0120804	0027271	Paul W.S. Anderson	Action | Documentary | Short
+0318627	0936838	Alexander Witt	Action | Drama | Thriller
+0432021	0611683	Russell Mulcahy	Drama | Thriller | Fantasy
+0458525	0004303	Gavin Hood	Drama | Thriller | Crime
+1220634	0027271	Paul W.S. Anderson	Action | Documentary | Short
+1430132	0003506	James Mangold	Drama | Mystery | Comedy
+1855325	0027271	Paul W.S. Anderson	Action | Documentary | Short
+2592614	0027271	Paul W.S. Anderson	Action | Documentary | Short
+3315342	0003506	James Mangold	Drama | Mystery | Comedy
+1046173	0814085	Stephen Sommers	Action | Adventure | Fantasy
